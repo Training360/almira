@@ -8,16 +8,26 @@ var selected;
 
 var counter = {"correct": 0, "incorrect": 0}
 
+var max = 3;
+
 $(document).ready(function() {
+  $.views.settings.allowCode(true);
   $("#en-lang-button").click(selectEn);
   $("#hu-lang-button").click(selectHu);
   updateUi();
 });
 
+function restart() {
+  console.log("Restart");
+  state = "start";
+  counter = {"correct": 0, "incorrect": 0};
+  updateUi();
+}
+
 function answer() {
   state = "answer";
   selected = $('input[name=answer-radio]:checked', '#answer-form').val();
-  if (item.answers[selected].correct) {
+  if (selected && item.answers[selected].correct) {
     counter.correct = counter.correct + 1;
   }
   else {
@@ -27,9 +37,14 @@ function answer() {
 }
 
 function next() {
-  state = "run";
-  generateQuestion();
-  updateUi();
+  if (counter.correct + counter.incorrect == max) {
+    restart();
+  }
+  else {
+    state = "run";
+    generateQuestion();
+    updateUi();
+  }
 }
 
 function selectEn() {
@@ -118,18 +133,24 @@ function updateUi() {
 }
 
 function updateItem() {
-    var tmpl = $.templates("#test-div");
-    var data = {"item": item, "state": state, "counter": counter};
+    var data = {"item": item, "state": state, "counter": counter, "selected": selected, "max": max};
     if (state == "answer") {
-      if (item.answers[selected].correct) {
+      if (selected && item.answers[selected].correct) {
         data["answerType"] = "correct";
       }
       else {
         data["answerType"] = "incorrect";
       }
     }
-    var html = tmpl.render(data);
-    $("#test-div").html(html);
+
+    $("#test-div").html($("#test-template").render(data));
+
+    if (state == "answer") {
+      $('input[name=answer-radio]', '#answer-form').prop('disabled', true);
+      $('input[name=answer-radio]', '#answer-form').eq(selected).prop('checked', true);
+    }
+
     $("#answer-button").click(answer);
     $("#next-button").click(next);
+    $("#restart-button").click(restart);
 }
