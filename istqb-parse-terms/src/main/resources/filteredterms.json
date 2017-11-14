@@ -1,0 +1,1089 @@
+[
+  {
+    "name": "alpha testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Simulated or actual operational testing by potential users/customers or an independent test team at the developers' site, but outside the development organization. Alpha testing is often employed for commercial off-the-shelf software as a form of internal acceptance testing."
+  },
+  {
+    "name": "beta testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "field testing"
+    ],
+    "desc": "Operational testing by potential and/or existing users/customers at an external site not otherwise involved with the developers, to determine whether or not a component or system satisfies the user/customer needs and fits within the business processes. Beta testing is often employed as a form of external acceptance testing for commercial off-the-shelf software in order to acquire feedback from the market."
+  },
+  {
+    "name": "black-box test design technique",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "black-box technique",
+      "specification-based technique",
+      "specification-based test design technique"
+    ],
+    "desc": "Procedure to derive and/or select test cases based on an analysis of the specification, either functional or non-functional, of a component or system without reference to its internal structure."
+  },
+  {
+    "name": "black-box testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "specification-based testing"
+    ],
+    "desc": "Testing, either functional or non-functional, without reference to the internal structure of the component or system."
+  },
+  {
+    "name": "boundary value analysis",
+    "ref": null,
+    "seeAlso": [
+      "boundary value"
+    ],
+    "synonyms": null,
+    "desc": "A black-box test design technique in which test cases are designed based on boundary values."
+  },
+  {
+    "name": "code coverage",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "An analysis method that determines which parts of the software have been executed (covered) by the test suite and which parts have not been executed, e.g., statement coverage, decision coverage or condition coverage."
+  },
+  {
+    "name": "commercial off-the-shelf (COTS)",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "off-the-shelf software"
+    ],
+    "desc": "A software product that is developed for the general market, i.e. for a large number of customers, and that is delivered to many customers in identical format."
+  },
+  {
+    "name": "compiler",
+    "ref": "IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A software tool that translates programs expressed in a high-order language into their machine language equivalents."
+  },
+  {
+    "name": "complexity",
+    "ref": null,
+    "seeAlso": [
+      "cyclomatic complexity"
+    ],
+    "synonyms": null,
+    "desc": "The degree to which a component or system has a design and/or internal structure that is difficult to understand, maintain and verify."
+  },
+  {
+    "name": "component testing",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": [
+      "module testing",
+      "program testing",
+      "unit testing"
+    ],
+    "desc": "The testing of individual software components."
+  },
+  {
+    "name": "configuration management",
+    "ref": "IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A discipline applying technical and administrative direction and surveillance to identify and document the functional and physical characteristics of a configuration item, control changes to those characteristics, record and report change processing and implementation status, and verify compliance with specified requirements."
+  },
+  {
+    "name": "configuration management tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that provides support for the identification and control of configuration items, their status over changes and versions, and the release of baselines consisting of configuration items."
+  },
+  {
+    "name": "control flow",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A sequence of events (paths) in the execution through a component or system."
+  },
+  {
+    "name": "coverage tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "coverage measurement tool"
+    ],
+    "desc": "A tool that provides objective measures of what structural elements, e.g., statements, branches have been exercised by a test suite."
+  },
+  {
+    "name": "data flow",
+    "ref": "Beiser",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "An abstract representation of the sequence and possible changes of the state of data objects, where the state of an object is any of creation, usage, or destruction."
+  },
+  {
+    "name": "data-driven testing",
+    "ref": "Fewster and Graham",
+    "seeAlso": [
+      "keyword-driven testing"
+    ],
+    "synonyms": null,
+    "desc": "A scripting technique that stores test input and expected results in a table or spreadsheet, so that a single control script can execute all of the tests in the table. Data-driven testing is often used to support the application of test execution tools such as capture/playback tools."
+  },
+  {
+    "name": "debugging",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The process of finding, analyzing and removing the causes of failures in software."
+  },
+  {
+    "name": "debugging tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "debugger"
+    ],
+    "desc": "A tool used by programmers to reproduce failures, investigate the state of programs and find the corresponding defect. Debuggers enable programmers to execute programs step by step, to halt a program at any program statement and to set and examine program variables."
+  },
+  {
+    "name": "decision coverage",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The percentage of decision outcomes that have been exercised by a test suite. 100% decision coverage implies both 100% branch coverage and 100% statement coverage."
+  },
+  {
+    "name": "decision table testing",
+    "ref": "Egler63",
+    "seeAlso": [
+      "decision table"
+    ],
+    "synonyms": null,
+    "desc": "A black-box test design technique in which test cases are designed to execute the combinations of inputs and/or stimuli (causes) shown in a decision table."
+  },
+  {
+    "name": "defect",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "bug",
+      "fault",
+      "problem"
+    ],
+    "desc": "A flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition. A defect, if encountered during execution, may cause a failure of the component or system."
+  },
+  {
+    "name": "defect density",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "fault density"
+    ],
+    "desc": "The number of defects identified in a component or system divided by the size of the component or system (expressed in standard measurement terms, e.g., lines-of-code, number of classes or function points)."
+  },
+  {
+    "name": "driver",
+    "ref": "After TMap",
+    "seeAlso": null,
+    "synonyms": [
+      "test driver"
+    ],
+    "desc": "A software component or test tool that replaces a component that takes care of the control and/or the calling of a component or system."
+  },
+  {
+    "name": "dynamic analysis tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that provides run-time information on the state of the software code. These tools are most commonly used to identify unassigned pointer check pointer arithmetic and to monitor the allocation, use and de-allocation of memory and to flag memory leaks."
+  },
+  {
+    "name": "dynamic testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing that involves the execution of the software of a component or system."
+  },
+  {
+    "name": "entry criteria",
+    "ref": "Gilb and Graham",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The set of generic and specific conditions for permitting a process to go forward with a defined task, e.g., test phase. The purpose of entry criteria is to prevent a task from starting which would entail more (wasted) effort compared to the effort needed to remove the failed entry criteria."
+  },
+  {
+    "name": "equivalence partitioning",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "partition testing"
+    ],
+    "desc": "A black-box test design technique in which test cases are designed to execute representatives from equivalence partitions. In principle, test cases are designed to cover each partition at least once."
+  },
+  {
+    "name": "error",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": [
+      "mistake"
+    ],
+    "desc": "A human action that produces an incorrect result."
+  },
+  {
+    "name": "error guessing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A test design technique where the experience of the tester is used to anticipate what defects might be present in the component or system under test as a result of errors made, and to design tests specifically to expose them."
+  },
+  {
+    "name": "exhaustive testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "complete testing"
+    ],
+    "desc": "A test approach in which the test suite comprises all combinations of input values and preconditions."
+  },
+  {
+    "name": "exit criteria",
+    "ref": "After Gilb and Graham",
+    "seeAlso": null,
+    "synonyms": [
+      "completion criteria",
+      "test completion criteria"
+    ],
+    "desc": "The set of generic and specific conditions, agreed upon with the stakeholders for permitting a process to be officially completed. The purpose o exit criteria is to prevent a task from being considered completed when there are still outstanding parts of the task which have not been finished Exit criteria are used to report against and to plan when to stop testing."
+  },
+  {
+    "name": "exploratory testing",
+    "ref": "After Bach",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "An informal test design technique where the tester actively controls the design of the tests as those tests are performed and uses information gained while testing to design new and better tests."
+  },
+  {
+    "name": "failure",
+    "ref": "After Fenton",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Deviation of the component or system from its expected delivery, service or result."
+  },
+  {
+    "name": "failure rate",
+    "ref": "IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The ratio of the number of failures of a given category to a given unit of measure, e.g., failures per unit of time, failures per number of transactions, failures per number of computer runs."
+  },
+  {
+    "name": "fault attack",
+    "ref": null,
+    "seeAlso": [
+      "negative testing",
+      "security attack"
+    ],
+    "synonyms": [
+      "attack"
+    ],
+    "desc": "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usuall focused on reliability or security."
+  },
+  {
+    "name": "formal review",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A review characterized by documented procedures and requirements, e.g., inspection."
+  },
+  {
+    "name": "functional requirement",
+    "ref": "IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A requirement that specifies a function that a component or system must perform."
+  },
+  {
+    "name": "functional testing",
+    "ref": null,
+    "seeAlso": [
+      "black-box testing"
+    ],
+    "synonyms": null,
+    "desc": "Testing based on an analysis of the specification of the functionality of a component or system."
+  },
+  {
+    "name": "impact analysis",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The assessment of change to the layers of development documentation, test documentation and components, in order to implement a given change to specified requirements."
+  },
+  {
+    "name": "incident",
+    "ref": "After IEEE 1008",
+    "seeAlso": null,
+    "synonyms": [
+      "deviation",
+      "software test incident",
+      "test incident"
+    ],
+    "desc": "Any event occurring that requires investigation."
+  },
+  {
+    "name": "incident logging",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Recording the details of any incident that occurred, e.g., during testing."
+  },
+  {
+    "name": "incident management",
+    "ref": "After IEEE 1044",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The process of recognizing, investigating, taking action and disposing of incidents. It involves logging incidents, classifying them and identifying the impact."
+  },
+  {
+    "name": "incident management tool",
+    "ref": null,
+    "seeAlso": [
+      "defect management tool"
+    ],
+    "synonyms": null,
+    "desc": "A tool that facilitates the recording and status tracking of incidents. They often have workflow-oriented facilities to track and control the allocation, correction and re-testing of incidents and provide reporting facilities."
+  },
+  {
+    "name": "incident report",
+    "ref": "After IEEE 829",
+    "seeAlso": null,
+    "synonyms": [
+      "deviation report",
+      "software test incident report",
+      "test incident report"
+    ],
+    "desc": "A document reporting on any event that occurred, e.g., during the testing, which requires investigation."
+  },
+  {
+    "name": "incremental development model",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A development lifecycle where a project is broken into a series of increments, each of which delivers a portion of the functionality in the overall project requirements. The requirements are prioritized and delivered in priority order in the appropriate increment. In some (but not all) versions of this lifecycle model, each subproject follows a mini V-model with its own design, coding and testing phases."
+  },
+  {
+    "name": "informal review",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A review not based on a formal (documented) procedure."
+  },
+  {
+    "name": "inspection",
+    "ref": "After IEEE 610, IEEE 1028",
+    "seeAlso": [
+      "peer review"
+    ],
+    "synonyms": null,
+    "desc": "A type of peer review that relies on visual examination of documents to detect defects, e.g., violations of development standards and non- conformance to higher level documentation. The most formal review technique and therefore always based on a documented procedure."
+  },
+  {
+    "name": "integration",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The process of combining components or systems into larger assemblies."
+  },
+  {
+    "name": "integration testing",
+    "ref": null,
+    "seeAlso": [
+      "component integration testing",
+      "system integration testing"
+    ],
+    "synonyms": null,
+    "desc": "Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems."
+  },
+  {
+    "name": "interoperability testing",
+    "ref": null,
+    "seeAlso": [
+      "functionality testing"
+    ],
+    "synonyms": [
+      "compatibility testing"
+    ],
+    "desc": "Testing to determine the interoperability of a software product."
+  },
+  {
+    "name": "iterative development model",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A development lifecycle where a project is broken into a usually large number of iterations. An iteration is a complete development loop   resulting in a release (internal or external) of an executable product, a subset of the final product under development, which grows from iteratio to iteration to become the final product."
+  },
+  {
+    "name": "keyword-driven testing",
+    "ref": null,
+    "seeAlso": [
+      "data-driven testing"
+    ],
+    "synonyms": [
+      "action word-driven testing"
+    ],
+    "desc": "A scripting technique that uses data files to contain not only test data and expected results, but also keywords related to the application being tested. The keywords are interpreted by special supporting scripts that are called by the control script for the test."
+  },
+  {
+    "name": "load testing",
+    "ref": null,
+    "seeAlso": [
+      "performance testing",
+      "stress testing"
+    ],
+    "synonyms": null,
+    "desc": "A type of performance testing conducted to evaluate the behavior of a component or system with increasing load, e.g., numbers of parallel users and/or numbers of transactions, to determine what load can be handled by the component or system."
+  },
+  {
+    "name": "maintainability testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "serviceability testing"
+    ],
+    "desc": "Testing to determine the maintainability of a software product."
+  },
+  {
+    "name": "maintenance testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing the changes to an operational system or the impact of a changed environment to an operational system."
+  },
+  {
+    "name": "metric",
+    "ref": "ISO 14598",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A measurement scale and the method used for measurement."
+  },
+  {
+    "name": "non-functional requirement",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A requirement that does not relate to functionality, but to attributes such as reliability, efficiency, usability, maintainability and portability."
+  },
+  {
+    "name": "peer review",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A review of a software work product by colleagues of the producer of the product for the purpose of identifying defects and improvements. Examples are inspection, technical review and walkthrough."
+  },
+  {
+    "name": "performance testing",
+    "ref": null,
+    "seeAlso": [
+      "efficiency testing"
+    ],
+    "synonyms": null,
+    "desc": "Testing to determine the performance of a software product."
+  },
+  {
+    "name": "performance testing tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool to support performance testing that usually has two main facilities: load generation and test transaction measurement. Load generation can simulate either multiple users or high volumes of input data. During execution, response time measurements are taken from selected transactions and these are logged. Performance testing tools normally provide reports based on test logs and graphs of load against response times."
+  },
+  {
+    "name": "portability testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "configuration testing"
+    ],
+    "desc": "Testing to determine the portability of a software product."
+  },
+  {
+    "name": "product risk",
+    "ref": null,
+    "seeAlso": [
+      "risk"
+    ],
+    "synonyms": null,
+    "desc": "A risk directly related to the test object."
+  },
+  {
+    "name": "project risk",
+    "ref": null,
+    "seeAlso": [
+      "risk"
+    ],
+    "synonyms": null,
+    "desc": "A risk related to management and control of the (test) project, e.g., lack of staffing, strict deadlines, changing requirements, etc."
+  },
+  {
+    "name": "quality",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The degree to which a component, system or process meets specified requirements and/or user/customer needs and expectations."
+  },
+  {
+    "name": "regression testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing of a previously tested program following modification to ensure that defects have not been introduced or uncovered in unchanged area of the software, as a result of the changes made. It is performed when the software or its environment is changed."
+  },
+  {
+    "name": "reliability testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing to determine the reliability of a software product."
+  },
+  {
+    "name": "requirement",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A condition or capability needed by a user to solve a problem or achieve an objective that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document."
+  },
+  {
+    "name": "requirements management tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that supports the recording of requirements, requirements attributes (e.g., priority, knowledge responsible) and annotation, and facilitates traceability through layers of requirements and requirements change management. Some requirements management tools also provide   facilities for static analysis, such as consistency checking and violations to pre-defined requirements rules."
+  },
+  {
+    "name": "review",
+    "ref": "After IEEE 1028",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "An evaluation of a product or project status to ascertain discrepancies from planned results and to recommend improvements. Examples include management review, informal review, technical review, inspection, and walkthrough."
+  },
+  {
+    "name": "review tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that provides support to the review process. Typical features include review planning and tracking support, communication support, collaborative reviews and a repository for collecting and reporting of metrics."
+  },
+  {
+    "name": "reviewer",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "checker",
+      "inspector"
+    ],
+    "desc": "The person involved in the review that identifies and describes anomalies in the product or project under review. Reviewers can be chosen to represent different viewpoints and roles in the review process."
+  },
+  {
+    "name": "risk",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A factor that could result in future negative consequences."
+  },
+  {
+    "name": "risk-based testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "An approach to testing to reduce the level of product risks and inform stakeholders of their status, starting in the initial stages of a project. It involves the identification of product risks and the use of risk levels to guide the test process."
+  },
+  {
+    "name": "robustness testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing to determine the robustness of the software product."
+  },
+  {
+    "name": "scribe",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "recorder"
+    ],
+    "desc": "The person who records each defect mentioned and any suggestions for process improvement during a review meeting, on a logging form. Th scribe should ensure that the logging form is readable and understandable."
+  },
+  {
+    "name": "scripting language",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A programming language in which executable test scripts are written, used by a test execution tool (e.g., a capture/playback tool)."
+  },
+  {
+    "name": "security testing",
+    "ref": null,
+    "seeAlso": [
+      "functionality testing"
+    ],
+    "synonyms": null,
+    "desc": "Testing to determine the security of the software product."
+  },
+  {
+    "name": "security tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that supports operational security."
+  },
+  {
+    "name": "stability",
+    "ref": "ISO 9126",
+    "seeAlso": [
+      "maintainability"
+    ],
+    "synonyms": null,
+    "desc": "The capability of the software product to avoid unexpected effects from modifications in the software."
+  },
+  {
+    "name": "state transition testing",
+    "ref": null,
+    "seeAlso": [
+      "N-switch testing"
+    ],
+    "synonyms": [
+      "finite state testing"
+    ],
+    "desc": "A black-box test design technique in which test cases are designed to execute valid and invalid state transitions."
+  },
+  {
+    "name": "statement coverage",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The percentage of executable statements that have been exercised by a test suite."
+  },
+  {
+    "name": "static testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing of a software development artifact, e.g., requirements, design or code, without execution of these artifacts, e.g., reviews or static analysis."
+  },
+  {
+    "name": "stress testing",
+    "ref": "After IEEE 610",
+    "seeAlso": [
+      "performance testing",
+      "load testing"
+    ],
+    "synonyms": null,
+    "desc": "A type of performance testing conducted to evaluate a system or component at or beyond the limits of its anticipated or specified workloads, or with reduced availability of resources such as access to memory or servers."
+  },
+  {
+    "name": "stress testing tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that supports stress testing."
+  },
+  {
+    "name": "stub",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A skeletal or special-purpose implementation of a software component, used to develop or test a component that calls or is otherwise dependent on it. It replaces a called component."
+  },
+  {
+    "name": "system testing",
+    "ref": "Hetzel",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing an integrated system to verify that it meets specified requirements."
+  },
+  {
+    "name": "technical review",
+    "ref": "Gilb and Graham, IEEE 1028",
+    "seeAlso": [
+      "peer review"
+    ],
+    "synonyms": null,
+    "desc": "A peer group discussion activity that focuses on achieving consensus on the technical approach to be taken."
+  },
+  {
+    "name": "test approach",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The implementation of the test strategy for a specific project. It typically includes the decisions made that follow based on the (test) project's goal and the risk assessment carried out, starting points regarding the test process, the test design techniques to be applied, exit criteria and test types to be performed."
+  },
+  {
+    "name": "test basis",
+    "ref": "After TMap",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "All documents from which the requirements of a component or system can be inferred. The documentation on which the test cases are based. a document can be amended only by way of formal amendment procedure, then the test basis is called a frozen test basis."
+  },
+  {
+    "name": "test case",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A set of input values, execution preconditions, expected results and execution postconditions, developed for a particular objective or test condition, such as to exercise a particular program path or to verify compliance with a specific requirement."
+  },
+  {
+    "name": "test case specification",
+    "ref": "After IEEE 829",
+    "seeAlso": [
+      "test specification"
+    ],
+    "synonyms": null,
+    "desc": "A document specifying a set of test cases (objective, inputs, test actions, expected results, and execution preconditions) for a test item."
+  },
+  {
+    "name": "test comparator",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "comparator"
+    ],
+    "desc": "A test tool to perform automated test comparison of actual results with expected results."
+  },
+  {
+    "name": "test condition",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "test requirement",
+      "test situation"
+    ],
+    "desc": "An item or event of a component or system that could be verified by one or more test cases, e.g., a function, transaction, feature, quality attribute, or structural element."
+  },
+  {
+    "name": "test control",
+    "ref": null,
+    "seeAlso": [
+      "test management"
+    ],
+    "synonyms": null,
+    "desc": "A test management task that deals with developing and applying a set of corrective actions to get a test project on track when monitoring show  a deviation from what was planned."
+  },
+  {
+    "name": "test data",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Data that exists (for example, in a database) before a test is executed, and that affects or is affected by the component or system under test."
+  },
+  {
+    "name": "test data preparation tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "test generator"
+    ],
+    "desc": "A type of test tool that enables data to be selected from existing databases or created, generated, manipulated and edited for use in testing."
+  },
+  {
+    "name": "test design",
+    "ref": null,
+    "seeAlso": [
+      "test design specification"
+    ],
+    "synonyms": null,
+    "desc": "The process of transforming general test objectives into tangible test conditions and test cases."
+  },
+  {
+    "name": "test design technique",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "test case design technique",
+      "test specification technique",
+      "test technique"
+    ],
+    "desc": "Procedure used to derive and/or select test cases."
+  },
+  {
+    "name": "test design tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that supports the test design activity by generating test inputs from a specification that may be held in a CASE tool repository, e.g., requirements management tool, from specified test conditions held in the tool itself, or from code."
+  },
+  {
+    "name": "test environment",
+    "ref": "After IEEE 610",
+    "seeAlso": null,
+    "synonyms": [
+      "test bed",
+      "test rig"
+    ],
+    "desc": "An environment containing hardware, instrumentation, simulators, software tools, and other support elements needed to conduct a test."
+  },
+  {
+    "name": "test execution",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The process of running a test on the component or system under test, producing actual result(s)."
+  },
+  {
+    "name": "test execution tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A type of test tool that is able to execute other software using an automated test script, e.g., capture/playback."
+  },
+  {
+    "name": "test harness",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A test environment comprised of stubs and drivers needed to execute a test."
+  },
+  {
+    "name": "test level",
+    "ref": "After TMap",
+    "seeAlso": null,
+    "synonyms": [
+      "test stage"
+    ],
+    "desc": "A group of test activities that are organized and managed together. A test level is linked to the responsibilities in a project. Examples of test levels are component test, integration test, system test and acceptance test."
+  },
+  {
+    "name": "test log",
+    "ref": "IEEE 829",
+    "seeAlso": null,
+    "synonyms": [
+      "test record",
+      "test run log"
+    ],
+    "desc": "A chronological record of relevant details about the execution of tests."
+  },
+  {
+    "name": "test management tool",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that provides support to the test management and control part of a test process. It often has several capabilities, such as testware management, scheduling of tests, the logging of results, progress tracking, incident management and test reporting."
+  },
+  {
+    "name": "test manager",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "test leader"
+    ],
+    "desc": "The person responsible for project management of testing activities and resources, and evaluation of a test object. The individual who directs, controls, administers, plans and regulates the evaluation of a test object."
+  },
+  {
+    "name": "test objective",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A reason or purpose for designing and executing a test."
+  },
+  {
+    "name": "test plan",
+    "ref": "After IEEE 829",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A document describing the scope, approach, resources and schedule of intended test activities. It identifies amongst others test items, the features to be tested, the testing tasks, who will do each task, degree of tester independence, the test environment, the test design techniques and entry and exit criteria to be used, and the rationale for their choice, and any risks requiring contingency planning. It is a record of the test planning process."
+  },
+  {
+    "name": "test policy",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A high-level document describing the principles, approach and major objectives of the organization regarding testing."
+  },
+  {
+    "name": "test procedure specification",
+    "ref": "After IEEE 829",
+    "seeAlso": [
+      "test specification"
+    ],
+    "synonyms": [
+      "test procedure",
+      "test scenario"
+    ],
+    "desc": "A document specifying a sequence of actions for the execution of a test. Also known as test script or manual test script."
+  },
+  {
+    "name": "test reporting",
+    "ref": null,
+    "seeAlso": [
+      "test process"
+    ],
+    "synonyms": null,
+    "desc": "Collecting and analyzing data from testing activities and subsequently consolidating the data in a report to inform stakeholders."
+  },
+  {
+    "name": "test script",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Commonly used to refer to a test procedure specification, especially an automated one."
+  },
+  {
+    "name": "test strategy",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A high-level description of the test levels to be performed and the testing within those levels for an organization or programme (one or more projects)."
+  },
+  {
+    "name": "test summary report",
+    "ref": "After IEEE 829",
+    "seeAlso": null,
+    "synonyms": [
+      "test report"
+    ],
+    "desc": "A document summarizing testing activities and results. It also contains an evaluation of the corresponding test items against exit criteria."
+  },
+  {
+    "name": "test-driven development (TDD)",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A way of developing software where the test cases are developed, and often automated, before the software is developed to run those test cases."
+  },
+  {
+    "name": "tester",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A skilled professional who is involved in the testing of a component or system."
+  },
+  {
+    "name": "testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects."
+  },
+  {
+    "name": "testware",
+    "ref": "After Fewster and Graham",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Artifacts produced during the test process required to plan, design, and execute tests, such as documentation, scripts, inputs, expected results set-up and clear-up procedures, files, databases, environment, and any additional software or utilities used in testing."
+  },
+  {
+    "name": "traceability",
+    "ref": null,
+    "seeAlso": [
+      "horizontal traceability",
+      "vertical traceability"
+    ],
+    "synonyms": null,
+    "desc": "The ability to identify related items in documentation and software, such as requirements with associated tests."
+  },
+  {
+    "name": "unit test framework",
+    "ref": "Graham",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A tool that provides an environment for unit or component testing in which a component can be tested in isolation or with suitable stubs and drivers. It also provides other support for the developer, such as debugging capabilities."
+  },
+  {
+    "name": "usability testing",
+    "ref": "After ISO 9126",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing to determine the extent to which the software product is understood, easy to learn, easy to operate and attractive to the users under specified conditions."
+  },
+  {
+    "name": "use case testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "scenario testing",
+      "user scenario testing"
+    ],
+    "desc": "A black-box test design technique in which test cases are designed to execute scenarios of use cases."
+  },
+  {
+    "name": "V-model",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A framework to describe the software development lifecycle activities from requirements specification to maintenance. The V-model illustrates how testing activities can be integrated into each phase of the software development lifecycle."
+  },
+  {
+    "name": "validation",
+    "ref": "ISO 9000",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled."
+  },
+  {
+    "name": "verification",
+    "ref": "ISO 9000",
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled."
+  },
+  {
+    "name": "walkthrough",
+    "ref": "Freedman and Weinberg, IEEE 1028",
+    "seeAlso": [
+      "peer review"
+    ],
+    "synonyms": [
+      "structured walkthrough"
+    ],
+    "desc": "A step-by-step presentation by the author of a document in order to gather information and to establish a common understanding of its content."
+  },
+  {
+    "name": "white-box test design technique",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "structural test design technique",
+      "structure-based test design technique",
+      "structure-based technique",
+      "white-box technique"
+    ],
+    "desc": "Procedure to derive and/or select test cases based on an analysis of the internal structure of a component or system."
+  },
+  {
+    "name": "white-box testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": [
+      "clear-box testing",
+      "code-based testing",
+      "glass-box testing",
+      "logic-coverage testing",
+      "logic-driven testing",
+      "structural testing",
+      "structure-based testing"
+    ],
+    "desc": "Testing based on an analysis of the internal structure of the component or system."
+  },
+  {
+    "name": "traceability matrix",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A two-dimensional table, which correlates two entities (e.g., requirements and test cases). The table allows tracing back and forth the links of one entity to the other, thus enabling the determination of coverage achieved and the assessment of impact of proposed changes."
+  },
+  {
+    "name": "safety testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "Testing to determine the safety of a software product."
+  },
+  {
+    "name": "condition testing",
+    "ref": null,
+    "seeAlso": null,
+    "synonyms": null,
+    "desc": "A white-box test design technique in which test cases are designed to execute condition outcomes."
+  }
+]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ISTQB Terms Test</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script src="http://www.jsviews.com/download/jsrender.js"></script>
+
+  <!-- Bootstrap -->
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="test.css" />
+  <script src="terms.json"></script>
+  <script src="huterms.json"></script>
+  <script src="test.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <div id="start-test-div">
+
+      <h1>Új teszt</h1>
+
+      <p>Válaszd ki, hogy milyen nyelven szeretnél gyakorolni!</p>
+
+      <div class="btn-group" role="lang">
+        <button id="en-lang-button" type="button" class="btn btn-default">Angol</button>
+        <button id="hu-lang-button" type="button" class="btn btn-default">Magyar</button>
+      </div>
+
+    </div>
+
+
+    <div id="test-div">
+
+      <div class="text-right">
+        {{:counter.correct + counter.incorrect}} megválaszolt a 20 kérdésből, ebből {{:counter.correct}} helyes
+      </div>
+
+
+      <h1>Kérdés</h1>
+
+<p>{{:item.question}}</p>
+
+<p><b>{{:item.questionPart}}</b></p>
+
+<form id="answer-form">
+
+    {{if answerType == "correct"}}
+      <div class="alert alert-success" role="alert">Helyes válasz</div>
+    {{/if}}
+
+    {{if answerType == "incorrect"}}
+      <div class="alert alert-danger" role="alert">A válasz nem helyes!</div>
+    {{/if}}
+
+    <ul class="list-unstyled">
+      {{for item.answers}}
+        <li>
+            <input type="radio" name="answer-radio" value="{{:#index}}"/>
+            <span>{{:answerPart}}</span>
+        </li>
+      {{/for}}
+    </ul>
+    {{if state == 'run'}}
+    <button id="answer-button" type="button" class="btn btn-primary">Válaszolok</button>
+    {{/if}}
+    {{if state == 'answer'}}
+    <button id="next-button" type="button" class="btn btn-primary">Következő</button>
+    {{/if}}
+</form>
+
+    </div>
+  </div>
+</body>

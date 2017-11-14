@@ -1,0 +1,2 @@
+műszaki teszttervezés - két értelmezése
+

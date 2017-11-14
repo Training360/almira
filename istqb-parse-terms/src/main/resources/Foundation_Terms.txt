@@ -1,0 +1,2276 @@
+acceptance testing
+
+Ref: After IEEE 610   See Also: user acceptance testing
+
+Formal testing with respect to user needs, requirements, and business processes conducted to determine whether or not a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system.
+
+
+
+actor
+
+User or any other person or system that interacts with the test object in a specific way.
+
+
+
+actual result
+
+Synonyms: actual outcome
+
+The behavior produced/observed when a component or system is tested.
+
+
+
+alpha testing
+
+Simulated or actual operational testing by potential users/customers or an independent test team at the developers' site, but outside the development organization. Alpha testing is often employed for commercial off-the-shelf software as a form of internal acceptance testing.
+
+
+
+audit
+
+Ref: IEEE 1028
+
+An independent evaluation of software products or processes to ascertain compliance to standards, guidelines, specifications, and/or procedures based on objective criteria, including documents that specify: the form or content of the products to be produced, the process by which the products shall be produced, and how compliance to standards or guidelines shall be measured.
+
+
+
+audit trail
+
+Ref: After TMap
+
+A path by which the original input to a process (e.g., data) can be traced back through the process, taking the process output as a starting poin This facilitates defect analysis and allows a process audit to be carried out.
+
+
+
+authentication
+
+See Also: authorization
+
+A procedure determining whether a person or a process is, in fact, who or what it is declared to be.
+
+
+
+authorization
+
+See Also: authentication
+
+Permission given to a user or process to access resources.
+
+
+
+availability
+
+Ref: IEEE 610
+
+The degree to which a component or system is operational and accessible when required for use. Often expressed as a percentage.
+
+
+
+best practice
+
+A superior method or innovative practice that contributes to the improved performance of an organization under given context, usually recognized as "best" by other peer organizations.
+
+
+
+beta testing
+
+Synonyms: field testing
+
+Operational testing by potential and/or existing users/customers at an external site not otherwise involved with the developers, to determine whether or not a component or system satisfies the user/customer needs and fits within the business processes. Beta testing is often employed as a form of external acceptance testing for commercial off-the-shelf software in order to acquire feedback from the market.
+
+
+
+black-box test design technique
+
+Synonyms: black-box technique , specification-based technique , specification-based test design technique
+
+Procedure to derive and/or select test cases based on an analysis of the specification, either functional or non-functional, of a component or system without reference to its internal structure.
+
+
+
+black-box testing
+
+Synonyms: specification-based testing
+
+Testing, either functional or non-functional, without reference to the internal structure of the component or system.
+
+
+
+boundary value
+
+An input value or output value which is on the edge of an equivalence partition or at the smallest incremental distance on either side of an edge for example the minimum or maximum value of a range.
+
+
+
+boundary value analysis
+
+See Also: boundary value
+
+A black-box test design technique in which test cases are designed based on boundary values.
+
+
+
+branch
+
+A basic block that can be selected for execution based on a program construct in which one of two or more alternative program paths is available, e.g., case, jump, go to, if-then-else.
+
+
+
+branch testing
+
+A white-box test design technique in which test cases are designed to execute branches.
+
+
+
+Capability Maturity Model Integration (CMMI)
+
+Ref: CMMI
+
+A framework that describes the key elements of an effective product development and maintenance process. The Capability Maturity Model Integration covers best-practices for planning, engineering and managing product development and maintenance.
+
+
+
+certification
+
+The process of confirming that a component, system or person complies with its specified requirements, e.g., by passing an exam.
+
+
+
+checklist-based testing
+
+An experience-based test design technique whereby the experienced tester uses a high-level list of items to be noted, checked, or remembere or a set of rules or criteria against which a product has to be verified.
+
+
+
+code
+
+Ref: IEEE 610
+
+Computer instructions and data definitions expressed in a programming language or in a form output by an assembler, compiler or other translator.
+
+
+
+code coverage
+
+An analysis method that determines which parts of the software have been executed (covered) by the test suite and which parts have not been executed, e.g., statement coverage, decision coverage or condition coverage.
+
+
+
+commercial off-the-shelf (COTS)
+
+Synonyms: off-the-shelf software
+
+A software product that is developed for the general market, i.e. for a large number of customers, and that is delivered to many customers in identical format.
+
+
+
+compiler
+
+Ref: IEEE 610
+
+A software tool that translates programs expressed in a high-order language into their machine language equivalents.
+
+
+
+complexity
+
+See Also: cyclomatic complexity
+
+The degree to which a component or system has a design and/or internal structure that is difficult to understand, maintain and verify.
+
+
+
+compliance
+
+Ref: ISO 9126
+
+The capability of the software product to adhere to standards, conventions or regulations in laws and similar prescriptions.
+
+
+
+component
+
+Synonyms: module , unit
+
+A minimal software item that can be tested in isolation.
+
+
+
+component integration testing
+
+Synonyms: link testing
+
+Testing performed to expose defects in the interfaces and interactions between integrated components.
+
+
+
+component specification
+
+A description of a component's function in terms of its output values for specified input values under specified conditions, and required non- functional behavior (e.g., resource-utilization).
+
+
+
+component testing
+
+Ref: After IEEE 610
+
+Synonyms: module testing , program testing , unit testing
+
+The testing of individual software components.
+
+
+
+condition
+
+See Also: condition testing
+
+Synonyms: branch condition
+
+A logical expression that can be evaluated as True or False, e.g., A>B.
+
+
+
+condition coverage
+
+Synonyms: branch condition coverage
+
+The percentage of condition outcomes that have been exercised by a test suite. 100% condition coverage requires each single condition in every decision statement to be tested as True and False.
+
+
+
+configuration
+
+The composition of a component or system as defined by the number, nature, and interconnections of its constituent parts.
+
+
+
+configuration control
+
+Ref: IEEE 610
+
+Synonyms: change control , version control
+
+An element of configuration management, consisting of the evaluation, coordination, approval or disapproval, and implementation of changes t configuration items after formal establishment of their configuration identification.
+
+
+
+configuration item
+
+Ref: IEEE 610
+
+An aggregation of hardware, software or both, that is designated for configuration management and treated as a single entity in the configuration management process.
+
+
+
+configuration management
+
+Ref: IEEE 610
+
+A discipline applying technical and administrative direction and surveillance to identify and document the functional and physical characteristics of a configuration item, control changes to those characteristics, record and report change processing and implementation status, and verify compliance with specified requirements.
+
+
+
+configuration management tool
+
+A tool that provides support for the identification and control of configuration items, their status over changes and versions, and the release of baselines consisting of configuration items.
+
+
+
+confirmation testing
+
+Synonyms:  re-testing
+
+Testing that runs test cases that failed the last time they were run, in order to verify the success of corrective actions.
+
+
+
+control flow
+
+A sequence of events (paths) in the execution through a component or system.
+
+
+
+control flow testing
+
+See Also: decision testing, condition testing, path testing
+
+An approach to structure-based testing in which test cases are designed to execute specific sequences of events. Various techniques exist for control flow testing, e.g., decision testing, condition testing, and path testing, that each have their specific approach and level of control flow coverage.
+
+
+
+conversion testing
+
+Synonyms: migration testing
+
+Testing of software used to convert data from existing systems for use in replacement systems.
+
+
+
+coverage
+
+Synonyms: test coverage
+
+The degree, expressed as a percentage, to which a specified coverage item has been exercised by a test suite.
+
+
+
+coverage tool
+
+Synonyms: coverage measurement tool
+
+A tool that provides objective measures of what structural elements, e.g., statements, branches have been exercised by a test suite.
+
+
+
+data flow
+
+Ref: Beiser
+
+An abstract representation of the sequence and possible changes of the state of data objects, where the state of an object is any of creation, usage, or destruction.
+
+
+
+data quality
+
+An attribute of data that indicates correctness with respect to some pre-defined criteria, e.g., business expectations, requirements on data integrity, data consistency.
+
+
+
+data-driven testing
+
+Ref: Fewster and Graham   See Also: keyword-driven testing
+
+A scripting technique that stores test input and expected results in a table or spreadsheet, so that a single control script can execute all of the tests in the table. Data-driven testing is often used to support the application of test execution tools such as capture/playback tools.
+
+
+
+debugging
+
+The process of finding, analyzing and removing the causes of failures in software.
+
+
+
+debugging tool
+
+Synonyms:  debugger
+
+A tool used by programmers to reproduce failures, investigate the state of programs and find the corresponding defect. Debuggers enable programmers to execute programs step by step, to halt a program at any program statement and to set and examine program variables.
+
+
+
+decision
+
+A program point at which the control flow has two or more alternative routes. A node with two or more links to separate branches.
+
+
+
+decision coverage
+
+The percentage of decision outcomes that have been exercised by a test suite. 100% decision coverage implies both 100% branch coverage and 100% statement coverage.
+
+
+
+decision outcome
+
+The result of a decision (which therefore determines the branches to be taken).
+
+
+
+decision table
+
+Synonyms: cause-effect decision table
+
+A table showing combinations of inputs and/or stimuli (causes) with their associated outputs and/or actions (effects), which can be used to design test cases.
+
+
+
+decision table testing
+
+Ref: Egler63   See Also: decision table
+
+A black-box test design technique in which test cases are designed to execute the combinations of inputs and/or stimuli (causes) shown in a decision table.
+
+
+
+decision testing
+
+A white-box test design technique in which test cases are designed to execute decision outcomes.
+
+
+
+defect
+
+Synonyms: bug , fault , problem
+
+A flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition. A defect, if encountered during execution, may cause a failure of the component or system.
+
+
+
+defect density
+
+Synonyms: fault density
+
+The number of defects identified in a component or system divided by the size of the component or system (expressed in standard measurement terms, e.g., lines-of-code, number of classes or function points).
+
+
+
+defect management tool
+
+See Also: incident management tool
+
+Synonyms: bug tracking tool , defect tracking tool
+
+A tool that facilitates the recording and status tracking of defects and changes. They often have workflow-oriented facilities to track and control the allocation, correction and re-testing of defects and provide reporting facilities.
+
+
+
+defect type
+
+Synonyms: defect category
+
+An element in a taxonomy of defects. Defect taxonomies can be identified with respect to a variety of considerations, including, but not limited to: Phase or development activity in which the defect is created, e.g., a specification error or a coding error, Characterization of defects, e.g., a "off-by-one" defect, Incorrectness, e.g., an incorrect relational operator, a programming language syntax error, or an invalid assumption, Performance issues, e.g., excessive execution time, insufficient availability.
+
+
+
+deliverable
+
+Any (work) product that must be delivered to someone other than the (work) product's author.
+
+
+
+development testing
+
+Ref: After IEEE 610
+
+Formal or informal testing conducted during the implementation of a component or system, usually in the development environment by developers.
+
+
+
+domain
+
+The set from which valid input and/or output values can be selected.
+
+
+
+driver
+
+Ref: After TMap
+
+Synonyms: test driver
+
+A software component or test tool that replaces a component that takes care of the control and/or the calling of a component or system.
+
+
+
+dynamic analysis tool
+
+A tool that provides run-time information on the state of the software code. These tools are most commonly used to identify unassigned pointer check pointer arithmetic and to monitor the allocation, use and de-allocation of memory and to flag memory leaks.
+
+
+
+dynamic testing
+
+Testing that involves the execution of the software of a component or system.
+
+
+
+effectiveness
+
+See Also: efficiency
+
+The capability of producing an intended result.
+
+
+
+efficiency
+
+Ref: ISO 9126
+
+(1) The capability of the software product to provide appropriate performance, relative to the amount of resources used, under stated conditions. (2) The capability of a process to produce the intended outcome, relative to the amount of resources used.
+
+
+
+entry criteria
+
+Ref: Gilb and Graham
+
+The set of generic and specific conditions for permitting a process to go forward with a defined task, e.g., test phase. The purpose of entry criteria is to prevent a task from starting which would entail more (wasted) effort compared to the effort needed to remove the failed entry criteria.
+
+
+
+equivalence partition
+
+Synonyms: equivalence class
+
+A portion of an input or output domain for which the behavior of a component or system is assumed to be the same, based on the specification
+
+
+
+equivalence partitioning
+
+Synonyms: partition testing
+
+A black-box test design technique in which test cases are designed to execute representatives from equivalence partitions. In principle, test cases are designed to cover each partition at least once.
+
+
+
+error
+
+Ref: After IEEE 610
+
+Synonyms: mistake
+
+A human action that produces an incorrect result.
+
+
+
+error guessing
+
+A test design technique where the experience of the tester is used to anticipate what defects might be present in the component or system under test as a result of errors made, and to design tests specifically to expose them.
+
+
+
+executable statement
+
+A statement which, when compiled, is translated into object code, and which will be executed procedurally when the program is running and m perform an action on data.
+
+
+
+exercised
+
+A program element is said to be exercised by a test case when the input value causes the execution of that element, such as a statement, decision, or other structural element.
+
+
+
+exhaustive testing
+
+Synonyms: complete testing
+
+A test approach in which the test suite comprises all combinations of input values and preconditions.
+
+
+
+exit criteria
+
+Ref: After Gilb and Graham
+
+Synonyms: completion criteria , test completion criteria
+
+The set of generic and specific conditions, agreed upon with the stakeholders for permitting a process to be officially completed. The purpose o exit criteria is to prevent a task from being considered completed when there are still outstanding parts of the task which have not been finished Exit criteria are used to report against and to plan when to stop testing.
+
+
+
+expected result
+
+Synonyms: expected outcome , predicted outcome
+
+The behavior predicted by the specification, or another source, of the component or system under specified conditions.
+
+
+
+experience-based test design technique
+
+Synonyms: experience-based technique
+
+Procedure to derive and/or select test cases based on the tester's experience, knowledge and intuition.
+
+
+
+experience-based testing
+
+Testing based on the tester's experience, knowledge and intuition.
+
+
+
+exploratory testing
+
+Ref: After Bach
+
+An informal test design technique where the tester actively controls the design of the tests as those tests are performed and uses information gained while testing to design new and better tests.
+
+
+
+factory acceptance testing
+
+See Also: alpha testing
+
+Acceptance testing conducted at the site at which the product is developed and performed by employees of the supplier organization, to determine whether or not a component or system satisfies the requirements, normally including hardware as well as software.
+
+
+
+fail
+
+Synonyms: test fail
+
+A test is deemed to fail if its actual result does not match its expected result.
+
+
+
+failure
+
+Ref: After Fenton
+
+Deviation of the component or system from its expected delivery, service or result.
+
+
+
+failure rate
+
+Ref: IEEE 610
+
+The ratio of the number of failures of a given category to a given unit of measure, e.g., failures per unit of time, failures per number of transactions, failures per number of computer runs.
+
+
+
+fault attack
+
+See Also: negative testing, security attack
+
+Synonyms: attack
+
+Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usuall focused on reliability or security.
+
+
+
+feature
+
+Ref: After IEEE 1008
+
+Synonyms: software feature
+
+An attribute of a component or system specified or implied by requirements documentation (for example reliability, usability or design constraints).
+
+
+
+formal review
+
+A review characterized by documented procedures and requirements, e.g., inspection.
+
+
+
+functional requirement
+
+Ref: IEEE 610
+
+A requirement that specifies a function that a component or system must perform.
+
+
+
+functional testing
+
+See Also: black-box testing
+
+Testing based on an analysis of the specification of the functionality of a component or system.
+
+
+
+functionality
+
+Ref: ISO 9126
+
+The capability of the software product to provide functions which meet stated and implied needs when the software is used under specified conditions.
+
+
+
+high-level test case
+
+See Also: low-level test case
+
+Synonyms: abstract test case , logical test case
+
+A test case without concrete (implementation level) values for input data and expected results. Logical operators are used: instances of the actual values are not yet defined and/or available.
+
+
+
+impact analysis
+
+The assessment of change to the layers of development documentation, test documentation and components, in order to implement a given change to specified requirements.
+
+
+
+incident
+
+Ref: After IEEE 1008
+
+Synonyms: deviation , software test incident , test incident
+
+Any event occurring that requires investigation.
+
+
+
+incident logging
+
+Recording the details of any incident that occurred, e.g., during testing.
+
+
+
+incident management
+
+Ref: After IEEE 1044
+
+The process of recognizing, investigating, taking action and disposing of incidents. It involves logging incidents, classifying them and identifying the impact.
+
+
+
+incident management tool
+
+See Also: defect management tool
+
+A tool that facilitates the recording and status tracking of incidents. They often have workflow-oriented facilities to track and control the allocation, correction and re-testing of incidents and provide reporting facilities.
+
+
+
+incident report
+
+Ref: After IEEE 829
+
+Synonyms: deviation report , software test incident report , test incident report
+
+A document reporting on any event that occurred, e.g., during the testing, which requires investigation.
+
+
+
+incremental development model
+
+A development lifecycle where a project is broken into a series of increments, each of which delivers a portion of the functionality in the overall project requirements. The requirements are prioritized and delivered in priority order in the appropriate increment. In some (but not all) versions of this lifecycle model, each subproject follows a mini V-model with its own design, coding and testing phases.
+
+
+
+incremental testing
+
+Testing where components or systems are integrated and tested one or some at a time, until all the components or systems are integrated and tested.
+
+
+
+independence of testing
+
+Ref: After DO-178b
+
+Separation of responsibilities, which encourages the accomplishment of objective testing.
+
+
+
+indicator
+
+Ref: ISO 14598
+
+A measure that can be used to estimate or predict another measure.
+
+
+
+informal review
+
+A review not based on a formal (documented) procedure.
+
+
+
+input
+
+A variable (whether stored within a component or outside) that is read by a component.
+
+
+
+input value
+
+See Also: input
+
+An instance of an input.
+
+
+
+inspection
+
+Ref: After IEEE 610, IEEE 1028    See Also: peer review
+
+A type of peer review that relies on visual examination of documents to detect defects, e.g., violations of development standards and non- conformance to higher level documentation. The most formal review technique and therefore always based on a documented procedure.
+
+
+
+installation guide
+
+Supplied instructions on any suitable media, which guides the installer through the installation process. This may be a manual guide, step-by- step procedure, installation wizard, or any other similar process description.
+
+
+
+integration
+
+The process of combining components or systems into larger assemblies.
+
+
+
+integration testing
+
+See Also: component integration testing, system integration testing
+
+Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.
+
+
+
+interface testing
+
+An integration test type that is concerned with testing the interfaces between components or systems.
+
+
+
+interoperability
+
+Ref: After ISO 9126   See Also: functionality
+
+The capability of the software product to interact with one or more specified components or systems.
+
+
+
+interoperability testing
+
+See Also: functionality testing
+
+Synonyms: compatibility testing
+
+Testing to determine the interoperability of a software product.
+
+
+
+invalid testing
+
+See Also: error tolerance, negative testing
+
+Testing using input values that should be rejected by the component or system.
+
+
+
+iterative development model
+
+A development lifecycle where a project is broken into a usually large number of iterations. An iteration is a complete development loop   resulting in a release (internal or external) of an executable product, a subset of the final product under development, which grows from iteratio to iteration to become the final product.
+
+
+
+keyword-driven testing
+
+See Also: data-driven testing
+
+Synonyms: action word-driven testing
+
+A scripting technique that uses data files to contain not only test data and expected results, but also keywords related to the application being tested. The keywords are interpreted by special supporting scripts that are called by the control script for the test.
+
+
+
+level test plan
+
+See Also: test plan
+
+A test plan that typically addresses one test level.
+
+
+
+load testing
+
+See Also: performance testing, stress testing
+
+A type of performance testing conducted to evaluate the behavior of a component or system with increasing load, e.g., numbers of parallel users and/or numbers of transactions, to determine what load can be handled by the component or system.
+
+
+
+
+load testing tool
+
+See Also: performance testing tool
+
+A tool to support load testing whereby it can simulate increasing load, e.g., numbers of concurrent users and/or transactions within a specified time-period.
+
+
+
+maintainability
+
+Ref: ISO 9126
+
+The ease with which a software product can be modified to correct defects, modified to meet new requirements, modified to make future maintenance easier, or adapted to a changed environment.
+
+
+
+maintainability testing
+
+Synonyms: serviceability testing
+
+Testing to determine the maintainability of a software product.
+
+
+
+maintenance
+
+Ref: IEEE 1219
+
+Modification of a software product after delivery to correct defects, to improve performance or other attributes, or to adapt the product to a modified environment.
+
+
+
+maintenance testing
+
+Testing the changes to an operational system or the impact of a changed environment to an operational system.
+
+
+
+master test plan
+
+See Also: test plan
+
+A test plan that typically addresses multiple test levels.
+
+
+
+maturity
+
+Ref: ISO 9126  See Also: Capability Maturity Model Integration, Test Maturity Model integration, reliability
+
+(1) The capability of an organization with respect to the effectiveness and efficiency of its processes and work practices. (2) The capability of th software product to avoid failure as a result of defects in the software.
+
+
+
+maturity model
+
+A structured collection of elements that describe certain aspects of maturity in an organization, and aid in the definition and understanding of an organization's processes. A maturity model often provides a common language, shared vision and framework for prioritizing improvement actions.
+
+
+
+measure
+
+Ref: ISO 14598
+
+The number or category assigned to an attribute of an entity by making a measurement.
+
+
+
+measurement
+
+Ref: ISO 14598
+
+The process of assigning a number or category to an entity to describe an attribute of that entity.
+
+
+
+memory leak
+
+A memory access failure due to a defect in a program's dynamic store allocation logic that causes it to fail to release memory after it has finished using it, eventually causing the program and/or other concurrent processes to fail due to lack of memory.
+
+
+
+metric
+
+Ref: ISO 14598
+
+A measurement scale and the method used for measurement.
+
+
+
+milestone
+
+A point in time in a project at which defined (intermediate) deliverables and results should be ready.
+
+
+
+modeling tool
+
+Ref: Graham .
+
+A tool that supports the creation, amendment and verification of models of the software or system.
+
+
+
+moderator
+
+Synonyms: inspection leader
+
+(1) The leader and main person responsible for an inspection or review process.(2) A neutral person who conducts a usability test session.
+
+
+
+monitoring tool
+
+Ref: After IEEE 610.
+
+A software tool or hardware device that runs concurrently with the component or system under test and supervises, records and/or analyzes th behavior of the component or system.
+
+
+
+multiple condition coverage
+
+Synonyms: branch condition combination coverage , condition combination coverage
+
+The percentage of combinations of all single condition outcomes within one statement that have been exercised by a test suite. 100% multiple condition coverage implies 100% modified condition / decision coverage.
+
+
+
+non-functional requirement
+
+A requirement that does not relate to functionality, but to attributes such as reliability, efficiency, usability, maintainability and portability.
+
+
+
+non-functional testing
+
+Testing the attributes of a component or system that do not relate to functionality, e.g., reliability, efficiency, usability, maintainability and portability.
+
+
+
+open source tool
+
+A software tool that is available to all potential users in source code form, usually via the internet. Its users are permitted, usually under license, to study, change, improve and, at times, to distribute the software.
+
+
+
+operational acceptance testing
+
+See Also: operational testing
+
+Synonyms: production acceptance testing
+
+Operational testing in the acceptance test phase, typically performed in a (simulated) operational environment by operations and/or systems administration staff focusing on operational aspects, e.g., recoverability, resource-behavior, installability and technical compliance.
+
+
+
+operational profile
+
+The representation of a distinct set of tasks performed by the component or system, possibly based on user behavior when interacting with the component or system, and their probabilities of occurrence. A task is logical rather that physical and can be executed over several machines or be executed in non-contiguous time segments.
+
+
+
+operational testing
+
+Ref: IEEE 610
+
+Testing conducted to evaluate a component or system in its operational environment.
+
+
+
+output
+
+A variable (whether stored within a component or outside) that is written by a component.
+
+
+
+pair programming
+
+A software development approach whereby lines of code (production and/or test) of a component are written by two programmers sitting at a single computer. This implicitly means ongoing real-time code reviews are performed.
+
+
+
+pass
+
+Synonyms: test pass
+
+A test is deemed to pass if its actual result matches its expected result.
+
+
+
+path
+
+Synonyms: control flow path
+
+A sequence of events, e.g., executable statements, of a component or system from an entry point to an exit point.
+
+
+
+peer review
+
+A review of a software work product by colleagues of the producer of the product for the purpose of identifying defects and improvements. Examples are inspection, technical review and walkthrough.
+
+
+
+performance
+
+Ref: After IEEE 610    See Also: efficiency
+
+Synonyms: time behavior
+
+The degree to which a system or component accomplishes its designated functions within given constraints regarding processing time and throughput rate.
+
+
+
+performance profiling
+
+The task of analyzing, e.g., identifying performance bottlenecks based on generated metrics, and tuning the performance of a software component or system using tools.
+
+
+
+performance testing
+
+See Also: efficiency testing
+
+Testing to determine the performance of a software product.
+
+
+
+performance testing tool
+
+A tool to support performance testing that usually has two main facilities: load generation and test transaction measurement. Load generation can simulate either multiple users or high volumes of input data. During execution, response time measurements are taken from selected transactions and these are logged. Performance testing tools normally provide reports based on test logs and graphs of load against response times.
+
+
+
+portability
+
+Ref: ISO 9126
+
+The ease with which the software product can be transferred from one hardware or software environment to another.
+
+
+
+portability testing
+
+Synonyms: configuration testing
+
+Testing to determine the portability of a software product.
+
+
+
+post-execution comparison
+
+Comparison of actual and expected results, performed after the software has finished running.
+
+
+
+postcondition
+
+Environmental and state conditions that must be fulfilled after the execution of a test or test procedure.
+
+
+
+precondition
+
+Environmental and state conditions that must be fulfilled before the component or system can be executed with a particular test or test procedure.
+
+
+
+priority
+
+The level of (business) importance assigned to an item, e.g., defect.
+
+
+
+probe effect
+
+The effect on the component or system by the measurement instrument when the component or system is being measured, e.g., by a performance testing tool or monitor. For example performance may be slightly worse when performance testing tools are being used.
+
+
+
+process
+
+Ref: ISO 12207
+
+A set of interrelated activities, which transform inputs into outputs.
+
+
+
+process cycle test
+
+Ref: TMap   See Also: procedure testing
+
+A black-box test design technique in which test cases are designed to execute business procedures and processes.
+
+
+
+process improvement
+
+Ref: CMMI
+
+A program of activities designed to improve the performance and maturity of the organization's processes, and the result of such a program.
+
+
+
+product risk
+
+See Also: risk
+
+A risk directly related to the test object.
+
+
+
+product-based quality
+
+Ref: After Garvin     See Also: manufacturing-based quality, quality attribute, transcendent-based quality, user-based quality, value-based quality
+
+A view of quality, wherein quality is based on a well-defined set of quality attributes. These attributes must be measured in an objective and quantitative way. Differences in the quality of products of the same type can be traced back to the way the specific quality attributes have been implemented.
+
+
+
+
+project
+
+Ref: ISO 9000
+
+A project is a unique set of coordinated and controlled activities with start and finish dates undertaken to achieve an objective conforming to specific requirements, including the constraints of time, cost and resources.
+
+
+
+project risk
+
+See Also: risk
+
+A risk related to management and control of the (test) project, e.g., lack of staffing, strict deadlines, changing requirements, etc.
+
+
+
+qualification
+
+Ref: ISO 9000
+
+The process of demonstrating the ability to fulfill specified requirements. Note the term "qualified" is used to designate the corresponding status
+
+
+
+quality
+
+Ref: After IEEE 610
+
+The degree to which a component, system or process meets specified requirements and/or user/customer needs and expectations.
+
+
+
+quality assurance
+
+Ref: ISO 9000
+
+Part of quality management focused on providing confidence that quality requirements will be fulfilled.
+
+
+
+quality attribute
+
+Ref: IEEE 610
+
+Synonyms: quality characteristic , software product characteristic , software quality characteristic
+
+A feature or characteristic that affects an item's quality.
+
+
+
+Rational Unified Process (RUP)
+
+A proprietary adaptable iterative software development process framework consisting of four project lifecycle phases: inception, elaboration, construction and transition.
+
+
+
+regression testing
+
+Testing of a previously tested program following modification to ensure that defects have not been introduced or uncovered in unchanged area of the software, as a result of the changes made. It is performed when the software or its environment is changed.
+
+
+
+reliability
+
+Ref: ISO 9126
+
+The ability of the software product to perform its required functions under stated conditions for a specified period of time, or for a specified number of operations.
+
+
+
+reliability growth model
+
+A model that shows the growth in reliability over time during continuous testing of a component or system as a result of the removal of defects that result in reliability failures.
+
+
+
+reliability testing
+
+Testing to determine the reliability of a software product.
+
+
+
+requirement
+
+Ref: After IEEE 610
+
+A condition or capability needed by a user to solve a problem or achieve an objective that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document.
+
+
+
+requirements management tool
+
+A tool that supports the recording of requirements, requirements attributes (e.g., priority, knowledge responsible) and annotation, and facilitates traceability through layers of requirements and requirements change management. Some requirements management tools also provide   facilities for static analysis, such as consistency checking and violations to pre-defined requirements rules.
+
+
+
+requirements phase
+
+Ref: IEEE 610
+
+The period of time in the software lifecycle during which the requirements for a software product are defined and documented.
+
+
+
+requirements-based testing
+
+An approach to testing in which test cases are designed based on test objectives and test conditions derived from requirements, e.g., tests that exercise specific functions or probe non-functional attributes such as reliability or usability.
+
+
+
+result
+
+See Also: actual result, expected result
+
+Synonyms: outcome , test outcome , test result
+
+The consequence/outcome of the execution of a test. It includes outputs to screens, changes to data, reports, and communication messages sent out.
+
+
+
+resumption requirements
+
+Ref: After IEEE 829
+
+The defined set of testing activities that must be repeated when testing is re-started after a suspension.
+
+
+
+review
+
+Ref: After IEEE 1028
+
+An evaluation of a product or project status to ascertain discrepancies from planned results and to recommend improvements. Examples include management review, informal review, technical review, inspection, and walkthrough.
+
+
+
+review tool
+
+A tool that provides support to the review process. Typical features include review planning and tracking support, communication support, collaborative reviews and a repository for collecting and reporting of metrics.
+
+
+
+reviewer
+
+Synonyms: checker , inspector
+
+The person involved in the review that identifies and describes anomalies in the product or project under review. Reviewers can be chosen to represent different viewpoints and roles in the review process.
+
+
+
+risk
+
+A factor that could result in future negative consequences.
+
+
+
+risk analysis
+
+The process of assessing identified project or product risks to determine their level of risk, typically by estimating their impact and probability of occurrence (likelihood).
+
+
+
+
+risk assessment
+
+See Also: product risk, project risk, risk, risk impact, risk level, risk likelihood
+
+The process of identifying and subsequently analyzing the identified project or product risk to determine its level of risk, typically by assigning likelihood and impact ratings.
+
+
+
+risk level
+
+Synonyms: risk exposure
+
+The importance of a risk as defined by its characteristics impact and likelihood. The level of risk can be used to determine the intensity of testin to be performed. A risk level can be expressed either qualitatively (e.g., high, medium, low) or quantitatively.
+
+
+
+risk likelihood
+
+Synonyms: likelihood
+
+The estimated probability that a risk will become an actual outcome or event.
+
+
+
+risk management
+
+Systematic application of procedures and practices to the tasks of identifying, analyzing, prioritizing, and controlling risk.
+
+
+
+risk mitigation
+
+Synonyms: risk control
+
+The process through which decisions are reached and protective measures are implemented for reducing risks to, or maintaining risks within, specified levels.
+
+
+
+risk-based testing
+
+An approach to testing to reduce the level of product risks and inform stakeholders of their status, starting in the initial stages of a project. It involves the identification of product risks and the use of risk levels to guide the test process.
+
+
+
+robustness
+
+Ref: IEEE 610   See Also: error-tolerance, fault-tolerance
+
+The degree to which a component or system can function correctly in the presence of invalid inputs or stressful environmental conditions.
+
+
+
+robustness testing
+
+Testing to determine the robustness of the software product.
+
+
+
+root cause
+
+Ref: CMMI
+
+A source of a defect such that if it is removed, the occurrence of the defect type is decreased or removed.
+
+
+
+safety
+
+Ref: ISO 9126
+
+The capability of the software product to achieve acceptable levels of risk of harm to people, business, software, property or the environment in  a specified context of use.
+
+
+
+scribe
+
+Synonyms: recorder
+
+The person who records each defect mentioned and any suggestions for process improvement during a review meeting, on a logging form. Th scribe should ensure that the logging form is readable and understandable.
+
+
+
+
+scripting language
+
+A programming language in which executable test scripts are written, used by a test execution tool (e.g., a capture/playback tool).
+
+
+
+security
+
+Ref: ISO 9126    See Also: functionality
+
+Attributes of software products that bear on its ability to prevent unauthorized access, whether accidental or deliberate, to programs and data.
+
+
+
+security testing
+
+See Also: functionality testing
+
+Testing to determine the security of the software product.
+
+
+
+security testing tool
+
+A tool that provides support for testing security characteristics and vulnerabilities.
+
+
+
+security tool
+
+A tool that supports operational security.
+
+
+
+severity
+
+Ref: After IEEE 610
+
+The degree of impact that a defect has on the development or operation of a component or system.
+
+
+
+simulation
+
+Ref: ISO 2382/1
+
+The representation of selected behavioral characteristics of one physical or abstract system by another system.
+
+
+
+simulator
+
+Ref: After IEEE 610, DO178b    See Also: emulator
+
+A device, computer program or system used during testing, which behaves or operates like a given system when provided with a set of controlled inputs.
+
+
+
+site acceptance testing
+
+Acceptance testing by users/customers at their site, to determine whether or not a component or system satisfies the user/customer needs and fits within the business processes, normally including hardware as well as software.
+
+
+
+software
+
+Ref: IEEE 610
+
+Computer programs, procedures, and possibly associated documentation and data pertaining to the operation of a computer system.
+
+
+
+software integrity level
+
+The degree to which software complies or must comply with a set of stakeholder-selected software and/or software-based system characteristics (e.g., software complexity, risk assessment, safety level, security level, desired performance, reliability or cost) which are define to reflect the importance of the software to its stakeholders.
+
+
+
+software lifecycle
+
+The period of time that begins when a software product is conceived and ends when the software is no longer available for use. The software lifecycle typically includes a concept phase, requirements phase, design phase, implementation phase, test phase, installation and checkout phase, operation and maintenance phase, and sometimes, retirement phase. Note these phases may overlap or be performed iteratively.
+
+
+
+specification
+
+Ref: After IEEE 610
+
+A document that specifies, ideally in a complete, precise and verifiable manner, the requirements, design, behavior, or other characteristics of a component or system, and, often, the procedures for determining whether these provisions have been satisfied.
+
+
+
+stability
+
+Ref: ISO 9126    See Also: maintainability
+
+The capability of the software product to avoid unexpected effects from modifications in the software.
+
+
+
+standard
+
+Ref: After CMMI
+
+Formal, possibly mandatory, set of requirements developed and used to prescribe consistent approaches to the way of working or to provide guidelines (e.g., ISO/IEC standards, IEEE standards, and organizational standards).
+
+
+
+standard-compliant testing
+
+See Also: process-compliant testing
+
+Testing that complies to a set of requirements defined by a standard, e.g., an industry testing standard or a standard for testing safety-critical systems.
+
+
+
+state table
+
+A grid showing the resulting transitions for each state combined with each possible event, showing both valid and invalid transitions.
+
+
+
+state transition
+
+A transition between two states of a component or system.
+
+
+
+state transition testing
+
+See Also: N-switch testing
+
+Synonyms: finite state testing
+
+A black-box test design technique in which test cases are designed to execute valid and invalid state transitions.
+
+
+
+statement
+
+Synonyms: source statement
+
+An entity in a programming language, which is typically the smallest indivisible unit of execution.
+
+
+
+statement coverage
+
+The percentage of executable statements that have been exercised by a test suite.
+
+
+
+statement testing
+
+A white-box test design technique in which test cases are designed to execute statements.
+
+
+
+static analysis
+
+Analysis of software development artifacts, e.g., requirements or code, carried out without execution of these software development artifacts. Static analysis is usually carried out by means of a supporting tool.
+
+
+
+static analyzer
+
+Synonyms: analyzer , static analysis tool
+
+A tool that carries out static analysis.
+
+
+
+static code analysis
+
+Analysis of source code carried out without execution of that software.
+
+
+
+static testing
+
+Testing of a software development artifact, e.g., requirements, design or code, without execution of these artifacts, e.g., reviews or static analysis.
+
+
+
+stress testing
+
+Ref: After IEEE 610   See Also: performance testing, load testing
+
+A type of performance testing conducted to evaluate a system or component at or beyond the limits of its anticipated or specified workloads, or with reduced availability of resources such as access to memory or servers.
+
+
+
+stress testing tool
+
+A tool that supports stress testing.
+
+
+
+structural coverage
+
+Coverage measures based on the internal structure of a component or system.
+
+
+
+stub
+
+Ref: After IEEE 610
+
+A skeletal or special-purpose implementation of a software component, used to develop or test a component that calls or is otherwise dependent on it. It replaces a called component.
+
+
+
+system
+
+Ref: IEEE 610
+
+A collection of components organized to accomplish a specific function or set of functions.
+
+
+
+system integration testing
+
+Testing the integration of systems and packages; testing interfaces to external organizations (e.g., Electronic Data Interchange, Internet).
+
+
+
+system of systems
+
+Multiple heterogeneous, distributed systems that are embedded in networks at multiple levels and in multiple interconnected domains, addressing large-scale inter-disciplinary common problems and purposes, usually without a common management structure.
+
+
+
+system testing
+
+Ref: Hetzel
+
+Testing an integrated system to verify that it meets specified requirements.
+
+
+
+system under test (SUT)
+
+See test object.
+
+
+
+Systematic Test and Evaluation Process (STEP)
+
+See Also: content-based model
+
+A structured testing methodology, also used as a content-based model for improving the testing process. Systematic Test and Evaluation Process (STEP) does not require that improvements occur in a specific order.
+
+
+
+technical review
+
+Ref: Gilb and Graham, IEEE 1028   See Also: peer review
+
+A peer group discussion activity that focuses on achieving consensus on the technical approach to be taken.
+
+
+
+test
+
+Ref: IEEE 829
+
+A set of one or more test cases.
+
+
+
+test analysis
+
+The process of analyzing the test basis and defining test objectives.
+
+
+
+test approach
+
+The implementation of the test strategy for a specific project. It typically includes the decisions made that follow based on the (test) project's goal and the risk assessment carried out, starting points regarding the test process, the test design techniques to be applied, exit criteria and test types to be performed.
+
+
+
+test automation
+
+The use of software to perform or support test activities, e.g., test management, test design, test execution and results checking.
+
+
+
+test basis
+
+Ref: After TMap
+
+All documents from which the requirements of a component or system can be inferred. The documentation on which the test cases are based. a document can be amended only by way of formal amendment procedure, then the test basis is called a frozen test basis.
+
+
+
+test case
+
+Ref: After IEEE 610
+
+A set of input values, execution preconditions, expected results and execution postconditions, developed for a particular objective or test condition, such as to exercise a particular program path or to verify compliance with a specific requirement.
+
+
+
+test case specification
+
+Ref: After IEEE 829   See Also: test specification
+
+A document specifying a set of test cases (objective, inputs, test actions, expected results, and execution preconditions) for a test item.
+
+
+
+test charter
+
+See Also: exploratory testing
+
+Synonyms: charter
+
+A statement of test objectives, and possibly test ideas about how to test. Test charters are used in exploratory testing.
+
+
+
+test closure
+
+See Also: test process
+
+During the test closure phase of a test process data is collected from completed activities to consolidate experience, testware, facts and numbers. The test closure phase consists of finalizing and archiving the testware and evaluating the test process, including preparation of a tes evaluation report.
+
+
+
+test comparator
+
+Synonyms:  comparator
+
+A test tool to perform automated test comparison of actual results with expected results.
+
+
+
+test condition
+
+Synonyms: test requirement , test situation
+
+An item or event of a component or system that could be verified by one or more test cases, e.g., a function, transaction, feature, quality attribute, or structural element.
+
+
+
+test control
+
+See Also: test management
+
+A test management task that deals with developing and applying a set of corrective actions to get a test project on track when monitoring show  a deviation from what was planned.
+
+
+
+test data
+
+Data that exists (for example, in a database) before a test is executed, and that affects or is affected by the component or system under test.
+
+
+
+test data preparation tool
+
+Synonyms: test generator
+
+A type of test tool that enables data to be selected from existing databases or created, generated, manipulated and edited for use in testing.
+
+
+
+test design
+
+See Also: test design specification
+
+The process of transforming general test objectives into tangible test conditions and test cases.
+
+
+
+test design specification
+
+Ref: After IEEE 829   See Also: test specification
+
+A document specifying the test conditions (coverage items) for a test item, the detailed test approach and identifying the associated high-level test cases.
+
+
+
+test design technique
+
+Synonyms: test case design technique , test specification technique , test technique
+
+Procedure used to derive and/or select test cases.
+
+
+
+test design tool
+
+A tool that supports the test design activity by generating test inputs from a specification that may be held in a CASE tool repository, e.g., requirements management tool, from specified test conditions held in the tool itself, or from code.
+
+
+
+test environment
+
+Ref: After IEEE 610
+
+Synonyms: test bed , test rig
+
+An environment containing hardware, instrumentation, simulators, software tools, and other support elements needed to conduct a test.
+
+
+
+test estimation
+
+The calculated approximation of a result related to various aspects of testing (e.g., effort spent, completion date, costs involved, number of test cases, etc.) which is usable even if input data may be incomplete, uncertain, or noisy.
+
+
+
+test execution
+
+The process of running a test on the component or system under test, producing actual result(s).
+
+
+
+test execution schedule
+
+A scheme for the execution of test procedures. Note: The test procedures are included in the test execution schedule in their context and in the order in which they are to be executed.
+
+
+
+test execution tool
+
+A type of test tool that is able to execute other software using an automated test script, e.g., capture/playback.
+
+
+
+test harness
+
+A test environment comprised of stubs and drivers needed to execute a test.
+
+
+
+test implementation
+
+The process of developing and prioritizing test procedures, creating test data and, optionally, preparing test harnesses and writing automated test scripts.
+
+
+
+test infrastructure
+
+The organizational artifacts needed to perform testing, consisting of test environments, test tools, office environment and procedures.
+
+
+
+test input
+
+The data received from an external source by the test object during test execution. The external source can be hardware, software or human.
+
+
+
+test item
+
+See Also: test object
+
+The individual element to be tested. There usually is one test object and many test items.
+
+
+
+test level
+
+Ref: After TMap
+
+Synonyms: test stage
+
+A group of test activities that are organized and managed together. A test level is linked to the responsibilities in a project. Examples of test levels are component test, integration test, system test and acceptance test.
+
+
+
+test log
+
+Ref: IEEE 829
+
+Synonyms: test record , test run log
+
+A chronological record of relevant details about the execution of tests.
+
+
+
+
+test logging
+
+Synonyms: test recording
+
+The process of recording information about tests executed into a test log.
+
+
+
+test management
+
+The planning, estimating, monitoring and control of test activities, typically carried out by a test manager.
+
+
+
+test management tool
+
+A tool that provides support to the test management and control part of a test process. It often has several capabilities, such as testware management, scheduling of tests, the logging of results, progress tracking, incident management and test reporting.
+
+
+
+test manager
+
+Synonyms: test leader
+
+The person responsible for project management of testing activities and resources, and evaluation of a test object. The individual who directs, controls, administers, plans and regulates the evaluation of a test object.
+
+
+
+test monitoring
+
+See Also: test management
+
+A test management task that deals with the activities related to periodically checking the status of a test project. Reports are prepared that compare the actuals to that which was planned.
+
+
+
+test object
+
+See Also: test item
+
+Synonyms: system under test
+
+The component or system to be tested.
+
+
+
+test objective
+
+A reason or purpose for designing and executing a test.
+
+
+
+test oracle
+
+Ref: After Adrion
+
+Synonyms: oracle
+
+A source to determine expected results to compare with the actual result of the software under test. An oracle may be the existing system (for a benchmark), other software, a user manual, or an individual's specialized knowledge, but should not be the code.
+
+
+
+test phase
+
+Ref: After Gerrard
+
+A distinct set of test activities collected into a manageable phase of a project, e.g., the execution activities of a test level.
+
+
+
+test plan
+
+Ref: After IEEE 829
+
+A document describing the scope, approach, resources and schedule of intended test activities. It identifies amongst others test items, the features to be tested, the testing tasks, who will do each task, degree of tester independence, the test environment, the test design techniques and entry and exit criteria to be used, and the rationale for their choice, and any risks requiring contingency planning. It is a record of the test planning process.
+
+
+
+test planning
+
+The activity of establishing or updating a test plan.
+
+
+
+test policy
+
+A high-level document describing the principles, approach and major objectives of the organization regarding testing.
+
+
+
+test procedure specification
+
+Ref: After IEEE 829   See Also: test specification
+
+Synonyms: test procedure , test scenario
+
+A document specifying a sequence of actions for the execution of a test. Also known as test script or manual test script.
+
+
+
+test process
+
+The fundamental test process comprises test planning and control, test analysis and design, test implementation and execution, evaluating exit criteria and reporting, and test closure activities.
+
+
+
+test process group (TPG)
+
+Ref: After CMMI
+
+A collection of (test) specialists who facilitate the definition, maintenance, and improvement of the test processes used by an organization.
+
+
+
+test progress report
+
+Synonyms: test report
+
+A document summarizing testing activities and results, produced at regular intervals, to report progress of testing activities against a baseline (such as the original test plan) and to communicate risks and alternatives requiring a decision to management.
+
+
+
+test reporting
+
+See Also: test process
+
+Collecting and analyzing data from testing activities and subsequently consolidating the data in a report to inform stakeholders.
+
+
+
+test run
+
+Execution of a test on a specific version of the test object.
+
+
+
+test schedule
+
+A list of activities, tasks or events of the test process, identifying their intended start and finish dates and/or times, and interdependencies.
+
+
+
+test script
+
+Commonly used to refer to a test procedure specification, especially an automated one.
+
+
+
+test session
+
+See Also: exploratory testing
+
+An uninterrupted period of time spent in executing tests. In exploratory testing, each test session is focused on a charter, but testers can also explore new opportunities or issues during a session. The tester creates and executes on the fly and records their progress.
+
+
+
+test specification
+
+A document that consists of a test design specification, test case specification and/or test procedure specification.
+
+
+
+test strategy
+
+A high-level description of the test levels to be performed and the testing within those levels for an organization or programme (one or more projects).
+
+
+
+test suite
+
+Synonyms: test case suite , test set
+
+A set of several test cases for a component or system under test, where the post condition of one test is often used as the precondition for the next one.
+
+
+
+test summary report
+
+Ref: After IEEE 829
+
+Synonyms: test report
+
+A document summarizing testing activities and results. It also contains an evaluation of the corresponding test items against exit criteria.
+
+
+
+test tool
+
+Ref: TMap    See Also: CAST
+
+A software product that supports one or more test activities, such as planning and control, specification, building initial files and data, test execution and test analysis.
+
+
+
+test type
+
+Ref: After TMap
+
+A group of test activities aimed at testing a component or system focused on a specific test objective, i.e. functional test, usability test, regression test etc. A test type may take place on one or more test levels or test phases.
+
+
+
+test-driven development (TDD)
+
+A way of developing software where the test cases are developed, and often automated, before the software is developed to run those test cases.
+
+
+
+testability
+
+Ref: ISO 9126    See Also: maintainability
+
+The capability of the software product to enable modified software to be tested.
+
+
+
+tester
+
+A skilled professional who is involved in the testing of a component or system.
+
+
+
+testing
+
+The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.
+
+
+
+testware
+
+Ref: After Fewster and Graham
+
+Artifacts produced during the test process required to plan, design, and execute tests, such as documentation, scripts, inputs, expected results set-up and clear-up procedures, files, databases, environment, and any additional software or utilities used in testing.
+
+
+
+traceability
+
+See Also: horizontal traceability, vertical traceability
+
+The ability to identify related items in documentation and software, such as requirements with associated tests.
+
+
+
+unit test framework
+
+Ref: Graham
+
+A tool that provides an environment for unit or component testing in which a component can be tested in isolation or with suitable stubs and drivers. It also provides other support for the developer, such as debugging capabilities.
+
+
+
+unreachable code
+
+Synonyms: dead code
+
+Code that cannot be reached and therefore is impossible to execute.
+
+
+
+usability
+
+Ref: ISO 9126
+
+The capability of the software to be understood, learned, used and attractive to the user when used under specified conditions.
+
+
+
+usability testing
+
+Ref: After ISO 9126
+
+Testing to determine the extent to which the software product is understood, easy to learn, easy to operate and attractive to the users under specified conditions.
+
+
+
+use case
+
+A sequence of transactions in a dialogue between an actor and a component or system with a tangible result, where an actor can be a user or anything that can exchange information with the system.
+
+
+
+use case testing
+
+Synonyms: scenario testing , user scenario testing
+
+A black-box test design technique in which test cases are designed to execute scenarios of use cases.
+
+
+
+user acceptance testing
+
+See Also: acceptance testing
+
+Acceptance testing carried out by future users in a (simulated) operational environment focusing on user requirements and needs.
+
+
+
+V-model
+
+A framework to describe the software development lifecycle activities from requirements specification to maintenance. The V-model illustrates how testing activities can be integrated into each phase of the software development lifecycle.
+
+
+
+validation
+
+Ref: ISO 9000
+
+Confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled.
+
+
+
+variable
+
+An element of storage in a computer that is accessible by a software program by referring to it by a name.
+
+
+
+verification
+
+Ref: ISO 9000
+
+Confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled.
+
+
+
+walkthrough
+
+Ref: Freedman and Weinberg, IEEE 1028    See Also: peer review
+
+Synonyms: structured walkthrough
+
+A step-by-step presentation by the author of a document in order to gather information and to establish a common understanding of its content.
+
+
+
+white-box test design technique
+
+Synonyms: structural test design technique , structure-based test design technique , structure-based technique , white-box technique
+
+Procedure to derive and/or select test cases based on an analysis of the internal structure of a component or system.
+
+
+
+white-box testing
+
+Synonyms: clear-box testing , code-based testing , glass-box testing , logic-coverage testing , logic-driven testing , structural testing , structure-based testing
+
+Testing based on an analysis of the internal structure of the component or system.
+
+

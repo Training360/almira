@@ -1,0 +1,4737 @@
+Hungarian standard glossary of terms
+used in Software Testing
+Szoftvertesztelés egységesített
+kifejezéseinek gyűjteménye
+HTB-Hungarian Testing Board
+Magyar Szoftvertesztelői Tanács Egyesület
+Neumann János u.1/E
+H-1117 Budapest, Hungary
+Tel: +36 30 611 4242
+Fax: +36 1 382 7298
+http://www.hstqb.org
+
+Version:
+Last updated:
+
+3.2
+27/10/2014
+
+Revision History
+
+Date
+
+Version
+
+Description
+
+Author
+
+21/05/2008
+
+0.3
+
+Document structure
+
+Árpád Beszédes
+
+21/09/2008
+
+0.4
+
+Draft including A-K, T-Z
+
+Gábor Kapros
+
+18/10/2008
+
+0.6
+
+02/11/2008
+
+0.7
+
+Suggestions for translation
+
+Árpád Beszédes
+
+21/03/2009
+
+0.8
+
+Incorporated common voting results
+
+Gábor Kapros
+
+26/03/2009
+
+0.9
+
+Incorporated common voting results
+
+Gábor Kapros
+
+26/03/2009
+
+1.0
+
+Released version
+
+Gábor Kapros
+
+10/10/09
+
+2.0
+
+Released based on review remarks
+
+Gábor Kapros
+
+26/02/2010
+
+2.1
+
+Small correction
+
+Gábor Kapros
+
+15/03/2010
+
+3.0
+
+Releaed version based on review
+assessments of foundation members of
+Hungarian Testing Board. Released
+parallel with Official ISTQB CTFL
+Syllabus – Hungarian 2.0
+
+Gábor Kapros
+
+22/06/2010
+
+3.01
+
+Small corrections
+
+Gábor Kapros
+
+27/06/2010
+
+3.09
+
+Adapted to ISTQB Glossary 2.1
+
+Gábor Kapros
+
+04/05/2011
+
+3.1
+
+HTB review
+
+Gábor Kapros
+
+04/05/2011
+
+3.1
+
+HTB review
+
+Gábor Kapros
+
+04/05/2011
+
+3.11
+
+Small corrections
+
+Gábor Kapros
+
+21/02/2012
+
+3.12
+
+Small corrections found during review
+of exam questions
+
+Gábor Kapros
+
+14/07/2013
+
+3.13
+
+Adaption to ISTQB glossary 2.2
+
+Gábor Kapros
+
+4/08/2014
+
+3.2
+
+Adaption to ISTQB glossary 2.3 and 2.4
+
+Gábor Kapros
+
+Gábor Kapros
+
+Az alábbi táblázat az ISTQB Glossary 2.3 változat változásait tartalmazza - az új, illetve
+megváltozott kifejezéseket. A változás többnyire csupán az F-AT kulcsszó
+hozzárendelését jelenti, néhány esetben történt csupán tartalmi változás, illetve
+kiegészítés, ezeket * jelzi:
+
+Új kifejezések
+-
+
+build verification test
+burndown chart
+BVT
+content reference model
+escaped defect
+MCDC
+n-wise testing
+PRISMA
+process reference model
+QFD
+Quality Function Deployment
+SUT
+system under test
+TDD
+test analysis
+test leader
+test reporting
+traceability matrix
+
+Megváltozott kifejezések
+-
+
+acceptance criteria *
+accuracy testing *
+agile manifesto
+agile software development
+combinatorial testing *
+configuration item
+configuration management
+defect taxonomy
+defect-based test design technique *
+exit criteria *
+exploratory testing
+incident report
+incremental development model
+iterative development model
+maintainability testing
+orthogonal array testing *
+pairwise testing *
+performance testing
+product risk
+quality risk
+regression testing
+risk assessment *
+security testing
+software lifecycle
+test approach
+test automation
+test basis
+test estimation
+test automation execution
+test oracle
+test strategy
+unit test framework
+usability testing
+user story
+
+Az alábbi táblázat az ISTQB Glossary 2.4 változat változásait tartalmazza – főként új,
+Expert Level Test Automation – Engineer (ETAE) kulcsszavak, illetve mozaikszavak
+kerültek be a kifejezésgyűjteménybe.
+
+Új kifejezések
+-
+
+API
+capture/playback
+CLI
+CLI testing
+EMTE
+equivalent manual test effort
+generic test automation architecture
+GUI
+GUI testing
+level of intrusion
+linear scripting
+process-driven testing
+structured scripting
+SUT
+test adaption layer
+test automation architecture
+test automation framework
+test automation manager
+test automation solution
+test automation strategy
+test case result
+test definition layer
+test execution layer
+test generation layer
+test hook
+test process improvement
+
+Megváltozott kifejezések
+-
+
+API testing
+
+Table of Contents / Tartalomjegyzék
+1.
+2.
+3.
+4.
+5.
+
+Előszó ....................................................................................................................... 5
+Document structure / A dokumentum szerkezete...................................................... 5
+Védjegyek ................................................................................................................. 6
+Hungarian definitions / Magyar meghatározások ...................................................... 7
+English-Hungarian dictionary / Angol-magyar szótár .............................................. 67
+
+1. Előszó
+A dokumentum az ISTQB 3.2 kifejezésgyűjtemény magyar megfelelője. Ezen magyar
+nyelvű dokumentum az alapja az ISTQB magyar nyelvű Alapszintű Vizsgának.
+A dokumentum kiadása, illetve módosítása a Hungarian Testing Board (HTB)
+hatáskörébe tartozik. Bármilyen módosítás csakis a HTB írásbeli engedélyével
+lehetséges
+Copyright © 2009 Hungarian Testing Board. Minden jog fenntartva.
+Contact, suggestions / Kapcsolat, javaslatok
+glossary@hstqb.org
+Edited by / Szerkeszti
+Kapros Gábor
+Contributors / Közreműködők
+Nyári Erika, Demeter Huba, Dr.Kovács Attila, Dr.BurcsiPéter, Beszédes Árpád
+
+2. Document structure / A dokumentum szerkezete
+A dokumentum két fő részből áll:
+1. Részletező kifejezésgyűjtemény a kifejezések magyar megfelelőjének ABC
+sorrendjében. Minden kifejezés végén egy “” karakterre utalunk a megfelelő angol
+nyelvű kifejezésre.
+ előfordul, hogy két angol nyelvű magyar szinonima létezik ugyanazon szakmai
+tartalomra, amelyeket adott esetben magyarul is két különböző szinonimával fordítunk
+le. Ilyen esetben az egyik magyar kifejezés leírásánál a „lásd” utalószó után a másik
+
+magyar kifejezés található – a szakmai tartalom ezen kifejezés leírásánál található.
+Olyan eset is van, amikor – szándékosan – egyetlen magyar kifejezést használunk két
+különböző angol kifejezésre
+ amennyiben a „lásd még:” utalás látható a kifejezés leírásának a végén, az azt jelenti,
+hogy az adott kifejezés tartalmához közel álló másik kifejezés leírását is érdemes
+elolvasni, mert ezáltal további információkhoz juthatunk az eredeti kifejezéssel
+kapcsolatban.
+
+2. Angol-magyar kifejezésszótár az angol kifejezések angol ABC sorrendjében
+
+A kifejezésgyűjteményben található kulcsszavak:
+F : Alapszintű ISTQB kulcsszó
+F-AT : ISTQB Foundation Agile Tester syllabus
+ATM : HaladóSzintű ISTQB kulcsszó – Test Management syllabus
+ATA : HaladóSzintű ISTQB kulcsszó – Test Analyst syllabus
+ATT : HaladóSzintű ISTQB kulcsszó – Technical Test Analyst syllabus
+EITP : Szakértő Szintű ISTQB kulcsszó – Improving the Testing Process syllabus
+ETAE : Szakértő Szintű ISTQB kulcsszó – Test Automation syllabus
+ETM : Szakértő Szintű ISTQB kulcsszó – Test Management syllabus
+
+Az alapszintű kifejezések természetesen a Haladó Szintű vizsgának is részét képezik.
+
+Hivatkozások
+Kétféleképpen használunk hivatkozásokat:.
+- a szögletes zárójelek azt jelentik, hogy a hivatkozás pontos szövegét másoltuk át
+- amennyiben a hivatkozást hozzáigazítottuk az ISTQB terminológiához, ott az “alapján”
+taggal szóval egészítettük ki mondatot, pl: [ISO 9126 alapján].
+
+3. Védjegyek
+A következő védjegyeket használjuk a dokumentumban:
+- CMMI és IDEAL – a Carnegie Mellon University bejegyezett védjegye
+- EFQM - az EFQM Foundation bejegyzett védjegye
+- Rational Unified Process - aRational Software Corporation bejegyzett védjegye
+- STEP – a Software Quality Engineering bejegyzett védjegye
+- TMap, TPA és TPI Next - a Sogeti Nederland BV bejegyzett védjegye
+- TMMi - aTMMi Foundation bejegyzett védjegye
+
+4. 4. Hungarian definitions / Magyar meghatározások
+absztrakt teszteset: lásd magas szintű teszteset.  abstract test case
+ATA
+
+adaptálhatóság: a szoftver azon tulajdonsága, hogy különböző környezetben
+mennyire képes különböző külső eszközök nélkül helyesen működni. Lásd
+még: hordozhatóság.  adaptability
+adatbázis-integritás teszt: azon metódusok és folyamatok tesztelése, amelyek
+az adat(bázis)ok elérését és kezelését végzik. Azt vizsgálja, hogy a
+hozzáférési metódusok, folyamatok és adat-szabályok az elvárásoknak
+megfelelően működnek-e, illetve hogy az adatbázis-műveletek során az
+adatok nem károsodnak-e, illetve nem történik-e nem szándékolt módosulás,
+törlés, vagy létrehozás.  database integrity testing
+
+F
+
+adatfolyam: az adatobjektumok állapotsorrendjének, valamint lehetséges
+változásainak absztrakt megjelenítése, ahol az objektum állapota létrehozás,
+használat, illetve megszüntetés lehet.  data flow
+
+ATT
+
+adatfolyam elemzés: a változók definícióján és használatán alapuló statikus
+elemzés.  data flow analysis
+adatfolyam lefedettség: a tesztkészlet által végrehajtott definíció-használati
+párok aránya.  data flow coverage
+adatfolyam teszt: fehérdoboz tesztelési módszer, amely során a változók
+definíció-használati párjait végrehajtó tesztesetek tervezünk.  data flow
+testing
+adat-integritás teszt: lásd: adatbázis-integritás teszt.  data integrity testing
+adaminősítés: az adatok egy olyan attribútuma, amely néhány előre definiált
+kritériummal, pl. az üzleti elvárásokkal, az adat integritással, adat
+konzisztenciával szembeni megfelelőséget mutatja.  data quality
+
+F,ATT
+
+adatvezérelt teszt: olyan szkript módszer, amely egy táblázatban tárolja a
+bemeneteket és az elvárt értékeket oly módon, hogy egy vezérlő szkript
+minden tesztet végre tud hajtani belőle. Az adatvezérelt tesztet gyakran
+használják
+pl.
+felvevő/lejátszó
+tesztelő
+eszközök
+használatának
+támogatására. [Fewster and Graham] Lásd még: kulcsszó-alapú teszt. 
+data--driven testing
+ad hoc felülvizsgálat: lásd informális felülvizsgálat.  ad hoc review
+ad hoc teszt: olyan informális tesztelés, ahol nincsenek formális tesztelőkészületek, nincs felismerhető teszttervezési technika, nincsenek elvárt
+eredmények, a teszt végrehajtása tetszés szerint történik.  ad hoc testing
+
+EITP
+
+agilis tesztelés: az agilis módszertannal (mint pl. az extrém programozás, XP)
+fejlesztett szoftverek tesztelési gyakorlata. A fejlesztést a tesztelés
+kiszolgálójának tekinti és annak fontosságát hangsúlyozza, hogy a műszaki
+
+teszttervezés megelőzi a fejlesztést. Lásd még: tesztvezérelt fejlesztés. 
+agile testing
+F-AT
+
+agilis kiáltvány: az agilis szoftverfejlesztés alapvető értékeit tartalmazó
+nyilatkozat. A fő értékek:
+- az egyének és kölcsönhatásaik fontosabbak, mint az folyamatok és az
+eszközök
+- a működő szoftver fontosabb, mint a minden részletre kiterjedő
+dokumentáció
+- az ügyféllel való együttműködés fontosabb, mint a szerződéses tárgyalások
+- a változásokra való reagálás fontosabb, mint a terv követése  agile
+manifesto.
+
+F-AT,EITP agilis szoftverfejlesztés: a szoftverfejlesztési módszerek csoportja, amely az
+iteratív fejlesztési modellen alapul, mind a követelmények, mind a
+megoldások az önszerveződő, széleskörű feladatokkal rendelkező csapatok
+együttműködése által jönnek létre.  agile software development
+aktor: felhasználó vagy bárki más, lehet egy rendszer is, aki/ami a tesztelt
+rendszerrel meghatározott kapcsolatban áll.  actor
+
+ATA
+
+aktuális eredmény: a teszt során tapasztalt viselkedés.  actual outcome,
+actual result
+alacsony szintű teszteset: teszteset konkrét (kód szintű) bemenő és elvárt
+kimenő értékekkel. Ebben a teszt típusban a magas szintű tesztesetekben
+levő logikai műveleteket konkrét, de a logikai műveleteknek továbbra is
+megfelelő értékekkel helyettesítjük. Lásd még: magas szintű teszteset. 
+low level test case, concrete test case
+alap tesztkészlet: olyan teszteset készlet, amely a komponens belső
+struktúrájából, vagy a specifikációból lett leszármaztatva annak érdekében,
+hogy 100%-osan biztosítsuk a megadott lefedettségi kritérium teljesítését. 
+basis test set
+alapvető teszt: lásd smoke teszt. sanity test
+
+F
+
+alfa teszt: szimulált, vagy tényleges tesztelés, amelyet potenciális felhasználók,
+vagy egy független tesztcsapat végez a fejlesztés helyszínén, de a fejlesztői
+szervezettől függetlenül. Gyakran használják dobozos szoftverek belső
+átvételi tesztjeihez.  alpha testing
+alulról-felfelé haladó teszt: az alsóbb szintű komponensek tesztelésével
+kezdődő teszttechnika. Lásd még: integrációs teszt.  bottom-up testing
+al-útvonal: egy komponensen belüli végrehajtható utasítások sorozata. 
+subpath
+
+API: Application Programming InterfaceAPI
+ETAE
+ATM
+
+API teszt: olyan teszt, amikor a tesztelendő szoftvert az alkalmazás programozói
+interfészén át közvetlenül látjuk el utasításokkal. Lásd még: API testing
+audit: a szoftvertermék, illetve a folyamat független értékelése annak érdekében,
+hogy kiderítsük, megfelel-e a szabványoknak, a specifikációknak, az
+irányelveknek, és/vagy azon dokumentumokban rögzített objektív
+kritériumoknak, amelyek meghatározzák
+
+
+a termék formáját, illetve tartalmát,
+
+
+
+a folyamatot, ahogy a terméket elő kell állítani.
+
+
+
+a szabványoknak, illetve az irányelveknek történő megfelelés
+mérésének módját [IEEE 1028]
+
+ audit
+audit nyomvonal: olyan útvonal, amelyen a folyamat eredeti bemenete (pl.
+valamilyen adatok) visszakövethető a folyamaton keresztül, a folyamat
+kimenetét kiindulópontnak tekintve. Megkönnyíti a hibaelemzést, és lehetővé
+teszi folyamat ellenőrzés végrehajtását.  audit trail
+automatizált tesztver: automatizált tesztelésnél használt teszteszköz, mint pl.
+egy szkriptkészlet.  automated testware
+F-AT,ETAE automatizált tesztvégrehajtás: olyan szoftver használata (pl. felvevő/lejátszó
+eszközök), amelyekkel a tesztvégrehajtást lehet irányítani, a várt
+eredményeket össze lehet hasonlítani az aktuális eredményekkel, tesztelési
+előfeltételeket lehet meghatározni és egyéb tesztirányítási és jelentési
+funkciókkal is rendelkezik.  test execution automation
+állapotdiagramm: egy komponens vagy rendszer állapotait ábrázoló diagramm,
+ami az állapotváltozást okozó eseményeket vagy körülményeket is. [IEEE
+610]  state diagramm
+állapot-tábla: egy táblázat, ami minden egyes állapotra és lehetséges
+eseményre mutatja az állapotátmeneteket, megjelenítve az érvényes és
+érvénytelen átmeneteket is.  state table
+állapotátmenet: átmenet egy komponens vagy rendszer két állapota között. 
+state transition
+F,ATA
+
+állapotátmenet teszt: olyan feketedoboz teszttervezési technika, amiben úgy
+tervezzük meg a teszteseteket, hogy érvényes és érvénytelen
+állapotátmeneteket generáljanak. Lásd még: N-lépéses teszt.  state
+transition testing
+állapotdiagramm: egy komponens vagy rendszer állapotait ábrázoló diagramm,
+ami mutatja az állapotváltozást okozó eseményeket vagy körülményeket is.
+[IEEE 610]  state diagramm
+állapotrögzítés: a konfiguráció-menedzsment egy eleme, ami az információk
+
+rögzítéséből és jelentéséből áll, a konfiguráció hatékony menedzselése
+érdekében. Ezek az információk tartalmazzák a jóváhagyott konfiguráció
+azonosítóját, az előterjesztett konfiguráció változásainak állapotait és a
+jóváhagyott változások megvalósítási állapotait. [IEEE 610]  status
+accounting
+állapottábla: egy táblázat, ami minden egyes állapotra és lehetséges eseményre
+mutatja az állapotátmeneteket, megjelenítve az érvényes és érvénytelen
+átmeneteket is.  state table
+általános célú szoftvertermék: lásd dobozos szoftver.  standard software
+általános teszt automatizálási architektúra: a teszt automatizálási architektúra
+rétegeinek, komponenseinek és interfészeinek ábrázolása, amely elősegíti a
+teszt automatizálás strukturált és moduláris implementálását.  generic test
+automation architecture
+átadandó: bármely olyan termék vagy munka, amelyet a készítőjétől eltérő
+személynek (szervezetnek) át kell adni.  deliverable
+átszivárgott hiba: olyan hiba, amelyet egy előző, az adott típusú hibák
+kiszűrésére szolgáló teszszinten nem találtak meg, Lásd még:
+hibamegtalálási arány.  escaped defect
+ETM
+
+áttekintőtábla: egy adott szervezet, illetve tevékenység hatékonyságának
+megjelenítését szolgálja. A metrikákat olyan metaforákkal helyettesítik, mint
+például „számlap”, vagy „mutató”, vagy más kijelző, amelynek segítségével
+az autóiparra lehet asszociálni, és így a tevékenység, vagy et pesemény
+hatása egyszerűen megérthető és hozzáköthető a működési célokhoz. Lásd
+még: vállalati áttekintőtábla, stratégiai mutatószám-rendszer.  dashboard
+átvétel: lásd átvételi teszt.  acceptance
+átvételi teszt: a felhasználó, vagy a megrendelő által a végterméken végzett
+feketedoboz teszt, amely azt hivatott eldönteni, hogy megfelel-e a termék a
+megfogalmazott (üzleti) elvárásoknak, illetve folyamatoknak.  acceptance
+testing
+
+F-AT
+
+átvételi kritérium: azon kilépési feltétel, amelyet a komponensnek, illetve a
+rendszernek teljesítenie kell, hogy a felhasználó, az ügyfél, vagy más, erre
+feljogosított személy átvehesse azt [IEEE 610]..  acceptance criteria
+
+F,ATM
+
+átvizsgálás: egy dokumentum szerzője által végzett lépésenkénti bemutató abból
+a célból, hogy információt gyűjtsön vagy közös álláspontot alakítson ki.
+[Freedman és Weinberg, IEEE 1028]. Lásd még: egyenrangú felülvizsgálat.
+ walkthrough
+baseline: verziókövetéssel fejlesztett szoftver, vagy dokumentáció, amely egy
+adott, formálisan felülvizsgált és elfogadott állapot azonosítására szolgál. A
+további fejlesztés csupán a formális változásirányítás szabályai szerint
+történhet.  baseline
+
+ETAE
+
+beavatkozási szint: azon mérték, amennyire a teszt tárgyát, illetve annak
+
+viselkedését módosítják a tesztelhetőség érdekében.  level of intrusion
+beágyazott iteratív fejlesztés: olyan fejlesztési életciklus al-modell, amely az
+általános szekvenciális megközelítésen belül iteratív megközelítést alkalmaz
+a részletes műszaki tervezéshez (a design-hoz), a kódoláshoz és a
+tesztelésre. Ebben az esetben a magas szintű tervezési (design)
+dokumentumok a teljes projektre készítik el és hagyják jóvá, de a részletes
+tervet (design-t) a fejlesztést és a tesztelést iterációk keretében hajtják
+végre.  embedded iterative development model
+bejárhatatlan útvonal: olyan útvonal, amely semmilyen lehetséges bemeneti
+érték esetén nem hajtódik végre.  infeasible path
+F
+
+belépési feltétel: általános és speciális feltételek halmaza, amely engedélyezi
+egy adott feladat végrehajtását. Az a cél, hogy ne indítsunk olyan
+feladatokat, amelyek több elvesztetegetett ráfordítást jelentenének, mint az
+elbukó belépési feltételek kijavítása [Gilb és Graham].  entry criteria
+belépési pont: a komponensen belüli első végrehajtható utasítás.  entry point
+bemenet: a komponens által beolvasott - akár a komponensen belül, vagy kívül
+tárolt – változó.  input
+bemeneti érték: a bemenet egy fajtája. Lásd még: bemenet.  input value
+bemeneti értéktartomány: azon értéktartomány, amelyből érvényes bemeneti
+adatok választhatók. Lásd még: értéktartomány.  input domain
+benchmark teszt: összehasonlító szabvány teszt, amelynek alapján a
+szoftvereket, illetve komponenseket egymással összehasonlíthatjuk, illetve
+mérhetjük.  benchmark test
+bevált gyakorlat: a tesztelés, vagy a fejlesztés során alkalmazott
+leghatékonyabb innovatív eljárások, módszerek, amelyeket általában a többi
+szervezeti egység is átvehet. best practice
+
+F
+
+béta teszt: a szoftvernek egy szűkebb felhasználói körben való külső tesztelése
+a végső kiadás előtt annak érdekében, hogy meghatározzuk, a szoftver
+megfelel-e a felhasználók piaci igényeinek. Gyakran megfelel a dobozos
+(COTS) szoftverek külső átvételi tesztjének.  beta testing, field testing
+bizonyossági teszt: lásd smoke teszt.  confidence test
+biztonságosság: a szoftvertermék azon képessége, hogy elfogadható szintű
+kockázatot biztosítson az emberekkel, üzlettel, tulajdonnal vagy a
+környezettel, a megadott használati környezetben. [ISO 9126]  safety
+biztonság-kritikus rendszer: olyan rendszer, aminek a meghibásodása, vagy
+hibás működése emberek súlyos sérüléséhez, halálához, eszközök komoly
+sérüléséhez, elvesztéséhez vagy környezeti károsodáshoz vezethet. 
+safety critical system
+biztonság: a szoftvertermékek azon tulajdonságai/attribútumai, amik a
+programokhoz és adatokhoz való jogosulatlan hozzáférést előzik meg. A
+
+hozzáférés lehet szándékos vagy akár véletlen is. Lásd még: funkcionalitás.
+[ISO 9126]  security
+F,ATT
+F-AT
+
+biztonsági teszt: olyan teszt, amivel a szoftvertermék biztonságát határozzuk
+meg. Lásd még: funkcionalitási teszt  security testing, safety testing
+biztonsági teszteszköz: olyan eszköz, ami a biztonsági karakterisztikák és
+sebezhetőségek teszteléséhez nyújt támogatást.  security testing tool
+
+F
+
+biztonsági eszköz: olyan eszköz, ami a működési biztonságot támogatja. 
+security tool
+blokkolt teszteset: olyan teszteset, amely nem hajtható végre, mivel a
+végrehajtás előfeltétele nem teljesíthető.  blocked test case
+bukás: akkor mondjuk, hogy egy teszt elbukik, ha a tényleges eredménye nem
+egyezik meg az elvárt eredménnyel.  fail
+
+F-AT
+
+build verifikációs teszt: olyan automatizált teszteket tartalmazó készlet, amely az
+új build-ek integritását validálja, valamint azok alapfunkcióit, stabilitását és
+tesztelhetőségét verifikálja. Abban az esetben, amikor gyakran készítenek
+build-eket (pl. agilis projekteknél), ipari gyakorlatnak tekinthető és minden
+build-en lefuttatják - még a build további tesztelésre való kiadása előtt. Lásd
+még: regressziós teszt, smoke teszt  build verification test, BVT
+Cél Kérdés Metrika: 3 szintű modell a szoftver minőségének mérésére:
+concepcionális szint (cél), működési szint (kérdés) és mennyiségi szint
+(metrika).  Goal Question Metric (GQM)
+Chow lefedettségi metrika: a tesztkészlet által meghívott N+1 átmenetek
+aránya.  Chow's coverage metrics, N-switch coverage
+
+ATT
+
+ciklomatikus komplexitás: a független, lineáris útvonalak maximális száma a
+programban. A ciklomatikus komplexitás definíciója: L – N + 2P, ahol
+- L = az élek/kapcsolatok száma a gráfban
+- N = a csomópontok száma a gráfban
+-
+
+P = a nem kapcsolódó részek a gráfban (pl. egy meghívott gráf, vagy
+szubrutin)
+[McCabe szerint]
+
+ cyclomatic complexity
+ciklomatikus szám: lásd ciklomatikus komplexitás  cyclomatic number
+ATT,EITP CMMI: lásd Integrált Képesség-Érettség Modell.  CMMI
+EITP
+
+cselekvés (IDEAL): az IDEAL model egyik fázisa, amely során a javításokat
+
+kifejlesztik, átültetik a gyakorlatba és az egész szervezetben életbe léptetik.
+A cselekvési fázis a következő tevékenységeket tartalmazza: a megoldás
+létrehozása, tesztje/pilotálása, finomítása és megvalósítása. Lásd még:
+IDEAL.  acting (IDEAL)
+csimpánz-teszt: véletlenszerű bemenettel, tetszőleges billentyű leütésével
+végrehajtott teszt, függetlenül attól, hogy a terméket helyesen használjuk-e.
+ monkey testing
+F
+
+ATT
+
+csonk: egy szoftver komponens speciális célú vagy részleges megvalósítása. A
+csonkot arra használjuk, hogy támogassuk a komponens(ek) fejlesztését
+vagy tesztelését. Helyettesíti a meghívott komponenst. [IEEE 610 alapján].
+ stub
+definíció-használat pár: a változó definíciójának összekapcsolása a változó
+használatával. A változó lehet számításokat végző változó (mondjuk
+szorzás egyik operandusa), vagy a végrehajtási útvonalat befolyásoló
+változó.  definition-use pair
+
+EITP
+
+Deming ciklus: iteratív, négylépéses, problémamegoldási folyamat (tervezés –
+végrehajtás, ellenőrzés, analízis). Jellemzően a folyamatjavítás során
+használják (Deming szerint).  Deming cycle
+
+EITP
+
+diagnózis (IDEAL): az IDEAL modellen belül az egyik fázis, amelynél
+meghatározzuk a kívánt állapothoz képest fennálló helyzetet, A diagnózis
+fázis : az aktuális és a kívánt állapot leírását, továbbá fejlesztési javaslatokat
+tartalmaz. Lásd még: IDEAL.  diagnosing(IDEAL)
+
+ATT
+
+dinamikus elemzés: a rendszer memória teljesítményének, CPU használatának
+kiértékelési folyamata.  dynamic analysis
+
+F
+
+dinamikus elemző eszköz: a szoftverkód állapotáról futási időben információt
+szolgáltató eszköz. Leggyakrabban érvénytelen mutatók, memóriafoglalások
+– és törlések, illetve memóriaszivárgások felderítésére használják. 
+dynamic analysis tool
+
+F
+
+dinamikus teszt: olyan teszt, amely magában foglalja egy komponens vagy
+rendszer szoftverének futtatását.  dynamic testing
+dinamikus összehasonlítás: az elvárt és a tényleges eredmények
+összehasonlítása a szoftver végrehajtása közben – pl. egy tesztvégrehajtó
+eszköz alkalmazásával.  dynamic comparison
+
+F
+
+dobozos szoftver: egy, az általános piaci igényeknek megfelelő szoftvertermék,
+pl.: nagy számú vevő számára, amely minden vásárlónak hasonló,
+megjelenéssel érhető el.  off-the-shelf software, COTS
+dokumentáció teszt: a dokumentáció (pl. a felhasználói, vagy installációs
+kézikönyv) minőségének tesztelése.  documentation testing
+döntés: olyan progampont, ahol a vezérlési folyamnak két, vagy több alternatív
+útvonala van. Egy csomópont, amelyből két, vagy több elágazás indul. 
+decision
+
+döntési eredmény: a döntés eredménye, amely meghatározza, hogy melyik
+elágazást kell bejárni.  decision outcome
+döntési feltétel lefedettség: a tesztkészlet végrehajtása során az összes feltétel
+eredmény és döntési eredmény meghívásának százalékos aránya. 100%
+döntésifeltétel-lefedettség 100%-os feltétel lefedettséget és 100%-os döntési
+lefedettséget jelent.  decision condition coverage
+ATT
+
+döntési feltétel teszt: fehérdoboz teszttervezési módszer, amely során a
+tesztesetek célja a feltétel eredmények és a döntési eredmények
+végrehajtása.  decision condition testing
+
+F
+
+döntési lefedettség: a tesztkészlet végrehajtása során a döntési eredmények
+meghívásának százalékos végrehajtási aránya. 100%-os döntési
+lefedettség 100%-os elágazási lefedettséget és 100%-os utasítás
+lefedettséget jelent.  decision coverage
+
+F,ATA
+
+döntési tábla teszt: feketedoboz teszttervezési módszer, amely során olyan
+teszteseteket tervezünk, amelyek a döntési táblában szereplő különböző
+okok és bemenetek kombinációit igyekeznek tesztelni. [Veenendaal04] Lásd
+még: döntési tábla.  decision table testing
+döntési teszt: fehérdoboz teszttervezési módszer, amelynek célja, hogy a
+tesztesetek döntési eredményeket hajtsanak végre.  decision testing
+döntésközti útvonal: egy algoritmus két döntése, vagy egy megfelelő gráf két
+döntési csomópontja közötti útvonal, amely nem tartalmaz további
+döntéseket. Lásd még: útvonal..  dd-path
+
+EITP
+
+EFQM kiválósági model: a European Foundation for Quality Management
+tulajdonában levő és általa definiált keretrendszer egy adott szervezet
+minőségügyi rendszeréhez. Nem előírásokat tartalmaz, hanem 5
+“Elősegítés” (Enabling - amit a szervezet csinál) és 4 “Eredmény” (Result,
+amit a szervezet elér) kritériumon alapul.  EFQM (European Foundation
+for Quality Management) excellence model
+
+ATM
+
+egyedi eszköz egyedi felhasználók vagy megrendelők részére fejlesztett szoftver
+eszköz.  custom tool
+egyedi szoftver: Nem tömeggyártási céllal, hanem a megrendelő egyedi
+igényeinek megfelelően készített, illetve testreszabott szoftver. A dobozos
+szoftver (OTS-szoftver) ellentéte.  bespoke software, custom software
+
+F
+
+egyenrangú felülvizsgálat: egy szoftver-munkatermék felülvizsgálata a termék
+előállítójának munkatársai által, amelynek célja, hogy hibákat fedezzen fel
+illetve javító javaslatokat hozzon. Példák: inspekció, technikai felülvizsgálat,
+átvizsgálás.  peer review
+egység: lásd komponens.  unit
+egységteszt: lásd komponens teszt.  unit testing
+
+F,F-AT
+
+egységteszt keretrendszer: olyan környezetet biztosító keretrendszer, amelyben
+
+egy komponens egyaránt tesztelhető különállóan valamint a megfelelő
+segédprogramokkal. Hibakeresési funkciójával támogatja a szoftverfejlesztő
+munkáját is. [Graham]  unit test framework
+ATT
+
+együttélés: a szoftver azon képessége hogy egy közös környezetben képes
+együtt élni egy másik, független programmal a közös erőforrások
+megosztása tekintetében.  co-existence
+együttműködő képesség: a szoftver azon jellemzője, hogy egy, vagy több adott
+komponenssel, illetve rendszerrel milyen az egymásra hatásuk [ISO 9126
+alapján]. Lásd még: funkcionalitás.  interoperability
+
+F,ATA
+
+együttműködő képességi teszt: egy adott szoftver együttműködő-képességének
+vizsgálata. Lásd még: funkcionalitási teszt.  interoperability testing
+ekvivalenciaosztály: lásd ekvivalencia partíció.  equivalence class
+ekvivalencia-partíció: olyan bemeneti, vagy kimeneti értéktartomány, amelyre a
+specifikáció alapján a rendszernek ugyanúgy kell viselkednie. 
+equivalence partition
+ekvivalencia-partíció lefedettség: a tesztkészlet által végrehajtott ekvivalencia
+partíciók aránya.  equivalence partition coverage
+
+F,ATA
+
+ekvivalencia partícionálás: feketedoboz tesztelési módszer, amely során olyan
+teszteseteket készítünk, amelyek az ekvivalencia partíciók egyes
+reprezentánsait tesztelik. Jellemzően minden egyes ekvivalencia partíciót
+érdemes legalább egyszer lefedni. equivalence partitioning
+elágazás: a program egy logikai feltételtől (pl. ugrás, goto, if then else) függő
+útvonala.  branch
+elágazási feltétel: lásd: feltétel.  branch condition, condition
+elágazás lefedettség: a tesztkészlet által meghívott elágazások százalékos aránya.
+100% elágazás lefedettség 100% döntési lefedettséget és 100% utasítás
+lefedettséget jelent.  branch coverage
+elágazási feltétel lefedettség: a teszt végrehajtása által meghívott feltétel
+eredmények aránya. A 100%-os elágazási feltétel lefedettség azt jelenti,
+hogy minden döntési utasításban minden egyes feltétel Igaz, illetve Hamis
+ága tesztelve van.  branch condition coverage, condition coverage
+elágazási teszt: olyan fehérdoboz teszttervezési technika, amely során
+elágazásokat tesztelünk [TMap].  branch testing, arc testing, algorithm test
+[TMap]
+
+ATT
+
+elemezhetőség: a szoftver azon tulajdonsága, hogy mennyire lehetséges a
+benne levő meghibásodások, illetve a módosítandó részek megtalálása. 
+analyzability
+elemi blokk: a szoftver elágazást nem tartalmazó utasításainak sorozata. Egy
+belépési, egy kilépési ponttal rendelkezik, és nincs benne ugrási utasítás. 
+basic block, segment
+
+ATT
+
+elemi feltétel: egyszerű feltételekre nem bontható feltétel, azaz nem logikai
+oprátorokkal (AND, OR, XOR) összekapcsolt két vagy több egyszerű
+feltételből álló többszörös feltétel.  atomic condition
+elemi összehasonlító teszt: feketedoboz tesztelési módszer, amely során olyan
+teszteseteket készítünk, amelyek a kiterjesztett döntési feltétel lefedettség
+koncepcióján alapuló bemeneti kombinációkat tartalmaznak [TMap]. 
+elementary comparison testing
+
+ETM
+
+elemzés-alapú teszt: valamilyen szempont - pl. kockázatok, követelmények módszeres elemzésére épülő teszt.  analytical testing
+elemző: lásd statikus elemző.  analyzer
+elérhetetlen kód: olyan kódrészlet, amely nem érhető el, így nem lehet
+végrehajtani.  unreachable code
+eljárás teszt: egy komponens vagy rendszer tesztje, amely arra irányul, hogy a
+komponens vagy rendszer együtt tud-e működni az új vagy meglévő
+felhasználók üzleti eljárásaival, működési folyamataival.  procedure testing
+ellenőrzés papíron: a szoftver, vagy a specifikáció tesztelése a végrehajtás kézi
+szimulálása által. Lásd még: statikus elemzés.  desk checking
+
+ETM
+
+ellenőrző diagramm: a statisztikai folyamatszabályozás (Statistical Process
+Control, SPC) eszköztárába tartozó diagramm típus, amely folyamatok
+monitorozására és annak eldöntésére használatos, hogy a folyamat
+statisztikailag szabályozottnak tekinthető-e. Grafikusan ábrázolja a folyamat
+vizsgált értékeinek átlagát és az alsó, valamint felső szabályozási
+határértékeit: control chart
+
+ATA
+
+ellenőrző lista alapú teszt: tapasztalat-alapú teszttervezési technika, amely
+során a tapasztalt tesztelő magas szintű tesztelemeket jegyez fel, ellenőriz,
+vagy szabályokat és kritériumokat használ a program verifikáláshoz. Lásd
+még: tapasztalat-alapú teszt.  checklist-based testing
+
+F
+
+ellenőrző teszt: lásd újratesztelés.  confirmation testing
+előfeltétel: környezeti vagy állapotbeli feltételek, amelyeket teljesíteni kell, mielőtt
+egy komponensen vagy rendszeren tesztet vagy tesztelési folyamatokat
+kezdenénk.  precondition
+előre jelzett kimenet: lásd elvárt eredmény.  predicted outcome
+előzetes teszt: lásd befogadási teszt.  pretest
+elszigetelt teszt: az egyes komponensek tesztje az őket körülvevő
+komponensektől elszigetelve, illetve azokat csonkokkal, valamint
+meghajtókkal helyettesítve.  isolation testing
+eltérés: lásd incidens.  deviation
+eltérési jelentés: lásd incidensjelentés.  deviation report
+elvárt eredmény: a szoftver adott feltételek melletti, a specifikáció, vagy más
+
+forrás alapján előrejelzett viselkedése. 
+result
+F
+
+expected outcome, expected
+
+emberi eredetű hiba: emberi tevékenység, amely során helytelen eredmény jön
+létre.  error, mistake
+emulátor: olyan eszköz, vagy program, amely ugyanazon bemeneteket fogadja,
+és ugyanazon kimeneteket generálja, mint az adott rendszer.  emulator
+eredmény: a tesztvégrehajtás következménye/kimenete, amely lehet: képernyő,
+adatváltozás, riport, kiküldött kommunikációs üzenet, stb. Lásd még: aktuális
+eredmény, elvárt eredmény.  outcome, result
+erőforrás kihasználtság: annak a mérőszáma, hogy a szoftvertermék adott
+feltételek mellett megfelelő (indokolt) mennyiségű és típusú erőforrást
+használ. Például a fő és a másodlagos memóriahasználat vagy a tárolási
+területfoglalás megfelelő szinten marad, amikor a program utasításokat hajt
+végre. [ISO 9126] Lásd még: hatékonyság.  resource utilization
+
+ATT
+
+EITP
+
+EITP
+
+erőforráshasználati teszt: a szoftvertermék erőforrás- használatának
+meghatározását – például memóriafelhasználást – célzó teszt. Lásd még:
+hatékonysági teszt.  resource utilization testing
+extrém programozás (XP): szoftverfejlesztési módszertan, amelyet az agilis
+szoftevrfejlesztés során használnak. A legfontosabb jellemzői a páros
+programozás, az alapos kód felülvizsgálat, minden kódhoz unit teszt
+készítése, illetve a kód egyszerűsége és átláthatósága. Lásd még: agilis
+szoftverfejlesztés.  extreme programming
+életciklus modell: a projekt, vagy a termék életének fázisokra bontása [CMMI].
+Lásd még: szoftver életciklus.  lifecycle model
+érettségi modell: a szervezeti érettség bzonyos szempontjait leíró elemek
+strukturált gyűjteménye, amely a szervezeti folyamatok meghatározását és
+megértését segíti. Az érettségi modell gyakran közös nyelvet, jövőképet és a
+fejlesztő tevékenységek priorizálását elősegítő keretrendszert nyújt. 
+maturity model
+
+ATT
+
+érettség:
+(1)
+
+egy szervezet azon képessége, hogy milyen hatásossággal és
+hatékonysággal használja elméleti- és gyakorlati munkafolyamatait. Lásd
+még: képességi-érettségi model (CMM), teszt-érettségi modell (TMM).
+
+(2) egy szoftvertermék azon képessége amelynek köszönhetően elkerülhető,
+hogy egy esetlegesen fellépő programhiba működési hibát okozzon. [ISO
+9126] Lásd még: megbízhatóság.
+
+ maturity
+EITP
+
+érettségi szint: a folyamatfejlesztés során, az előre meghatározott
+folyamatterületeken elért szint, amely szint összes célját megvalósítottuk. 
+maturity level
+
+értékadás: végrehajtható utasítás, amelyben egy változóhoz hozzá van rendelve
+egy érték.  data definition
+EITP
+
+érték-alapú minőség: a minőség egy formája, ahol a minőséget az ár határozza
+meg. A termék, vagy szolgáltatás minőségét az határozza meg, hogy a
+kívánt teljesítményt elfogadható költségekért tudja-e nyújtani. A minőséget
+egy döntési folyamat határozza meg, amelyet az érintettekkel együtt
+végzünk és amelyben a határidő, a ráfordítás és a költségek szempontjait
+figyelembe véve között optimalizálunk.  value-based quality
+
+EITP
+
+értékelő: az értékelést végrehajtó személy: az értékelő csapat bármely tagja. 
+assessor
+
+EITP
+
+értékelő jelentés: az értékelés eredményét összefoglaló dokumentum, amely
+tartalmazhatja a következtetéseket, ajánlásokat és észrevételeket. Lásd
+még: folyamatértékelés.  assessment report
+értéktartomány: azon készlet, amelyből az érvényes bemenetek és kimenetek
+választhatók.  domain
+
+ATA
+
+értéktartomány analízis: olyan feketedoboz teszttervezési technika, amely során
+több változó együttes használatára készítünk hatékony és hatásos teszteket.
+Az ekvivalencia partícionálás és a határérték elemzés módszertanát
+használja. Lásd még: hatáérték elemzés, ekvivalencia partícionálás. 
+domain analysis
+
+ATA
+
+érthetőség: a szoftver termék azon tulajdonsága, hogy a felhasználó mennyire
+könnyen képes eldönteni, hogy a szoftver számára megfelelő-e, továbbá
+hogy azt hogyan és milyen feltételek mellett használhatják bizonyos
+feladatokra. [ISO 9126] Lásd felhasználhatóság.  understandability
+érvénytelen teszt: azon bementi értékekkel való tesztelés, amelyet a szoftvernek
+nem szabad elfogadnia. Lásd még: hibatűrés.  invalid testing
+
+EITP
+
+ATT
+
+érzelmi intellingencia: egy személy képessége, tehetsége, hogy saját maga, más
+személy, vagy egy csoport érzelmeit felismerje, értékelje és kezelje. 
+emotional intellingence
+érvénytelen mutató: olyan mutató, amely a saját hatókörén kívüli vagy nem
+létező pontra hivatkozik. Lásd még: mutató (pointer).  wild pointer
+fagyasztott tesztbázis: olyan tesztbázis dokumentum, amelyet csupán formális
+változás-kezelési folyamaton keresztül lehet megváltoztatni. Lásd még:
+baseline.  frozen test basis
+
+ATA,ATM fázis behatárolás: Azoknak a hibáknak a százaléka, amelyeket a szoftver
+életciklus ugyanazon fázisában távolítottak el, mint amelyikben bekerült a
+rendszerbe.  phase containment
+feature: a komponensnek, vagy a rendszernek a követelmény-dokumentációban
+meghatározott attribútuma (pl. a megbízhatóságra, a használhatóság, illetve
+műszaki tervezési jellemzőire). [IEEE 1008 alapján].  feature
+
+ETM
+
+feature-vezérelt fejlesztés: olyan iteratív és inkrementális szoftverfejlesztési
+folyamat, amely az ügyfél számára értékes funkcionalitást (feature-t) tartja
+szem előtt. A feature-vezérelt fejlesztést jellemzően az agilis
+szoftverfejlesztés során használják. Lásd még: agilis szoftverfejlesztés. 
+feature-driven development
+
+F
+
+fehérdoboz teszt: a szoftver belső struktúrájának elemzésén alapuló tesztelés 
+white-box testing, glass box testing, clear-box testing
+
+F,ATT
+
+fehérdoboz teszttervezési technika: olyan eljárás, amely a teszteseteit egy
+komponens vagy rendszer belső struktúrájának elemzéséből származtatja.
+ white-box test design technique
+fejlesztői teszt: a szoftver fejlesztése közben, általában a fejlesztők által
+végrehajtott formális, vagy informális teszt, jellemzően fejlesztői
+környezetben.  development testing
+
+F
+
+feketedoboz teszt: a program belső szerkezetére történő hivatkozás nélküli
+funkcionális, vagy nem-funkcionális teszt.  black box testing
+
+F,ATA
+
+feketedoboz teszttervezési technika: olyan módszer, amelynél a szoftver
+specifikáció alapján, a program belső szerkezetének ismerete nélkül
+tervezünk teszteket.  black box test design technique, black box technique
+
+F, ATA,F-AT
+
+felderítő teszt: informális teszttervezési módszer, amely során a tesztelő
+aktívan felügyeli a tesztek tervezését, a futtatás során szerzett
+információkat összegyűjti és hasznosítja új és jobb tesztek tervezése
+érdekében [Bach szerint].  exploratory testing
+
+felfüggesztési feltételek: azon feltételek, amik alapján a tesztelemen
+(ideiglenesen) leállítjuk az összes teszttevékenységet [IEEE 829]. 
+suspension criteria
+EITP
+
+felhasználó-alapú minőség: a minőség egy formája, amelyet azon kapacitás
+függvényében határozunk meg, amely a felhasználó(k) igényeit hivatott
+kielégíteni. Azon termék, vagy szolgáltatás, amely nem felhasználói
+igényeket old meg, aligha talál magának felhasználót. Ez egy nehezen
+meghatározható, a környezettől nagyban függő megközelítési mód, mivel a
+különböző karakterisztikájú üzleti elvárások különböző termékminőséget
+tesznek szükségessé.  user-based quality
+felhasználói forgatókönyv teszt: lásd használati eset teszt.  user scenario
+testing
+
+F
+
+felhasználói átvételi teszt: lásd átvételi teszt.  user acceptance testing
+felhasználói teszt: olyan teszt, amelyben valós felhasználók vesznek részt a
+rendszer vagy rendszerkomponens használhatóságának kiértékelésében. 
+user test
+
+F-AT
+
+felhasználói történet: magas szintű felhasználói, vagy üzleti követelmény,
+amelyet általában az agilis szoftverfejlesztés során használnak. Jellemzően
+egy, vagy több, hétköznapi, vagy üzleti nyelven megfogalmazott mondatot
+
+tartalmaz, amely leírja, hogy a felhasználónak milyen funkcionalitásra van
+szüksége, vagy bármilyen egyéb nem-funkcionálisi követelményt fogalmaz
+meg, továbbá tartalmazza az átvételi kritériumot is. Lásd még: agilis
+szoftverfejlesztés, követemény.  user story
+ATA
+
+felhasználói történet teszt: olyan feketedoboz teszttervezési technika, amely
+során a felhasználói történetekre alapuló teszteket készítünk annak
+érdekében, hogy leellenőrizzük az implementáció helyességét.  user story
+testing
+feltétel: olyan logikai kifejezés, amely Igaz, vagy Hamis értékeket vehet fel (pl.
+A>B). Lásd még: feltétel teszt. condition, branch condition
+feltétel eredménye: valamely
+feltétel Igaz, vagy Hamis értékre történő
+kiértékelése.  condition outcome
+feltétel meghatározási lefedettség: lásd módosított döntési feltétel lefedettség.
+ condition determination coverage
+feltétel meghatározási teszt: lásd kiterjesztett döntési feltétel teszt.  condition
+determination testing
+
+ATT
+F
+
+feltétel teszt: olyan fehérdoboz tesztelési módszer, amely során a tesztesetek
+feltételekhez tartoznak.  condition testing
+felügyeleti eszköz: egy szoftver, vagy hardver eszköz, amely párhuzamosan fut
+a tesztelés alatt levő komponenssel vagy rendszerrel, ez utóbbiakat
+felügyeli, elmenti és/vagy elemzi azok viselkedését. [IEEE 610 alapján]. 
+monitor, monitoring tool
+felülről-lefelé haladó teszt: az integrációs teszt lépcsőzetes megközelítése,
+amelyben először a hierarchia felső szintjén található komponens kerül
+tesztelésre az alsóbb rétegek csonkokkal történő szimulációja által, majd az
+alsóbb szinteken található komponensek tesztelése következik. A folyamat
+addig ismétlődik, amíg a legalsó szintű komponensek is tesztelésre
+kerülnek. Lásd még: integrációs teszt.  top-down testing
+
+F,ATM
+
+felülvizsgálat: egy termék vagy projekt státuszának értékelése. Célja, hogy
+feltérképezze az eltéréseket a tervezett eredményekhez képest, valamint
+ajánlást tegyen a továbblépéshez. Több típusa van, például: menedzsment
+felülvizsgálat, informális felülvizsgálat, technikai felülvizsgálat, inspekció,
+átvizsgálás. [IEEE 1028 alapján].  review
+
+ATM
+
+felülvizsgálati terv: a tervezett felülvizsgálati tevékenységek megközelítési
+módszereit, ütemtervét és erőforrásait leíró dokumentum. Többek között a
+következőket azonosítja: a felülvizsgálandó kód és dokumentumok, a
+használandó felülvizsgálati módszerek, a résztvevők, formális felülvizsgálat
+esetén a belépési, illetve kilépési feltételek, a választások indoklása. A
+fellvizsgálati terv a felülvizsgálat tervezési folyamatának rögzítése. 
+review plan
+
+F,ATM
+
+felülvizsgáló: a felülvizsgálaton résztvevő személy, aki azonosítja és leírja a
+
+termékben vagy projektben azonosított eltéréseket. A felülvizsgálókat
+célszerű úgy kiválasztani, hogy többféle nézőpontot, szerepkört
+képviseljenek.  reviewer
+F
+
+felülvizsgáló eszköz: olyan eszköz, ami a felülvizsgálat folyamatát támogatja.
+Jellemzően a felülvizsgálatok tervezését, a változáskövetést, a felülvizsgálók
+közötti kommunikációt, közös felülvizsgálat végzését támogatja. Ezek mellett
+a mérőszámok egyfajta gyűjtőhelyeként, valamint az azokat tartalmazó
+jelentések alapjául is szolgál.  review tool
+felülvizsgáló: a felülvizsgálatba bevont személy, aki meghatározza és leírja a
+felülvizsgálat tárgyát képező termék, vagy projekt rendellenességeit. A
+felülvizsgálókat úgy szokták választani, hogy a felülvizsgálati folyamat
+különböző aspektusait és szerepköreit képviseljék.  checker, reviewer
+felvétel/lejátszás: olyan teszt automatizálási módszer, amelynél felveszik a kézi
+teszt tárgyának bemeneteit, hogy azokkal később végrehajtható (pl.
+megismételhető)
+automatikus
+tesztszkripteket
+generáljanak.
+
+capture/playback
+
+ATT,ETAE felvevő/lejátszó eszköz: olyan végrehajtó eszköz, amely felveszi a kézi
+tesztelés lépéseit annak érdekében, hogy ezekből később végrehajtható
+automatikus teszt szkripteket generáljon (pl. megismétli őket). Ezeket az
+eszközöket gyakran használják az automatikus regressziós tesztek
+támogatására.  capture/playback tool, record/playback tool
+folyamat: egymáshoz kapcsolódó tevékenységek halmaza, amely a bemenő
+értékekből kimenő értékeket generál. [ISO 12207].  process
+folyamat ciklus teszt: olyan feketedoboz teszttervezési technika, amelyben a
+teszteseteket üzleti folyamatok és eljárások futtatására tervezték. [TMap]
+Lásd még: eljárás teszt.  process cycle test
+EITP
+
+folyamatértékelés: egy szervezet szoftverfolyamatainak egy referencia modell
+alapján történő, szabályozott kiértékelése. [ISO 15504].  process
+assessment
+folyamatjavítás: szervezeti folyamatok teljesítményének és érettségének
+javítására szolgáló tevékenységek és ezek eredményinek összessége
+[CMMI].  process improvement
+folyamatlefutási modell: a strukturált elemző és tervező módszerek részeként
+használatos. Az információ rendszerben történő áramlását mutatja. Minden
+egyes folyamat bemenetet (bemeneteket) kimenetté (kimenetekké)
+transzformálja. Lásd még: adatfolyam elemzés.  process flow model
+
+EITP
+
+folyamatmodell: olyan keretrendszer, amelyben az ugyanolyan jellegű
+folyamatokat egy általános modellhez sorolják, pl. a tesztfejlesztési
+modellhez.  process model
+
+ETM
+
+folyamatnak megfelelő tesztelés: olyan tesztelés, amely egy meghatározott
+folyamatot követ, például egy külső fél , szabványügyi testület által
+
+meghatározott folyamatot.  process-compliant testing
+folyamat referencia modell: olyan folyamatmodell, amely a bevált gyakorlatok
+általános gyűjteményét tartalmazza és a folyamatfejlesztés lépésről
+lépésre való módját írja le.  process reference model
+ETAE
+
+folyamatvezérelt teszt: olyan szkriptkészítési technika, amelynél a szkripteket a
+teszt tárgyát képzező szoftver használati eseteinek megfelelő
+forgatókönyvekbe szervezik. A tesztszkriptek tesztadatok segtségével
+paraméterezhetők.  process-driven testing
+
+EITP
+
+folytonos reprezentáció: Képességi-Érettségi modell struktúra, amelyben a
+képességi szintek meghatározzák a folyamat-területeken belül a
+folyamatjavítás formáját.  continuous representation
+
+F
+
+fordítóprogram: egy olyan szoftver eszköz, amely a magas szintű programnyelvi
+kifejezéseket a gépi kódú megfelelőjére fordítja.  compiler
+forgatókönyv-alapú teszt: lásd használati eset teszt. scenario testing
+
+F
+
+formális felülvizsgálat: dokumentált eljárásokal és követelményekkel (pl.
+inspekcióval) jellemzett felülvizsgálat.  formal review
+forráskód utasítás: lásd utasítás.  source statement
+
+ATM
+
+fő tesztterv (master test plan): olyan tesztterv, amely általában többszintű
+tervezést foglal magába. Lásd még: tesztterv (test plan).  master test plan
+funkcionalitás: a szoftvertermék azon képessége, hogy – bizonyos feltételek
+fennállása esetén - képes a meghatározott igények szerinti működésre. 
+functionality
+funkcionalitási teszt: a rendszer funkcionalitását vizsgáló teszt.  functionality
+testing
+funkcionális integráció: olyan integrációs eljárás, amely összekapcsolja az
+egyes komponenseket, illetve rendszereket, hogy az alapvető
+funkcionalitások minél hamarabb működhessenek. Lásd még: integrációs
+teszt.  functional integration
+
+F
+
+funkcionális követelmény: olyan követelmény, amely a szoftverrel szemben
+támasztott funkcionális elvárást írja le. [IEEE 610].  functional requirement
+
+F
+
+funkcionális teszt: a rendszer funkcionális specifikációján alapuló teszt. Lásd
+még: feketedoboz teszt.  functional testing
+funkcionális teszttervezési technika: a rendszer funkcionális specifikációjának
+elemzésén alapuló teszttervezési módszer, amely nem tartalmaz semmilyen
+utalást a rendszer belső struktúrájára.  functional test design technique
+funkciópont elemzés: egy informatikai rendszer funkcionalitásának méretét
+meghatározó módszer. A mérés független a technológiától. A produktivitás,
+a szükséges erőforrások, és a projektirányítás mérésének alapjául
+szolgálhat. [DO-178b alapján].  Function Point Analysis (FPA)
+
+F,ATM
+
+független tesztelés: a felelősségi körök elválasztása, amely az objektív tesztelést
+segíti.  independence of testing
+függőleges nyomonkövethetőség: a követelmények nyomonkövetése a több
+rétegű
+fejlesztési
+dokumentációkon
+keresztül
+a
+különböző
+komponensekhez. vertical traceability
+
+EITP
+
+gondolattérkép: egy központi ötlet, vagy szó körül más szavak, ötletek, feladatok,
+vagy egyéb egységek elrendezését, illetve szerkesztését szolgáló ábra.
+Gondolattérképeket ötletek létrehozására, megjelenítésére, rendezésére és
+osztályozására használnak, illetve segíthetnek tanulmányok, szervezetek,
+problémamegoldások és döntések meghozatalában és leírásában.  mind
+map
+grafikus felhasználói felület:  GUI (GraphicalUser Interface)
+
+ETAE
+
+grafikus felhasználói felület teszt: olyan teszt, amelynek során a tesztelendő
+szoftverrel a grafikus felhasználói felületen keresztül lépünk kapcsolatba 
+GUI testing
+
+EITP
+
+gyártás-alapú minőség: a minőség egy formája, amely során a minőséget úgy
+határozzuk meg, hogy a termék, vagy a szolgáltatás mennyire felel meg a
+terveknek, illetve a követelményeknek. A minőség az alkalmazott
+folyamat(ok)on alapul. Lásd még: termék-alapú minőség, transzcendenciaalapú minőség, felhasználó-alapú minőség, érték-alapú minőség 
+manufacturing-based quality
+halott kód: lásd elérhetetlen kód.  dead code
+halszálka diagramm: lásd ok-okozat diagramm.  fishbone diagramm
+hardver-szoftver integrációs teszt: olyan teszt, amely a hardver és szoftver
+komponensek közötti interészekben és kölcsönhatásokban meglevő hibákat
+hivatott megtalálni. Lásd még: integrációs teszt.  hardware-software
+integration testing
+használati eset: mérhető eredménnyel rendelkező tranzakciók sorozata egy
+dialóguson a felhasználó és a rendszer között.  use case
+
+F,ATA
+
+használati eset teszt: olyan feketedoboz teszttervezési technika, amelyekben a
+műszaki tesztterveket (test design) különböző használati eset
+forgatókönyvek futtatására készítették.  use case testing
+használhatóság: a szoftver képességeinek megértése, megtanulása, használata
+a felhasználó számára, meghatározott feltételek mentén. [ISO 9126]. 
+usability
+
+F,ATA
+F-AT
+
+használhatósági teszt: annak meghatározása, hogy a szoftvertermék mennyire
+érthető meg, mennyire könnyű megtanulni használatát és milyen könnyen
+kezelhető, ezáltal - meghatározott feltételek mentén - mennyire
+felhasználóbarát. [ISO 9126 alapján].  usability testing
+határérték: egy olyan bemeneti, vagy kimeneti érték, amely egy ekvivalencia
+
+partíció szélén, vagy attól a legkisebb távolságra helyezkedik, például egy
+tartomány minimum, vagy maximum értékei.  boundary value
+F,ATA
+
+határérték elemzés: a program változóinak, illetve paramétereinek szélsőértékelemzésén alapuló feketedoboz teszttervezési technika. Lásd még:
+hatérérték.  boundary value analysis
+határérték lefedettség: a program változóinak, illetve paramétereinek
+szélsőértékeinek leteszteltsége az adott tesztkészlet által.  boundary value
+coverage
+határérték teszt:: lásd: határérték elemzés.  boundary value testing
+
+F
+
+ATM
+
+hatáselemzés: a szoftverváltozás kihatásának elemzése a fejlesztési
+dokumentáció, a teszt dokumentáció, illetve a komponensek tekintetében, a
+követelmények változásainak megvalósítása érdekében.  impact analysis
+hatásosság: a tervezett eredmény létrehozásának képessége. Lásd még:
+hatékonyság.  effectiveness
+
+ATM,ATT hatékonyság:
+(1) a szoftvertermék azon képessége, hogy megfelelő teljesítménnyel
+működik, figyelembe véve az adott feltételek mellett felhasználható
+erőforrásokat [ISO 9126]
+(2) a folyamat azon képessége, hogy képes az elvárt eredményt hozni,
+figyelembe véve az adott feltételek mellett felhasználható erőforrásokat 
+efficiency
+hatékonysági teszt: a szoftver hatékonyságának megállapítását célzó teszt 
+efficiency testing
+hárompontos becslés: tesztbecslési módszer, amely az adott esemény „legjobb
+eredményének”, „legrosszabb eredményének”, illetve „legvalószínűbb
+eredményének” valószínűségét használja az esemény valószínűségének
+meghatározásához.. three point estimation
+helyben kiszervezett tesztelés: olyan tesztelés, amelyet a projekt csapattal egy
+helyszínen levő, de szervezetileg független kollégák végeznek.  insourced
+testing
+ATT
+
+helyettesíthetőség: egy szoftvertermék azon képessége, hogy egy másik
+szoftvertermék helyett ugyanarra a célra ugyanazon a környezeten lehessen
+használni. [ISO 9126] Lásd még: hordozhatóság.  replaceability
+Helyreállási Idő: A rendszer bármely meghibásodása utáni helyreállási átlagidő
+(számtani közép). Jellemzően a hiba kijavításának tesztlését is.  Mean
+Time To Repair (MTTR)
+helyszíni átvételi teszt: a felhasználói/ügyfél oldalon elvégzett tesztelés annak a
+meghatározására, hogy egy komponens vagy rendszer - általában beleértve
+a hardvert és a szoftvert is - kielégíti-e a felhasználó/ügyfél igényeit az üzleti
+folyamaton belül.  site acceptance testing
+
+ATA
+
+heurisztikán alapuló kiértékelés: olyan felülvizsgálati technika, amely a
+felhasználói felület, illetve annak tervezésével kapcsolatos használhatósági
+problémákat célozza. A felülvizsgálók ezen technika alkalmazása során
+megvizsgálják a felületet és megítélik annak megfelelését az elfogadott
+használhatósági jellemzők (az ún. “heurisztikák”) szerint.  heuristic
+evaluation
+
+ATA
+
+hiba-alapú technika: lásd hiba-alapú teszttervezési technika.  defect-based
+technique
+
+ATA
+
+hiba-alapú teszttervezési technika: olyan eljárás, amelynek során egy
+hibatípushoz tervezünk, vagy választunk ki teszteseteket úgy, hogy
+figyelembe vesszük a hibatípushoz kapcsolódó ismereteinket. Lásd még:
+hibaosztályozás.  defect based test design technique
+hibabeszúrás: olyan folyamat, amelynek során – a meglevő hibákon túl –
+szándékosan új hibákat adunk a programhoz, és azt vizsgáljuk, hogy a
+tesztelés során ezek közül mennyit találunk meg és távolítunk el. Ebből
+következtethetünk a meg nem talált hibák számára. A hibabeszúrás
+jellemzően (kiadás előtti) fejlesztői teszt és bármely tesztszinten
+(komponens-, integrációs-, illetve rendszerteszt) végrehajtható. [Az IEEE
+610 alapján].  bebugging, fault seeding, error seeding
+
+ATT
+EITP
+
+hibabeszúró eszköz: olyan eszköz, amely – pl. szándékos beszúrással – hibákat
+helyez el a szoftverben.  error seeding tool, fault seeding tool
+hibafa elemzés: a hibák elemzésére szolgáló módszer. Vizuálisan modellezi,
+hogy a meghibásodások, az emberi tévedések és külső hatások hogyan
+kombinálódhatnak, hogy speciális hibákat hozzanak elő.  Fault Tree
+Analysis (FTA)
+hibakategória: lásd: hibatípus. defect category
+hibajelentés: olyan dokumentum, amely leírja a szoftver azon hibáit, amelyek a
+program elégtelen működéséhez vezethetnek.  bug report, defect report
+
+F
+
+hibakeresés: a szoftver meghibásodás okainak megtalálási, analizálási és
+eltávolítási folyamata.  debugging
+hibakereső: lásd hibakereső eszköz.  debugger
+
+F,ATT
+
+hibakereső eszköz: a programozó által használt eszköz a külső hibák
+reprodukálására, elemzésére és a hibák okainak megtalálására. A
+hibakereső eszközök lehetővé teszik a program lépésenkénti végrehajtását,
+illetve bármely utasításánál történő megállítását, valamint a programváltozók
+vizsgálatát és beállítását.  debugging tool
+hibakövető eszköz: a hibák és változások feljegyzésének és nyomon
+követésének megkönnyítését célzó eszköz. Általában végigkíséri a hibákat a
+bejegyzéstől kezdve a javításon át az újratesztelésig, illetve különböző
+jelentési lehetőségeket kínál. Lásd még: incidens menedzsment eszköz. 
+bug tracking tool, defect tracking tool
+
+hibamaszkolás: olyan állapot, amikor az egyik hiba megakadályozza a másik
+hiba megtalálását.  defect masking, fault masking
+EITP
+
+hibamegtalálási arány: egy tesztfázisban talált hibák száma osztva az adott
+teszt fázisban és később talált kódhibák számával.  Defect Detection
+Percentage (DDP), Fault Detection Percentage (FDP)
+hibamenedzsment: azon folyamat, amely során felismerjük, analizáljuk a
+kódhibákat, osztályozzuk őket, meghatározzuk hatásaikat.  defect
+management
+hibamenedzsment eszköz: olyan eszköz, amely megkönnyíti a hibák és
+változások feljegyzését és állapotaik nyomon követését. Lehetőséget nyújt a
+hibák allokálására, kijavítására és újratesztelésére, valamint támogatja a
+jelentéskészítést. Lásd még: incidens menedzsment eszköz.  defect
+management tool
+
+ATM
+
+hibamenedzsment bizottság: a hibamenedzsmentben érintett, különböző
+szempontrendszerrel rendelkező rérsztvevőkből álló csapat, amely a
+bejelentett hibák menedzsmentjét végzi – a hibák felfedezésétől kezdve
+egészen az utolsó döntésig (hiba eltávolítás, eltolás későbbi verzióra, vagy a
+jelentés törlése). Bizonyos esetekben ugyanaz a csapat, mint a konfiguráció
+irányító testület. Lásd még: konfiguráció irányító testület.  defect
+management committee, defect triage committee
+
+F-AT,ATA hibaosztályozás: (Hierarchikus) kategóriák olyan rendszere, amely támogatást
+nyújthat a hibák osztályozásában.  bug taxonomy, defect taxonomy
+F,ATA
+
+hibasejtés: olyan műszaki teszttervezési módszer, amely során a tesztelők
+tapasztalata alapján próbálják megsejteni a tesztelendő szoftverben levő
+hibákat, illetve ez alapján próbálnak megfelelő teszteket tervezni.  error
+guessing
+
+F
+
+hibasűrűség: a szoftverben azonosított hibák aránya a szoftver méretéhez
+viszonyítva (ez utóbbi szabványos mértékegységben kifejezve, mint pl. a
+kódsorok, vagy az osztályok, illetve funkciópontok száma).  defect
+density, fault density
+hibaszimuláció: olyan folyamat, amelynek során szándékosan új hibákat adunk
+a rendszerhez, és azt vizsgáljuk, hogy a rendszer ezeket észreveszi-e,
+illetve képes-e a hibák után a normális működésre. Az üzemi használat
+során feltételezhető hibák szimulációjára használatos. Lásd még: hibatűrés..
+ fault injection
+
+F
+
+hibatámadás: célzott próbálkozás a teszt tárgyának minőségének,
+különösképpen a megbízhatóságának meghatározására azáltal, hogy
+speciális meghibásodásokat próbálunk meg szándékosan előidézni. Lásd
+még: negatív teszt.  attack, fault attack
+hibatámadás-alapú teszt: tapasztalat-alapú tesztelési technika, amely
+szoftveres támadásokkal próbál hibákat előidézni - különös tekintettel a
+biztonságot érintő hibákra. Lásd még: hibatámadás  attack-based testing
+
+hibatípus: egy, a hibaosztályozás által létrehozott elem. A hibaosztályokat
+különböző szempontok szerint lehet létrehozni, például (de nem kizárólag):
+
+
+
+Az a fázis, amely során a hiba létrejött, például specifikációs hiba,
+dokumentációs hiba
+A hibák jellemzése, mint például „szélsőérték hiba”
+
+
+
+Hibás relációs operátor, programnyelv szintaktikai hiba, vagy
+érvénytelen feltételezés
+
+
+
+Teljesítmény hibák, például túl hosszú végrehajtási idő, elégtelen
+rendelkezésre állás
+
+ defect type
+hibatűrés: a szoftver azon tulajdonsága, hogy mennyire képes folytatni a
+normális működését meghatározott teljesítményen a hibás bemenetek,
+emberi hibák, valamint a hibák és belső rendellenességek ellenére.  error
+tolerance, fault tolerance
+hiperlink: egy web-oldalon található, egy másik web-oldalra vezető mutató. 
+hyperlink
+hiperlink ellenőrző eszköz: olyan eszköz, amely azt ellenőrzi, hogy nincsenek-e
+hibás hiperlinkek a web-oldalon.  hyperlink tool
+ATA
+
+hiperlink tesztszeköz: olyan eszköz, amely azt ellenőrzi, hogy a web-oldalon
+nincs-e érvénytelen hiperlink.  hyperlink test tool
+hívási gráf: a programban levő szubrutinok közötti hívási kapcsolatok absztrakt
+megjelenítése.  call graph
+hordozhatóság: egy szoftvertermék átmozgathatóságának mértéke (hardverről
+egy másikra, vagy egyik szoftver környezetből egy másikba). [ISO 9126]. 
+portability
+
+F,ATT
+ATA
+
+EITP
+
+hordozhatósági teszt: egy szoftvertermék hordozhatóságra vonatkozó tesztelés
+folyamata.  portability testing
+hozzáférhetőségi teszt: annak ellenőrzése, hogy a valamilyen fogyatékkal élő
+emberek mennyire könnyen tudják használni a komponenst, illetve a
+rendszert. [Gerrard].  accessibility testing
+IDEAL: egy szervezeti fejlesztési modell, amely a fejlesztési tevékenységek
+indításának, tervezésének és bevezetésének terveként szolgál. Az IDEAL
+modellt 5 fázisa írja le: indítás, diagnózis, kiépítés, cselekvés és tanulás. 
+IDEAL
+időbeli viselkedés: lásd teljesítmény. time behavior
+
+F
+
+incidens: bármely olyan történés, amely vizsgálódást tesz szükségessé.
+[IEEE1008 alapján].  incident
+
+F
+
+incidensjelentés: olyan dokumentum, amely minden, pl. a tesztelés alatt
+
+bekövetkezett incidenst tartalmaz, amely vizsgálatot tesz szükségessé. [Az
+IEEE 829 alapján].  incident report
+F
+
+incidens naplózása: bármely bekövetkezett incidens feljegyzése, pl. a tesztelés
+alatt.  incident logging
+
+F
+
+incidens menedzsment: az incidensek felismerésének, vizsgálatának, a
+különböző intézkedések és rendelkezések szervezésének folyamata.
+Magába foglalja az incidens loggolását, osztályozását és kihatásának
+vizsgálatát. [Az IEEE 1044 alapján].  incident management
+
+F
+
+incidens menedzsment eszköz: olyan eszköz, amely megkönnyíti az incidensek
+felismerését és állapotainak nyomonkövetését. Gyakran munkafolyamatközpontú annak érdekében, hogy az incidens allokációját, javítását és
+újratesztelését támogassa, illetve hogy támogassa a jelentéskészítést. Lásd
+még: hiba menedzsment eszköz.  incident management tool
+
+EITP
+
+indítás (IDEAL): az IDEAL modell egyik fázisa, amely során megalapozzuk a
+sikeres fejlesztési törekvéseket. A következő tevékenységeket tartalmazza:
+az összefüggések meghatározása, a támogatás kiépítése, az infrastruktúra
+biztosítása.  initiating (IDEAL)
+
+F,ATM
+
+informális felülvizsgálat: olyan felülvizsgálat, amely nem formális (dokumentált)
+eljáráson alapul.  informal review
+
+F,F-AT
+
+inkrementális fejlesztési modell: fejlesztési életciklus modell, ahol a projekt részét
+alkotó kis lépések mindegyike egy kis részt tesz hozzá az általános
+projektkövetelményekhez. A követelményeket priorizálják és a megfelelő
+inkrementális egységben a prioritási sorrend szerint szállítják. Ezen
+életciklusmodell néhány (de nem minden) verziójában minden alprojekt egy
+„mini V-modell” szerint működik, saját tervezési, megvalósítási és tesztelési
+fázisokkal.  incremental development model
+inkrementális teszt: olyan tesztelés, amikor a komponenseket egyesével, vagy
+legfeljebb néhányukat együtt lépésenként integrálják és tesztelik egészen
+addig, amíg az összes komponenst össze nem integrálják, illetve együtt nem
+tesztelik.  incremental testing
+
+F,ATM,EITP inspekció: az egyenrangú felülvizsgálat egy típusa, amely a dokumentum
+vizuális vizsgálatán alapul, hogy megtaláljuk a hibákat, vagy pl. a
+szabványokhoz képest meglevő különbségeket, illetve a magasabb szintű
+dokumentációktól való eltéréseket. A leginkább formális felülvizsgálati
+módszer, amely emiatt mindig dokumentált eljáráson alapul. [Az IEEE 610,
+és az IEEE 1028 alapján]. Lásd még: egyenrangú felülvizsgálat. 
+inspection
+inspekció vezető: lásd moderátor  inspection leader
+inspektor: lásd felülvizsgáló  inspector
+instrumentálás: kiegészítő kódok beszúrása a programba annak érdekében,
+hogy információkat kapjunk a program végrehajtása közbeni viselkedéséről,
+
+pl. kód lefedettség mérésekor.  instrumentation
+instrumentáló: az instrumentálást végrehajtó szoftver eszköz  instrumenter
+F
+
+integráció: a komponensek, vagy rendszerek nagyobb egységbe történő
+összeolvasztásának folyamata.  integration
+
+F
+
+integrációs teszt: olyan teszt, amelynek célja az integrált egységek közötti
+interfészekben, illetve köcsönhatásokban lévő hibák megtalálása. Lásd még:
+komponens integrációs teszt, rendszer integrációs teszt.  integration
+testing
+
+ATM,EITP
+
+Integrált Képességi-Érettségi Modell (CMMI): a hatékony termékfejlesztés
+és karbantartás alapelemeit leíró keretrendszer. A legjobb termékfejlesztési
+és karbantartási, tervezési és szervezési gyakorlatokat foglalja magában.
+[CMMI]  Capability Maturity Model Integration (CMMI)
+
+ATM,EITP
+
+Integrált Teszt-Érettségi Modell (TMMi): :Az Integrált Képességi-Érettségi
+Modell (CMMI)-hez kapcsolódó, ötszintes keretrendszer a tesztfolyamatok
+javítására, amely a hatásos tesztfolyamat kulcselemeit írja le.  Test
+Maturity Model Integrated (TMMi)
+interfész teszt: olyan integrációs teszt, amely az interfészekre koncentrál. 
+interface testing
+
+EITP
+
+intézkedés előrejelző: olyan intézkedés, amelyet egymásik intézkedés
+előrejelzésére, vagy becslésére használunk. [ISO 14598].  indicator
+ipari átvételi teszt: a termék fejlesztési helyén végrehajtott, a szálíltó cég
+munkatársai által végrehajtott átvételi teszt, amelynek az a célja, hogy
+megállapítsák, hogy a komponens, vagy a rendszer teljesíti-e a
+követelményeket, általában mind a hardverre, mind a szoftverre
+vonatkozóan. Lásd még: alfa teszt  factory acceptance testing
+
+ETM
+
+Ishikawa diagramm: lásd ok-okozat diagramm.  Ishikawa diagramm
+
+F,F-AT
+
+iteratív fejlesztési modell: olyan fejlesztési életciklus, amely során a projektet
+nagyszámú iterációk sorozatára bontják. Egy iteráció egy olyan teljes
+fejlesztési ciklus, amely egy végrehajtható termék (belső, vagy külső)
+kiadását eredményezi, a végső termék egy részhalmazát, amely iterációról
+iterációra növekedve válik a végső termékké.  iterative development model
+
+F
+
+jegyzőkönyv vezető: az a személy, aki naplózott formában rögzíti a
+felülvizsgálat során megemlített összes hibát és azokat a javaslatokat, amik
+a folyamat javítására irányulnak. A jegyzőkönyv vezetőnek biztosítani kell,
+hogy a naplózás olvasható és érthető legyen.  scribe, recorder
+karbantartás: az alkalmazás átadása után végzett módosítások: hiba javítások,
+teljesítmény vagy más jellemzők feljavítása illetve megváltozott
+környezetre/követelményekre való alkalmazása. [IEEE 1219]. 
+maintenance
+
+F
+
+karbantartási teszt: módosítások vagy megváltozott környezet miatt a működő
+
+rendszeren végrehajtott teszt.  maintenance testing
+karbantarthatóság: egy alkalmazás azon tulajdonsága, hogy milyen egyszerűen
+lehet hibákat javítani benne, új vagy megváltozott követelmények illetve
+környezet miatt szükséges módosításokat eszközölni. [ISO 9126]. 
+maintainability
+F, ATT,F-AT karbantarthatósági teszt: teszteljárás egy alkalmazás karbantarthatóságának
+meghatározására.  maintainability testing
+F
+
+kereskedelmi dobozos szoftver: lásd dobozos szoftver.  Commercial Off-TheShelf software
+Képesség-Érettség Modell (CMM): a hatékony szoftverfejlesztés kulcs lépéseit
+5 szinten leíró keretrendszer. Magába foglalja a tervezés, illetve a
+szoftverfejlesztés bevált gyakorlatait. Lásd még: integrált KépességiÉrettségi Modell.  Capability Maturity Model (CMM)
+képzeletbeli futtatás: a program elméleti futtatása, amikor a szoftverfejlesztő
+lépésről lépésre megvizsgálja a forráskódot és megállapítja, hogy az a
+futáskor hogyan fog viselkedni.  dry run
+
+ETAE
+
+kézi
+
+teszt ráfordítási igénye: a tesztek kézi futtatásához
+ráfordításszükséglet.  equivalent manual test effort, EMTE
+
+szükséges
+
+kiadási megjegyzés: tesztelemeket, azok konfigurációját, aktuális státuszát és
+egyéb információkat azonosító dokumentum vagy feljegyzés. Ezt a teszt
+végrehajtási fázis kezdetekor a fejlesztők szállítják a tesztelőknek, esetleg a
+megrendelőnek. [IEEE 829].  release note, item transmittal report
+EITP
+
+EITP
+
+kiegyensúlyozott stratégiai mutatószám-rendszer: stratégiai teljesítmény
+menedzsment eszköz, amellyel azt mérhetjük, hogy a vállalat működési
+tevékenységei összhangban vannak-e a céljaival a vállalat jövőképével,
+illetve stratégiájával. Lásd még: vállalati áttekintőtábla, stratégiai
+mutatószám-rendszer.  balanced scorecard
+kiépítés (IDEAL): az IDEAL modell azon fázisa, amely során meghatározzák,
+hogyan érje el a szervezet a célját. A kiépítés fázis a következő
+tevékenységeket foglalja magában: prioritások felállítása, fejlesztési
+megközelítés, tevékenységek tervezése.  establishment (IDEAL)
+
+F,ATM,ATA kilépési feltétel: általános és speciális feltételek halmaza, amelyet minden
+érintettel egyeztetve egy folyamat hivatalos befejezési feltételének tekintünk.
+A célja, hogy megakadályozzuk az olyan feladatok befejezettnek tekintését,
+amelyeknek még vannak függőben levő, be nem fejezett részei. A kilépési
+feltételeket a tesztelés leállításának tervezéséhez és jelentéséhez
+használjuk. . [Gilb és Graham alapján].  exit criteria
+kilépési pont: egy végrehajtható utasítás, vagy folyamatlépés, amely egy adott
+folyamat utolsó tervezett lépését határozza meg.  exit point
+kimenet: egy (komponensen kívül vagy belül tárolt) változó, amelyet egy
+komponens írhat.  output
+
+kimeneti érték: a kimenet egy példánya. Lásd még: kimenet.  output value
+kimeneti értéktartomány: a helyes kimeneti értékeket tartalmazó halmaz. Lásd
+még: domain.  output domain
+F
+
+kimerítő teszt: olyan teszt, amely során a tesztkészletünk magába foglalja a
+bemeneti értékek és előfeltételek összes kombinációját.  exhaustive
+testing
+kiszervezett tesztelés: olyan tesztelés, amelyet a projekt csapattal nem egy
+helyszínen levő és szervezetileg is független kollégák végeznek. 
+outsourced testing
+kiterjesztett döntési feltétel lefedettség: olyan arányszám, amely azt mutatja,
+hogy a tesztkészlet hány százalékban hívta meg az egyes feltétel
+kimeneteket, amelyek egymástól függetlenül befolyásolják a döntés
+eredményét. 100% kiterjesztett döntési feltétel lefedettség mindig 100%
+döntési feltétel lefedettséget is jelent.  modified condition decision
+coverage, MCDC, modified multiple condition coverage
+
+ATT
+
+kiterjesztett döntési feltétel teszt: olyan fehérdoboz teszttervezési technika,
+amely során olyan teszteseteket tervezünk, amelyek azon feltétel
+kimeneteket hajtják végre, amelyek egymástól függetlenül befolyásolják a
+döntés eredményét.  modified condition decision testing, modified multiple
+condition testing
+
+ATM
+
+kiváltó ok: a hiba forrása, melyet eltávolítva a hibajelenség is csökken vagy
+megszűnik. [CMMI].  root cause
+
+ATA
+
+kiváltó ok elemzés: ezen elemzési technikának az a célja, hogy a hibát kiváltó
+okokat azonosítsa. Amennyiben a hibát kiváltó okokat meg tudjuk határozni,
+és ezeket még valamilyen módon mérni is tudjuk, a hibák előfordulásának
+valószínűségét minimalizálni lehet.  root cause analysis
+kivételkezelés: a szoftver azon viselkedése, hogy hogyan reagál a téves
+bemenetekre, amelyek akár téves felhasználásból, akár egy másik
+szoftvertől, akár belső meghibásodásból származik.  exception handling
+kivitelezési görbe:
+olyan ábra, amely az iterációban hátralevő
+munkamennyiséget mutatja a maradék idő függvényében. Kiolvasható
+belőle a kivitelezés állapota és várható alakulása. Az X-tengely általában a
+futam napjait jelöli, míg az Y-tengely a hátralevő munka mennyiségét
+(általában vagy elméleti mérnökórában, vagy story pontokban.)  burndown
+chart
+
+F,ATM
+
+kockázat: az a tényező, amely a jövőben negatív következményeket okozhat.
+Általában, mint hatás és valószínűség jelenik meg.  risk
+
+F,ATM
+kockázat-alapú teszt: a tesztelés egy olyan megközelítése, mely csökkenti a
+ATA,ATT
+termék kockázati szintjét és tájékoztatja az érintetteket a kockázat
+mértékéről már a projekt kezdeti fázisában. Magában foglalhatja mind a
+termék kockázatainak azonosítását, mind a tesztfolyamat kockázat szerinti
+
+vezetését.  risk-based testing
+ATM,ATA kockázat azonosítás: folyamat a kockázatok azonosítására valamilyen technika
+/ módszer használatával. Ilyen technika például a “brainstorming”, az
+ötletlista, vagy a hibatörténet elemzés.  risk identification
+ATM
+ATA,ATT
+
+kockázatkezelés: egy olyan folyamat, melyben megelőző méréseket
+végzünk, és döntéseket hozunk, hogy a megadott szintre csökkentsük,
+vagy azon a szinten tartsuk a kockázatokat. risk control, risk mitigation
+
+ATM
+ATA
+ATT
+a
+
+kockázatelemzés: a projekt-illetve termékkockázati elemek elemzésének
+folyamata, amelynek során meghatározzuk a kockázat szintjét, jellemzően
+a várható kihatásának, illetve a bekövetkezés valószínűségének a
+megbecslésével.  hazard analysis, risk analysis
+
+ATM,ATT
+ETAE
+
+kockázat értékelés: az projekt- illetve termékkockázatok azonosításának, majd
+ezek elemzésének folyamata, amely során meghatározzuk a kockázati
+szintet jellemzően azáltal, hogy a kockázatokhoz valószínűségeket és
+kockázati hatásokat rendelünk. Lásd még: termékkockázat, projekt
+kockázat, kockázat hatása, kockázat, kockázati szint, kockázat
+valószínűsége.  risk assessment
+
+Lásd még:
+
+ATM
+ATA,ATT
+
+kockázat hatása: a kockázati esemény bekövetkezése esetén keletkező kár
+mértéke. risk impact
+kockázati szint: egy kockázat nagysága megadható a hatásának és a
+valószínűségének karakterisztikájával. A kockázat nagysága, azaz a
+kockázati szint meghatározza a tesztelés intenzitását is. A kockázati szint
+kvalitatív (nagy, közepes, kicsi) vagy kvantitatív (30%) módon egyaránt
+megadható.  risk level
+kockázat kategória: lásd: kockázattípus.  risk category
+
+ATM,ATA kockázat menedzsment: azon folyamatok és gyakorlatok rendszerszintű
+alkalmazása, melyek a kockázatok azonosításával, elemzésével,
+priorizálásával és kezelésével kapcsolatosak.  risk management
+kockázattípus: a kockázatok valamilyen szempont szerinti csoportja, mint pl.
+minőségi attribútum, ok, a kockázat helye, vagy a lehetséges kihatás. A
+kockázat típusa összefügg a tesztelés típusával, amely csökkentheti
+(kezelheti) az adott kockázattípust. Például a felhasználói interakciókkal
+kapcsolatos félreértések csökkenthetők a használhatósági teszttel.  risk
+type
+kockázat valószínűsége: a kockázati esemény bekövetkezésének becsült
+valószínűsége.  risk likelihood
+EITP
+
+kodependens viselkedés (kapcsolati függőség): egy másik személytől való
+túlzott érzelmi, vagy pszichológiai függőség, amely során látszólag
+megpróbáljuk megváltoztatni a másik személy jelenlegi (nem kívánatos)
+viselkedését, mialatt tudat alatt partnerek vagyunk a nemkívánatos
+viselkedés fenntartásában: Példa lehet erre a szoftvertesztelés során,
+
+amikor panaszkodunk a fejlesztők késlekedése miatt, de tudat alatt élvezzük
+a „hősi” szerepet, amelyet a túlórákkal vívunk ki magunknak, és ezáltal
+tulajdonképpen megerősítjük a nem kívánt viselkedést.  codependent
+benaviour
+ATA
+
+kombinatorikus teszt: adott lefedettségi szint eléréséhez szükséges és
+elegendő tesztkombinációk meghatározására szolgáló módszer. Akkor
+alkalmazzák, ha a tesztelendő objektumnak sok paramétere, ezek
+mindegyikének több értéke van, így a lehetséges kombinációk száma
+meghaladja a rendelkezésre álló idő alatt elvégezhető tesztek számát. Lásd
+még: osztályozási fa módszer, páronkénti teszt, n-szeres teszt, ortogonális
+mátrix teszt.  combinatorial testing
+kompatibilitási teszt: lásd: együttműködőképességi teszt.  compatibility testing
+
+F
+
+komplexitás: a szoftver tervének, illetve illetve belső struktúrájának
+összetettsége megértés, karbantartás, valamint verifikálás szempontjából.
+Lásd még: ciklomatikus komplexitás.  complexity
+komponens: a legkisebb önállóan tesztelhető szoftver egység.  component
+komponens integrációs teszt: az integrált komponensek közötti kapcsolatok
+hibáinak felderítését szolgáló teszt.  component integration testing,
+integration testing in the small
+komponens specifikáció: a komponens viselkedésének leírása abban az
+értelemben, hogy a megadott bemeneti értékre bizonyos feltételek mellett
+milyen kimeneti érték várható el, valamint a szükséges nem-funkcionális
+működés meghatározása (pl. az erőforrások kezelésése).  component
+specification
+
+F
+
+komponens teszt: az egyes szoftverkomponensek tesztje.  component testing
+
+ETM
+
+konfidencia intervallum: a projektkockázatok kezelésére előírt azon
+időintervallum, amelyen belül a váratlan helyzetekben elvégzendő
+műveleteket végre kell hajtani, hogy azok a kockázat következményeit
+mérsékelni tudják.  confidence interval
+konfiguráció: a rendszer, illetve a szoftver összeállítása az alkotóelemeinek
+száma, jellege és kapcsolatai alapján.  configuration
+konfiguráció azonosítás: a konfiguráció menedzsment része, amely a
+konfigurációs elemek kiválasztásából, illetve ezek funkcionális és fizikai
+karakterisztikáinak a műszaki dokumentációba történő feljegyzéséből áll. 
+configuration identification
+
+F-AT
+
+konfiguráció elem: azon hardver, illetve szoftver egységek összessége, amelyek
+a konfiguráció menedzsment egységeként kezelendők.  configuration item
+konfiguráció ellenőrzés: annak vizsgálata, hogy a konfigurációs elemek
+tartalma megfelel-e pl. a szabványoknak.  configuration auditing
+konfiguráció
+
+irányítás:
+
+a
+
+konfiguráció
+
+menedzsment
+
+része,
+
+amely
+
+a
+
+konfigurációs elemeknek a konfigurációs állapot formális rögzítése utáni
+változásainak kiértékelését, koordinálást, jóváhagyását, vagy éppen
+elutasítását, továbbá a megvalósítását foglalja magába.  configuration
+control
+konfiguráció irányító testület: lásd változás irányító testület.  configuration
+control board (CCB)
+F,F-AT
+
+konfiguráció menedzsment: a következő tevékenységek technikai és
+adminisztratív irányítása: a konfigurációs elemek funkcionális és fizikai
+karakterisztikáinak meghatározása és dokumentálása, az ezen
+karakterisztikákhoz képest történő változás irányítása, a változáskezelési és
+megvalósítási állapot nyomon követése és jelentése, illetve a különböző
+követelményeknek történő megfelelés.  configuration management
+
+F
+
+konfiguráció menedzsment eszköz: olyan eszköz, amely támogatja a
+konfigurációs elemek meghatározását és irányítását, ezek változásainak,
+illetve verzióinak, státuszainak nyomon követését, illetve felügyeli az ezeket
+tartalmazó alapverziók kiadását.  configuration management tool
+
+F
+
+konfiguráció teszt: lásd hordozhatósági teszt  configuration testing
+
+ETM
+
+konvergencia metrika: olyan metrika, amely egy meghatározott szempontból
+mutatja a haladást, pl. a végrehajtott tesztek számának közelítését a
+tervezett tesztek számához.  convergence metric
+konverziós teszt: annak tesztje, hogy egy meglevő rendszerből hogyan lehet
+adatokat átkonvertálni a helyettesítő rendszerbe.  conversion testing
+
+ETM
+
+konzultáló teszt: külsö szakértők (a technológia és/vagy a szakterület ismerői)
+irányításával folyó teszt.  consultative testing
+komponens kapcsolati teszt: lásd komponens integrációs teszt.  link testing
+konfiguráció irányítás: a konfigurációkezelés eleme, amely magába foglalja a
+konfigurációs elemek változásainak a formális rögzítést követő kiértékelését,
+jóváhagyását és elutasítását, valamint a megvalósítását.  configuration
+control
+konkurencia teszt: annak vizsgálata, hogy a szoftver megfelelően kezeli-e a két,
+vagy több tevékenység egyidejű futtatását, amely párhuzamos futtatásból,
+illetve a különböző tevékenységek összefésüléséből származhat. 
+concurrency testing
+konzisztencia: a szoftver, illetve a dokumentáció egységességének,
+szabványosságának, illetve az ellentmondásoktól mentességének foka. 
+consistency
+kód: programnyelven, vagy a fordító, illetve az assembler kimeneteként kifejezett
+számítógépes utasítás és adat definíció.  code
+kód-alapú teszt: lásd fehérdoboz teszt.  code-based testing
+kód elemző: statikus kód elemzést végző eszköz.
+
+Az eszköz megvizsgálja,
+
+hogy a forráskód mennyire felel meg a kódolási irányelveknek, a minőségi
+mutatóknak, illetve vizsgálja az adatfolyam rendellenességeit.  code
+analyzer, static code analyzer
+F
+
+kód lefedettség: elemző módszer, amely meghatározza, hogy a szoftver mely
+részei lettek végrehajtva (lefedve) a teszt végrehajtása során, és melyek
+nem. Például: utasítás lefedettség, döntési lefedettség, feltétel lefedettség.
+ code coverage
+
+F
+
+követelmény: olyan feltétel vagy képesség, amely a felhasználó számára azért
+szükséges, hogy megoldjon egy problémát,vagy elérjen egy célt. Ezen
+feltételnek vagy képességnek a rendszer vagy rendszer komponens által is
+megvalósíthatónak kell lennie úgy, hogy közben a szerződés, szabvány,
+specifikáció
+és
+egyéb
+formális
+dokumentumban
+támasztott
+követelményeknek is megfeleljen. [IEEE 610].  requirement
+
+ATA
+
+követelmény-alapú teszt: olyan teszt, amely során a tesztesetek tervezése a
+követelményekből származtatott tesztcélok és feltételek alapján történik.
+Például speciális funkciók tesztjei vagy olyan nem-funkcionális jellemzők
+tesztjei, mint a megbízhatóság vagy használhatóság.  requirements-based
+testing
+követelmény feltárási fázis: a szoftver életciklus azon fázisa, melyben a
+szoftvertermékkel kapcsolatos követelmények definiálása és dokumentálása
+történik. [IEEE 610].  requirements phase
+
+F
+
+követelmény-menedzsment eszköz: olyan eszköz, amely támogatja a
+követelmények, a követelmény jellemzőinek (pl. prioritás, tudás gazda)
+rögzítését és magyarázó jegyzetek készítését, valamint megkönnyíti a
+különböző szintű követelmények nyomon követhetőségét és változás
+menedzsmentjét. Vannak olyan követelmény-menedzsment eszközök,
+melyek a statikus elemzéshez is segítséget nyújtanak, például konzisztencia
+ellenőrzéssel vagy előre definiált, követelményekre vonatkozó szabályokkal.
+ requirements management tool
+közbeékelődéses támadás: egy külső szereplő olyan tevékenysége,amely
+során úgy kapja el, szimulálja, és/vagy változtatja meg az áldozatai közötti
+kommunikációs üzeneteket (pl. hitelkártya tranzakciók), hogy a felhasználó
+nem veszi észre a külső szereplő jelenlétét.  man in the middle attack
+
+EITP
+
+kritikus sikertényező: a szervezet küldetésének eléréséhez nélkülözhetetlen
+elem. Ezek olyan kritikus tényezők, vagy tevékenységek, amelyek biztosítják
+a sikert.  critical success factor
+
+ATM,EITP kritikus tesztelési folyamatok: nagyjából 12 kulcsfontosságú folyamatból
+felépített, a tesztelési folyamat fejlesztését szolgáló tartalom-alapú modell.
+Célja, hogy jól áttekinthetően mutassa a menedzsment részére a szervezet
+küldetése szempontjából legfontosabb folyamatokat, ahol a teljesítmény
+leginkább befolyásolja a cég nyereségét és hírnevét. Lásd még: tartalomalapú modell.  Critical Testing Processes, CTP
+
+kulcsfontosságú teljesítményjelző: magas szintű mutató, amely a fejlesztés
+eredményességét és/vagy hatékonyságát mutatja. Azt jelzi, hogy adott célt
+elérünk-e és milyen feltételekkel (mondjuk idő vagy költség szempontból).
+[CMMI].  key performance indicator
+F,ATA,ATT kulcsszó-alapú teszt: egy olyan, szkripteken alapuló tesztelési technológia,
+amelynél a teszt-szkriptekben nemcsak tesztadatok és az elvárt eredmény
+található, hanem az alkalmazással kapcsolatos vezérlő kulcsszavak is. Az
+akciószavak értelmezését a teszthez tartozó vezérlő szkriptek által
+meghívott speciális támogató szkriptek végzik. Lásd még: adatvezérelt teszt.
+ action word driven testing, keyword-driven testing
+LCSAJ: a LCSAJ (Linear Code Sequence and Jump) kifejezés három összetevőt
+takar (amelyet a forráskód egy-egy sorával azonosíthatunk): az egymást
+követő lineáris utasítás sorok kezdő és végpontját, valamint azt a kód helyet,
+ahova a vezérlés kerül a zárósor után.  LCSAJ
+LCSAJ lefedettség: egy komponensben levő összes LCSAJ kódrészletből azok
+százalékos aránya, amelyek a teszt futtatása során végrehajtásra kerültek.
+100% LCSAJ lefedettség 100%-os döntési lefedettséget jelent. Lásd: döntési
+lefedettség.  LCSAJ coverage
+LCSAJ teszt: fehérdoboz teszttervezési módszer, amelynek célja, hogy a
+tesztesetek LCSAJ kódsorokat járjanak be.  LCSAJ testing
+lefedettség: annak százalékos mérőszáma, hogy az adott lefedettségi elemet
+milyen arányban hajtotta végre a teszteszköz.  coverage
+lefedettség elemzés: az adott lefedettségi elem a teszt során elért
+lefedettségének elemzése, amely utal az előre meghatározott szempontra,
+eldönti, hogy további tesztelés szükséges-es, és ha igen, milyen formában.
+ coverage analysis
+lefedettség-mérő eszköz: lásd lefedettségi eszköz.  coverage measurement
+tool
+lefedettségi elem: olyan entitás, vagy jellemző, amely a test lefedettség alapjául
+szolgál, pl. ekvivalencia partíciók, vagy kód utasítások.  coverage item
+F
+
+lefedettségi eszköz: olyan eszköz, amely objektíven méri, hogy mely strukturális
+elemeket – pl. utasításokat, elágazásokat - hajt végre a tesztkészlet. 
+coverage tool
+
+EITP
+
+lépcsőzetes felépítés: egy modell struktúra, amiben adott folyamatok céljainak
+megvalósításával egy érettségi szintet érünk el; minden egyes szint a
+következő szint alapját képezi. [CMMI].  staged representation
+
+ETAE
+
+lineáris szkritpkészítés: egyszerű szkriptkésztési technika, amelynek
+alkalmazása esetén a szkriptek nem tartalmaznak vezérlési struktúrákat. 
+linear scripting
+
+ATA
+
+logikai teszteset: lásd magas szintű teszteset.  logical test case
+
+ATA
+
+magas szintű teszteset: olyan teszteset, amely nem rendelkezik konkrét,
+megvalósítási szintű bemenő adattal, illetve elvárt eredménnyel. Logikai
+műveleteket használ. Az aktuális értékek példányai nem meghatározottak
+és/vagy nem hozzáférhetők. Lásd még: alacsony szintű teszteset.  high
+level test case
+megbízhatóság: a szoftvertermék azon képessége, hogy a szükséges, előírt
+funkcionalitást meghatározott időtartam vagy meghatározott műveletszám
+mellett az előre megállapított követelmények szerint látja el. [ISO 9126]. 
+reliability
+
+ATT
+
+megbízhatóság-növekedés modell: olyan modell, mely megmutatja, hogy
+folyamatos tesztelés mellett és azon hibák javításával, melyek a
+megbízhatóságot érintették, hogyan növekszik egy komponens vagy
+rendszer megbízhatósága.  reliability growth model
+
+F,ATT
+
+megbízhatósági teszt: a teszt folyamata meghatározza egy szoftvertermék
+megbízhatóságát.  reliability testing
+megfelelőség: a szoftvertermék azon képessége, hogy megfelelő funkciókat
+biztosítson meghatározott feladatokhoz és felhasználói célokhoz. Lásd még:
+funkcionalitás. [ISO 9126].  suitability
+
+ATA
+ATA
+F
+
+megfelelőségi teszt: a szoftver megfelelőségét vizsgáló teszt.  suitability
+testing
+megjelenés: annak vizsgálata, hogy a szoftver mennyire attraktív a felhasználó
+felé.  attractiveness
+meghajtó: egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a
+komponenst, amely egy másik komponens, vagy a rendszer vezérlését,
+és/vagy felhívását végzi.  driver
+meghatározott bemeneti érték: egy bemenet, amire a specifikáció megadja az
+eredményt.  specified input
+
+F,ATM
+
+meghibásodás: a komponens, illetve a rendszer eltér az elvárt eredménytől, vagy
+szolgáltatástól.  failure
+
+F
+
+meghibásodás arány: adott kategóriájú meghibásodások aránya egy adott
+mértékegységben kifejezve, pl. időegységhez, a tranzakciók számához,
+vagy a futó gépek számához viszonyítva.  failure rate
+meghibásodási teszt: olyan teszt, amely során üzemzavarokat szimulálunk,
+illetve ellenőrzött körülmények között meghibásodásokat idézünk elő. A
+meghibásodási teszt azt teszteli, hogy a meghibásodás után nincs-e
+adatvesztés, vagy adatromlás, és hogy minden elfogadott szolgáltatási szint
+fennmaradt-e (pl. bizonyos funkcionalitások elérhetők-e, illetve a válaszidők
+megfelelők-e).  failover testing
+Meghibásodások Közti Átlagidő: a rendszer meghibásodásai között eltelt
+átlagidő (számtani közép). A Meghibásodások Közti Átlagidő (Mean Time
+Between Failures, MTBF) jellemzően a megbízhatóság-növekedés modell
+
+része, amely azt feltételezi, hogy a rendszert a hibajavító folyamat keretében
+azonnal javítják, Lásd még: megbízhatóság-növekedés modell.  Mean
+Time Between Failures (MTBF)
+ATT
+
+memóriaszivárgás: Memóriahozzáférési meghibásodás, amelyet a program
+dinamikus tárhely allokációjában levő programhiba okoz, amely miatt nem
+szabadul fel az adott memóriaterület a használat után. A memóriaszivárgás
+a program és/vagy a párhuzamos folyamatok leállásához vezethet. 
+memory leak
+
+ATM
+
+menedzsment felülvizsgálat: a beszerzési-, szolgáltatási-, fejlesztési-,
+üzemeltetési- és karbantartási eljárások rendszeres kiértékelése a
+menedzsment által vagy annak megbízásából. A kiértékelés célja, hogy
+ellenőrizze, hogy a feladatok ellátása az (ütem)tervnek megfelelően történike, jóváhagyja a követelmények teljesítését, valamint, hogy kiértékelje a
+menedzsment (saját maga) által a cél elérésére tett lépéseinek
+eredményességét. [Az IEEE 610 és az IEEE 1028 alapján].  management
+review
+mennyiségi teszt: a rendszer funkcióit nagy mennyiségű adattal vizsgáló
+tesztelési módszer. Lásd még: erőforráshasználat teszt.  volume testing
+
+F,EITP
+
+metrika: méréseknél használatos skála és mérési módszertan. [ISO 14598] 
+metric
+mérés: az az eljárás amivel egy egyed egy tulajdonságához számosságot vagy
+kategóriát rendelünk. [ISO 14598]  measurement
+mérési mellékhatás: egy rendszer vagy komponens mérése során a
+mérőeszköz által okozott hatás; például teljesítményteszt során a tesztelő
+illetve mérőeszköz rontja a rendszer vagy komponens teljesítményét (még
+ha nem is onnan futtatjuk, de monitorozzuk).  probe effect
+mérési skála: az adatelemzés típusát meghatározó skála (névleges, sorrendi,
+különbségi vagy aranyskála). [ISO 14598].  measurement scale
+mérföldkő: a projekt egy időpontja, amelyre meghatározott minőségű és
+mennyiségű (köztes) leszállítandót és eredmény kell felmutatni  milestone
+
+EITP
+
+mérőszám: tetszőleges egyed egy tulajdonságához mérés során hozzárendelt
+számossága vagy kategóriája. [ISO 14598].  measure
+migrációs teszt: lásd konverziós teszt.  migration testing
+
+F
+
+minőség: az a szint, amikor a komponens, rendszer vagy folyamat megfelel a
+meghatározott követelményeknek és/vagy a felhasználó/ügyfél igényeinek
+és elvárásainak. [IEEE 610]  quality
+minőségbiztosítás: a minőségmenedzsment azon eleme, mely azért felel, hogy
+kielégítsük a minőséggel szemben támasztott követelmények. [ISO 9000]. 
+quality assurance
+minőségellenőrzés: minőségmenedzsment része, azon tevékenységek és
+
+módszerek összessége, amelyek a minőségi követelmények teljesítésére
+fókuszálnak [ISO 8402 alapján].  quality control
+minőségellenőrző kapu: a projekt egy speciális mérföldköve. Azon fázisok közé
+szokták beékelni, ahol az egyik fázis eredménye nagyban függ az előtte levő
+fázis kiementétől. A minőségellenőrző kapu formálisan ellenőrzi a megelőző
+fázis dokumentumait.  quality gate
+Minőségi Funkcionalitás Transzfer: olyan módszer, amely a felhasználói
+igényeket minőségi műszaki teszttervvé alakítja át, megmutatja a minőséget
+jelentő funkcionalitásokat és bevezeti az alrendszerekbe, komponensekbe,
+végsősoron a gyártási folyamat speciális elemeire a minőségi műszaki terv
+megvalósításához szükséges módszereket [Akao].  Quality Function
+Deployment, QFD
+minőségi jellemző: olyan tulajdonság, vagy jellemző, amely befolyásolja egy
+elem minőségét. [IEEE 610].  quality attribute, quality characteristic
+minőség költsége: a minőséggel kapcsolatos tevékenységek teljes költsége,
+amelyek általában megelőzési költségből, a kiértékelési költségekből, a
+belső és külső meghibásodások költségéből áll.  cost of quality
+minőségmenedzsment: koordinált tevékenységek egy szervezet irányítására és
+ellenőrzésére a minőség szempontjából.
+Az irányítás és ellenőrzés
+minőségi szempontjai általában a következő tevékenységeket foglalják
+magukba: minőségi előírások, irányelvek készítése, minőségtervezés,
+minőségellenőrzés, minőségbiztosítás, minőségjavítás. [ISO 9000]. 
+quality management
+F-AT,ATM minőségügyi kockázat: a minsőgéi jellemzőkhöz tartozó kockázat. Lásd még:
+minőségi jellemző, termékkockázat.  quality risk
+minősítés: egy folyamat, mely tanúsítja az elvárt követelményeknek való
+megfelelőséget. A „minősített” fogalmat a megfelelő státusz megnevezésére
+használják. [ISO 9000].  qualification
+ETM
+
+F
+
+F,ATM
+
+modell-alapú teszt: a tesztelendő rendszer, vagy egy komponens modelljén
+alapuló teszt, mint a megbízhatóság-növekedés modell, használati modellek,
+mint a működési profilok, vagy viselkedési modellek, mint a döntési tábla,
+vagy az állapotátmenet diagramm. model-based testing
+modellező eszköz: egy alkalmazás, vagy egy rendszer modelljeinek
+létrehozását, javítását és verifikálását támogató eszköz. [Graham] 
+modeling tool
+moderátor: egy inspekció, vagy felülvizsgálat levezetéséért felelős kulcsember
+vagy vezető.  moderator
+modul: lásd: komponens.  module
+modulteszt: lásd: komponens teszt.  module testing
+
+ETM
+
+módszeres teszt: szabványos tesztkészleten, mint például ellenőrző listán,
+
+minőségügyi szabványon, vagy általános jellegű teszteseteken alapuló
+teszt. methodical testing
+ATM,EITP Módszeres Teszt és Kiértékelési Folyamat: egy olyan strukturált tesztelési
+módszertan, amelyet tartalom-alapú modellként a tesztelési folyamat
+fejlesztésére használnak. A Módszeres Teszt és Kiértékelési Folyamat
+(STEP) nem követeli meg, hogy a fejlesztések meghatározott sorrendben
+történjenek. Lásd még: tartalom-alapú modell.  Systematic Test and
+Evaluation Process (STEP)
+Munkaelem Strukturálás: egy munka elemeinek, továbbá az egymáshoz és a
+termékhez való kapcsolatának elrendezése. [CMMI].  Work Breakdown
+Structure (WBS)
+munkamenet-alapú teszt vezetése: a munkamenet-alapú teszt mérésének és
+irányításának módszere.  session-based test management
+munkamenet-alapú teszt: olyan tesztelési megközelítés, amely során a
+tesztelési tevékenységek a műszaki teszttervezés és a végrehajtás
+megszakítás nélküli menetként zajlanak. Általában a felderítő teszttel
+kapcsolatosan használják.  session-based test
+mutató: adatelem mely egy másik adatelem helyét határozza meg, például: egy
+ilyen adatelem tartalmazza a következő feldolgozandó alkalmazott rekord
+címét. [IEEE 610].  pointer
+mutációs elemzés: egy tesztkészlet alaposságát vizsgálhatjuk ezen módszerrel
+úgy, hogy megfigyeljük, hogy a tesztkészlet mennyire tesz különbséget
+(mennyire hoz más eredményt) eredeti program kód és variánsain
+(mutánsain) történő futtatása között.  mutation analysis
+mutációs teszt: lásd összehasonlító teszt  mutation testing
+ATT
+
+működési átvételi teszt: az átvételi tesztfázisban általában egy szimulált,
+életszerű környezetben az üzemeltetők és vagy adminisztrátorok által
+végrehajtott működési teszt, amely működési szempontból (pl.:
+visszaállíthatóság, erőforrás-kezelés, telepíthetőség és technikai
+szabványosság) vizsgálja a rendszert,. Lásd még: működési teszt. 
+operational acceptance testing
+működési környezet: a felhasználók vagy vevők telephelyén levő szoftver és
+hardver termékek, amelyeken vagy amelyekkel a tesztelendő komponens
+vagy rendszer futni fog. Ilyen szoftverek például az operációs rendszer
+illetve az adatbáziskezelő rendszer.  operational environment
+
+ETM,ATT működési profil: egy komponens, vagy rendszer által végrehajtott különböző
+feladatok, és ezek valószínűségének reprezentációja, amely a felhasználói
+várható interakcióin alapul. Ez a feladat inkább logikai típusú, amely
+lefutása akár több gépen és nem folytonos időintervallumban is történhet. 
+operational profile
+ETM
+
+működési profilozás: a működési profil fejlesztésének és megvalósításának
+
+folyamata. Lásd még: működési profil.  operational profiling
+működési profil teszt: egy komponens, vagy rendszer által végrehajtott
+különböző feladatok, és ezek valószínűségének reprezentációja, amely a
+várható felhasználói interakciókon alapul. Ez a feladat inkább logikai típusú,
+amely lefutása akár több gépen és nem folytonos időintervallumban is
+történhet.  operational profile testing
+működési teszt: egy komponensen, vagy rendszeren futtatott teszt, amivel
+megfigyelhetjük a komponens vagy rendszer működési környezetben való
+viselkedését. [IEEE 610].  operational testing
+ATA
+
+működtethetőség: egy szoftverterméknek a felhasználók számára nyújtott
+működtetési, vezérelhetőségi tulajdonsága. [ISO 9126] Lásd még:
+használhatóság.  operability
+műszaki tesztterv (test design) specifikáció: egy tesztelemre vonatkozó
+tesztfeltételeket (lefedettségi elemeket), a részletes tesztelési megközelítést
+és a magas szintű teszteseteket leíró dokumentáció (IEEE 829 alapján). 
+test design specification
+
+F,ATM
+ATA
+
+műszaki teszttervezés:
+(1) Lásd műszaki tesztterv (test design) specifikáció
+(2) Az általános tesztcélok átalakítása mérhető tesztfeltételekké és
+tesztesetekké
+
+ test design
+F
+
+műszaki teszttervezési technika: a tesztesetek készítésére, származtatására és
+kiválasztására alkalmazott eljárás.  test design technique
+
+F,ATA
+
+műszaki teszttervező eszköz: a műszaki teszttervezési tevékenységet támogató
+eszköz, amely tesztbemeneteket generál egyéb forrásokból, pl. CASE
+eszközökből, követelmény menedzsment eszközökből, tesztfeltételekből
+valamint magából a programkódból.  test design tool
+
+ETM
+
+Myers-Briggs Type Típus Indikátor (MBTI): pszichológiai indikátor, amely az
+emberek különböző személyiségjellemzőit és kommunikációs stílusát
+mutatja.  Myers-Briggs Type Indicator (MBTI)
+N-lépéses lefedettség: egy tesztkészlet által bejárt egymás utáni N+1 átmenet.
+[Chow]  N-switch coverage
+N-lépéses teszt: az állapotátmenet teszt egy fajtája, amelyben a teszteseteket
+úgy tervezték, hogy az N+1 átmenet összes valós utasítását bejárják.
+[Chow] Lásd még: állapotátmenet teszt.  N-switch testing
+n-szeres teszt: feketedoboz teszttervezési technika, ahol olyan teszteseteket
+tervezünk, amelyek az n számú bemeneti paraméter bármely sorozatának
+összes lehetséges kombinációját teszteli. Lásd még: ortogonális mátrix
+teszt, páronkénti teszt.  n-wise testing
+
+nagy bumm teszt: az integrációs teszt egyik fajtája, ahol akár a szoftver, akár a
+hardver elemeket nem lépésenként, hanem egyszerre építik be a
+komponensekbe, vagy akár a teljes rendszerbe [IEEE 610]. .  big-bang
+testing
+napi build: olyan fejlesztői tevékenység, amely során minden nap során a teljes
+rendszert lefordítják és összeszerkesztik (általában éjszaka), hogy mindig
+elérhető legyen egy olyan konzisztens rendszer, amely tartalmazza a
+legfrissebb változtatásokat.  daily build
+ATT
+
+negatív minta: olyan átvett művelet, folyamat, struktúra vagy újrahasznosíható
+megoldás, amely jónak hitt és általánosan elterjedt, a gyakorlatban viszont
+erdménytelen és/vagy kontraproduktív.  anti-pattern
+negatív teszt: olyan teszt, amelynek az a
+szoftver nem működik. A negatív teszt
+nem pedig egy teszt technikában vagy
+elvárt bemenő értékekkel való tesztelés.
+
+F
+
+célja, hogy megmutassa, hogy a
+inkább a tesztelők hozzállásában,
+módszerben rejlik, pl.: rossz, nem
+ dirty testing, negative testing
+
+nem-funkcionális követelmény: olyan követelmény, amely a funkcionalitáshoz
+nem, de a megbízhatósághoz, hatékonysághoz, használhatósághoz,
+karbantarthatósághoz és hordozhatósághoz kapcsolódik.  non-functional
+requirement
+nem-funkcionális teszt: egy komponens vagy rendszer funkcionalitáshoz nem
+kapcsolódó tulajdonságainak tesztelése, mint például megbízhatóság,
+hatékonyság, használhatóság, karbantarthatóság és hordozhatóság.  nonfunctional testing
+nem-funkcionális teszttervezési technika: olyan eljárás, amellyel a nemfunkcionális teszt tesztkészletéből kiválasztunk, vagy származtatunk
+teszteseteket, amiket a tesztelendő komponens, vagy rendszer
+specifikációjának elemzése alapján határoztunk meg anélkül, hogy
+ismernénk a belső struktúrát. Lásd feketedoboz teszttervezési technika. 
+non-functional test design technique
+nem-szabályosság: egy meghatározott követelmény be nem teljesülése. [ISO
+9000].  non-conformity
+
+ATM
+
+nyílt forráskódú eszköz: olyan szoftver eszköz, amely minden lehetésges
+felhasználó számára forráskód formájában rendelkezésre áll, általában az
+interneten keresztül; a felhasználóinak lehetősége van – általában
+licenszkötelezettség mellett - a szoftver tanulmányozására, változtatására,
+fejlesztésére, és időnként a terjesztésésére is.  open source tool
+
+F
+
+nyomonkövethetőség: a dokumentáció és a szoftver összefüggő egységeinek
+vizsgálata, pl. a követelmények és a hozzájuk tartozó tesztesetek közötti
+kapcsolatra. Lásd függőleges nyomonkövethetőség, vízszintes
+nyomonkövethetőség.  traceability
+
+F
+
+nyomonkövethetőségi mátrix: olyan kétdimenziós táblázat, amely két entitást
+feleltet meg egymásnak (pl. a követelmények és a tesztesetek). Oda-vissza
+
+lehetővé teszi a nyomonkövetést egyik entitásról a másikra, ezáltal lehetővé
+válik a lefedettség meghatározása, valamint a tervezett változások
+kihatásainak értékelése.  traceability matrix
+EITP
+
+ok-okozat diagramm: egy probléma különböző lehetséges kiváltó okai közötti
+kapcsolat grafikai megjelenítését szolgálja. A tényleges, vagy lehetséges
+hiba, vagy meghibásodás lehetséges okait kategóriákként és alkategóriákként egy fastruktúrában jeleníti meg, ahol a (lehetséges) hiba,
+vagy meghibásodás a csomópont [Juran szerint].  cause-effect diagramm
+ok-okozat döntési tábla: olyan táblázat, amely a bemenetek, és/vagy a
+különböző kiváltó okok és a hozzájuk kapcsolt eredmények, és/vagy hatások
+kapcsolatát mutatja.  cause-effect decision table, decision table
+
+EITP
+
+ok-okozati gráf: a bemenetek és/vagy a különböző folyamatok kiváltói (okok)
+grafikai megjelenítése a hozzájuk kapcsolt kimenetekkel (okozatok) együtt,
+amely tesztesetek tervezéséhez használható.  cause-effect graph
+
+ATA
+
+ok-okozat teszt: olyan feketedoboz teszttechnika, amely az ok-okozati gráf
+alapján tervezi a teszteseteket. [BS 7925/2].  cause-effect graphing
+
+EITP
+
+okozati elemzés: a hibák analízise a kiváltó ok meghatározása érdekében. 
+causal analyis
+orákulum: lásd teszt-orákulum.  oracle
+
+ATA
+
+ortogonális mátrix: egy kétdimenziós tömb (mátrix) a következő matematikai
+tulajdonsággal: bármely két oszlopot kiválasztva a soronkénti párok a tömb
+által tartalmazott összes számkombinációt lefedik.  orthogonal array
+ortogonális mátrix teszt: a változó-párok összes lehetséges
+módszeres tesztje ortogonális mátrixok használatával.
+jelentősen kevesebb tesztesetet igényel, mint az egyes
+lehetséges kombinációjának tesztje. Lásd még: n-szeres
+teszt.  orthogonal array testing
+
+kombinációjának
+Ez a módszer
+változók összes
+teszt, páronkénti
+
+osztályozási fa: olyan fa, amely a hierarchikusan rendezett ekvivalencia
+partíciókat mutatja. Lásd még: osztályozási fa módszer.  classification tree
+ATA
+
+osztályozási fa módszer: feketedoboz teszttervezési technika, amely során az
+osztályozási fa segítéségével tervezünk teszteseteket annak érdekében,
+hogy reprezentatív be- és kimeneteket vizsgáljunk. [Grochtmann].
+classification tree method
+
+F,ATM
+
+összefoglaló tesztjelentés: a teszttevékenységeket és eredményeket tartalmazó
+dokumentum. Ebben a dokumentumban található a kilépési feltételeknek
+megfelelően ellenőrzött tesztelemek kiértékelése is.  test summary report
+összehasonlító: lásd: teszt összehasonlító eszköz.  comparator
+összehasonlító teszt: funkcionálisan megegyező szoftverkomponensek kimenő
+adatainak összehasonlítása ugyanolyan bemenő adatok esetén.  back-toback testing
+
+parancssor interfész:  Command Line Interface, CLI
+ETAE
+
+parancssor interfész teszt: olyan teszt,amelynek során a tesztelendő szoftvert
+egy dedikált parancssori intefészen keresztül látjuk el utasításokkal.  CLI
+testing
+
+EITP
+
+Pareto elemzés: döntéshozatali statisztikai módszer, amely során kiválasztják
+azon korlátozott számú tényezőt, amelyeknek szignifikáns kihatása van az
+eredményre. A minőségfejlesztés tekintetében a paroblémák nagy többségét
+(80%) csupán néhány hibaok (20%) okozza.  Pareto analysis
+partíciós teszt: lásd ekvivalencia partíció. [Beizer].  partition testing
+
+ATT
+
+ATA
+
+páronkénti integrációs teszt: az integrációs teszt azon formája, amikor a hívási
+gráf által is megmutatott, összefüggő komponenseket tesztelünk.  pairwise
+integration testing
+páronkénti teszt: feketedoboz technika, amely során olyan teszteseteket
+készítünk, amelyek minden egyes bemeneti paraméter pár összes
+lehetséges diszkrét kombinációját letesztelik. Lásd még: n-szeres teszt,
+ortogonális mátrix teszt.  pairwise testing
+páros programozás: egy olyan szoftverfejlesztési módszer, amelyben egy
+komponens minden egyes programsorát (alkalmazás, vagy teszt) két
+programozó egy számítógép előtt ülve írja meg. Ez egyben egy valós-idejű
+kód felülvizsgálatot is magában foglal.  pair programming
+páros tesztelés: két személy, pl.: két tesztelő, egy fejlesztő és egy tesztelő, vagy
+egy végfelhasználó és egy tesztelő együttesen hibakereséssel foglalkoznak.
+Általában egy gép előtt ülve felváltva folytatják a tesztelést.  pair testing
+pontosság: annak vizsgálata, hogy a szoftver mennyire képes az elvárt
+eredményeket, illetve hatásokat a kívánt pontossággal létrehozni. [ISO
+9126]. Lásd még: funkcionalitási teszt.  accuracy
+
+ATA
+
+pontossági teszt: a szoftver pontosságánakmeghatározását célzó teszt. Lásd
+még: pontosság. accuracy testing
+predikátum: egy kifejezés, amely lehet igaz vagy hamis, és arra használható,
+hogy a vezérlésfüggést vagy egy alacsonyabb szintten levő döntési logikát
+kiértékeljünk. Lásd még: döntés.  predicate
+
+ATM
+
+prioritás: egy elemhez rendelt (üzleti) fontosság, például hiba prioritás.  priority
+
+ATM
+
+PRISMA: a kockázat-alapú teszt rendszerszintű alkalmazása, amelynek során a
+termékkockázatok azonosítása és analízise alapján létrehozunk egy
+termékkockázati mátrixot, amely a valószínűségeket és a kihatásokat
+tartalmazza.  PRISMA, Product RISk MAnagement
+prioritás: egy elemhez rendelt (üzleti) fontosság, például hiba prioritás.  priority
+probléma: lásd programhiba.  problem
+problémajelentés: lásd hibajelentés.  problem report
+
+probléma menedzsment: lásd hiba menedzsment.  problem management
+program-instrumentáló: lásd instrumentáló.  program instrumenter
+F,ATM
+
+programhiba: a program olyan belső hibája, amely azt eredményezheti, hogy a
+szoftver nem tudja teljesíteni az elvárt viselkedését, azaz a program
+meghibásodásához vezethet.  bug, defect, fault
+programlogika lefedettségi teszt: lásd fehérdoboz teszt. [Myers].  logiccoverage testing
+programlogika-alapú teszt: lásd fehérdoboz teszt.  logic-driven testing
+programteszt: lásd komponens teszt.  program testing
+progresszív integráció alapú teszt: a komponensek integrációs tesztjének egyik
+megközelítése, amely a követelmények részhalmazainak megvalósítását
+követi, nem a komponensek integrációjának hierarchikus szerkezetét. 
+thread testing
+projekt: a projekt egy időben, költségekben és erőforrásokban korlátozott, adott
+követelményeknek megfelelő cél érdekében kezdő és végidőpontokkal
+ellátott koordinált és kontrollált tevékenységek halmaza.  project
+
+F,ATM
+
+projektkockázat: egy (teszt) projekt menedzsmentjénél, iránytásánál felmerülő
+kockázat, mint például emberhiány, szoros határidők, változó
+követelmények, stb. Lásd még: kockázat.  project risk
+projekt tesztterv (test plan): lásd fő tesztterv (master test plan).  project test
+plan
+
+EITP
+
+projekt visszatekintő: a tanulságok levonásának és a speciális akciótervek
+elkészítésének strukturált módja a következő projektfázis, vagy projekt
+fejlesztése érdekében.  project retrospective
+pszeudó-véletlen: egy számsorozat, amely véletlenszerűnek tűnik, de valójában
+egy előre legenerált rendezett számsor egyes elemeit tartalmazza. 
+pseudo-random
+puffer: eszköz, vagy tárterület, amely adatok átmeneti tárolására szolgál. 
+buffer
+puffer túlcsordulás: memória hozzáférési hiba, amely azáltal jön létre, hogy a
+lehetségesnél nagyobb mennyiségű, illetve méretű adatot próbálunk meg
+tárolni fix hosszúságú tárolóban, ezáltal a szomszédos memóriaterületek
+felülírásódnak, illetve túlcsordulási hiba jelentkezik. Ld még puffer.  buffer
+overflow
+
+ETM
+
+RACI mátrix: egy olyan mátrix, amely a projekt, vagy a folyamat befejezéséhez
+szükséges különböző szerepkörök hozzájárulását mutatja meg. Különösen
+hasznos a szerepkörök és felelősségek tisztázásakor. A RACI
+egymozaikszó, amely a Responsible, Accountable, Consulted és Informed
+szavak kezdőbetűiből áll össze.  RACI matrix
+
+EITP
+
+Rational Egységesített Folyamat (Rational Unified Process, RUP): egy
+szabadalmaztatott rugalmas iteratív szoftverfejlesztési folyamat
+keretrendszer, amely 4 projekt életciklus fázisból áll: Elkészítés Kidolgozás
+Megvalósítás Átadás.  Rational Unified Process (RUP)
+
+ETM
+
+reaktív teszt: olyan teszt, amely a tesztelendő rendszerre és a megszerzett
+tesztadatokra dinamikus válaszokat ad. Tipikusan lerövidített tervezési ciklus
+jellemzi, a műszaki teszttervezés és a teszt megvalósítása csak a teszt
+tárgyának rendelkezésre álása után történik.  reactive testing
+
+ETM
+
+regresszió-elkerülő teszt: A regresszió kockázatainak kezelésére hivatott
+tesztelés, mely különböző sajátos technikákat használ. Pl.
+újrafelhasználható tesztek tervezése, kiterjedt teszt automatizálás egy vagy
+több tesztelési szinten.  regression-averse testing
+
+F,F-AT , ETAE regressziós teszt: egy korábban már tesztelt program módosítást követő
+tesztelése annak biztosítása érdekében, hogy a módosítás nem okozott
+hibát a szoftver nem módosított részeiben. A teszt végrehajtása a szoftver
+vagy a szoftverkörnyezet változtatásakor történik.  regression testing
+rendelkezésre állás: annak meghatározása, hogy a komponens, illetve a
+szoftver mennyire elérhető és működőképes, amikor szükségessé válik a
+használata. Gyakran százalékban adják meg.  availability
+ATM
+
+rendellenesség: a követelmény-specifikációtól, a tervezési, vagy felhasználói
+dokumentációtól, a szabványoktól, illetve bármilyen elvárástól, vagy
+tapasztalattól való eltérés. Rendellenességet lehet találni a felülvizsgálat, a
+tesztelés, az elemzés, a fordítás, vagy a program használata során. Lásd
+még: hiba, eltérés, meghibásodás, incidens, probléma.  anomaly
+rendszer: bizonyos funkciók, vagy funkciók halmazának elvégzése érdekében
+összeszervezett komponensek összessége. [IEEE 610].  system
+rendszer-integrációs teszt: rendszerek és szoftvercsomagok integrációs tesztje;
+külső szervezetek interfészeinek tesztje (pl. Internet, Electronic Data
+Interchange).  system integration testing
+rendszerek rendszere: hálózatokban több szinten egymásba ágyazott, több
+tartományban összekapcsolt összetett heterogén elosztott rendszerek,
+amiket átfogó, több szakterületen átívelő általános problémák és feladatok
+megoldására hozunk létre, jellemzően közös irányítási struktúra nélkül. 
+system of systems
+
+F
+
+rendszerteszt: integrált rendszer tesztje abból a célból, hogy ellenőrizzük a
+követelményeknek való megfelelőséget. [Hetzel].  system testing
+
+ATT
+
+robosztusság: annak fokmérője, hogy egy komponens vagy rendszer mennyire
+képes az elvárt működésre érvénytelen bemenetek vagy szűkös környezeti
+erőforrások mellett. [IEEE 610] Lásd még: hibatűrés.  robustness
+
+F
+
+robosztussági teszt: egy szoftvertermék robosztusságának meghatározására
+vonatkozó teszt.  robustness testing
+
+ATT
+
+rövidzár-kiértékelés: Programozási nyelvi kifejezés-kiértékelési technika mely
+során összetett feltételek vizsgálatakor a logikai művetben szereplő
+második feltétel nem miden esetben kerül kiértékelésre ha a első feltétel
+elegendő a végső eredmény meghatározásához.  short-circuiting
+
+EITP
+
+SCRUM: iteratív, inkrementális keretrendszer az általában agilis
+szoftverfejlesztést alkalmazó projektekhez. Lásd még: agilis
+szoftverfejlesztés.  SCRUM
+
+ETM
+
+Shewhart diagramm lásd: ellenőrző diagramm.  Shewhart chart
+sikeres teszt: egy teszt sikeresnek minősül, ha a kapott eredmény megfelel az
+elvárt eredménynek.  pass
+siker/bukás feltétel: döntési szabályok, amelyekkel eldöntjük, hogy egy
+tesztelem (funkció) vagy feature megfelel-e vagy megbukik-e egy teszten.
+[IEEE 829].  pass/fail criteria
+sikertelen teszt: lásd bukás.  test fail
+skálázhatóság: a szoftver azon képessége, hogy az upgrade után
+alkalmazkodjon a megnövekedett terheléshez. [Gerrard szerint].  scalability
+skálázhatósági teszt: olyan teszt, amellyel a szoftvertermék skálázhatóságát
+határozzuk meg. scalability testing
+
+ETM
+
+SMART célkitűzési módszertan: Jól meghatározott célok kitűzését segíti elő.
+Betűszó, mely a Specific (egyedi), Measurable (mérhető), Achievable,
+(megvalósítható), Realistic (reális) és Time-based (időtartamhoz kötött)
+szavak kezdőbetűinek összeolvasásából származik.  S.M.A.R.T. goal
+methodology
+smoke teszt: a definiált, illetve tervezett tesztek egy olyan halmaza, amely a
+komponens, illetve a rendszer fő funkcionalitásait hivatott tesztelni abból a
+célból, hogy meggyőződjünk arról, hogy a program legkritikusabb részei
+működnek-e. A teszt során nem megyünk bele a részletekbe. A napi
+integráció és a smoke tesztek a leggyakrabban használt ipari eljárások közé
+tartoznak. smoke test
+specifikáció: egy dokumentum, ami ideális esetben teljesen, precízen és
+ellenőrizhetően határozza meg egy komponens vagy rendszer
+követelményeit, konstrukcióját, viselkedését vagy egyéb karakterisztikáit. A
+követelmények ellenőrzésének a folyamatát is meghatározhatja. [IEEE 610].
+ specification
+
+ATA
+
+specifikáció-alapú technika: lásd feketedoboz teszttervezés.  specificationbased technique
+specifikáció-alapú teszt: lásd feketedoboz teszttervezés.  specification-based
+testing
+specifikáció-alapú teszttervezési technika: lásd feketedoboz tesz tervezési
+technika.  specification-based test design technique
+
+ATT
+
+F,ATT
+
+F,ATT
+
+stabilitás: a szoftvertermék azon képessége, hogy a szoftverben történt
+módosítások nem várt hatásait elkerülje. Lásd még: karbantarthatóság. [ISO
+9126].  stability
+statikus elemzés: a szoftverelemek (például követelmények, műszaki
+szoftverterv, vagy kód) elemzése azok futtatása nélkül. Általában támogató
+eszközök segítségével végzik.  static analysis
+statikus elemző eszköz: olyan eszköz, ami statikus elemzést hajt végre.  static
+analysis tool, static analyzer
+statikus forráskód elemzés: a forráskód elemzése anélkül, hogy a szoftvert
+futtatnánk.  static code analysis
+statikus forráskód elemző: olyan eszköz, ami ellenőrzi a forráskód bizonyos
+tulajdonságait, például, hogy nincsenek-e adatfolyam anomáliák a kódban,
+vagy hogy megfelel-e a kódolási szabványoknak, minőségi előírásoknak. 
+static code analyzer
+
+F
+
+statikus teszt: egy komponens vagy rendszer szoftver elemeinek – pl.
+követekemények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy
+megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy
+statikus forráskód elemzés.  static testing
+statisztikai teszt: olyan műszaki teszttervezési technika, amiben az inputok
+statisztikai eloszlás modelljét használjuk reprezentatív tesztesetek
+készítéséhez. Lásd még: működési profil teszt.  statistical testing
+stratégiai mutatószám-rendszer: az összesített teljesítmény értékelés
+megjelenítésére szolgál, a hosszútávú célok felé történő előrehaladást
+mutatja. A stratégiai mutatószám-rendszer egy adott időszak egészén, vagy
+végén meglevő teljesítmény statikus mérésére alkalmazható. Lásd még:
+kiegyensúlyozott stratégiai mutatószám-rendszer, áttekintőtábla. 
+scorecard
+
+F
+
+stressz teszt: olyan teljesítményteszt típus, amikor úgy vizsgálunk egy
+komponenst vagy rendszert, hogy az előre elvárt vagy annál nagyobb
+terheléssel, vagy csökkentett erőforrás rendelkezésre bocsátással teszteljük
+- például korlátozott szerver, vagy memória hozzáféréssel. Lásd még:
+teljesítményteszt, terheléses teszt. [IEEE 610 alapján].  stress testing
+
+F
+
+stressz teszteszköz: stressz tesztet támogató eszköz.  stress testing tool
+strukturált átvizsgálás: lásd átvizsgálás.  structured walkthrough
+
+F
+
+struktúra-alapú teszt: lásd fehérdoboz teszt.  structure-based testing,
+structural testing
+
+ATT
+
+struktúra-alapú technika: lásd fehérdoboz teszttervezési technika.  structurebased technique
+struktúra-alapú teszttervezési technika:
+Lásd fehérdoboz teszttervezési
+technika.  structure-based test design technique
+
+struktúra szintű lefedettség: egy komponens vagy rendszer belső struktúrája
+alapján meghatározott lefedettség.  structural coverage
+struktúra szintű teszttervezési technika: lásd fehérdoboz teszttervezési
+technika.  structural test design technique
+ETAE
+
+strukturált szkriptkészítés: olyan szkriptkészítési technika, ahol a szkriptek
+többször felhasználható részeiből könyvtárakat szervezünk, illetve ezeket
+felhasználjuk.  structured scripting
+
+ATM
+
+súlyosság: valamely hiba hatásának a mértéke a rendszer vagy komponens
+fejlesztésére vagy működésére. [IEEE 610 alapján].  severity
+szabályosság: a szoftver mennyire tartja be a szabványokat,
+megállapodásokat, a szabályokat és hasonló előírásokat.  compliance
+
+a
+
+szabályossági teszt: olyan teszt, amely a szoftver szabályosságát hivatott
+vizsgálni.  compliance testing, conformance testing, regulation testing
+EITP
+
+szabvány: formális, esetleg szerint kötelező jellegű követelmények, amelyeket egy
+adott munka elvégzési módjának következetes előírására, illetve irányelvek
+meghatározására használnak (pl. ISO/IEC szabányok, IEEE szabványok és
+szervezeti szabványok) [CMMI].  standard
+szabványossági teszt: lásd szabályossági teszt.  standards testing
+
+ETM
+
+szabványnak megfelelő tesztelés: Olyan tesztelés, mely megfelel egy adott
+szabvány által előírt követelményeknek vagy egy előírt folyamatot követ. (Pl.
+iparági tesztelési szabvány, vagy biztonságkritikus rendszerek előírásai).
+Lásd: folyamatnak megfelelő tesztelés.  standard-compliant testing
+számítógéppel támogatott szoftverfejlesztés (CASE): mozaikszó - Computer
+Aided Software Engineering, azaz számítógép által támogatott
+szoftvertervezés.  CASE
+számítógéppel támogatott szoftvertesztelés (CAST): mozaikszó - Computer
+Aided Software Testing, azaz számítógép által támogatott szoftvertesztelés.
+Lásd még: teszt automatizálás.  CAST
+
+ATM
+
+széleskörű Delphi eljárás: olyan szakértő-alapú tesztbecslési technika, amely a
+csapat tagjainak együttes tudását használja fel a minél pontosabb becslések
+készítésére.  Wide Band Delphi
+szimuláció: egy fizikai vagy egy absztrakt rendszer kiválasztott viselkedési
+karakterisztikáinak egy másik rendszer által történő ábrázolása. [ISO
+2382/1].  simulation
+szimulátor: a teszt során használt eszköz, számítógépes program vagy
+rendszer, ami úgy viselkedik, vagy úgy működik, mint egy adott rendszer,
+melyet megfelelő inputtal vezérlünk. Lásd még: emulátor. [IEEE 610,
+DO178b].  simulator
+szintaxis teszt: egy feketedoboz teszttervezési technika, melyben a tesztesetek
+tervezése a definiált be- vagy kimeneti értelmezési tartomány alapján
+
+történik.  syntax testing
+szkript-alapú teszt: olyan tesztfuttatás, amelynél a teszteket a korábban
+dokumentált sorrendjüknek megfelelően hajtunk végre. scripted testing
+F
+
+szkript nyelv: a tesztvégrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is
+használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni.
+scripting language
+szoftver: számítógépes programok, folyamatok és esetlegesen a számítógépes
+rendszer üzemelésére vonatkozó dokumentációk és adatok. [IEEE 610]. 
+software
+
+EITP
+
+Szoftverfolyamat Fejlesztés: a szervezet szoftverrel összefüggő folyamatainak
+hatékonyságának
+és
+érettségének
+fejlesztését
+megcélzó
+tevékenységsorozat, és annak eredménye [CMMI alapján].  Software
+Process Improvement (SPI)
+szoftver feature: lásd feature.  software feature
+
+ATA
+
+Szoftver Használhatósági Kérdőív: egy kérdőív-alapú használhatósági teszt
+technika, amivel egy komponens vagy rendszer használhatóságát lehet
+kiértékelni.
+Például:
+felhasználói
+elégedettséget
+mérő
+kérdőív
+[Veenendaal04].  Software Usability Measurement Inventory (SUMI)
+szoftver hibafa elemzés: lásd hibafa elemzés.  software fault tree analysis
+(SFTA)
+szoftver integritás szint: annak a mértéke, hogy a szoftver mennyiben felel
+meg, illetve kell, hogy megfeleljen egy, a stakeholderek által összeállított a
+szoftverrel kapcsolatos kritériumrendszernek (pl. szoftverkomplexitás,
+kockázati szint, biztonsági szint, elvárt teljesítmény, megbízhatóság vagy
+költség). A szinteket úgy határozzák meg, hogy kifejezzék a szoftver
+fontosságát a stakeholderek szempontjából. software integrity level
+szoftver minőségi jellemző: lásd minőségi jellemző.  software quality
+characteristic
+szoftverminőség: a szoftvertermék funkcionalitásainak és jellemzőinek az
+összessége, amelyek az explicit és implicit módon megadott szükségleteket
+elégítik ki. [ISO 9126 alapján]. Lásd még: minőség  software quality
+szoftvertermék jellemző:
+characteristics
+
+lásd
+
+minőségi
+
+jellemző.
+
+ software product
+
+F-AT,EITP szoftver életciklus: egy időperiódus, ami akkor kezdődik, amikor a
+szoftverterméket kigondoljuk és akkor fejeződik be, amikor a szoftvert már
+nem használják. A szoftver életciklus jellemzően a következő fázisokat
+tartalmazza: koncepció, követelmény, tervezés, megvalósítás, teszt,
+installáció és ellenőrzés, operáció és üzemeltetés, valamint időnként egy
+leállítási fázist. Megjegyzés: a fázisok átfedhetik egymást, vagy akár
+ismétlődhetnek is.  software lifecycle
+
+szoftveres támadás: lásd hibatámadás.  software attack
+szoftverteszt incidens: lásd incidens.  software test incident
+szoftverteszt incidens jelentés: lásd incidensjelentés.  software test incident
+report
+Szoftver Üzemzavar és Hatáselemzés: lásd Üzemzavar és Hatáselemzés. 
+Software Failure Mode and Effect Analysis (SFMEA)
+Szoftver Üzemzavar,
+Hatás és Kritikusság Elemzés: lásd: Szoftver
+Üzemzavar, Hatás és Kritikusság Elemzés.  Software Failure Mode Effect,
+and Criticality Analysis (SFMECA)
+ATT
+
+szomszédos integrációs teszt: az integrációs teszt azon formája, amikor egy
+adott csomópontnak az összes hozzá kapcsolódó további csomópontokkal
+való kapcsolata képezi a teszt alapját.  neighborhood integration testing
+sztochasztikus teszt: a csimpánz-teszthez hasonló, rendszerint automatikusan
+végrehajtott nagyszámú, véletlenszerű feketedoboz tesztek sorozata. Az
+egyes tesztek külün-külön általában sikeresek, a cél annak vizsgálata, hogy
+nagyszámú ilyen teszt esetén hogyan viselkedik a rendszer.  stochastic
+testing
+
+EITP
+
+tanulás (IDEAL): az IDEAL modell egyik fázisa, amely során a tapasztatokból
+tanulunk, illetve az új folyamatok és technológiák jövőbeli alkalmazásának
+képességét fejlesztjük. A következő tevékenységeket foglalja magában:
+analízis, validálás, javaslat jövőbeli tevékenységekre. Lásd még: IDEAL 
+learning (IDEAL)
+
+ATA
+
+tanulhatóság: az alkalmazás azon tulajdonsága, amely lehetővé teszi, hogy a
+felhasználó könnyen megismerje és megtanulja az alkalmazás használatát.
+[ISO 9126] Lásd még: használhatóság.  learnability
+tanúsítvány: annak igazolása, hogy az adott szoftver, illetve személy megfelel a
+követelményeknek (pl. egy vizsga letételével).  certification
+tapasztalat-alapú teszt: a tesztelő tapasztalatára, tudására és megérzéseire
+építő teszt.  experienced-based testing
+
+ATA
+F,ATA
+
+EITP
+
+tapasztalat-alapú technika: lásd tapasztalat-alapú teszttervezési módszer. 
+experienced-based technique
+tapasztalat-alapú teszttervezési technika: olyan teszttervezési módszer,amely
+során a tesztelők tapasztalata, tudása és megérzései alapján
+származtatunk, illetve választunk teszteseteket.  experienced-based test
+design technique
+tartalom-alapú modell: olyan folyamatmodell, amely részletesen leírja a jó
+mérnöki gyakorlatokat, pl a tesztelési gyakorlatokat.  content-based
+model, content reference model
+tároló: lásd erőforrás kihasználtság.  storage
+
+tároló-használati teszt: lásd erőforrás kihasználtsági teszt.  storage testing
+F,ATM
+
+technikai felülvizsgálat: egyenrangú résztvevők csoportos megbeszélése, akik a
+technikai megközelítés tekintetében törekednek a közös álláspont
+kialakítására [Gilb és Graham, IEEE 1028] Lásd egyenrangú felülvizsgálat.
+ technical review
+telepítési útmutató: egy valamilyen médiumon fellelhető utasításhalmaz, amely
+a telepítő személynek útmutatást nyújt a telepítés folyamatán. Ez lehet egy
+kézikönyv, lépésről lépésre haladó eljárásleírás, telepítő varázsló, vagy más
+hasonló folyamat leírás.  installation guide
+
+ATT
+
+telepíthetőség: annak vizsgálata, hogy a szoftver egy adott környezetben
+mennyire telepíthető [ISO 9126].  installability
+telepíthetőségi teszt: a szoftver telepíthetőségének vizsgálatát végző teszt.
+Lásd még: hordozhatósági teszt.  installability testing
+telepítési varázsló: egy adott médiumon található szoftver, amely a telepítő
+személyt végigvezeti a telepítés folyamatán. Általában futtatja a telepítési
+folyamatot, a telepítés eredményéről visszajelzést ad, illetve opciókat kínál
+fel.  installation wizard
+teljes teszt: lásd kimerítő teszt.  complete testing
+
+EITP
+
+Teljeskörű Minőségirányítás: a teljes szervezetre kiható irányítási megközelítés,
+amely a minőségre koncentrál, minden dolgozó részvételére épít, a
+hosszútávú siker feltételének a megrendelői elégedettség tekinti, és a a
+szervezet minden tagja érezheti az előnyeit. A Teljeskörű
+Minőségmenedzsment tervezési, szervezési, utasítási, irányítási és
+minőségbiztosítási tevékenységekből áll [ISO 8402 alapján].  Total Quality
+Management (TQM)
+teljesítési feltétel: lásd kilépési feltétel.  completion criteria
+teljesítmény: egy komponens vagy rendszer azon tulajdonsága, hogy bizonyos
+funkciókat milyen hatékonyan hajt végre (tranzakciók ideje, száma,
+válaszidő, stb). [IEEE 610 alapján] Lásd még: hatékonyság.  performance
+teljesítmény mutató: magas szintű mutató, amely a fejlesztés eredményességét
+és/vagy hatékonyságát mutatja, például szoftverfejlesztésnél a kritikus úton
+történő csúszás. [CMMI].  performance indicator
+teljesítmény profilozás: egy szoftver komponens, vagy rendszer különböző
+eszközökkel való analízise – pl. a teljesítményproblémák azonosítása a
+generált metikák alapján – illetve a teljesítmény javítása. Lásd még: terhelési
+profil, működési profil.  performance profiling
+
+F,ATT ,F-AT teljesítményteszt: tesztelési folyamat, mellyel a szoftvertermék teljesítményét
+lehet meghatározni. Lásd még: hatékonyság teszt.  performance testing
+F,ATT
+
+teljesítményteszt eszköz: teljesítményteszthez alkalmazott eszköz, melynek két
+különböző képessége van: terhelést generál és méri a tranzakciók számát.
+
+Az eszköz terhelést generál több felhasználó szimulációjával, illetve nagy
+mennyiségű bemenő adatot elküldésével. A futás során kiválasztott
+tranzakciók válaszidejét mérik és naplózzák, amelyből általában a terhelés
+és a válaszidő kapcsolatát leíró napló file-okon és ábrákon alapuló
+jelentések készülnek.  performance testing tool
+F
+
+F
+
+terheléses teszt: a teljesítményteszt azon típusa, amely a komponens vagy
+rendszer viselkedését vizsgálja növekedő terhelés alatt (például a
+felhasználók számának, vagy kérések számának növelésekor). A teszt célja,
+hogy kiderüljön, a komponens vagy rendszer hogyan reagál a magas
+terhelésre (lefagy, nő a válaszidő, stb.). Lásd még: teljesítményteszt, stressz
+teszt.  load testing
+terheléses teszt eszköz: terheléses tesztet támogató eszköz, amely szimulálni
+tudja a növekvő terhelést, pl. a konkurens felhasználók számát, és/vagy egy
+adott időtartamon belüli tranzakciók számát. Lásd még: teljesítményteszt
+eszköz.  load testing tool
+terhelési profil: a tesztelendő alkalmazás egy olyan specifikációja, amely az
+alkalmazás életszerű használata alatt történő műveleteket írja le. A terhelési
+profil egy meghatározott számú virtuális felhasználóból áll, amelyek adott
+időben bizonyos előre definiált műveleteket hajtanak végre a működése
+profilnak megfelelően. Lásd még: működési profil.  load profile
+termék átvételi teszt: lásd működési átvételi teszt.  production acceptance
+testing
+
+EITP
+
+termék-alapú minőség: a minőség egy formája, amely során a minőséget jól
+meghatározott minőségi attribútumok alapján határozzák meg. Ezen
+attribútumokat objektíven és mennyiségileg mérhetjük. Az ugyanolyan típusú
+termékek minősége közötti különbségek a megvalósított minőségi
+attribútumokra vezethető vissza.  product-based quality
+
+F,F-AT , ATM termékkockázat: a teszt tárgyához (magához a termékhez) közvetlenül
+ATA,ATT
+kapcsolódó kockázat. Lásd még: kockázat.  product risk
+termékkockázat menedzsment: lásd PRISMA.  Product RIsk MAnagement
+terv-alapú teszt: olyan tesztelési módszer, amely során a teszteseteket a
+szoftver tervére, illetve architektúrájára alapozva készítjük el (pl. a szoftver
+interface-einek tesztje).  design-based testing
+ETM
+
+tervezési póker: konszenzuson alapuló becslési technika, melyet legfőképpen
+agilis fejlesztésben, a felhasználói forgatókönyvek ráfordításának vagy
+viszonylagos méretének becslésére használnak. A Wide Band Delphi
+módszer egy variánsa, melyben különböző értékeket tartalmazó kártyákból
+álló kártyacsomagot használnak a csapat által végzett becslésben. Lásd
+még: agilis szoftverfejlesztés, Wide Band Delphi.  planning poker
+teszt: egy vagy több teszteset halmaza. [IEEE 829].  test
+
+ETAE
+
+teszt adaptációs réteg: az általános teszt automatizálási architektúra rétege,
+
+amely azon kódot tartalmazza, amely lehetővé teszi az automatikus tesztek
+adaptációját a teszt tárgyának különböző komponenseihez, konfigurációihoz,
+illetve interfészeihez.  test adaptation layer
+tesztanalízis: a tesztbázis elemzésének és a tesztcél meghatározásának
+folyamata.  test analysis
+ETM
+
+teszt architekt:
+(1) Olyan személy, aki egy tesztelési szervezet és annak más
+diszciplínákhoz kapcsolódó viszonyához ad útmutatást és stratégiai
+irányítást.
+(2) Az a személy, aki meghatározza egy adott IT rendszer tesztelési
+struktúráját, beleértve a tesztelési eszközök és teszt adatok kezelésének
+témaköreit.
+ test architect
+
+F-AT
+
+teszt automatizálás: valamilyen szoftver használata különböző
+teszttevékenységek támogatására, mint pl. tesztmenedzsment, műszaki
+teszttervezés, tesztek végrehajtása, teszteredmények vizsgálata.  test
+automation
+
+ETAE
+
+teszt automatizálási architektúra: az általános teszt automatizálási archtektúra
+egy konkrét példánya, amely a teszt automatizálási megoldás arhcitektúráját
+definiálja – pl. a rétegeit, komponenseit, szolgáltatásait és interfészeit. 
+test automation architecture
+
+ETAE
+
+teszt automatizálási keretrendszer: a teszt automatizálás célját szolgáló
+környezet, amely magába foglalja a tesztelési alapkörnyezetet és a teszt
+könyvtárakat.  test automation framework
+
+ETAE
+
+teszt automatizálási megoldás: a teszt automatizálási architektúra
+realizálása/implementálása, pl. speciális teszt automatizálási feladatokat
+elvégző komponensek kombinációja. A komponensek tartalmazhatnak
+dobozos teszteszközöket, teszt automatizálási keretrendszereket, valamint
+teszt hardvereket is.  test automation solution
+
+ETAE
+
+teszt automatizálási menedzser: olyan személy, aki a teszt automatizálási
+megoldások implementálásának és továbbfejlesztésének tervezéséért és
+felügyeletéért felelős.  test automation manager
+
+ETAE
+
+teszt automatizálási mérnök: olyan személy, aki a teszt automatizálási
+architektúra műszaki tervezéséért, implementálásáért és karbantartásáért,
+továbbá a létrejövő teszt automatizálási megoldások műszaki fejlesztéséért
+felelős.  test automation engineer
+
+ETAE
+
+teszt automatizálási stratégia: magas szintű terv, amely a teszt automatizálás
+hosszútávú céljainak elérését szolgálja az adott körülmények
+figyelembevételével.  test automation strategy
+teszt bemenet: a külső forrásból érkezett adat a teszt végrehajtása során. A
+külső forrás lehet hardver, szoftver vagy emberi forrás is.  test input
+
+ETAE
+
+teszt definíciós réteg: az általános teszt automatizálási architektúra rétege,
+amely a tesztek implementációját támogatja úgy, hogy lehetővé teszi a teszt
+készletek és/vagy a tesztesetek definiálását – például sablonokat és
+irányelveket ajánl.  test definition layer
+teszt-forgatókönyv: lásd teszteljárás specifikáció.  test scenario
+teszt-kiértékelési jelentés: a tesztfolyamat végén készített dokumentáció, amely
+összegzi a összes teszttevékenységet és eredményt. Ezen kívül tartalmazza
+a tesztfolyamat kiértékelését és a teszt során szerzett tapasztalatokat. 
+test evaluation report
+teszt meghajtó: lásd meghajtó.  test driver
+teszt megismételhetősége: a teszt egy attribútuma, amely azt jelzi, hogy a teszt
+többszöri végrehajtása során mindig ugyanazok az eredmények
+keletkeznek-e.  test reproduceability
+
+ATM,ATA teszt megvalósítása: a teszteljárások fejlesztésének és priorizálásának
+folyamata, tesztadatok készítése és - opcionálisan - automata tesztszkriptek,
+valamint a teszttámogató szoftverkörnyezetek kialakítása.  test
+implementation
+teszt naplózása: a tesztnaplóba történő információ rögzítés folyamata.  test
+logging, test recording
+F-AT
+
+teszt-orákulum: a várt és az aktuális eredmények összehasonlítását támogató
+forrás. Teszt-orákulum lehet egy másik, benchmark-ként funkcionáló
+rendszer; lehet felhasználó kézikönyv, vagy akár egy személy speciális
+tudása is. A program forráskódja viszont nem lehet teszt-orákulum [Adrion
+alapján].  test oracle
+teszt összehasonlítás: a rendszeren illetve rendszerkomponensen végzett elvárt
+és aktuális teszteredményt összehasonlító eljárás. Az összehasonlítás
+elvégezhető a teszt futtatása közben (dinamikus összehasonlítás) valamint a
+teszt futtatása után is.  test comparison
+
+F
+
+teszt összehasonlító eszköz: egy teszteszköz, amellyel a teszt elvárt és aktuális
+eredményeit automatikusan össze lehet hasonlítani.  test comparator
+teszt státusz jelentés: rendszeres időközönként készített dokumentum, amely
+összefoglalja az addigi teszttevékenységeket és eredményeket, valamint
+összehasonlítja az eredeti tervvel. Ezen kívül a kockázatokat és
+alternatívákat is összefoglalja a menedzsment számára, hogy támogassa a
+szükséges döntések meghozatalát.  test progress report
+teszt tárgya: a teszt tárgyát képező rendszer vagy rendszerkomponens. Lásd
+még: tesztelem.  test object, system under test, SUT
+
+EITP
+
+teszt-teljesítmény mutató: a tesztfolyamat hatékonyságát mérő és irányító
+magasszintű mutató, pl. hiba megtalálási arány (Defect Detection
+Percentage, DDP).  test performance indicator
+
+teszt ütemezése: teszttevékenységek, feladatok és események listája,
+meghatározva azok tervezett kezdési és befejezési időpontját, valamint
+függőségi viszonyait.  test schedule
+F
+
+tesztadat: olyan adat, amely a teszt előtt is létezik (például egy adatbázisban) és
+amely kölcsönhatásban van a tesztelés alatt álló rendszerrel, vagy a
+rendszerkomponenssel.  test data
+
+F,ATA
+
+tesztadat előkészítő eszköz: olyan teszteszköz, amellyel a teszteléshez adatot
+állíthatunk elő egy már meglévő adatbázisból. Az eszköz alkalmas lehet
+egyéb adatok generálására, adatok manipulálására, valamint szerkesztésére
+is.  test data preparation tool
+tesztadat kezelés: A tesztadatokkal kapcsolatos követelmények elemzését,
+tesztadatok tervezését, tesztadatstruktúrák tervezését valamint a
+tesztadatok létrehozását és karbantartását magába foglaló folyamat.  test
+data management
+
+F,F-AT
+
+tesztbázis: az összes olyan dokumentum, amelyből a komponensekre vagy
+rendszerekre vonatkozó követelmények származnak. Ezek azok a
+dokumentumok, amelyeken a tesztesetek alapulnak. Ha egy ilyen
+dokumentumot
+csak
+formális
+változáskezelési
+folyamat
+során
+módosíthatnak, a tesztbázist ún. fagyasztott tesztbázisnak nevezik. [TMap
+alapján].  test basis
+
+F
+
+tesztcél: a műszaki teszttervezés, illetve tesztvégrehajtás célja.  test objective
+tesztciklus: a tesztfolyamat végrehajtása a teszt tárgyának egy konkrét
+verziójára.  test cycle
+tesztelem: a tesztelendő egység. Rendszerint a teszt tárgyához több tesztelem
+tartozik.  test item
+tesztelem kiadási jelentés: lásd. kiadási megjegyzés.  test item transmittal
+report
+
+F-AT,ATM tesztbecslés: a tesztelés küönböző szempontok szerinti eredményének
+számítással történő becslése (pl. ráfordított idő, befejezés dátuma,
+költségek, tesztesetek száma), amely akkor is használható, ha a tesztadatok
+nem állnak teljes mértékben rendelkezésre, vagy bizonytalanok.  test
+estimation
+F
+
+tesztelés: az összes szoftverfejlesztési életciklushoz kapcsolódó akár statikus,
+akár dinamikus folyamat, amely kapcsolatban áll a szoftvertermékek
+tervezésével, elkészítésével és kiértékelésével, hogy megállapítsa, hogy a
+szoftvertermék teljesíti-e a meghatározott követelményeket, megfelel-e a
+célnak. A tesztelés felelős a szoftvertermékkel kapcsolatos hibák
+megtalálásáért.  testing
+
+F
+
+tesztelési alapkörnyezet: a teszt végrehajtásához szükséges, a meghajtókat és
+csonkokat tartalmazó tesztkörnyezet.  test harness
+
+F,ATM
+
+teszteljárás: lásd teszteljárás specifikáció.  test procedure
+
+F,ATM
+
+teszteljárás specifikáció: a teszt futtatásának tevékenységsorozatát rögzítő
+dokumentum. Teszt szkript illetve manuális teszt szkript néven is ismert.
+[IEEE alapján]. Lásd még: tesztspecifikáció.  test procedure specification
+
+F,ATM
+
+tesztfeltétel: a rendszer egy olyan eleme, vagy eseménye, amelyet egy
+tesztesettel ellenőrizni lehet, például funkció, tranzakció, jellemző, minőségi
+attribútum vagy strukturális elem.  test condition, test situation
+
+F,ATM
+tesztelési irányelvek: magas szintű dokumentum, amely a szervezet elveit,
+EITP,ETM
+megközelítésmódját, valamint céljait mutatja be a tesztelésre vonatkozóan.
+ test policy
+tesztelési átadandó: bármilyen tesztelési (munka)termék, amelyet a tesztelési
+(munka)termék készítőjén kívüli személy részére át kell adni.  test
+deliverable
+tesztelési infrastruktúra: a teszt elvégzéséhez szükséges szervezeti tényezők,
+beleértve a tesztkörnyezeteket, teszteszközöket, irodai környezetet és
+eljárásokat.  test infrastructure
+F,ATM
+F-AT
+
+tesztelési megközelítés: a tesztstratégia megvalósítása egy konkrét projektre.
+Jellemzően a projekt céljain és a kockázatelemzésen alapuló döntéseket, a
+tesztfolyamatok kiindulópontjait, az alkalmazandó műszaki teszttervezési
+technikákat, belépési és kilépési kritériumokat valamint a tesztelés fajtáit
+tartalmazza.  test approach
+tesztelési végfeltétel: lásd kilépési feltétel.  test completion criteria
+tesztelhető követelmények: a követelmények olyan szintű leírása, amely
+alapján a teszt tervezhető és tesztesetek készíthetők, valamint a teszt
+végrehajtása során meghatározható, hogy a követelmények teljesültek-e.
+[IEEE 610 alapján].  testable requirements
+
+ATT
+
+tesztelhetőség: a szoftvertermék azon képessége, amely lehetővé teszi a
+tesztelést az esetleges módosítások során.  testability
+tesztelhetőségi felülvizsgálat: a tesztbázis részletes vizsgálata, amelynek során
+azt vizsgálják, hogy a tesztbázist képező dokumentumok megfelelő
+minőségűek-e a tesztfolyamat végrehajtásához.  testability review
+tesztelhetőségi teszt: a smoke tesztek egy speciális fajtája, amely azt vizsgálja,
+hogy a rendszert érdemes-e részletesen tovább teszteni. Tipikusan a teszt
+végrehajtási fázisának kezdetén használják. Lásd még: smoke teszt. 
+intake test
+
+F
+
+tesztelő: egy képzett szakértő, aki a rendszer vagy rendszerkomponens
+tesztelésében vesz részt.  tester
+teszteredmény: lásd eredmény.  test result
+
+F,ATM
+
+teszteset: bemeneti értékek, végrehajtási előfeltételek, elvárt eredmények és
+végrehajtási utófeltételek halmaza, amelyeket egy konkrét célért vagy a
+tesztért fejlesztettek (például egy program forgatókönyv végrehajtása, vagy
+
+egy követelménynek való megfelelés). [IEEE 610 alapján].  test case
+ETAE
+
+teszteset eredmény: a teszt végrehajtásának és eredményének végső
+megítélése – sikeres, bukás, vagy hiba. A hiba eredmény akkor
+használatos, ha nem tudjuk eldönteni, hogy a hiba a teszt tárgyában van-e.
+ test case result
+
+F
+
+teszteset specifikáció: egy tesztelemre vonatkozó, a teszteseteket leíró
+dokumentáció (cél, bemenetek, teszttevékenységek, elvárt eredmények,
+végrehajtás előfeltételei) [IEEE 829 alapján]. Lásd még: tesztspecifikáció. 
+test case specification
+teszteset tervezési technika: lásd műszaki teszttervezési technika.  test case
+design technique
+
+ETIP
+
+teszteszköz: egy vagy több teszttevékenységet támogató szoftvertermék. Ilyen
+tevékenység lehet a tervezés és irányítás, specifikáció, bemeneti fájlok és
+adatok előállítása, teszt végrehajtás és tesztelemzés. [TMap]. Lásd még:
+CAST.  test tool
+tesztfázis: teszttevékenységek egy különálló halmaza a projekt egy együtt
+kezelhető fázisába összegyűjtve. Ilyen például egy tesztszinthez tartozó
+tesztvégrehajtási tevékenységek halmaza. [Gerrard alapján].  test phase
+tesztfázis terv: olyan tesztterv (test plan), amely csupán egy tesztfázist fed le.
+Lásd még: tesztterv (test plan).  phase test plan
+
+EITP
+
+F,ATM
+ATA
+
+tesztfejlesztési terv: mind a szervezet tesztelési folyamatainak, mind a hozzá
+tartozó eszközök aktuális erősségeinek és gyengeségeinek alapos
+megismerésén alapuló tesztfejlesztési célok elérését szolgáló terv.  test
+improvement plan
+tesztfelügyelet: a tesztprojekt státuszát rendszeresen vizsgáló, a
+teszttevékenységet kezelő tesztmenedzsment feladat. A tesztfelügyelet
+részét képezi az elvárt eredményeket az aktuális eredményekkel
+összehasonlító jelentés készítése. Lásd tesztmenedzsment.  test
+monitoring
+tesztfolyamat: az alapvető tesztfolyamat a következő tevékenységeket öleli fel: a
+műszaki teszttervezést, a tesztelés irányítását, a tesztelemzést és tervezést,
+a teszt megvalósítását és végrehajtását, a kilépési feltételek kiértékelését,
+valamint a teszt lezárási tevékenységeket.  test process
+
+EITP
+
+Tesztfolyamat Csoport: (Teszt) specialisták csapata, akik lehetővé teszik a
+szervezet tesztfolyamatainak meghatározását, fenntartását és fejlesztését
+[CMMI].  Test Process Group (TPG)
+
+ATM,EITP Tesztfolyamat Fejlesztés (TPI Next): A hatékony és hatásos tesztfolyamat
+kulcselemeit leíró, az üzleti folyamatok által vezérelt, összefüggő
+keretrendszer.  TPI Next
+EITP
+
+tesztfolyamat fejlesztési kiáltvány: az agilis kiáltvány mintájára kiadott
+kiejlentések, amelyek a tesztfolyamat fejlesztésének értékét határozzák
+
+meg. Ezen értékek:
+-
+
+rugalmasság a részletes folyamatok helyett
+
+-
+
+bevált gyakorlat a sablonok helyett
+
+-
+
+megvalósítás-irányultság folyamat-irányultság helyett
+
+-
+
+egyenrangú felülvizsgálat a minőségbiztosítás helyett
+
+-
+
+üzlet-vezéreltség a modell-vezéreltség helyett
+
+ test process improvement manifesto
+EITP
+
+tesztfolyamat fejlesztő: a tesztfejlesztési terven alapuló tesztfolyamat fejlesztését
+végrehajtó személy.  test process improver
+
+ETAE
+
+tesztfolyamat fejlesztés: olyan célzott tevékenységek sorozata, amely a szervezet
+tesztfolyamatainak érettségét és sebességét hivatott fejleszteni, továbbá
+maguk a fejlesztési program eredményei. [CMMI alapján]  test process
+improvement
+
+ETAE
+
+teszthorog: testreszabott szoftver interfész,amely lehetővé teszi a teszt tárgyának
+automatikus tesztjét.  test hook
+tesztfuttatás: a teszt tárgyának egy meghatározott verzióján a teszt elvégzése.
+ test run
+tesztfutási napló: lásd tesztnapló.  test run log
+tesztgenerátor: lásd tesztadat előkészítő eszköz.  test generator
+
+ETAE
+
+tesztgenerátor réteg: az általános teszt automatizálási architektúra azon rétege,
+amely a tesztkészletek és/vagy a tesztesetek kézi, vagy automatikus
+műszaki tervezését szolgálja.  test generation layer
+
+ATM
+
+tesztigazgató: Magas beosztású vezető, aki tesztmenedzsereket irányít. Lásd
+még: tesztmenedzser.  test director
+tesztincidens: lásd incidens. test incident
+tesztincidens jelentés: lásd incidensjelentés.  test incident report
+
+F,ATM
+ATA
+
+tesztirányítás: egy olyan tesztmenedzseri feladat, amelynek során javító
+intézkedéseket fejlesztünk és alkalmazunk annak érdekében, hogy a
+tesztprojektet visszatereljük a tervezett pályára, amennyiben a tesztelés
+felügyelete során a tervektől való eltérést tapasztalunk.  test control
+tesztjelentés: lásd összefoglaló tesztjelentés.  test report
+
+ETAE
+
+F
+
+tesztjelentés készítés: a teszttevékenységek során keletkezett adatok
+összegyűjtése és elemzése, ezt követően az adatokból az érintettek
+számára egy jelentés készítése. Lásd még: tesztfolyamat.  test reporting
+tesztkészlet: rendszerre vagy rendszerkomponenensekre készített tesztesetek
+halmaza, amelyben gyakran az egyik teszt utófeltétele egyben a másik teszt
+előfeltétele.  test suite
+
+tesztkimenet: lásd eredmény.  test outcome
+F
+
+tesztkörnyezet: a tesztelést támogató eszközök együttese, beleértve minden
+hardver és szoftver eszközt. [IEEE 610].  test bed, test environment, test
+rig
+
+ETM
+
+teszt küldetés: a tesztelés célja a szervezetben, amelyet sokszor a tesztelési
+alapelvekben rögzítenek. Lásd még: tesztelési alapelvek.  test mission
+
+F
+
+tesztlefedettség: lásd lefedettség.  test coverage
+
+ATM
+
+tesztlezárás: a tesztlezárási fázisban gyűjtjük össze a tesztelés során előállított
+adatokat, hogy a tesztverből, számokból, tényekből és egyéb
+tapasztalatokból összegyűjtött adatokat konszolidáljuk. A tesztlezárási
+fázisban véglegesítjük és archiváljuk a tesztvert, értékeljük ki az
+eredményeket és készítjük elő az összefoglaló tesztjelentést. Lásd még:
+tesztelési folyamat.  test closure
+
+F
+
+tesztmenedzser: a teszttevékenységekért, erőforrások menedzseléséért valamint
+a teszt tárgyának értékeléséért felelős személy. A tesztmenedzser irányítja,
+adminisztrálja, tervezi és menedzseli a teszt tárgyának vizsgálatát.  test
+manager
+
+ATM
+
+tesztmenedzsment: a teszttevékenységek tervezése, becslése, monitorozása és
+irányítása, amelyet általában a tesztmenedzser végez.  test management
+
+F,ATT
+
+tesztmenedzsment eszköz: olyan szoftver eszköz, amely támogatja a teszt
+menedzsmentet és irányítja a tesztfolyamat egy részét. Gyakran rendelkezik
+olyan funkciókkal, mint a tesztelési környezet menedzsmentje, tesztek
+ütemezése, eredmények naplózása, folyamatkövetés, hibakezelés és
+teszteredmények jelentése.  test management tool
+
+F,ATM
+
+tesztnapló: a tesztvégrehajtáshoz kapcsolódó részletek időrendi rögzítése. 
+test log, test record
+tesztpont elemzés (TPA): a funkciópont elemzés alapján készített, képleteken
+alapuló becslési módszer.  Test Point Analysis (TPA)
+tesztspecifikáció: dokumentum, amely tartalmazza a műszaki tesztterv (test
+design) specifikációt, a teszteset specifikációt és/vagy az eljárás
+specifikációt.  test specification
+tesztspecifikációs technika: lásd műszaki teszttervezési technika.  test
+specification technique
+
+F,ATM
+tesztstratégia: magas szintű dokumentum, amely a végrehajtandó tesztszinteket
+ATA,ETM
+írja le, valamint azok részleteit tartalmazza a szervezetre vagy a programra
+F-AT
+(egy vagy több projektre) vonatkozóan.  test strategy
+tesztszakasz: a teszt végrehajtása egy megszakítás nélküli idő intervallumban.
+A felderítő teszt során minden tesztszakasz az egyes fejezetekre
+összpontosít, de a tesztelők egyéb tevékenységekkel, illetve új
+lehetőségekkel is foglalkozhatnak. Ebben az esetben a tesztelő a
+
+teszteseteket menet közben készíti, hajtja végre valamint dokumentálja azok
+eredményét.  test session
+F,ATM
+
+tesztszint: közös szervezés és menedzsment alatt álló teszttevékenységek
+csoportja. A tesztszint felelősségi körökhöz kapcsolódik a projekten belül.
+Tesztszintekre példa a komponens-teszt, integrációs teszt, rendszerteszt és
+felhasználó teszt. [TMap alapján].  test level, test stage
+
+ATM
+
+tesztszint-tesztterv: olyan tesztterv, amely általában egy adott (alacsony-, vagy
+magas-) szintű tervezést foglal magába. Lásd még: tesztterv (test plan). 
+level test plan
+
+F,ATM
+
+tesztszkript: legtöbbször teszteljárás specifikációra használt kifejezés,
+elsősorban automatizált teszt esetén.  test script
+teszttámogató szoftverkörnyezet: a teszt végrehajtásához szükséges, a
+meghajtókat és csonkokat tartalmazó tesztelési környezet. test harness
+teszttechnika: lásd teszt tervezési technika test technique
+
+F,ATM
+
+tesztterv (test plan): a teszt hatáskörét, megközelítését, erőforrásait valamint a
+tevékenységek tervezett ütemezését tartalmazó dokumentum. Ezen kívül
+meghatározza a tesztelemeket, a tesztelendő funkciókat, feladatokat, a
+tesztet végrehajtó személyek függetlenségét, a tesztkörnyezetet, a műszaki
+teszttervezési technikákat, a belépési és kilépési feltételeket, valamint
+kockázatokat. A teszttervezési folyamat meghatározó dokumentuma [IEEE
+829 alapján].  test plan
+
+ATM,ATA teszttervezés: tesztterv (test plan) készítése vagy módosítása.  test planning
+teszttípus:
+egy
+meghatározott
+tesztobjektumon
+végrehajtott,
+rendszerkomponensre vagy rendszerre fókuszáló teszttevékenységek
+csoportja. Példa teszttípusokra: funkcionális teszt, használhatósági teszt,
+regressziós teszt, stb. Egy teszttípus több tesztszinten is végrehajtható. 
+test type
+ATA
+
+tesztvázlat: a tesztcélok listája valamint ötletek a tesztelés végrehajtására. A
+tesztelési elképzelések a felderítő tesztelésben használatosak. Lásd
+felderítő teszt.  test charter, charter
+
+F
+
+tesztver: a tesztfolyamat során keletkezett különböző termékek, például
+dokumentáció, programkód, inputok, elvárt eredmények, eljárások, fájlok,
+adatbázisok, környezetek illetve bármilyen egyéb szoftver. [Fewster és
+Graham után].  testware
+
+F
+
+tesztvezető: lásd tesztmenedzser.  test leader
+
+F,ETM
+
+tesztvezérelt fejlesztés: szoftverfejlesztési módszertan, amelyben a
+teszteseteket azelőtt készítik el (és többnyire automatizálják), mielőtt a
+szoftver fejlesztési folyamata befejeződne, és le lehetne futtatni a teszteket.
+ test driven development, TDD
+
+F,ATM
+
+tesztvégrehajtás: a rendszeren vagy annak komponensén végzett tesztfolyamat,
+
+ATA
+F,ATA
+ATT
+
+amelyből megkapjuk az aktuális eredményeket.  test execution
+tesztvégrehajtási eszköz: olyan teszteszköz, amelynek segítségével másik
+szoftvert futtathatunk egy automatizált szkript (pl. felvétel/lejátszás)
+segítségével.  test execution tool
+tesztvégrehajtási fázis: a szoftverfejlesztési életciklus azon szakasza, amelyben
+a szoftverkomponenseket tesztelik, és a szoftvertermék követelményeknek
+való megfelelését vizsgálják. [IEEE 610].  test execution phase
+
+ETAE
+
+F
+
+tesztvégrehajtási réteg: a teszt automatizálási architektúra azon rétege, amely a
+tesztkészletek és/vagy a tesztesetek végrehajtását támogatja.  test
+execution layer
+tesztvégrehajtási ütemterv: a teszteljárások végrehajtásának ütemezése. A
+tesztvégrehajtási ütemterv megfelelő sorrendben és környezetben és
+tartalmazza a teszteljárásokat.  test execution schedule
+
+ATM
+
+téves hiba eredmény: olyan teszteredmény, amely hibát jelez, bár az adott hiba
+valójában nem létezik a termékben.  false-fail result, false-positive result
+
+ATM
+
+téves siker eredmény: olyan teszteredmény, amely nem találja meg az adott, a
+termékben meglevő hibát. false-pass result, false-negative result
+többszörös feltétel: két, vagy több egyszerű feltétel, amelyet egy logikai
+operator kapcsol össze (AND, OR or XOR), e.g. ‘A>B AND C>1000’. 
+compound condition
+többszörös feltétel lefedettség: a teszt által meghívott utasításokban szereplő
+egyes feltétel eredmények összes kombációinak lefedettségi aránya. 100%
+többszörös feltétel lefedettség 100%-os kiterjesztett döntési feltétel
+lefedettséget is jelent.  branch condition combination coverage, multiple
+condition coverage
+többszörös feltétel teszt: fehérdoboz teszttervezési technika, amely során olyan
+teszteseteket készítünk, amelyek egy összetett predikátumon belül minél
+több feltétel eredmény kombinációt lefednek.  branch condition
+combination testing, multiple condition testing
+
+EITP
+
+tranzakció analízis: emberek, illetve emberi elméken belüli közötti tranzakciók
+analízise; a tranzakciót az inger és a rá adott válasz együtteseként
+értelmezzük. Tranzakciók történhetnek emberek között, mint ahogy egy
+adott ember elméjében is az én-állapotai, azaz a személyiséget
+meghatározó szegmensei között.  transactional analysis
+
+EITP
+
+transzcendencia-alapú minőség: a minőség azon formája, amit nem lehet
+egyértelműen meghatározni, mégis tudjuk, ha látjuk, vagy érzékeljük a
+hiányát, ha az nem megfelelő. A minőség az egyén, vagy egyének
+csoportjának érzékelésén és szubjektív érzésein múlik, [Garvin szerint].
+Lásd még: gyártás-alapú minőség, termék-alapú minőség, felhasználó-alapú
+minőség, érték-alapú minőség.  transcendent-based quality
+utasítás: a programozási nyelvek egy entitása, ami tipikusan a futtatás legkisebb
+
+oszthatatlan egysége.  statement
+F
+
+utasítás lefedettség: a tesztkészlet által kipróbált futtatható utasítások százaléka.
+ statement coverage
+
+ATT
+
+utasítás szintű teszt: egy fehérdoboz tesz tervezési technika, amely során úgy
+tervezzük meg a teszteseteket, hogy utasításokat hajtsanak végre. 
+statement testing
+utófeltétel: környezeti vagy állapotbeli feltételek, amelyeket teljesíteni kell,
+miután egy komponensen vagy rendszeren tesztet vagy teszteljárást
+futtatunk.  postcondition
+újrakezdési feltételek: azon feltételek, amelyek alapján a teszttevékenységek
+egy részét, vagy egészét újra lehet kezdeni a tevékenységek korábban
+történt felfüggesztése után.  resumption criteria
+újrakezdési követelmények: előre meghatározott tevékenységsorozat, amelyet a
+teszt felfüggesztése után történő újraindításkor el kell végezni. [IEEE 829
+alapján].  resumption requirements
+
+F
+
+újratesztelés: olyan teszt, amikor azokat a teszteseteket futtatjuk, amelyek a
+legutóbbi tesztfuttatásnál elbuktak. Célja a hibajavítás sikerességének
+ellenőrzésére.  re-testing
+útvonal: események egy sora, például egy komponens vagy rendszer kezdő és
+végpontja közötti végrehajtható utasítások.  path
+útvonal lefedettség: egy tesztkészlet által bejárt utak aránya az összeshez
+képest. 100%-os útvonal lefedettség 100%-os LCSAJ lefedettséget jelent. 
+path coverage
+útvonal kikényszerítés: olyan bemeneti értékek kiválasztása, amely egy adott út
+végrehajtásához vezet.  path sensitizing
+
+ATT
+
+útvonal teszt: fehérdoboz teszttervezési technika, amely során a teszteseteket
+úgy tervezzük, hogy egy-egy végrehajtási utat járjanak be.  path testing
+üzemeltethetőségi teszt: lásd karbantarthatósági teszt.  serviceability testing,
+maintainability testing
+üzemzavar: a meghibásodás fizikai, vagy funkcionális megjelenése. Például a
+rendszer hibamegjelenése lehet a műveletek lelassulása, helytelen kimentek
+megjenése, vagy akár a végrehajtás teljes leállása failure mode
+
+EITP
+
+Üzemzavar és Hatáselemzés (FMEA): a meghibásodások lehetséges módjainak
+kockázat-meghatározásán és elemzésén, valamint az előfordulásuk
+megakadályozásán alapuló megközelítés. Lásd még: Üzemzavar, Hatás és
+Kritikusság Elemzés.  Failure Mode and Effect Analysis (FMEA)
+Üzemzavar, Hatás és Kritikusság Elemzés (FMECA): az Üzemzavar és Hatás
+Elemzés kibővítése a kritikus elemzéssel, amely a meghibásodások
+valószínűségét és a következményei súlyosságát ábrázolja grafikusan. A
+grafikon láthatóvá teszi azon meghibásodásokat, amelyek viszonylag magas
+
+valószínűséggel és súlyos következménnyel bírnak, és lehetővé teszi, hogy
+a megelőző tevékenyéget oda koncentráljuk, ahol erre a legnagyobb
+szükség van. Lásd még: Üzemzavar és Hatás Elemzés.  Failure Mode,
+Effect and Criticality Analysis (FMECA)
+üzleti folyamat alapú teszt: Olyan műszaki teszttervezési módszer, amely során
+az üzleti folyamatok leírásai, illetve ismerete alapján tervezünk
+teszteseteket.  business process-based testing
+F
+
+validáció: annak vizsgálata és konfirmálása, hogy a szoftver tervezett
+felhasználási céljának megfelelő követelmények teljesülnek-e. [ISO 9000].
+ validation
+vállalati áttekintőtábla: a közösségi teljesítmény áttekintését szolgálja. 
+corporate dashboard
+változás irányítás: lásd: konfiguráció irányítás.  change control
+változás irányító testület: azon emberek csoportja, akik felelősek a
+konfigurációs elemekben tervezett változtatások kiértékeléséért és
+jóváhagyásáért, vagy elutasításáért, továbbá a tervezett változtatások
+megvalósításáért.  change control board (CCB)
+
+EITP
+
+változás menedzsment: (1) struktúrált megközelítés az egyének, csapatok,
+szervezetek jelen állapotból a kívánt jövőbeli állapotba történő átmenetének
+kezelésére (2) a termékben, vagy szolgáltatásban történő változások, vagy
+tervezett változások irányított végrehajtása. Lásd még: konfiguráció
+menedzsment.  change management
+változó: a számítógép által tárolt elem, amelyet a szoftver a nevén hivatkozva ér
+el.  variable
+
+ATT
+
+változtathatóság: a szoftvertermék azon képessége, hogy mennyire képes adott
+módosítások megvalósítására.  changeability
+
+F
+
+verifikáció: az adott követelmények teljesülésének vizsgálata és konfirmálása.
+[ISO 9000].  verification
+
+F
+
+verziókövetés: lásd konfiguráció irányítás.  version control
+
+EITP
+
+vezető értékelő: az értékelést vezető személy. Bizonyos esetekben, például
+CMMi, vagy TMMi esetén, amikor formális értékelést hajtunk végre,
+akkreditált és formálisan képzett vezető értékelőre van szükség.  lead
+assessor
+
+F
+
+vezérlési folyam: az események (útvonalak) sorrendje a végrehajtás során. 
+control flow
+
+ATT
+
+vezérlési folyam elemzés: statikus elemzés, amely a végrehajtás során fellépő
+események (útvonalak) sorrendjének megjelenítésével foglalkozik. A
+vezérlési folyam analízis kiértékeli a vezérlési folyam strukturák integritását,
+olyan vezérlési folyam rendellenességeket keres, mint pl. a zárt hurkok, vagy
+a logikailag elérhetetlen folyamatlépések.  control flow analysis
+
+vezérlési folyam gráf: a végrehajtás során fellépő összes esemény (útvonal)
+összes lehetséges sorrendjének absztrakt megjelenítése.  control flow
+graph
+ATT
+
+vezérlési folyam teszt: a struktúra alapú teszt egy fajtája, amelynél a
+teszteseteket meghatározott eseménysorozatok végrehajtására tervezik. A
+vezérlési folyam tesztnek különféle technikái vannak, úgymint döntési teszt,
+feltétel teszt és útvonal teszt, melyek más-más szemléletmódot képviselnek
+és a vezérlési folyam tesztjének más-más lefedettségi szintjét
+eredményezik. Lásd még: döntési teszt, feltétel teszt és ütvonal teszt. 
+control flow testing
+vezérlési út: lásd útvonal.  control flow path
+végrehajtás utáni összehasonlítás: az elvárt és aktuális eredmények
+összehasonlítása a szofter futása után.  post-execution comparison
+véletlenszerű teszt: egy olyan feketedoboz teszttervezési technika, ahol a
+teszteseteket a működési profilhoz illeszkedően – esetleg pszeudo-véletlen
+generáló algoritmus használatával - választják ki. Ezt a technikát olyan
+nem-funkcionális tulajdonságok tesztjénél is használják, mint a
+megbízhatóság és a teljesítmény.  random testing
+véges állapotú automata: olyan számítási modell, amely véges számú állapotot
+és ezen állapotok közötti átmenetet tartalmaz, esetleg kisérő műveletekkel
+együtt.  finite state machine
+véges állapotú teszt: lásd: állapotátmenet teszt.  finite state machine
+végrehajtható utasítás: olyan utasítás, amelyet a gépi kódra való lefordítás után
+a szoftver futás közben műveletként végrehajt, és rendszerint valamilyen
+adatműveletet hajt végre.  executable statement
+végrehajtható útvonal: olyan útvonal, amely végrehajtásához a bemeneti
+értékek és az előfeltételek rendelkezésre állnak.  feasible path
+végrehajtott: egy programelemre – utasításra, döntésre, vagy más strukturális
+elemre – akkor mondjuk, hogy a teszteset által végrehajtott, ha a bemeneti
+érték a programelem végrehajtását okozza.  exercised
+viselkedés: a szoftver válasza adott előfeltételekre és bemeneti értékekre. 
+behavior
+
+ATT
+
+EITP
+
+visszaállíthatóság: egy szoftvertermék azon képessége, hogy külső hiba esetén
+a hiba által okozott rendszert érintő következményeket, azaz a rendszer
+teljesítményének meghatározott szintjét és az adatokat helyreállítsa. [ISO
+9126] Lásd még: megbízhatóság.  recoverability
+visszaállíthatósági teszt: az a tesztfolyamat, amely egy szoftvertermék
+visszaállíthatóságát vizsgálja. Lásd még: megbízhatósági teszt. 
+recoverability testing, recovery testing
+visszatekintő megbeszélés: egy projekt végén, a projekttagokkal tartott
+megbeszélés, melyen értékelik a projektet és a tanulságokat egy következő
+
+projekt számára.  retrospective meeting, post-project meeting
+vízszintes nyomonkövethetőség: a követelmények egy adott tesztszinten
+történő nyomon követése a különböző tesztdokumentációkon keresztül (pl.
+tesztterv, műszaki tesztterv specifikáció, teszteset specifikáció, teszteljárás
+specifikáció, vagy tesztszkript).  horizontal traceability
+F
+
+ATA
+
+V-modell: egy keretrendszer a szoftverfejlesztési ciklus részletes leírására, a
+követelményspecifikációtól kezdve az üzemeltetésig. Az V-modell illusztrálja,
+hogy a teszttevékenység hogyan illeszthető a szoftverfejlesztési életciklusok
+bármely fázisába.  V-model
+Weboldal Analízis és Mérési Kérdőív (WAMMI): kérdőív alapú
+használhatósági teszt technika egy web oldal szoftverminőségének
+mérésére a végfelhasználó szempontjából.  WAMMI, Website Analysis
+and MeasureMent Inventory
+
+5. English-Hungarian dictionary / Angol-magyar szótár
+A
+abstract test case: absztrakt teszteset
+acceptance: átvétel
+acceptance criteria: átvételi kritérium
+acceptance testing: átvételi teszt
+accessibility testing: hozzáférhetőségi teszt
+accuracy: pontosság
+accuracy testing: pontossági teszt
+acting (IDEAL): cselekvés (IDEAL)
+action word driven testing: kulcsszó-alapú teszt
+actor: aktor
+actual outcome: aktuális eredmény
+actual result: aktuális eredmény
+ad hoc review: ad hoc felülvizsgálat
+ad hoc testing: ad hoc teszt
+adaptability: adaptálhatóság
+agile testing: agilis tesztelés
+agile manifesto: agilis kiáltvány
+agile software development: agilis szoftverfejlesztés
+algorithm test [TMap]: algoritmus teszt
+alpha testing: alfa teszt
+analytical testing: elemzés-alapú teszt
+analyzability: elemezhetőség
+analyzer: elemző
+anomaly: rendellenesség
+anti-pattern: negatív minta
+API (Application Programming Interface) testing: API teszt
+arc testing: elágazás teszt
+assessment report: értékelő jelentés
+
+assessor: értékelő
+atomic condition: elemi feltétel
+attack: támadás
+attack-based testing: hibatámadás-alapú teszt
+attractiveness: megjelenés
+audit: audit
+audit trail: audit nyomvonal
+automated testware: automatizált tesztver
+availability: rendelkezésre állás
+
+B
+back-to-back testing: összehasonlító teszt
+balanced scorecard: kiegyensúlyozott stratégiai mutatószám-rendszer
+baseline: baseline
+basic block: elemi blokk
+basis test set: alap tesztkészlet
+bebugging: hibabeszúrás
+behavior: viselkedés
+benchmark test: "benchmark" teszt
+bespoke software: egyedi szoftver
+best practice: bevált gyakorlat
+beta testing: béta teszt
+big-bang testing: nagy bumm teszt
+black box technique: feketedoboz technika
+black box test design technique: feketedoboz teszttervezési technika
+black box testing: feketedoboz teszt
+blocked test case: blokkolt teszteset
+bottom-up testing: alulról-felfelé haladó teszt
+boundary value: határérték
+boundary value analysis: határérték elemzés
+boundary value coverage: határérték lefedettség
+boundary value testing: határérték teszt
+branch: elágazás
+
+branch condition: elágazási feltétel
+branch condition combination coverage: feltétel-kombinációs lefedettség
+branch condition combination testing: feltétel-kombinációs teszt
+branch condition coverage: elágazási feltétel lefedettség
+branch coverage: elágazás lefedettség
+branch testing: elágazási teszt
+buffer: puffer
+buffer overflow: puffer túlcsordulás
+bug: programhiba
+bug report: hibajelentés
+bug taxonomy: hibaosztályozás
+bug tracking tool: hibakövető eszköz
+build verification test: build verifikációs teszt
+burndown chart: kivitelezési görbe
+business process-based testing: üzleti folyamat alapú teszt
+BVT: build verifikációs teszt
+
+C
+call graph: hívási gráf
+Capability Maturity Model (CMM): képesség-érettség modell (CMM)
+Capability Maturity Model Integration (CMMI): integrált képességi-érettségi modell
+(CMMI)
+capture/playback: felvétel/lejátszás
+capture/playback tool: felvevő/lejátszó eszköz
+capture/replay tool: felvevő/lejátszó eszköz
+CASE: számítógéppel támogatott szoftverfejlesztés (CASE)
+CAST: számítógéppel támogatott szoftverfejlesztés (CAST)
+causal analysis: okozati elemzés
+cause-effect analysis: ok-okozat elemzés
+cause-effect decision table: ok-okozat döntési tábla
+cause-effect diagramm: ok-okozat diagramm
+cause-effect graph: ok-okozati gráf
+
+cause-effect graphing: ok-okozat teszt
+certification: tanúsítvány
+change control: változás irányítás
+change control board (CCB): változás irányító testület
+change management: változás menedzsment
+changeability: változtathatóság
+charter: tesztvázlat
+checker: felülvizsgáló
+checklist-based testing: ellenőrző lista alapú teszt
+Chow's coverage metrics: Chow lefedettségi metrikái
+clear-box testing: fehérdoboz teszt
+classification tree: osztályozási fa
+classification tree method: osztályozási fa módszer
+CLI: parancssor interfész
+CLI testing: parancssor interfész teszt
+co-existence: együttélés
+code: kód
+code analyzer: kód elemző
+code coverage: kód lefedettség
+code-based testing: kód-alapú teszt
+codependent behavior: kodependens viselkedés (kapcsolati függőség)
+combinatorial testing: kombinatorikus teszt
+Commercial Off-The-Shelf software: kereskedelmi dobozos szoftver
+comparator: összehasonlító
+compatibility testing: kompatibilitási teszt
+compiler: fordítóprogram
+complete testing: teljes teszt
+completion criteria: teljesítési feltétel
+complexity: komplexitás
+compliance: szabályosság
+compliance testing: szabályossági teszt
+component: komponens
+component integration testing: komponens integrációs teszt
+
+component specification: komponens specifikáció
+component testing: komponens teszt
+compound condition: többszörös feltétel
+concrete test case: alacsony szintű teszteset
+concurrency testing: konkurrencia teszt
+condition: feltétel
+condition combination coverage: módosított kombinációs feltétel lefedettség
+condition combinaton testing: módosított kombinációs feltétel teszt
+condition coverage: feltétel lefedettség
+condition determination coverage: feltétel meghatározási lefedettség
+condition determination testing: feltétel meghatározási teszt
+condition outcome: feltétel eredménye
+condition testing: feltétel teszt
+confidence test: bizonyossági teszt
+confidence interval: konfidencia intervallum
+configuration: konfiguráció
+configuration auditing: konfiguráció ellenőrzés
+configuration control: konfiguráció irányítás
+configuration control board (CCB): konfiguráció irányító testület
+configuration identification: konfiguráció azonosítás
+configuration item: konfigurációs elem
+configuration management: konfiguráció menedzsment
+configuration management tool: konfiguráció menedzsment eszköz
+configuration testing: konfiguráció teszt
+confirmation testing: ellenőrző teszt
+conformance testing: szabályossági teszt
+consistency: konzisztencia
+consultative testing: konzultáló teszt
+content-based model: tartalom-alapú modell
+content reference model: tartalom-alapú modell
+continuous representation: folytonos reprezentáció
+control chart: ellenőrző diagramm
+control flow: vezérlési folyam
+
+control flow analysis: vezérlési folyam elemzés
+control flow graph: vezérlési folyam gráf
+control flow path: vezérlési út
+control flow testing: vezérlési folyam teszt
+convergence metric: konvergencia metrika
+conversion testing: konverziós teszt
+corporate dashboard: vállalati áttekintőtábla
+cost of quality: minőség költsége
+COTS: dobozos szoftver
+coverage: lefedettség
+coverage analysis: lefedettség elemzés
+coverage measurement tool: lefedettség-mérő eszköz
+coverage item: lefedettségi elem
+coverage tool: lefedettségi eszköz
+critical success factor: kritikus sikertényező
+Critical Testing Process (CTP): kritikus tesztelési folyamat
+custom software: egyedi szoftver
+custom tool: egyedi eszköz
+cyclomatic complexity: ciklomatikus komplexitás
+cyclomatic number: ciklomatikus szám
+
+D
+daily build: napi build
+dashboard: áttekintőtábla
+data definition: értékadás
+data-driven testing: adatvezérelt teszt
+data flow: adatfolyam
+data flow analysis: adatfolyam elemzés
+data flow coverage: adatfolyam lefedettség
+data flow testing: adatfolyam teszt
+data integrity testing: adat-integritás teszt
+database integrity testing: adatbázis-integritás teszt
+
+data quality: adatminőség
+dd-path: döntésközti útvonal
+dead code: elérhetetlen kód
+debugger: hibakereső
+debugging: hibakeresés
+debugging tool: hibakereső eszköz
+decision: döntés
+decision condition coverage: döntési feltétel lefedettség
+decision condition testing: döntési feltétel teszt
+decision coverage: döntési lefedettség
+decision outcome: döntési eredmény
+decision table: döntési tábla
+decision table testing: döntési tábla teszt
+decision testing: döntési teszt
+defect: programhiba
+defect-based technique: hiba-alapú technika
+defect based test design technique: hiba-alapú teszttervezési technika
+defect category: hibakategória
+defect density: hibasűrűség
+Defect Detection Percentage (DDP): hibamegtalálási arány
+defect management: hiba-menedzsment
+defect management committee: hibamenedzsment bizottság
+defect management tool: hiba-menedzsment eszköz
+defect masking: hibamaszkolás
+defect report: hibajelentés
+defect taxonomy: hibaosztályozás
+defect tracking tool: hibakövető eszköz
+defect triage committee: hibamenedzsment bizottság
+defect type: hibatípus
+definition-use pair: definíció-használat pár
+deliverable: átadandó
+Deming cycle: Deming ciklus
+design-based testing: terv-alapú teszt
+
+desk checking: ellenőrzés papíron
+development testing: fejlesztői teszt
+deviation: eltérés
+deviation report: eltérési jelentés
+diagnosing (IDEAL): diagnózis (IDEAL)
+dirty testing: negatív teszt
+documentation testing: dokumentáció teszt
+domain: értéktartomány
+domain analísis: értéktartomány analízis
+driver: meghajtó
+dry run: képzeletbeli futtatás
+dynamic analysis: dinamikus elemzés
+dynamic analysis tool: dinamikus elemző eszköz
+dynamic comparison: dinamikus összehasonlítás
+dynamic testing: dinamikus teszt
+
+E
+effectiveness: hatásosság
+efficiency: hatékonyság
+efficiency testing: hatékonysági teszt
+EFQM (European Foundation for Quality Management) excellence model: EFQM
+kiválósági modell
+elementary comparison testing: elemi összehasonlító teszt
+embedded iterative development model: beágyazott iteratív fejlesztés
+emotional intellingence: érzelmi intellingecia
+EMTE (equivalent manual test effort): kézi teszt ráfordítás igénye
+emulator: emulátor
+entry criteria: belépési feltétel
+entry point: belépési pont
+equivalence class: ekvivalenciaosztály
+equivalence partition: ekvivalencia partíció
+equivalence partition coverage: ekvivalencia partíció lefedettség
+equivalence partitioning: ekvivalencia partícionálás
+
+error: emberi eredetű hiba
+error guessing: hibasejtés
+error seeding: hibabeszúrás
+error seeding tool: hibabeszúró eszköz
+error tolerance: hibatűrés
+escaped defect: átszivárgott hiba
+establishing (IDEAL): kiépítés (IDEAL)
+evaluation: kiértékelés
+exception handling: kivételkezelés
+executable statement: végrehajtható utasítás
+exercised: végrehajtott
+exhaustive testing: kimerítő teszt
+exit criteria: kilépési feltétel
+exit point: kilépési pont
+expected outcome: elvárt eredmény
+expected result: elvárt eredmény
+experience-based testing: tapasztalat-alapú teszt
+experienced-based technique: tapasztalat-alapú technika
+experience-based test design technique: tapasztalat-alapú teszttervezési technika
+exploratory testing: felderítő teszt
+extreme programming: extrém programozás
+
+F
+factory acceptance testing: ipari átvételi teszt
+fail: bukás
+failover testing: meghibásodási teszt
+failure: meghibásodás
+failure mode: üzemzavar
+Failure Mode and Effect Analysis (FMEA): Üzemzavar és Hatás Elemzés (FMEA)
+Failure Mode, Effect and Criticality Analysis (FMECA): Üzemzavar, Hatás és
+Kritikusság Elemzés (FMECA)
+failure rate: meghibásodás arány
+false-fail result: téves hiba eredmény
+
+false-pass result: téves siker eredmény
+false-positive result: téves-hiba eredmény
+false-negative result: téves-siker eredmény
+fault: progamhiba
+fault attack: hibatámadás
+fault density: hibasűrűség
+Fault Detection Percentage (FDP): hiba megtalálási arány
+fault injection: hibaszimuláció
+fault masking: hibamaszkolás
+fault seeding: hibabeszúrás
+fault seeding tool: hibaeszúró eszköz
+fault tolerance: hibatűrés
+Fault Tree Analysis (FTA): hibafa elemzés
+feasible path: végrehajtható útvonal
+feature: feature
+feature-driven development: feature-vezérelt fejlesztés
+field testing: béta teszt
+finite state machine: véges állapotú automata
+finite state testing: véges állapot teszt
+fishbone diagramm: halszálka diagramm
+formal review: formális felülvizsgálat
+frozen test basis: fagyasztott tesztbázis
+Function Point Analysis (FPA): funkciópont elemzés
+functional integration: funkcionális integráció
+functional requirement: funkcionális követelmény
+functional test design technique: funkcionális teszttervezési technika
+functional testing: funkcionális teszt
+functionality: funkcionalitás
+functionality testing: funkcionalitási teszt
+
+G
+generic test automation architecture: általános teszt automatizálási architektúra
+glass box testing: fehérdoboz teszt
+
+Goal Question Metric (GQM): Cél Kérdés Metrika
+GUI: grafikus felhasználói felület
+GUI testing: grafikus felhasznlói felület teszt
+
+H
+hardware-software integration testing: hardver-szoftver integrációs teszt
+hazard analysis: kockázatelemzés
+heuristic evaluation: heurisztikán alapuló kiértékelés
+high level test case: magas szintű teszteset
+horizontal traceability: vízszintes nyomonkövethetőség
+hyperlink: hiperlink
+hyperlink test tool: hyperlink teszteszköz
+hyperlink tool: hiperlink ellenőrző eszköz
+
+I
+IDEAL: IDEAL
+impact analysis: hatáselemzés
+incident: incidens
+incident logging: incidens naplózása
+incident management: incidens menedzsment
+incident management tool: incidens menedzsment eszköz
+incident report: incidensjelentés
+incremental development model: inkrementális fejlesztési modell
+incremental testing: inkrementális teszt
+independence of testing: független tesztelés
+indicator: intézkedés előrejelző
+infeasible path: bejárhatatlan útvonal
+informal review: informális felülvizsgálat
+initiating (IDEAL): indítás (IDEAL)
+input: bemenet
+input domain: bemeneti értéktartomány
+input value: bemeneti érték
+
+insourced testing: helyben kiszervezett tesztelés
+inspection: inspekció
+inspection leader: inspekció vezető
+inspector: inspektor
+installability: telepíthetőség
+installability testing: telepíthetőségi teszt
+installation guide: telepítési útmutató
+installation wizard: telepítési varázsló
+instrumentation: instrumentálás
+instrumenter: instrumentáló
+intake test: tesztelhetőségi teszt
+integration: integráció
+integration testing: integrációs teszt
+integration testing in the large: rendszer integrációs teszt
+integration testing in the small: komponens integrációs teszt
+interface testing: interfész teszt
+interoperability: együttműködőképesség
+interoperability testing: együttműködőképességi teszt
+invalid testing: érvénytelen teszt
+Ishikawa diagramm: Ishikawa diagramm
+isolation testing: elszigetelt teszt
+item transmittal report: kiadási jelentés
+iterative development model: iteratív fejlesztési modell
+
+K
+key performance indicator: kulcsfontosságú teljesítményjelző
+keyword-driven testing: kulcsszó-alapú teszt
+
+L
+LCSAJ: LCSAJ
+LCSAJ coverage: LCSAJ lefedettség
+LCSAJ testing: LCSAJ teszt
+
+lead assessor: vezető értékelő
+learnability: tanulhatóság
+learning (IDEAL): tanulás (IDEAL)
+level of intrusion: beavatkozási szint
+level test plan: tesztszint-tesztterv
+linear scripting: lineáris szkriptkészítés
+link testing: komponens kapcsolati teszt
+lifecycle model: életciklus modell
+load profile: terhelési profil
+load testing: terheléses teszt
+load testing tool: terheléses teszt eszköz
+logic-coverage testing: programlogika lefedettségi teszt
+logic-driven testing: programlogika-alapú teszt
+logical test case: logikai teszteset
+low level test case: alacsony szintű teszteset
+
+M
+maintainability: karbantarthatóság
+maintainability testing: karbantarthatósági teszt
+maintenance: karbantartás
+maintenance testing: karbantartási teszt
+man in the middle attack: közbeékelődéses támadás
+management review: menedzsment felülvizsgálat
+manufacturing-based quality: gyártás-alapú minőség
+master test plan: fő tesztterv (test plan)
+maturity: érettség
+maturity level: érettségi szint
+maturity model: érettségi modell
+MCDC: kiterjesztett döntési feltétel lefedettség
+Mean Time To Repair (MTTR): Helyreállási idő
+Mean Time Between Failures (MTBF): Meghibásodások Közti Átlagidő
+measure: mérőszám
+measurement: mérés
+
+measurement scale: mérési skála
+memory leak: memóriaszivárgás
+methodical testing: módszeres teszt
+metric: metrika
+migration testing: migrációs teszt
+milestone: mérföldkő
+mind map: gondolattérkép
+mistake: emberi eredetű hiba
+model-based testing: modell-alapú teszt
+modeling tool: modellező eszköz
+moderator: moderátor
+modified condition decision coverage: kiterjesztett döntési feltétel lefedettség
+modified condition decision testing: kiterjesztett döntési feltétel teszt
+modified multiple condition coverage: kiterjesztett döntési feltétel lefedettség
+modified multiple condition testing: kiterjesztett döntési feltétel teszt
+module: modul
+module testing: modulteszt
+monitor. felügyeleti eszköz
+monitoring tool: felügyeleti eszköz
+monkey testing: csimpánz-teszt
+multiple condition: többszörös feltétel
+multiple condition coverage: többszörös feltétel lefedettség
+multiple condition testing: többszörös feltétel teszt
+mutation analysis: mutációs elemzés
+mutation testing: mutációs teszt
+Myers-Briggs Type Indicator (MBTI): Myers-Briggs Típus Indikátor (MBTI)
+
+N
+N-switch coverage: N-lépéses lefedettség
+N-switch testing: N-lépéses teszt
+n-wise testing: n-szeres teszt
+negative testing: negatív teszt
+neighborhood integration testing:szomszédos integrációs teszt
+
+non-conformity: nem-szabályosság
+non-functional requirement: nem-funkcionális követelmény
+non-functional test design technique: nem-funkcionális teszttervezési technika
+non-functional testing: nem-funkcionális teszt
+
+O
+off-the-shelf software: dobozos szoftver
+open source tool: nyílt forráskódú eszköz
+operability: működtethetőség
+operational acceptance testing: működési átvételi teszt
+operational environment: működési környezet
+operational profile: működési profil
+operational profile testing: működési profil teszt
+operational profiling: működési profilozás
+operational testing: működési teszt
+oracle: orákulum
+orthogonal array: ortogonális mátrix
+orthogonal array testing: ortogonális mátrix teszt
+outcome: eredmény
+output: kimenet
+output domain: kimeneti értéktartomány
+output value: kimeneti érték
+outsourced testing: kiszervezett tesztelés
+
+P
+pair programming: páros programozás
+pair testing: páros tesztelés
+pairwise testing: páronkénti teszt
+pairwise integration testing: páronkénti integrációs teszt
+Pareto analysis: Pareto elemzés
+partition testing: partíciós teszt
+pass: sikeres teszt
+
+pass/fail criteria: siker/bukás feltétel
+path: útvonal
+path coverage: útvonal lefedettség
+path sensitizing: útvonal kikényszerítés
+path testing: útvonal teszt
+peer review: egyenrangú felülvizsgálat
+performance: teljesítmény
+performance indicator: teljesítmény mutató
+performance profiling: teljesítmény profilozás
+performance testing: teljesítményteszt
+performance testing tool: teljesítményteszt eszköz
+phase test plan: tesztfázis terv
+phase containment: fázis behatárolás
+planning poker: tervezési póker
+pointer: mutató
+portability: hordozhatóság
+portability testing: hordozhatósági teszt
+post-execution comparison: végrehajtás utáni összehasonlítás
+postcondition: utófeltétel
+post-project meeting: visszatekintő megbeszélés
+precondition: előfeltétel
+predicate: predikátum
+predicted outcome: előrejelzett kimenet
+pretest: előzetes teszt
+priority: prioritás
+PRISMA: PRISMA
+probe effect: mérési mellékhatás
+problem: probléma
+problem management: probléma menedzsment
+problem report: problémajelentés
+procedure testing: eljárás teszt
+process: folyamat
+process assessment: folyamatértékelés
+
+process-compliant testing: folyamatnak megfelelő tesztelés
+process cycle test: folyamat ciklus teszt
+process-driven testing: folyamatvezérelt teszt
+process flow model: folyamatlefutási modell
+process improvement: folyamatjavítás
+process model: folyamatmodell
+process reference model: folyamat referencia modell
+product-based quality: termék-alapú minőség
+product risk: termékkockázat
+Product RISk MAnagement: termékkockázat menedzsment
+production acceptance testing: termék átvételi teszt
+program instrumenter: program-instrumentáló
+program testing: programteszt
+project: projekt
+project retrospective: projekt visszatekintő
+project risk: projektkockázat
+project test plan: projekt tesztterv (test plan)
+pseudo-random: pszeudó-véletlen
+
+Q
+QFD: Minőségi Funckionalitás Transzfer
+qualification: minősítés
+quality: minőség
+quality assurance: minőségbiztosítás
+quality attribute: minőségi jellemző
+quality characteristic: minőségi jellemző
+quality control: minőségellenőrzés
+Quality Function Deployment: Minőségi Funkcionalitás Transzfer
+quality management: minőségmenedzsment
+quality risk: minőségügyi kockázat
+
+R
+RACI matrix: RACI mátrix
+random testing: véletlenszerű teszt
+Rational Unified Process (RUP): Rational Egységesített Folyamat (Rational Unified
+Process, RUP)
+reactive testing: reaktív teszt
+re-testing: újratesztelés
+record/playback tool: felvevő/lejátszó eszköz
+recorder: jegyzőkönyv vezető
+recoverability: visszaállíthatóság
+recoverability testing: visszaállíthatósági teszt
+recovery testing: visszaállíthatósági teszt
+regression-averse testing: regresszió-elkerülő teszt
+regression testing: regressziós teszt
+regulation testing: szabályozási teszt
+release note: kiadási megjegyzés
+reliability: megbízhatóság
+reliability growth model: megbízhatóság-növekedés modell
+reliability testing: megbízhatósági teszt
+replaceability: helyettesíthetőség
+requirement: követelmény
+requirements management tool: követelmény-menedzsment eszköz
+requirements phase: követelményfeltárási fázis
+requirements-based testing: követelmény-alapú teszt
+resource utilization: erőforrás kihasználtság
+resource utilization testing: erőforráshasználati teszt
+result: eredmény
+resumption criteria: újrakezdési feltételek
+resumption requirements: újrakezdési követelmények
+retrospective meeting: visszatekintő megbeszélés
+review: felülvizsgálat
+review plan: felülvizsgálati terv
+review tool: felülvizsgáló eszköz
+
+reviewer: felülvizsgáló
+risk: kockázat
+risk analysis: kockázatelemzés
+risk assessment: kockázat értékelés
+risk-based testing: kockázat-alapú teszt
+risk category: kockázat kategória
+risk control: kockázatkezelés
+risk identification: kockázat azonosítás
+risk impact: kockázat hatása
+risk level: kockázati szint
+risk likelihood: kockázat valószínűsége
+risk management: kockázatkezelés
+risk mitigation: kockázatkezelés
+risk type: kockázattípus
+robustness: robosztusság
+robustness testing: robosztussági teszt
+root cause: kiváltó ok
+root cause analysis: kiváltó ok elemzés
+
+S
+safety: biztonság
+safety critical system: biztonság-kritikus rendszer
+safety testing: biztonsági teszt
+sanity test: alapvető teszt
+scalability: skálázhatóság
+scalability testing: skálázhatósági teszt
+scenario testing: forgatókönyv-alapú teszt
+scorecard: stratégiai mutatószám-rendszer
+scribe: jegyzőkönyv vezető
+scripted testing: szkript-alapú teszt
+scripting language: szkript nyelv
+SCRUM: SCRUM
+security: biztonság
+
+security testing: biztonsági teszt
+security testing tool: biztonsági teszteszköz
+security tool: biztonsági eszköz
+serviceability testing: üzemeltethetőségi teszt
+session-based test management: munkamenet-alapú teszt vezetése
+session-based test: munkamenet-alapú teszt
+severity: súlyosság
+Shewhart chart: Shewhart diagramm
+short-circuiting: rövidzár-kiértékelés
+software integrity level: szoftver integritás szint
+simulation: szimuláció
+simulator: szimulátor
+site acceptance testing: helyszíni átvételi teszt
+S.M.A.R.T. goal methodology: SMART célkitűzési módszertan
+smoke test: smoke teszt
+software: szoftver
+software attack: szoftveres támadás
+Software Failure Mode and Effect Analysis (SFMEA): Szoftver Üzemzavar és
+Hatáselemzés
+Software Failure Mode, Effect and Criticality Analysis (SFMECA): Szoftver
+Üzemzavar, Hatás és Kritikusság Elemzés
+Software Fault Tree Analysis (SFTA): szoftverhibafa elemzés
+software feature: szoftver feature
+software lifecycle: szoftver életciklus
+Software Process Improvement (SPI): Szoftverfolyamat Fejlesztés
+software product characteristics: szoftvertermék jellemző
+software quality: szoftverminőség
+software quality characteristic: szoftverminőségi jellemző
+software test incident: szoftverteszt incidens
+software test incident report: szoftverteszt incidensjelentés
+Software Usability Measurement Inventory (SUMI): Szoftver Használhatósági Kérdőív
+source statement: forráskód utasítás
+specification: specifikáció
+
+specification-based technique: specifikáció-alapú technika
+specification-based test design technique: specifikáció-alapú teszttervezési technika
+specification-based testing: specifikáció-alapú teszt
+specified input: meghatározott bemeneti érték
+stability: stabilitás
+staged representation: lépcsőzetes felépítés
+standard: szabvány
+standard-compliant testing: szabványnak megfelelő tesztelés
+standard software: általános célú szoftvertermék
+standards testing: szabványossági teszt
+state diagramm: állapotdiagramm
+state table: állapottábla
+state transition: állapotátmenet
+state transition testing: állapotátmenet teszt
+statement: utasítás
+statement coverage: utasítás lefedettség
+statement testing: utasítás szintű teszt
+static analysis: statikus elemzés
+static analysis tool: statikus elemző eszköz
+static analyzer: statikus elemző eszköz
+static code analysis: statikus forráskód elemzés
+static code analyzer: statikus forráskód elemző
+static testing: statikus teszt
+statistical testing: statisztikai teszt
+status accounting: állapot rögzítés
+stochastic testing: sztochasztikus teszt
+storage: tároló
+storage testing: tároló-használati teszt
+stress testing: stressz teszt
+stress testing tool: stressz teszteszköz
+structural coverage: struktúra szintű lefedettség
+structural test design technique: struktúra szintű teszttervezési technika
+structural testing: struktúra-alapú teszt
+
+structure-based technique: struktúra-alapú technika
+structure-based test design technique: struktúra-alapú műszaki teszttervezési
+technika
+structure-based testing: struktúra-alapú teszt
+structured scripting: strukturált szkriptkészítés
+structured walkthrough: strukturált átvizsgálás
+stub: csonk
+subpath: al-útvonal
+suitability: megfelelőség
+suitability testing: megfelelőségi teszt
+suspension criteria: felfüggesztési feltételek
+SUT: teszt tárgya
+syntax testing: szintaxis teszt
+system: rendszer
+system integration testing: rendszer-integrációs teszt
+system of systems: rendszerek rendszere
+system under test: teszt tárgya
+system testing: rendszerteszt
+Systematic Test and Evaluation Process (STEP): Módszeres Teszt és Kiértékelési
+Folyamat
+
+T
+TDD: tesztvezérelt fejlesztés
+technical review: technikai felülvizsgálat
+test: teszt
+test adaption layer: teszt adaptációs réteg
+test analysis: tesztanalízis
+test approach: tesztelési megközelítés
+test architect: teszt architekt
+test automation: teszt automatizálás
+test automation architecture: teszt automatizálási architektúra
+test automation engineer: teszt automatizálási mérnök
+test automation framework: teszt automatizálási keretrendszer
+
+test automation manager: teszt automatizálási menedzser
+test automation solution: teszt automatizálási megoldás
+test automation strategy: teszt automatizálási stratégia
+test basis: tesztbázis
+test bed: tesztkörnyezet
+test case: teszteset
+test case design technique: teszteset tervezési technika
+test case result: teszteset eredmény
+test case specification: teszteset specifikáció
+test case suite: tesztkészlet
+test charter: tesztvázlat
+test closure: tesztlezárás
+test comparator: tesztösszehasonlító eszköz
+test comparison: teszt összehasonlítás
+test completion criteria: tesztelési végfeltétel
+test condition: tesztfeltétel
+test control: tesztirányítás
+test coverage: tesztlefedettség
+test cycle: tesztciklus
+test data: tesztadat
+test data management: tesztadat kezelés
+test data preparation tool: tesztadat előkészítő eszköz
+test definition layer: teszt definíciós réteg
+test deliverable: tesztelési átadandó
+test design: műszaki tesztterv (test design)
+test design specification: műszaki tesztterv (test design) specifikáció
+test design technique: műszaki teszttervezési technika
+test design tool: műszaki teszttervező eszköz
+test director: tesztigazgató
+test driven development: tesztvezérelt fejlesztés
+test driver: teszt meghajtó
+test environment: tesztkörnyezet
+test estimation: tesztbecslés
+
+test evaluation report: teszt-kiértékelési jelentés
+test execution: tesztvégrehajtás
+test execution automation: automatizált tesztvégrehajtás
+test execution layer: tesztvégrehajtási réteg
+test execution phase: tesztvégrehajtási fázis
+test execution schedule: tesztvégrehajtás ütemezése
+test execution technique: tesztvégrehajtási technika
+test execution tool: tesztvégrehajtási eszköz
+test fail: sikertelen teszt
+test generation layer: tesztgenerátor réteg
+test generator: tesztgenerátor
+test harness: teszttámogató szoftverkörnyezet
+test hook: teszthorog
+test implementation: teszt megvalósítása
+test improvement plan: tesztfejlesztési terv
+test incident: tesztincidens
+test incident report: tesztincidens jelentés
+test infrastructure: tesztelési infrastruktúra
+test input: tesztbemenet
+test item: tesztelem
+test item transmittal report: tesztelem kiadási jelentés
+test leader: tesztvezető
+test level: tesztszint
+test log: tesztnapló
+test logging: teszt naplózása
+test management: tesztmenedzsment
+test management tool: tesztmenedzsment eszköz
+test manager: tesztmenedzser
+Test Maturity Model Integrated (TMMi): Integrált Teszt-Érettségi Modell (TMMI)
+test mission: teszt küldetés
+test monitoring: tesztfelügyelet
+test object: teszt tárgya
+test objective: tesztcél
+
+test oracle: teszt-orákulum
+test outcome: tesztkimenet
+test pass: sikeres teszt
+test performance indicator: teszt-teljesítmény mutató
+test phase: tesztfázis
+test plan: tesztterv (test plan)
+test planning: teszttervezés
+Test Point Analysis (TPA): tesztpont elemzés (TPA)
+test policy: tesztelési irányelvek
+test procedure: teszteljárás
+test procedure specification: teszteljárás specifikáció
+test process: tesztfolyamat
+Test Process Group (TPG): Tesztfolyamat Csoport
+test process improvement: tesztfolyamat fejlesztés
+test process improvement manifesto: tesztfolyamat fejlesztési kiáltvány
+test process improver: tesztfolyamat fejlesztő
+test progress report: teszt státusz jelentés
+test record: tesztnapló
+test recording: teszt naplózása
+test report: tesztjelentés
+test reporting: tesztjelentés készítés
+test reproduceability: teszt megismételhetősége
+test requirement: teszt követelmény
+test result: teszteredmény
+test rig: tesztkörnyezet
+test run: tesztfuttatás
+test run log: tesztfutási napló
+test scenario: teszt-forgatókönyv
+test schedule: teszt ütemezése
+test script: tesztszkript
+test session: tesztszakasz
+test set: tesztkészlet
+test situation: tesztfeltétel
+
+test specification: tesztspecifikáció
+test specification technique: tesztspecifikációs technika
+test stage: tesztszint
+test strategy: tesztstratégia
+test suite: tesztkészlet
+test summary report: összefoglaló tesztjelentés
+test target: tesztcél
+test technique: teszttechnika
+test tool: teszteszköz
+test type: teszttípus
+testability: tesztelhetőség
+testability review: tesztelhetőségi felülvizsgálat
+testable requirements: tesztelhető követelmények
+tester: tesztelő
+testing: tesztelés
+testware: tesztver
+thread testing: progresszív integráció alapú teszt
+three point estimation: hárompontos becslés
+time behavior: időbeli viselkedés
+top-down testing: felülről-lefelé haladó teszt
+Total Quality Management (TQM): Teljeskörű Minőségirányítás
+TPI Next: Teszfolyamat Fejlesztés (TPI Next):
+traceability: nyomonkövethetőség
+traceability matrix: nyomonkövethetőségi mátrix
+transactional analysis: tranzakció analízis
+transcendent-based quality: transzcendencia-alapú minőség
+
+U
+understandability: érthetőség
+unit: egység
+unit test framework: egységteszt keretrendszer
+unit testing: egységteszt
+unreachable code: elérhetetlen kód
+
+usability: használhatóság
+usability testing: használhatósági teszt
+use case: használati eset
+use case testing: használati eset teszt
+user acceptance testing: felhasználói átvételi teszt
+user-based quality: felhasználó-alapú minőség
+user scenario testing: felhasználói forgatókönyv teszt
+user story: felhasználói történet
+user story testing: felhasználói történet teszt
+user test: felhasználói teszt
+
+V
+V-model: V-modell
+validation: validáció
+value-based quality: érték-alapú minőség
+variable: változó
+verification: verifikáció
+version control: verziókövetés
+vertical traceability: függőleges nyomonkövethetőség
+volume testing: mennyiségi teszt
+
+W
+walkthrough: átvizsgálás
+Website Analysis and MeasureMent Inventory (WAMMI): Weboldal Analízis és Mérési
+Kérdőív (WAMMI)
+white-box techniques: fehérdoboz technikák
+white-box test design technique: fehérdoboz teszttervezési technika
+white-box testing: fehérdoboz teszt
+Wide Band Delphi: széleskörű Delphi eljárás
+wild pointer: érvénytelen mutató
+Work Breakdown Structure (WBS): Munkaelem Strukturálás
+
+
