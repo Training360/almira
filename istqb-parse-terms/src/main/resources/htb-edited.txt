@@ -1442,7 +1442,6 @@ vagy azon a szinten tartsuk a kockázatokat. risk control, risk mitigation
 ATM
 ATA
 ATT
-a
 
 kockázatelemzés: a projekt-illetve termékkockázati elemek elemzésének
 folyamata, amelynek során meghatározzuk a kockázat szintjét, jellemzően
@@ -2672,7 +2671,7 @@ attribútumokat objektíven és mennyiségileg mérhetjük. Az ugyanolyan típus
 termékek minősége közötti különbségek a megvalósított minőségi
 attribútumokra vezethető vissza.  product-based quality
 
-F,F-AT, ATM
+F,F-AT,ATM
 ATA,ATT
 termékkockázat: a teszt tárgyához (magához a termékhez) közvetlenül
 kapcsolódó kockázat. Lásd még: kockázat.  product risk

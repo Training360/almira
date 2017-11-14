@@ -692,7 +692,7 @@
     "desc": "a teljesítményteszt azon típusa, amely a komponens vagy rendszer viselkedését vizsgálja növekedő terhelés alatt (például a felhasználók számának, vagy kérések számának növelésekor). A teszt célja, hogy kiderüljön, a komponens vagy rendszer hogyan reagál a magas terhelésre (lefagy, nő a válaszidő, stb.)."
   },
   {
-    "name": "ATM ATA,ATT termékkockázat",
+    "name": "termékkockázat",
     "engNames": [
       "product risk"
     ],
