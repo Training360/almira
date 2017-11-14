@@ -8,7 +8,7 @@ var selected;
 
 var counter = {"correct": 0, "incorrect": 0}
 
-var max = 3;
+var max = 20;
 
 $(document).ready(function() {
   $.views.settings.allowCode(true);

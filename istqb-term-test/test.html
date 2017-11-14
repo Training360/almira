@@ -76,8 +76,12 @@
     <ul class="list-unstyled">
       {^{for item.answers ~state=state ~selected=selected}}
         <li>
-            <input type="radio" name="answer-radio" value="{{:#index}}" class="{{if ~state == 'answer'}}disabled{{/if}}" />
+        <div class="radio">
+          <label for="radio{{:#index}}">
+            <input id="radio{{:#index}}" type="radio" name="answer-radio" value="{{:#index}}" class="{{if ~state == 'answer'}}disabled{{/if}}" />
             <span class="{{if ~state == 'answer' && correct}}text-success{{/if}} {{if ~state == 'answer' && !correct && #index == ~selected}}text-danger{{/if}}">{{:answerPart}}</span>
+            </label>
+            </div>
         </li>
       {{/for}}
     </ul>
