@@ -8547,7 +8547,7 @@ Q. 785: The flow graph below shows the logic of a program for which 100%
 statement coverage and 100% decision coverage is required on exit from
 component testing.
 
-TODO Picture
+![](images/ISTQB785.jpg)
 
 
 The following test cases have been run:
@@ -11341,15 +11341,14 @@ D. I, II, and III are true, IV is false
 Q. 1033: The following code segment contains a potential "divide by 0"
 error.
 
-TODO Which operator?
-
 ```
 J=50
 K=1
-while (N>=10) and (N<=10) loop
+while (N>= -10) and (N<=10)
+loop
 M [K] = J/N
 K = K + 1
-N = N ��1
+N = N - 1
 end loop
 ```
 
