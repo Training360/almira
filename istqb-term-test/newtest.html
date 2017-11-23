@@ -11,20 +11,18 @@
 </head>
 
 <body>
-    <div class="container" ng-app="testApp" ng-controller="testController">
+    <div class="container" ng-app="testApp" ng-controller="testController" ng-cloak="">
 
         <!-- HEADER -->
         <header>
             <div class="header">
-                <h1>{{ translate.title[language] }}</h1>
+                <h1>{{ translate('title') }}</h1>
             </div>
         </header>
 
         <nav>
-            <div class="menu clearfix">
-                <div class="right">
-                    <button class="btn btn-lg">{{ translate.restart[language] }}</button>
-                </div>
+            <div class="menu right">
+                <button class="btn btn-lg">{{ translate('restart') }}</button>
             </div>
         </nav>
 
@@ -33,63 +31,63 @@
 
             <div class="full">
 
-                <div class="index" ng-show="started">
+                <div class="index">
                     <h2>Új teszt / New test</h2>
                     <h3>
                         Válaszd ki a nyelvet!
                         <br> Choose language!
                     </h3>
                     <div class="btn-group">
-                        <button class="btn btn-lg" ng-click="selectLanguage('hu')">Magyar</button>
-                        <button class="btn btn-lg" ng-click="selectLanguage('en')">English</button>
+                        <button class="btn btn-lg" ng-click="setLanguage('hu')">Magyar</button>
+                        <button class="btn btn-lg" ng-click="setLanguage('hu')">English</button>
                     </div>
                 </div>
 
-                <div class=" tests " ng-show="!started ">
+                <div class="tests">
 
-                    <div class="message ">
+                    <div class="message">
                         <p>
                             <strong>{{ questionNumber }}</strong> /
-                            <strong>{{ actualTestIndex }} </strong>{{ translate.actual[language] }}
-                            <span class="corect-answer ">{{ rightAnswer }} </span> {{ translate.correct[language] }}
+                            <strong>{{ actualTestIndex }} </strong>{{ translate('actual') }}
+                            <span class="corect-answer">{{ rightAnswer }} </span> {{ translate('correct') }}
                         </p>
                     </div>
 
-                    <div class="test ">
-                        <p class="question ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolores labore praesentium consectetur
+                    <div class="test">
+                        <p class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolores labore praesentium consectetur
                             odit, culpa dolor veniam tenetur reiciendis eveniet quos dicta. Fugiat, dicta rerum. Nisi eum
                             harum deleniti repellat?
                         </p>
-                        <div class="design-radio ">
-                            <input type="radio " name="test " class="design-radio__input " id="test1 ">
-                            <label for="test1 " class="design-radio__label ">
+                        <div class="design-radio">
+                            <input type="radio" name="test" class="design-radio__input" id="test1">
+                            <label for="test1" class="design-radio__label">
                                 Lorem 1
                             </label>
                         </div>
 
-                        <div class="design-radio ">
-                            <input type="radio " name="test " class="design-radio__input " id="test2 ">
-                            <label for="test2 " class="design-radio__label ">
+                        <div class="design-radio">
+                            <input type="radio" name="test" class="design-radio__input" id="test2">
+                            <label for="test2" class="design-radio__label">
                                 Lorem 2
                             </label>
                         </div>
 
-                        <div class="design-radio ">
-                            <input type="radio " name="test " class="design-radio__input " id="test3 ">
-                            <label for="test3 " class="design-radio__label ">
+                        <div class="design-radio">
+                            <input type="radio" name="test" class="design-radio__input" id="test3">
+                            <label for="test3" class="design-radio__label">
                                 Lorem 3
                             </label>
                         </div>
 
-                        <div class="design-radio ">
-                            <input type="radio " name="test " class="design-radio__input " id="test4 ">
-                            <label for="test4 " class="design-radio__label ">
+                        <div class="design-radio">
+                            <input type="radio" name="test" class="design-radio__input" id="test4">
+                            <label for="test4" class="design-radio__label">
                                 Lorem 4
                             </label>
                         </div>
                     </div>
-                    <div class="btn-group ">
-                        <button class="btn btn-lg " ng-click="flipTest() ">{{ translate.next[language] }}</button>
+                    <div class="btn-group next">
+                        <button class="btn btn-lg" ng-click="flipTest()">{{ translate('next') }}</button>
                     </div>
                 </div>
 
@@ -98,9 +96,9 @@
 
         <!-- FOOTER -->
         <footer>
-            <div class="copyright "> 2017 Yellowroad | Powered by
-                <a href="https://training360.com " target="_blank ">
-                    <img src="./img/training360-logo.png ">
+            <div class="copyright"> 2017 Yellowroad | Powered by
+                <a href="https://training360.com" target="_blank">
+                    <img src="./img/training360-logo.png">
                 </a>
             </div>
         </footer>
@@ -108,14 +106,18 @@
 
     <script>
         var app = angular.module('testApp', []);
-        app.controller("testController ", function ($scope, $http) {
+        app.controller("testController", function ($scope, $http) {
             $scope.started = false;
             $scope.questionNumber = 20;
             $scope.rightAnswer = 0;
             $scope.actualTestIndex = 1;
-            $scope.jsonData;
+            $scope.jsonFile = {
+                hu: './huterms.json',
+                en: './terms.json'
+            };
+            $scope.testQuestions = [];
             $scope.language = 'hu';
-            $scope.translate = {
+            $scope.dictionary = {
                 title: {
                     hu: 'ISTQB Terms Test',
                     en: 'ISTQB Terms Test'
@@ -123,6 +125,14 @@
                 description: {
                     hu: "Leírás ",
                     en: "Description "
+                },
+                descriptionQuestion: {
+                    hu: 'Melyik leírás felel meg az alábbi definíciónak?',
+                    en: 'Which description corresponds to the definition below?'
+                },
+                definitionQuestion: {
+                    hu: 'Melyik definíció felel meg az alábbi leírásnak?',
+                    en: 'Which definition corresponds to the following description?'
                 },
                 answer: {
                     hu: 'Következő',
@@ -150,27 +160,74 @@
                 }
             };
 
-            $scope.selectLanguage = function (lang) {
-                $scope.language = lang;
-
-                var requestPath = './';
-                var files = {
-                    hu: 'huterms.json',
-                    en: 'terms.json'
-                };
-
-                if ($scope.language == 'hu') {
-                    requestPath += path.hu;
-                } else {
-                    requestPath += path.en;
-                }
-                $http.get(requestPath)
-                    .then(function (response) {
-                        $scope.jsonData = response.data;
-                    }, function (response) {
-                        $scope.jsonData = "Something went wrong";
-                    });
+            $scope.translate = function (data) {
+                return $scope.dictionary[data][$scope.language];
             }
+
+            $scope.setLanguage = function (lang) {
+                $scope.language = lang;
+                $scope.getJSONData();
+            }
+
+            $scope.getJSONData = function () {
+                $http({
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        url: $scope.jsonFile[$scope.language]
+                    })
+                    .then(function (response) {
+                        $scope.generateQuestions(response.data.terms);
+                    }, function (response) {
+                        $scope.jsonError = $scope.translate('jsonError');
+                    });
+            };
+
+            $scope.nameOrDescription = function () {
+                return Math.random() >= 0.5 ? 'name' : 'desc';
+            }
+
+            $scope.generateRandomNumber = function (count, maxNumber) {
+                var randomNumbers = [];
+                var aNumber;
+                var i = 0;
+                while (i < count) {
+                    aNumber = Math.floor(Math.random() * maxNumber);
+                    if (randomNumbers.indexOf(aNumber) == -1) {
+                        randomNumbers.push(aNumber);
+                        i++;
+                    }
+                }
+                return randomNumbers;
+            }
+
+            $scope.generateQuestions = function (jsonData) {
+                var i = 0;
+                var j;
+                var indexes;
+                var questonType;
+                var aQuestion = {};
+
+                while (i < $scope.questionNumber) {
+                    indexes = $scope.generateRandomNumber(4, jsonData.length);
+                    aQuestion.type = nameOrDescription();
+                    if (aQuestion.type == 'name') {
+                        aQuestion.text
+                    } else {
+
+                    }
+
+                    for (j = 0; j < indexes.length; j++) {
+                        question.push({
+                            type: questonType,
+                            text: 'lorem',
+                            answers: ['lorem', 'lorem', 'lorem', 'lorem'],
+                            correct: 0
+                        });
+                    }
+                }
+            };
 
             $scope.flipTest = function () {
                 $scope.actualTestIndex++;

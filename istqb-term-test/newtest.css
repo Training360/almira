@@ -102,6 +102,10 @@ select:hover {
   padding: 12px 24px;
 }
 
+.next {
+  margin-top: 20px;
+}
+
 .message {
   background: #eee;
   padding: 5px 15px;
