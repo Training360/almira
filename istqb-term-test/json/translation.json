@@ -1,0 +1,20 @@
+{
+  "dictionary": {
+    "title": { "hu": "ISTQB Terms Test", "en": "ISTQB Terms Test" },
+    "description": { "hu": "Leírás ", "en": "Description " },
+    "descriptionQuestion": {
+      "hu": "Melyik leírás felel meg az alábbi definíciónak?",
+      "en": "Which description corresponds to the definition below?"
+    },
+    "definitionQuestion": {
+      "hu": "Melyik definíció felel meg az alábbi leírásnak?",
+      "en": "Which definition corresponds to the following description?"
+    },
+    "answer": { "hu": "Következő", "en": "Next" },
+    "restart": { "hu": "Újraindítás", "en": "Restart" },
+    "next": { "hu": "Következő", "en": "Next" },
+    "actual": { "hu": "kérdés megválaszolva,", "en": " question(s) answered," },
+    "correct": { "hu": " helyes válasz.", "en": " corect answer(s)." },
+    "jsonError": { "hu": "Hiba történt!", "en": "Something went wrong!" }
+  }
+}

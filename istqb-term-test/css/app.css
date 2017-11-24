@@ -30,6 +30,12 @@ footer > div {
   padding: 15px;
 }
 
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
 header h1 {
   color: #fff;
   margin: 0;
@@ -38,12 +44,11 @@ header h1 {
 
 .container {
   border: 10px solid #ece819;
-  height: auto;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1140px;
+  min-height: 100vh;
   position: relative;
-  top: 0;
-  left: 0;
-  transform: translate(0, 0);
+  width: 100%;
 }
 
 .index {
@@ -56,9 +61,9 @@ header h1 {
 }
 
 .clearfix::after {
+  clear: both;
   content: " ";
   display: block;
-  clear: both;
 }
 
 .embed-half {
@@ -76,19 +81,25 @@ header h1 {
 }
 
 .btn {
+  background: #3c3c3c;
+  border: 1px solid #3c3c3c;
   color: #fff;
   display: inline-block;
-  background: #3c3c3c;
+  font-size: 14px;
+  font-weight: bold;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
   line-height: 18px;
-  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  white-space: nowrap;
+  transition: 0.3s;
   vertical-align: middle;
-  border: 1px solid #3c3c3c;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #000;
+  color: #ece819;
 }
 
 .btn:hover,
@@ -103,7 +114,8 @@ select:hover {
 }
 
 .next {
-  margin-top: 20px;
+  margin: 30px 0 50px 40px;
+  text-align: left;
 }
 
 .message {
@@ -116,24 +128,20 @@ select:hover {
   font-weight: bold;
 }
 
-label {
-  display: block;
-}
-
 select {
-  color: #3c3c3c;
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
   border: 1px solid #3c3c3c;
+  color: #3c3c3c;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .question {
@@ -157,22 +165,27 @@ select {
 }
 
 .design-radio {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
+  transition: 0.3s;
+}
+
+.design-radio:hover {
+  background: #eee;
 }
 
 .design-radio__input {
   opacity: 0;
-  position: absolute;
   left: -9999px;
+  position: absolute;
   -webkit-appearance: none;
 }
 
 .design-radio__label {
   cursor: pointer;
-  display: inline-block;
+  display: block;
   line-height: 24px;
-  padding: 0 0 0 40px;
+  padding: 10px 0 10px 40px;
   position: relative;
 }
 
@@ -185,7 +198,7 @@ select {
   height: 22px;
   left: 0;
   position: absolute;
-  top: 0;
+  top: 10px;
   width: 22px;
 }
 
@@ -196,20 +209,10 @@ select {
   height: 12px;
   left: 6px;
   position: absolute;
-  top: 6px;
+  top: 16px;
   width: 12px;
 }
 
 .design-radio__input:checked + .design-radio__label::after {
   background: #ea5533;
-}
-
-@media (min-width: 640px) {
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1140px;
-  }
 }
