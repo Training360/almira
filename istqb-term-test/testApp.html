@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ISTQB Terms Test</title>
     <link rel="stylesheet" href="./css/app.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js"></script>
     <script src="./app/app.module.js"></script>
-    <!--script src="./app/controllers/languageController.js"></script>
+    <script src="./app/directives/indexDirective.js"></script>
+    <script src="./app/directives/testDirective.js"></script>
+    <script src="./app/controllers/languageController.js"></script>
     <script src="./app/controllers/testController.js"></script>
-    <script- src="./app/app.module.js"></script-->
-
+    <title>{{ translate('title') }}</title>
 </head>
 
 <body>
 
     <div class="container" ng-controller="testController">
+
         <!-- HEADER -->
         <header>
             <div class="header">
@@ -25,20 +26,19 @@
             </div>
         </header>
 
+        <!-- NAV -->
         <nav>
             <div class="menu right">
-                <button class="btn btn-lg">{{ translate('restart') }}</button>
+                <button class="btn btn-lg" ng-click="init()">{{ translate('restart') }}</button>
             </div>
         </nav>
 
         <!-- MAIN -->
         <main>
-
             <div class="full">
-
+                <div class="error-color">{{ errorMessage }}</div>
                 <index-directive></index-directive>
                 <test-directive></test-directive>
-
             </div>
         </main>
 
@@ -51,9 +51,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-    </script>
 </body>
 
 </html>

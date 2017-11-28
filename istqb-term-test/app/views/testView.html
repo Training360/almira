@@ -1,0 +1,36 @@
+<div class="tests">
+
+    <div class="message" ng-show="started">
+        <p>
+            <strong>{{ numberOfQuestions }}</strong> /
+            <strong>{{ actualTestIndex }} </strong>{{ translate('actual') }}
+            <span class="corect-answer">{{ rightAnswer }} </span> {{ translate('correct') }}
+        </p>
+    </div>
+
+    <div class="test" ng-repeat="test in testQuestions" ng-show="actualTestIndex==$index && started">
+        <form action="" id="form{{$index}}" name="form{{$index}}" ng-submit="checkAnswer($event, 'form' + $index)">
+            <p class="question">
+                {{ test.question }}
+            </p>
+            <p class="answer success-color"></p>
+            <div class="design-radio" ng-repeat="answer in test.answers">
+                <input type="radio" name="test{{$parent.$index}}" class="design-radio__input" id="test{{$parent.$index}}{{$index}}" value="{{answer}}"
+                    ng-click="setUserAnswer(answer, $parent.$index, $index)">
+                <label for="test{{$parent.$index}}{{$index}}" id="test{{$parent.$index}}{{$index}}label" class="design-radio__label">
+                    {{ answer }}
+                </label>
+            </div>
+            <div class="btn-group controls">
+                <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">{{ translate('previous') }}</button>
+                <input type="submit" class="btn btn-lg" value="{{ translate('check') }}">
+                <button class="btn btn-lg" ng-show="actualTestIndex < 19" ng-click="nextQuestion()">{{ translate('next') }}</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">{{ translate('end') }}</button>
+            </div>
+        </form>
+    </div>
+    <div>
+
+    </div>
+
+</div>

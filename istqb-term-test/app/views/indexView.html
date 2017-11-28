@@ -1,0 +1,20 @@
+<div class="index" ng-show="!started">
+    <div ng-show="!languageIsSelected">
+        <h2>Új teszt / New test</h2>
+        <h3>
+            Válaszd ki a nyelvet!
+            <br> Choose language!
+        </h3>
+    </div>
+
+    <div ng-show="!languageIsSelected">
+        <div class="btn-group">
+            <button class="btn btn-lg" ng-click="setLanguage('hu')">Magyar</button>
+            <button class="btn btn-lg" ng-click="setLanguage('en')">English</button>
+        </div>
+    </div>
+    <div ng-show="languageIsSelected">
+        <p>{{ translate('youAreReady') }}</p>
+        <button class="btn btn-lg" ng-click="generateQuestions()">Start</button>
+    </div>
+</div>
