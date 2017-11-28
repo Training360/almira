@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <!-- Bootstrap -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    .table {
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  <h1>Q. </h1>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+-->
+
+<h1>Q. 21</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Conditions</th>
+      <th>Rule 1</th>
+      <th>Rule 2</th>
+      <th>Rule 3</th>
+      <th>Rule 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Age</td>
+      <td>&lt; 21 yrs</td>
+      <td>21-29 yrs</td>
+      <td>30-50yrs</td>
+      <td>&gt; 50yrs</td>
+    </tr>
+    <tr>
+      <td>Insurance Class</td>
+      <td>A</td>
+      <td>A or B</td>
+      <td>B. C or D</td>
+      <td>C or D</td>
+    </tr>
+    <tr>
+      <td>Actions</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Premium</td>
+      <td>$100</td>
+      <td>$90</td>
+      <td>$70</td>
+      <td>$70</td>
+    </tr>
+    <tr>
+      <td>Excess</td>
+      <td>$2500</td>
+      <td>$2500</td>
+      <td>$500</td>
+      <td>$1000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 282</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Conditions</th>
+      <th>Rule 1</th>
+      <th>Rule 2</th>
+      <th>Rule 3</th>
+      <th>Rule 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Citibank Card Member</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Type of Room</td>
+      <td>Silver</td>
+      <td>Platinum</td>
+      <td>Silver</td>
+      <td>Platinum</td>
+    </tr>
+    <tr>
+      <td>Actions</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Offer upgrade To Gold Luxury</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Offer upgrade to Silver</td>
+      <td>N/A</td>
+      <td>Yes</td>
+      <td>N/A</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 581</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Conditions</th>
+      <th>Rule 1</th>
+      <th>Rule 2</th>
+      <th>Rule 3</th>
+      <th>Rule 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Indian Resident?</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Age between 18-55</td>
+      <td>Don't Care</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Married</td>
+      <td>Don't Care</td>
+      <td>Don't Care</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Actions</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Issue Membership?</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Offer 10% discount?</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Conditions</th>
+      <th>Rule 1</th>
+      <th>Rule 2</th>
+      <th>Rule 3</th>
+      <th>Rule 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Indian Resident?</td>
+      <td class="info">False</td>
+      <td class="success">True</td>
+      <td class="success">True</td>
+      <td class="success">True</td>
+    </tr>
+    <tr>
+      <td>Age between 18-55</td>
+      <td class="info">Don't Care</td>
+      <td>False</td>
+      <td class="success">True</td>
+      <td class="success">True</td>
+    </tr>
+    <tr>
+      <td>Married</td>
+      <td class="info">Don't Care</td>
+      <td>Don't Care</td>
+      <td>False</td>
+      <td class="success">True</td>
+    </tr>
+    <tr>
+      <td>Actions</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Issue Membership?</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td class="success">True</td>
+    </tr>
+    <tr>
+      <td>Offer 10% discount?</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td class="success">False</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 735</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Conditions</th>
+      <th>Rule 1</th>
+      <th>Rule 2</th>
+      <th>Rule 3</th>
+      <th>Rule 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Over 23?</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Clean driving record?</td>
+      <td>Don't Care</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>On business?</td>
+      <td >Don't Care</td>
+      <td>Don't Care</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Actions</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Supply rental car?</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Premium charge</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 782</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Test Procedure ID</th>
+      <th>Business Priority<br />(1 High <br />2 Medium <br />3 Low)</th>
+      <th>Dependencies on test procedures</th>
+      <th>Other dependencies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P</td>
+      <td>1</td>
+      <td>Can not start unless R has completed</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>1</td>
+      <td>None</td>
+      <td>Regression testing only</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>2</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>2</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>3</td>
+      <td>None</td>
+      <td>Delivery of the code for this part of system is running very late</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>3</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 774</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Tester ID</th>
+      <th>Incident Description</th>
+      <th>Inputs / Expected & Actual Results</th>
+      <th>Business Priority<br />(1 High<br />2 Medium<br />3 Low)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tester 1</td>
+      <td>User Log-on validation error</td>
+      <td>Entered user ID of Ram Kumar & password ABC123 but got an error message</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Tester 2</td>
+      <td>Log-on does not meet requirements</td>
+      <td><b>Inputs:</b> Entered valid user ID & password<br />
+<b>Expected result:</b> Main menu screen to be displayed<br />
+<b>Actual result:</b> Error saying incorrect password</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Tester 3</td>
+      <td>Log-on password validation error</td>
+      <td><b>Inputs</b>: User ID Ram Kumar & password ABC123<br />
+<b>Expected result</b>: Main menu screen<br />
+<b>Actual result</b>: Error Message "Incorrect password"<br />
+This test has worked many times before<br /></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Tester 4</td>
+      <td>Password validation error</td>
+      <td><b>Inputs:</b> User ID Ram Kumar & password ABC123<br />
+<b>Expected result:</b> Main menu screen<br />
+<b>Actual result:</b> "Incorrect password"<br />
+N. B: The same inputs worked yesterday, before code release 1.2 was delivered<br /></td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 828</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S1</td>
+      <td>S2/R1</td>
+      <td>S3/R2</td>
+      <td>S1/N</td>
+      <td>S4/R6</td>
+    </tr>
+    <tr>
+      <td>S2</td>
+      <td>S2/N</td>
+      <td>S2/N</td>
+      <td>S3/R3</td>
+      <td>S4/R4</td>
+    </tr>
+    <tr>
+      <td>S3</td>
+      <td>S4/R5</td>
+      <td>S2/R3</td>
+      <td>S2/R6</td>
+      <td>S2/N</td>
+    </tr>
+    <tr>
+      <td>S4</td>
+      <td>S4/N</td>
+      <td>S4/N</td>
+      <td>S2/N</td>
+      <td>S1/R7</td>
+    </tr>
+</tbody>
+</table>
+
+<h1>Q. 876</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Test Procedure ID</th>
+      <th>Business Priority<br />(1 High <br />2 Medium <br />3 Low)</th>
+      <th>Dependencies on test procedures</th>
+      <th>Other dependencies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P</td>
+      <td>3</td>
+      <td>None</td>
+      <td>Delivery of the code for this part of system is running very late</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>1</td>
+      <td>None</td>
+      <td>Regression testing only</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>1</td>
+      <td>Requires S to be run first</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>2</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>2</td>
+      <td>None</td>
+      <td>Regression testing only</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>3</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 905</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>TC</th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>INT_MAX</td>
+      <td>INT_MAX</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>INT_MAX+1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>1</td>
+      <td>INT_MAX+1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Q. 928 = Q. 735</h1>
+
+<h1>Q. 1050 = Q. 581</h1>
+
+</body>
