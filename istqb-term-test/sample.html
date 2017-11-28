@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu" ng-app="testApp" ng-controller="languageController">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js"></script>
+</head>
+
+<body>
+    <p>
+        {{ dictionary }} {{ translate('hu') }}
+    </p>
+    <script>
+        var app = angular.module('testApp', []);
+        app.factory("jsonFactory", function getJson($http) {
+            return function (path) {
+                $http({
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    url: path
+                }).then(
+                    function (response) {
+                        return response.data;
+                    },
+                    function (response) {
+                        $scope.jsonError = $scope.translate("jsonError");
+                    }
+                );
+            }
+        });
+
+        app.controller("languageController", function ($scope, jsonFactory) {
+            $scope.language = "hu";
+            $scope.dictionary = jsonFactory('./json/translation.json');
+            $scope.translate = function (data) {
+                return jsonFactory('./json/translation.json');
+            };
+
+            $scope.setLanguage = function (lang) {
+                $scope.language = lang;
+                $scope.started = true;
+            };
+
+        });
+    </script>
+</body>
+
+</html>

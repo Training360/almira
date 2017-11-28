@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="testApp" ng-controller="languageController" ng-cloak="">
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,16 @@
     <title>ISTQB Terms Test</title>
     <link rel="stylesheet" href="./css/app.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js"></script>
+    <script src="./app/app.module.js"></script>
+    <!--script src="./app/controllers/languageController.js"></script>
+    <script src="./app/controllers/testController.js"></script>
+    <script- src="./app/app.module.js"></script-->
+
 </head>
 
 <body>
-    <div class="container" ng-app="testApp" ng-controller="testController" ng-cloak="">
 
+    <div class="container" ng-controller="testController">
         <!-- HEADER -->
         <header>
             <div class="header">
@@ -31,45 +36,9 @@
 
             <div class="full">
 
-                <div class="index" ng-show="!started">
-                    <h2>Új teszt / New test</h2>
-                    <h3>
-                        Válaszd ki a nyelvet!
-                        <br> Choose language!
-                    </h3>
-                    <div class="btn-group">
-                        <button class="btn btn-lg" ng-click="setLanguage('hu')">Magyar</button>
-                        <button class="btn btn-lg" ng-click="setLanguage('hu')">English</button>
-                    </div>
-                </div>
+                <index-directive></index-directive>
+                <test-directive></test-directive>
 
-                <div class="tests">
-
-                    <div class="message" ng-show="started">
-                        <p>
-                            <strong>{{ questionNumber }}</strong> /
-                            <strong>{{ actualTestIndex }} </strong>{{ translate('actual') }}
-                            <span class="corect-answer">{{ rightAnswer }} </span> {{ translate('correct') }}
-                        </p>
-                    </div>
-
-                    <div class="test" ng-repeat="test in testQuestions" ng-show="actualTestIndex == $index && started">
-                        <p class="question">
-                            {{ test.question }}
-                        </p>
-                        <div class="design-radio" ng-repeat="answer in test.answers">
-                            <input type="radio" name="test{{$parent.$index}}" class="design-radio__input" id="test{{$parent.$index}}{{$index}}" value="{{answer}}"
-                                ng-click="setAnswer(answer,$parent.$index, $index)">
-                            <label for="test{{$parent.$index}}{{$index}}" class="design-radio__label">
-                                {{ answer }}
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="btn-group next" ng-show="started && actualTestIndex < questionNumber">
-                        <button class="btn btn-lg" ng-click="checkAnswer()">{{ translate('next') }}</button>
-                    </div>
-                </div>
             </div>
         </main>
 
@@ -84,215 +53,6 @@
     </div>
 
     <script>
-        var app = angular.module('testApp', []);
-        app.controller("testController", function ($scope, $http) {
-            $scope.started = false;
-            $scope.questionNumber = 20;
-            $scope.rightAnswer = 0;
-            $scope.actualTestIndex = 0;
-            $scope.jsonFile = './json/questions.json';
-            $scope.jsonData;
-            $scope.testQuestions = [];
-            $scope.language = 'hu';
-            $scope.userAnswer;
-            $scope.userAnswerId;
-            $scope.dictionary = {
-                title: {
-                    hu: 'ISTQB Terms Test',
-                    en: 'ISTQB Terms Test'
-                },
-                description: {
-                    hu: "Leírás ",
-                    en: "Description "
-                },
-                descriptionQuestion: {
-                    hu: 'Melyik leírás felel meg az alábbi definíciónak?',
-                    en: 'Which description corresponds to the definition below?'
-                },
-                definitionQuestion: {
-                    hu: 'Melyik definíció felel meg az alábbi leírásnak?',
-                    en: 'Which definition corresponds to the following description?'
-                },
-                answer: {
-                    hu: 'Következő',
-                    en: 'Next'
-                },
-                restart: {
-                    hu: 'Újraindítás',
-                    en: 'Restart'
-                },
-                next: {
-                    hu: 'Következő',
-                    en: 'Next'
-                },
-                actual: {
-                    hu: 'kérdés megválaszolva,',
-                    en: ' question(s) answered,'
-                },
-                correct: {
-                    hu: ' helyes válasz.',
-                    en: ' corect answer(s).'
-                },
-                jsonError: {
-                    hu: 'Hiba történt!',
-                    en: 'Something went wrong!'
-                }
-            };
-
-            $scope.translate = function (data) {
-                return $scope.dictionary[data][$scope.language];
-            }
-
-            $scope.setLanguage = function (lang) {
-                $scope.language = lang;
-                $scope.started = true;
-                $scope.generateQuestions();
-            }
-
-            $scope.getJsonData = function (path) {
-                $http({
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        url: path
-                    })
-                    .then(function (response) {
-                        $scope.jsonData = response.data;
-                    }, function (response) {
-                        $scope.jsonError = $scope.translate('jsonError')
-                    });
-            }
-
-            $scope.getJsonData($scope.jsonFile);
-            $scope.generateRandomNumbers = function (count, maxNumber) {
-                var randomNumbers = [];
-                var aNumber;
-                var i = 0;
-                while (i < count) {
-                    aNumber = Math.floor(Math.random() * maxNumber);
-                    if (randomNumbers.indexOf(aNumber) == -1) {
-                        randomNumbers.push(aNumber);
-                        i++;
-                    }
-                }
-                return randomNumbers;
-            }
-
-            $scope.randomizeElements = function (elements) {
-                return elements.sort(() => Math.random() * 2 - 1);
-            }
-
-            $scope.generateQuestions = function () {
-                var i = 0;
-                var j;
-                var indexes;
-                var aQuestion;
-                var data = $scope.jsonData.questions;
-                var nameAttribute = $scope.language + 'Name';
-                var descriptionAttribute = $scope.language + 'Description';
-
-                while (i < $scope.questionNumber) {
-                    aQuestion = {};
-                    aQuestion.type = Math.random() >= 0.5 ? nameAttribute : descriptionAttribute;
-                    aQuestion.answers = [];
-                    indexes = $scope.generateRandomNumbers(4, data.length);
-
-                    for (j = 0; j < indexes.length; j++) {
-                        if (aQuestion.type.indexOf('Name') != -1) {
-                            aQuestion.question = data[indexes[0]][descriptionAttribute];
-                            aQuestion.answers.push(data[indexes[j]][nameAttribute]);
-                        } else {
-                            aQuestion.question = data[indexes[0]][nameAttribute];
-                            aQuestion.answers.push(data[indexes[j]][descriptionAttribute]);
-                        }
-                    }
-                    aQuestion.rigthAnswer = aQuestion.answers[0];
-                    aQuestion.answers = $scope.randomizeElements(aQuestion.answers);
-                    $scope.testQuestions.push(aQuestion);
-                    i++;
-                }
-            };
-
-            $scope.setAnswer = function (userAnswer, parentId, id, self) {
-                console.log(self);
-                $scope.userAnswer = userAnswer;
-                $scope.userAnswerId = 'test' + parentId + id;
-            }
-
-            $scope.checkAnswer = function () {
-                if ($scope.rightAnswer < 20) {
-                    console.log($scope.userAnswerId);
-                    $scope.testQuestions[$scope.actualTestIndex].userAnswer = $scope.userAnswer;
-                    if ($scope.userAnswer == $scope.testQuestions[$scope.actualTestIndex].rigthAnswer) {
-                        $scope.testQuestions[$scope.actualTestIndex].correct = "yes";
-                        $scope.rightAnswer++;
-                    } else {
-                        $scope.testQuestions[$scope.actualTestIndex].correct = "no";
-                    }
-                    $scope.actualTestIndex++;
-                }
-            }
-
-            function capitalizeFirstLetter(string) {
-                console.log(string.charAt(0).toUpperCase() + string.slice(1));
-                return string.charAt(0).toUpperCase() + string.slice(1);
-            }
-
-            // $scope.getJsonData('./json/concated.json');
-
-            $scope.generateNewJsonFile = function () {
-                var huJsonData = $scope.jsonData.hu;
-                var enJsonData = $scope.jsonData.en;
-                var newJsonFile = {
-                    questions: []
-                };
-                var huObjectIndex;
-                var i, j, k = 0;
-                console.log(huJsonData[0].engNames);
-                for (i = 0; i < enJsonData.length; i++) {
-                    for (j = 0; j < huJsonData.length; j++) {
-                        console.log(huJsonData[j]);
-                        if (huJsonData[j].engNames.indexOf(enJsonData[i].name) != -1) {
-                            huObjectIndex = j;
-                            break;
-                        }
-                    }
-
-                    if (Array.isArray(enJsonData[i].ref)) {
-                        for (k = 0; k < enJsonData[i].ref.length; k++) {
-                            enJsonData[i].ref[k] = capitalizeFirstLetter(enJsonData[i].ref[k]);
-                        }
-                    }
-
-                    if (Array.isArray(enJsonData[i].seeAlso)) {
-                        for (k = 0; k < enJsonData[i].seeAlso.length; k++) {
-                            enJsonData[i].seeAlso[k] = capitalizeFirstLetter(enJsonData[i].seeAlso[
-                                k]);
-                        }
-                    }
-
-                    if (Array.isArray(enJsonData[i].synonyms)) {
-                        for (k = 0; k < enJsonData[i].synonyms.length; k++) {
-                            enJsonData[i].synonyms[k] = capitalizeFirstLetter(enJsonData[i].synonyms[
-                                k]);
-                        }
-                    }
-
-                    newJsonFile.questions.push({
-                        "huName": capitalizeFirstLetter(huJsonData[huObjectIndex].name),
-                        "enName": capitalizeFirstLetter(enJsonData[i].name),
-                        "huDescription": capitalizeFirstLetter(huJsonData[huObjectIndex].desc),
-                        "enDescription": capitalizeFirstLetter(enJsonData[i].desc),
-                        "reference": enJsonData[i].ref,
-                        "seeAlso": enJsonData[i].seeAlso,
-                        "synonyms": enJsonData[i].synonyms
-                    });
-                }
-                $scope.jsonData = JSON.stringify(newJsonFile);
-                console.log(JSON.stringify(newJsonFile));
-            }
-        });
     </script>
 </body>
 
