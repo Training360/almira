@@ -96,7 +96,7 @@ angular.module("testApp").controller("testController", function($scope, $http) {
     var formId = "form" + parentId;
     $scope.colorized = "test" + parentId + id + "label";
     $scope.currectForm = document.forms[formId];
-    $scope.testQuestions[$scope.actualTestIndex].userAnswer = answer;
+    $scope.testQuestions[parentId].userAnswer = answer;
   };
 
   function disableFormElements() {
@@ -109,28 +109,31 @@ angular.module("testApp").controller("testController", function($scope, $http) {
     }
   }
 
-  $scope.checkAnswer = function(e, index) {
-    e.preventDefault();
+  $scope.checkAnswer = function(e, parentId, id) {
     disableFormElements();
-    if ($scope.testQuestions[index].isCorrect == null) {
+    if (
+      $scope.testQuestions[parentId].isCorrect == null &&
+      $scope.testQuestions[parentId].userAnswer != ""
+    ) {
       if (
-        $scope.testQuestions[index].userAnswer ==
-        $scope.testQuestions[index].rightAnswer
+        $scope.testQuestions[parentId].userAnswer != "" &&
+        $scope.testQuestions[parentId].userAnswer ==
+          $scope.testQuestions[parentId].rightAnswer
       ) {
-        $scope.testQuestions[index].isCorrect = true;
+        $scope.testQuestions[parentId].isCorrect = true;
         document.getElementById($scope.colorized).className += " success-color";
         $scope.rightAnswer++;
       } else {
-        $scope.testQuestions[index].isCorrect = false;
+        $scope.testQuestions[parentId].isCorrect = false;
         document.getElementById($scope.colorized).className += " error-color";
         $scope.currectForm.children[1].innerHTML =
-          $scope.testQuestions[index].rightAnswer;
+          $scope.testQuestions[parentId].rightAnswer;
       }
     }
   };
 
   $scope.previousQuestion = function() {
-    $scope.actualTestIndex--;
+    $scope.actualTestIndex -= 1;
   };
 
   $scope.nextQuestion = function() {
