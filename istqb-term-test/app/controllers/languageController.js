@@ -2,7 +2,9 @@ angular
   .module("testApp")
   .controller("languageController", function($scope, $http) {
     $scope.language = "hu";
+
     $scope.languageIsSelected = false;
+
     $http.get("./json/translation.json").then(
       function(response) {
         $scope.dictionary = response.data.dictionary;

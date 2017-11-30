@@ -67,19 +67,24 @@ angular.module("testApp").controller("testController", function($scope, $http) {
     return answers;
   }
 
+  function generateQuestion(answerIndexes) {
+    var aQuestion = {};
+    aQuestion.type = generateQuestionType();
+    aQuestion.question = setQuestion(aQuestion.type, answerIndexes[0]);
+    aQuestion.answers = setRandomAnswers(aQuestion.type, answerIndexes);
+    aQuestion.rightAnswer = aQuestion.answers[0];
+    aQuestion.userAnswer = "";
+    aQuestion.isCorrect = null;
+    return aQuestion;
+  }
+
   $scope.generateQuestions = function() {
     var i = 0;
     var aQuestion = {};
     var answerIndexes;
     while (i < $scope.numberOfQuestions) {
       answerIndexes = generateRandomNumbers(4, $scope.jsonData.length);
-      aQuestion = {};
-      aQuestion.type = generateQuestionType();
-      aQuestion.question = setQuestion(aQuestion.type, answerIndexes[0]);
-      aQuestion.answers = setRandomAnswers(aQuestion.type, answerIndexes);
-      aQuestion.rightAnswer = aQuestion.answers[0];
-      aQuestion.userAnswer = "";
-      aQuestion.isCorrent = false;
+      aQuestion = generateQuestion(answerIndexes);
       aQuestion.answers = randomizeElements(aQuestion.answers);
       $scope.testQuestions.push(aQuestion);
       i++;
@@ -104,21 +109,23 @@ angular.module("testApp").controller("testController", function($scope, $http) {
     }
   }
 
-  $scope.checkAnswer = function(e, form) {
+  $scope.checkAnswer = function(e, index) {
     e.preventDefault();
     disableFormElements();
-    if (
-      $scope.testQuestions[$scope.actualTestIndex].userAnswer ==
-      $scope.testQuestions[$scope.actualTestIndex].rightAnswer
-    ) {
-      $scope.testQuestions[$scope.actualTestIndex].correct = true;
-      document.getElementById($scope.colorized).className += " success-color";
-      $scope.rightAnswer++;
-    } else {
-      $scope.testQuestions[$scope.actualTestIndex].correct = false;
-      document.getElementById($scope.colorized).className += " error-color";
-      $scope.currectForm.children[1].innerHTML =
-        $scope.testQuestions[$scope.actualTestIndex].rightAnswer;
+    if ($scope.testQuestions[index].isCorrect == null) {
+      if (
+        $scope.testQuestions[index].userAnswer ==
+        $scope.testQuestions[index].rightAnswer
+      ) {
+        $scope.testQuestions[index].isCorrect = true;
+        document.getElementById($scope.colorized).className += " success-color";
+        $scope.rightAnswer++;
+      } else {
+        $scope.testQuestions[index].isCorrect = false;
+        document.getElementById($scope.colorized).className += " error-color";
+        $scope.currectForm.children[1].innerHTML =
+          $scope.testQuestions[index].rightAnswer;
+      }
     }
   };
 
@@ -127,6 +134,6 @@ angular.module("testApp").controller("testController", function($scope, $http) {
   };
 
   $scope.nextQuestion = function() {
-    $scope.actualTestIndex++;
+    $scope.actualTestIndex += 1;
   };
 });

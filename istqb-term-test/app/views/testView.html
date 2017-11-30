@@ -9,7 +9,7 @@
     </div>
 
     <div class="test" ng-repeat="test in testQuestions" ng-show="actualTestIndex==$index && started">
-        <form action="" id="form{{$index}}" name="form{{$index}}" ng-submit="checkAnswer($event, 'form' + $index)">
+        <form action="" id="form{{$index}}" name="form{{$index}}" ng-submit="checkAnswer($event, $index)">
             <p class="question">
                 {{ test.question }}
             </p>
@@ -22,15 +22,13 @@
                 </label>
             </div>
             <div class="btn-group controls">
-                <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">{{ translate('previous') }}</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">&lt;</button>
                 <input type="submit" class="btn btn-lg" value="{{ translate('check') }}">
-                <button class="btn btn-lg" ng-show="actualTestIndex < 19" ng-click="nextQuestion()">{{ translate('next') }}</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex < 19" ng-click="nextQuestion()">&gt;</button>
                 <button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">{{ translate('end') }}</button>
             </div>
         </form>
     </div>
     <div>
-
     </div>
-
 </div>
