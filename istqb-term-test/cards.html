@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ISTQB Terms Cards</title>
+    <title>ISTQB Terms Cards</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 
-   <script src="http://www.jsviews.com/download/jsrender.js"></script>
+    <script src="http://www.jsviews.com/download/jsrender.js"></script>
 
-  <!-- Bootstrap -->
+    <!-- Bootstrap -->
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="cards.css" />
-  <script src="terms.json"></script>
-  <script src="huterms.json"></script>
-  <script src="cards.js"></script>
+    <link rel="stylesheet" href="cards.css" />
+    <script src="terms.json"></script>
+    <script src="huterms.json"></script>
+    <script src="cards.js"></script>
 </head>
+
 <body>
-  <div class="container">
+    <div class="container">
 
-    <div class="btn-group" role="lang">
-      <button id="en-lang-button" type="button" class="btn btn-primary">Angol</button>
-      <button id="hu-lang-button" type="button" class="btn btn-default">Magyar</button>
+        <div class="btn-group" role="lang">
+            <button id="en-lang-button" type="button" class="btn btn-primary">Angol</button>
+            <button id="hu-lang-button" type="button" class="btn btn-default">Magyar</button>
+        </div>
+
+        <div class="btn-group" role="question">
+            <button id="desc-question-button" type="button" class="btn btn-primary">Leírás</button>
+            <button id="term-question-button" type="button" class="btn btn-default">Fogalom</button>
+        </div>
+
+        <div id="card" class="card text-center">
+            <div id="front">
+                {{:desc}}
+            </div>
+            <div id="back">
+                <h1>{{:name}}</h1>
+                {{if ref}}
+                <p>
+                    <b>Ref:</b> {{:ref}}</p>
+                {{/if}} {{if synonyms}}
+                <p>
+                    <b>Synonyms:</b>
+                    {{for synonyms}}{{if #index != 0}}, {{/if}}{{:}}{{/for}}
+                </p>
+                {{/if}} {{if seeAlso}}
+                <p>
+                    <b>See also:</b>
+                    {{for seeAlso}}{{if #index != 0}}, {{/if}}{{:}}{{/for}}
+                </p>
+                {{/if}} {{if engNames}}
+                <p>
+                    <b>Angolul:</b>
+                    {{for engNames}}{{if #index != 0}}, {{/if}}{{:}}{{/for}}
+                </p>
+                {{/if}}
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" id="next-button" class="btn btn-primary btn-lg active">Next</button>
+
+        </div>
     </div>
-
-    <div class="btn-group" role="question">
-      <button id="desc-question-button" type="button" class="btn btn-primary">Leírás</button>
-      <button id="term-question-button" type="button" class="btn btn-default">Fogalom</button>
-    </div>
-
-    <div id="card" class="card text-center">
-        <div id="front">
-          {{:desc}}
-        </div>
-        <div id="back">
-          <h1>{{:name}}</h1>
-          {{if ref}}
-            <p><b>Ref:</b> {{:ref}}</p>
-          {{/if}}
-          {{if synonyms}}
-            <p><b>Synonyms:</b>
-            {{for synonyms}}{{if #index != 0}}, {{/if}}{{:}}{{/for}}
-          </p>
-          {{/if}}
-          {{if seeAlso}}
-            <p><b>See also:</b>
-            {{for seeAlso}}{{if #index != 0}}, {{/if}}{{:}}{{/for}}
-          </p>
-          {{/if}}
-          {{if engNames}}
-            <p><b>Angolul:</b>
-            {{for engNames}}{{if #index != 0}}, {{/if}}{{:}}{{/for}}
-          </p>
-          {{/if}}
-        </div>
-        </div>
-      <div class="text-center">
-        <button type="button" id="next-button" class="btn btn-primary btn-lg active">Next</button>
-
-  </div>
-  </div>
 </body>

@@ -1,1470 +1,1219 @@
 {
-  "questions": [
-    {
-      "huName": "Alfa teszt",
-      "enName": "Alpha testing",
-      "huDescription":
-        "Szimulált, vagy tényleges tesztelés, amelyet potenciális felhasználók, vagy egy független tesztcsapat végez a fejlesztés helyszínén, de a fejlesztői szervezettől függetlenül. Gyakran használják dobozos szoftverek belső átvételi tesztjeihez.",
-      "enDescription":
-        "Simulated or actual operational testing by potential users/customers or an independent test team at the developers' site, but outside the development organization. Alpha testing is often employed for commercial off-the-shelf software as a form of internal acceptance testing.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Béta teszt",
-      "enName": "Beta testing",
-      "huDescription":
-        "A szoftvernek egy szűkebb felhasználói körben való külső tesztelése a végső kiadás előtt annak érdekében, hogy meghatározzuk, a szoftver megfelel-e a felhasználók piaci igényeinek. Gyakran megfelel a dobozos (COTS) szoftverek külső átvételi tesztjének.",
-      "enDescription":
-        "Operational testing by potential and/or existing users/customers at an external site not otherwise involved with the developers, to determine whether or not a component or system satisfies the user/customer needs and fits within the business processes. Beta testing is often employed as a form of external acceptance testing for commercial off-the-shelf software in order to acquire feedback from the market.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Field testing"]
-    },
-    {
-      "huName": "Feketedoboz teszttervezési technika",
-      "enName": "Black-box test design technique",
-      "huDescription":
-        "Olyan módszer, amelynél a szoftver specifikáció alapján, a program belső szerkezetének ismerete nélkül tervezünk teszteket.",
-      "enDescription":
-        "Procedure to derive and/or select test cases based on an analysis of the specification, either functional or non-functional, of a component or system without reference to its internal structure.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": [
-        "Black-box technique",
-        "Specification-based technique",
-        "Specification-based test design technique"
-      ]
-    },
-    {
-      "huName": "Feketedoboz teszt",
-      "enName": "Black-box testing",
-      "huDescription":
-        "A program belső szerkezetére történő hivatkozás nélküli funkcionális, vagy nem-funkcionális teszt.",
-      "enDescription":
-        "Testing, either functional or non-functional, without reference to the internal structure of the component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Specification-based testing"]
-    },
-    {
-      "huName": "Határérték elemzés",
-      "enName": "Boundary value analysis",
-      "huDescription":
-        "A program változóinak, illetve paramétereinek szélsőértékelemzésén alapuló feketedoboz teszttervezési technika.",
-      "enDescription":
-        "A black-box test design technique in which test cases are designed based on boundary values.",
-      "reference": null,
-      "seeAlso": ["Boundary value"],
-      "synonyms": null
-    },
-    {
-      "huName": "Kód lefedettség",
-      "enName": "Code coverage",
-      "huDescription":
-        "Elemző módszer, amely meghatározza, hogy a szoftver mely részei lettek végrehajtva (lefedve) a teszt végrehajtása során, és melyek nem. Például: utasítás lefedettség, döntési lefedettség, feltétel lefedettség.",
-      "enDescription":
-        "An analysis method that determines which parts of the software have been executed (covered) by the test suite and which parts have not been executed, e.g., statement coverage, decision coverage or condition coverage.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Dobozos szoftver",
-      "enName": "Commercial off-the-shelf (COTS)",
-      "huDescription":
-        "Egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló, megjelenéssel érhető el.",
-      "enDescription":
-        "A software product that is developed for the general market, i.e. for a large number of customers, and that is delivered to many customers in identical format.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Off-the-shelf software"]
-    },
-    {
-      "huName": "Fordítóprogram",
-      "enName": "Compiler",
-      "huDescription":
-        "Egy olyan szoftver eszköz, amely a magas szintű programnyelvi kifejezéseket a gépi kódú megfelelőjére fordítja.",
-      "enDescription":
-        "A software tool that translates programs expressed in a high-order language into their machine language equivalents.",
-      "reference": "IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Komplexitás",
-      "enName": "Complexity",
-      "huDescription":
-        "A szoftver tervének, illetve illetve belső struktúrájának összetettsége megértés, karbantartás, valamint verifikálás szempontjából.",
-      "enDescription":
-        "The degree to which a component or system has a design and/or internal structure that is difficult to understand, maintain and verify.",
-      "reference": null,
-      "seeAlso": ["Cyclomatic complexity"],
-      "synonyms": null
-    },
-    {
-      "huName": "Komponens teszt",
-      "enName": "Component testing",
-      "huDescription": "Az egyes szoftverkomponensek tesztje.",
-      "enDescription": "The testing of individual software components.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": ["Module testing", "Program testing", "Unit testing"]
-    },
-    {
-      "huName": "Konfiguráció menedzsment",
-      "enName": "Configuration management",
-      "huDescription":
-        "A következő tevékenységek technikai és adminisztratív irányítása: a konfigurációs elemek funkcionális és fizikai karakterisztikáinak meghatározása és dokumentálása, az ezen karakterisztikákhoz képest történő változás irányítása, a változáskezelési és megvalósítási állapot nyomon követése és jelentése, illetve a különböző követelményeknek történő megfelelés.",
-      "enDescription":
-        "A discipline applying technical and administrative direction and surveillance to identify and document the functional and physical characteristics of a configuration item, control changes to those characteristics, record and report change processing and implementation status, and verify compliance with specified requirements.",
-      "reference": "IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Konfiguráció menedzsment eszköz",
-      "enName": "Configuration management tool",
-      "huDescription":
-        "Olyan eszköz, amely támogatja a konfigurációs elemek meghatározását és irányítását, ezek változásainak, illetve verzióinak, státuszainak nyomon követését, illetve felügyeli az ezeket tartalmazó alapverziók kiadását.",
-      "enDescription":
-        "A tool that provides support for the identification and control of configuration items, their status over changes and versions, and the release of baselines consisting of configuration items.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Vezérlési folyam",
-      "enName": "Control flow",
-      "huDescription":
-        "Az események (útvonalak) sorrendje a végrehajtás során.",
-      "enDescription":
-        "A sequence of events (paths) in the execution through a component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Lefedettségi eszköz",
-      "enName": "Coverage tool",
-      "huDescription":
-        "Olyan eszköz, amely objektíven méri, hogy mely strukturális elemeket – pl. utasításokat, elágazásokat - hajt végre a tesztkészlet.",
-      "enDescription":
-        "A tool that provides objective measures of what structural elements, e.g., statements, branches have been exercised by a test suite.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Coverage measurement tool"]
-    },
-    {
-      "huName": "Adatfolyam",
-      "enName": "Data flow",
-      "huDescription":
-        "Az adatobjektumok állapotsorrendjének, valamint lehetséges változásainak absztrakt megjelenítése, ahol az objektum állapota létrehozás, használat, illetve megszüntetés lehet.",
-      "enDescription":
-        "An abstract representation of the sequence and possible changes of the state of data objects, where the state of an object is any of creation, usage, or destruction.",
-      "reference": "Beiser",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Adatvezérelt teszt",
-      "enName": "Data-driven testing",
-      "huDescription":
-        "Olyan szkript módszer, amely egy táblázatban tárolja a bemeneteket és az elvárt értékeket oly módon, hogy egy vezérlő szkript minden tesztet végre tud hajtani belőle. Az adatvezérelt tesztet gyakran használják pl. felvevő/lejátszó tesztelő eszközök használatának támogatására.",
-      "enDescription":
-        "A scripting technique that stores test input and expected results in a table or spreadsheet, so that a single control script can execute all of the tests in the table. Data-driven testing is often used to support the application of test execution tools such as capture/playback tools.",
-      "reference": "Fewster and Graham",
-      "seeAlso": ["Keyword-driven testing"],
-      "synonyms": null
-    },
-    {
-      "huName": "Hibakeresés",
-      "enName": "Debugging",
-      "huDescription":
-        "A szoftver meghibásodás okainak megtalálási, analizálási és eltávolítási folyamata.",
-      "enDescription":
-        "The process of finding, analyzing and removing the causes of failures in software.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Hibakereső eszköz",
-      "enName": "Debugging tool",
-      "huDescription":
-        "A programozó által használt eszköz a külső hibák reprodukálására, elemzésére és a hibák okainak megtalálására. A hibakereső eszközök lehetővé teszik a program lépésenkénti végrehajtását, illetve bármely utasításánál történő megállítását, valamint a programváltozók vizsgálatát és beállítását.",
-      "enDescription":
-        "A tool used by programmers to reproduce failures, investigate the state of programs and find the corresponding defect. Debuggers enable programmers to execute programs step by step, to halt a program at any program statement and to set and examine program variables.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Debugger"]
-    },
-    {
-      "huName": "Döntési lefedettség",
-      "enName": "Decision coverage",
-      "huDescription":
-        "A tesztkészlet végrehajtása során a döntési eredmények meghívásának százalékos végrehajtási aránya. 100%-os döntési lefedettség 100%-os elágazási lefedettséget és 100%-os utasítás lefedettséget jelent.",
-      "enDescription":
-        "The percentage of decision outcomes that have been exercised by a test suite. 100% decision coverage implies both 100% branch coverage and 100% statement coverage.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Döntési tábla teszt",
-      "enName": "Decision table testing",
-      "huDescription":
-        "Feketedoboz teszttervezési módszer, amely során olyan teszteseteket tervezünk, amelyek a döntési táblában szereplő különböző okok és bemenetek kombinációit igyekeznek tesztelni.",
-      "enDescription":
-        "A black-box test design technique in which test cases are designed to execute the combinations of inputs and/or stimuli (causes) shown in a decision table.",
-      "reference": "Egler63",
-      "seeAlso": ["Decision table"],
-      "synonyms": null
-    },
-    {
-      "huName": "Programhiba",
-      "enName": "Defect",
-      "huDescription":
-        "A program olyan belső hibája, amely azt eredményezheti, hogy a szoftver nem tudja teljesíteni az elvárt viselkedését, azaz a program meghibásodásához vezethet.",
-      "enDescription":
-        "A flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition. A defect, if encountered during execution, may cause a failure of the component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Bug", "Fault", "Problem"]
-    },
-    {
-      "huName": "Hibasűrűség",
-      "enName": "Defect density",
-      "huDescription":
-        "A szoftverben azonosított hibák aránya a szoftver méretéhez viszonyítva (ez utóbbi szabványos mértékegységben kifejezve, mint pl. a kódsorok, vagy az osztályok, illetve funkciópontok száma).",
-      "enDescription":
-        "The number of defects identified in a component or system divided by the size of the component or system (expressed in standard measurement terms, e.g., lines-of-code, number of classes or function points).",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Fault density"]
-    },
-    {
-      "huName": "Meghajtó",
-      "enName": "Driver",
-      "huDescription":
-        "Egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy felhívását végzi.",
-      "enDescription":
-        "A software component or test tool that replaces a component that takes care of the control and/or the calling of a component or system.",
-      "reference": "After TMap",
-      "seeAlso": null,
-      "synonyms": ["Test driver"]
-    },
-    {
-      "huName": "Dinamikus elemző eszköz",
-      "enName": "Dynamic analysis tool",
-      "huDescription":
-        "A szoftverkód állapotáról futási időben információt szolgáltató eszköz. Leggyakrabban érvénytelen mutatók, memóriafoglalások – és törlések, illetve memóriaszivárgások felderítésére használják.",
-      "enDescription":
-        "A tool that provides run-time information on the state of the software code. These tools are most commonly used to identify unassigned pointer check pointer arithmetic and to monitor the allocation, use and de-allocation of memory and to flag memory leaks.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Dinamikus teszt",
-      "enName": "Dynamic testing",
-      "huDescription":
-        "Olyan teszt, amely magában foglalja egy komponens vagy rendszer szoftverének futtatását.",
-      "enDescription":
-        "Testing that involves the execution of the software of a component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Belépési feltétel",
-      "enName": "Entry criteria",
-      "huDescription":
-        "Általános és speciális feltételek halmaza, amely engedélyezi egy adott feladat végrehajtását. Az a cél, hogy ne indítsunk olyan feladatokat, amelyek több elvesztetegetett ráfordítást jelentenének, mint az elbukó belépési feltételek kijavítása",
-      "enDescription":
-        "The set of generic and specific conditions for permitting a process to go forward with a defined task, e.g., test phase. The purpose of entry criteria is to prevent a task from starting which would entail more (wasted) effort compared to the effort needed to remove the failed entry criteria.",
-      "reference": "Gilb and Graham",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Ekvivalencia partícionálás",
-      "enName": "Equivalence partitioning",
-      "huDescription":
-        "Feketedoboz tesztelési módszer, amely során olyan teszteseteket készítünk, amelyek az ekvivalencia partíciók egyes reprezentánsait tesztelik. Jellemzően minden egyes ekvivalencia partíciót érdemes legalább egyszer lefedni.",
-      "enDescription":
-        "A black-box test design technique in which test cases are designed to execute representatives from equivalence partitions. In principle, test cases are designed to cover each partition at least once.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Partition testing"]
-    },
-    {
-      "huName": "Emberi eredetű hiba",
-      "enName": "Error",
-      "huDescription":
-        "Emberi tevékenység, amely során helytelen eredmény jön létre.",
-      "enDescription": "A human action that produces an incorrect result.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": ["Mistake"]
-    },
-    {
-      "huName": "Hibasejtés",
-      "enName": "Error guessing",
-      "huDescription":
-        "Olyan műszaki teszttervezési módszer, amely során a tesztelők tapasztalata alapján próbálják megsejteni a tesztelendő szoftverben levő hibákat, illetve ez alapján próbálnak megfelelő teszteket tervezni.",
-      "enDescription":
-        "A test design technique where the experience of the tester is used to anticipate what defects might be present in the component or system under test as a result of errors made, and to design tests specifically to expose them.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Kimerítő teszt",
-      "enName": "Exhaustive testing",
-      "huDescription":
-        "Olyan teszt, amely során a tesztkészletünk magába foglalja a bemeneti értékek és előfeltételek összes kombinációját.",
-      "enDescription":
-        "A test approach in which the test suite comprises all combinations of input values and preconditions.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Complete testing"]
-    },
-    {
-      "huName": "Kilépési feltétel",
-      "enName": "Exit criteria",
-      "huDescription":
-        "Általános és speciális feltételek halmaza, amelyet minden érintettel egyeztetve egy folyamat hivatalos befejezési feltételének tekintünk. A célja, hogy megakadályozzuk az olyan feladatok befejezettnek tekintését, amelyeknek még vannak függőben levő, be nem fejezett részei. A kilépési feltételeket a tesztelés leállításának tervezéséhez és jelentéséhez használjuk.",
-      "enDescription":
-        "The set of generic and specific conditions, agreed upon with the stakeholders for permitting a process to be officially completed. The purpose o exit criteria is to prevent a task from being considered completed when there are still outstanding parts of the task which have not been finished Exit criteria are used to report against and to plan when to stop testing.",
-      "reference": "After Gilb and Graham",
-      "seeAlso": null,
-      "synonyms": ["Completion criteria", "Test completion criteria"]
-    },
-    {
-      "huName": "ATA,F-AT felderítő teszt",
-      "enName": "Exploratory testing",
-      "huDescription":
-        "Informális teszttervezési módszer, amely során a tesztelő aktívan felügyeli a tesztek tervezését, a futtatás során szerzett információkat összegyűjti és hasznosítja új és jobb tesztek tervezése érdekében",
-      "enDescription":
-        "An informal test design technique where the tester actively controls the design of the tests as those tests are performed and uses information gained while testing to design new and better tests.",
-      "reference": "After Bach",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Meghibásodás",
-      "enName": "Failure",
-      "huDescription":
-        "A komponens, illetve a rendszer eltér az elvárt eredménytől, vagy szolgáltatástól.",
-      "enDescription":
-        "Deviation of the component or system from its expected delivery, service or result.",
-      "reference": "After Fenton",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Meghibásodás arány",
-      "enName": "Failure rate",
-      "huDescription":
-        "Adott kategóriájú meghibásodások aránya egy adott mértékegységben kifejezve, pl. időegységhez, a tranzakciók számához, vagy a futó gépek számához viszonyítva.",
-      "enDescription":
-        "The ratio of the number of failures of a given category to a given unit of measure, e.g., failures per unit of time, failures per number of transactions, failures per number of computer runs.",
-      "reference": "IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Hibatámadás",
-      "enName": "Fault attack",
-      "huDescription":
-        "Célzott próbálkozás a teszt tárgyának minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni.",
-      "enDescription":
-        "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usuall focused on reliability or security.",
-      "reference": null,
-      "seeAlso": ["Negative testing", "Security attack"],
-      "synonyms": ["Attack"]
-    },
-    {
-      "huName": "Formális felülvizsgálat",
-      "enName": "Formal review",
-      "huDescription":
-        "Dokumentált eljárásokal és követelményekkel (pl. inspekcióval) jellemzett felülvizsgálat.",
-      "enDescription":
-        "A review characterized by documented procedures and requirements, e.g., inspection.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Funkcionális követelmény",
-      "enName": "Functional requirement",
-      "huDescription":
-        "Olyan követelmény, amely a szoftverrel szemben támasztott funkcionális elvárást írja le.",
-      "enDescription":
-        "A requirement that specifies a function that a component or system must perform.",
-      "reference": "IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Funkcionális teszt",
-      "enName": "Functional testing",
-      "huDescription": "A rendszer funkcionális specifikációján alapuló teszt.",
-      "enDescription":
-        "Testing based on an analysis of the specification of the functionality of a component or system.",
-      "reference": null,
-      "seeAlso": ["Black-box testing"],
-      "synonyms": null
-    },
-    {
-      "huName": "Hatáselemzés",
-      "enName": "Impact analysis",
-      "huDescription":
-        "A szoftverváltozás kihatásának elemzése a fejlesztési dokumentáció, a teszt dokumentáció, illetve a komponensek tekintetében, a követelmények változásainak megvalósítása érdekében.",
-      "enDescription":
-        "The assessment of change to the layers of development documentation, test documentation and components, in order to implement a given change to specified requirements.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Incidens",
-      "enName": "Incident",
-      "huDescription":
-        "Bármely olyan történés, amely vizsgálódást tesz szükségessé.",
-      "enDescription": "Any event occurring that requires investigation.",
-      "reference": "After IEEE 1008",
-      "seeAlso": null,
-      "synonyms": ["Deviation", "Software test incident", "Test incident"]
-    },
-    {
-      "huName": "Incidens naplózása",
-      "enName": "Incident logging",
-      "huDescription":
-        "Bármely bekövetkezett incidens feljegyzése, pl. a tesztelés alatt.",
-      "enDescription":
-        "Recording the details of any incident that occurred, e.g., during testing.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Incidens menedzsment",
-      "enName": "Incident management",
-      "huDescription":
-        "Az incidensek felismerésének, vizsgálatának, a különböző intézkedések és rendelkezések szervezésének folyamata. Magába foglalja az incidens loggolását, osztályozását és kihatásának vizsgálatát.",
-      "enDescription":
-        "The process of recognizing, investigating, taking action and disposing of incidents. It involves logging incidents, classifying them and identifying the impact.",
-      "reference": "After IEEE 1044",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Incidens menedzsment eszköz",
-      "enName": "Incident management tool",
-      "huDescription":
-        "Olyan eszköz, amely megkönnyíti az incidensek felismerését és állapotainak nyomonkövetését. Gyakran munkafolyamatközpontú annak érdekében, hogy az incidens allokációját, javítását és újratesztelését támogassa, illetve hogy támogassa a jelentéskészítést.",
-      "enDescription":
-        "A tool that facilitates the recording and status tracking of incidents. They often have workflow-oriented facilities to track and control the allocation, correction and re-testing of incidents and provide reporting facilities.",
-      "reference": null,
-      "seeAlso": ["Defect management tool"],
-      "synonyms": null
-    },
-    {
-      "huName": "Incidensjelentés",
-      "enName": "Incident report",
-      "huDescription":
-        "Olyan dokumentum, amely minden, pl. a tesztelés alatt bekövetkezett incidenst tartalmaz, amely vizsgálatot tesz szükségessé.",
-      "enDescription":
-        "A document reporting on any event that occurred, e.g., during the testing, which requires investigation.",
-      "reference": "After IEEE 829",
-      "seeAlso": null,
-      "synonyms": [
-        "Deviation report",
-        "Software test incident report",
-        "Test incident report"
-      ]
-    },
-    {
-      "huName": "Inkrementális fejlesztési modell",
-      "enName": "Incremental development model",
-      "huDescription":
-        "Fejlesztési életciklus modell, ahol a projekt részét alkotó kis lépések mindegyike egy kis részt tesz hozzá az általános projektkövetelményekhez. A követelményeket priorizálják és a megfelelő inkrementális egységben a prioritási sorrend szerint szállítják. Ezen életciklusmodell néhány (de nem minden) verziójában minden alprojekt egy „mini V-modell” szerint működik, saját tervezési, megvalósítási és tesztelési fázisokkal.",
-      "enDescription":
-        "A development lifecycle where a project is broken into a series of increments, each of which delivers a portion of the functionality in the overall project requirements. The requirements are prioritized and delivered in priority order in the appropriate increment. In some (but not all) versions of this lifecycle model, each subproject follows a mini V-model with its own design, coding and testing phases.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Informális felülvizsgálat",
-      "enName": "Informal review",
-      "huDescription":
-        "Olyan felülvizsgálat, amely nem formális (dokumentált) eljáráson alapul.",
-      "enDescription": "A review not based on a formal (documented) procedure.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Inspekció",
-      "enName": "Inspection",
-      "huDescription":
-        "Az egyenrangú felülvizsgálat egy típusa, amely a dokumentum vizuális vizsgálatán alapul, hogy megtaláljuk a hibákat, vagy pl. a szabványokhoz képest meglevő különbségeket, illetve a magasabb szintű dokumentációktól való eltéréseket. A leginkább formális felülvizsgálati módszer, amely emiatt mindig dokumentált eljáráson alapul.",
-      "enDescription":
-        "A type of peer review that relies on visual examination of documents to detect defects, e.g., violations of development standards and non- conformance to higher level documentation. The most formal review technique and therefore always based on a documented procedure.",
-      "reference": "After IEEE 610, IEEE 1028",
-      "seeAlso": ["Peer review"],
-      "synonyms": null
-    },
-    {
-      "huName": "Integráció",
-      "enName": "Integration",
-      "huDescription":
-        "A komponensek, vagy rendszerek nagyobb egységbe történő összeolvasztásának folyamata.",
-      "enDescription":
-        "The process of combining components or systems into larger assemblies.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Integrációs teszt",
-      "enName": "Integration testing",
-      "huDescription":
-        "Olyan teszt, amelynek célja az integrált egységek közötti interfészekben, illetve köcsönhatásokban lévő hibák megtalálása.",
-      "enDescription":
-        "Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.",
-      "reference": null,
-      "seeAlso": [
-        "Component integration testing",
-        "System integration testing"
-      ],
-      "synonyms": null
-    },
-    {
-      "huName": "Együttműködő képességi teszt",
-      "enName": "Interoperability testing",
-      "huDescription":
-        "Egy adott szoftver együttműködő-képességének vizsgálata.",
-      "enDescription":
-        "Testing to determine the interoperability of a software product.",
-      "reference": null,
-      "seeAlso": ["Functionality testing"],
-      "synonyms": ["Compatibility testing"]
-    },
-    {
-      "huName": "Iteratív fejlesztési modell",
-      "enName": "Iterative development model",
-      "huDescription":
-        "Olyan fejlesztési életciklus, amely során a projektet nagyszámú iterációk sorozatára bontják. Egy iteráció egy olyan teljes fejlesztési ciklus, amely egy végrehajtható termék (belső, vagy külső) kiadását eredményezi, a végső termék egy részhalmazát, amely iterációról iterációra növekedve válik a végső termékké.",
-      "enDescription":
-        "A development lifecycle where a project is broken into a usually large number of iterations. An iteration is a complete development loop   resulting in a release (internal or external) of an executable product, a subset of the final product under development, which grows from iteratio to iteration to become the final product.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Kulcsszó-alapú teszt",
-      "enName": "Keyword-driven testing",
-      "huDescription":
-        "Egy olyan, szkripteken alapuló tesztelési technológia, amelynél a teszt-szkriptekben nemcsak tesztadatok és az elvárt eredmény található, hanem az alkalmazással kapcsolatos vezérlő kulcsszavak is. Az akciószavak értelmezését a teszthez tartozó vezérlő szkriptek által meghívott speciális támogató szkriptek végzik.",
-      "enDescription":
-        "A scripting technique that uses data files to contain not only test data and expected results, but also keywords related to the application being tested. The keywords are interpreted by special supporting scripts that are called by the control script for the test.",
-      "reference": null,
-      "seeAlso": ["Data-driven testing"],
-      "synonyms": ["Action word-driven testing"]
-    },
-    {
-      "huName": "Terheléses teszt",
-      "enName": "Load testing",
-      "huDescription":
-        "A teljesítményteszt azon típusa, amely a komponens vagy rendszer viselkedését vizsgálja növekedő terhelés alatt (például a felhasználók számának, vagy kérések számának növelésekor). A teszt célja, hogy kiderüljön, a komponens vagy rendszer hogyan reagál a magas terhelésre (lefagy, nő a válaszidő, stb.).",
-      "enDescription":
-        "A type of performance testing conducted to evaluate the behavior of a component or system with increasing load, e.g., numbers of parallel users and/or numbers of transactions, to determine what load can be handled by the component or system.",
-      "reference": null,
-      "seeAlso": ["Performance testing", "Stress testing"],
-      "synonyms": null
-    },
-    {
-      "huName": "ATT,F-AT karbantarthatósági teszt",
-      "enName": "Maintainability testing",
-      "huDescription":
-        "Teszteljárás egy alkalmazás karbantarthatóságának meghatározására.",
-      "enDescription":
-        "Testing to determine the maintainability of a software product.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Serviceability testing"]
-    },
-    {
-      "huName": "Karbantartási teszt",
-      "enName": "Maintenance testing",
-      "huDescription":
-        "Módosítások vagy megváltozott környezet miatt a működő rendszeren végrehajtott teszt.",
-      "enDescription":
-        "Testing the changes to an operational system or the impact of a changed environment to an operational system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Metrika",
-      "enName": "Metric",
-      "huDescription": "Méréseknél használatos skála és mérési módszertan.",
-      "enDescription":
-        "A measurement scale and the method used for measurement.",
-      "reference": "ISO 14598",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Nem-funkcionális követelmény",
-      "enName": "Non-functional requirement",
-      "huDescription":
-        "Olyan követelmény, amely a funkcionalitáshoz nem, de a megbízhatósághoz, hatékonysághoz, használhatósághoz, karbantarthatósághoz és hordozhatósághoz kapcsolódik.",
-      "enDescription":
-        "A requirement that does not relate to functionality, but to attributes such as reliability, efficiency, usability, maintainability and portability.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Egyenrangú felülvizsgálat",
-      "enName": "Peer review",
-      "huDescription":
-        "Egy szoftver-munkatermék felülvizsgálata a termék előállítójának munkatársai által, amelynek célja, hogy hibákat fedezzen fel illetve javító javaslatokat hozzon. Példák: inspekció, technikai felülvizsgálat, átvizsgálás.",
-      "enDescription":
-        "A review of a software work product by colleagues of the producer of the product for the purpose of identifying defects and improvements. Examples are inspection, technical review and walkthrough.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Teljesítményteszt",
-      "enName": "Performance testing",
-      "huDescription":
-        "Tesztelési folyamat, mellyel a szoftvertermék teljesítményét lehet meghatározni.",
-      "enDescription":
-        "Testing to determine the performance of a software product.",
-      "reference": null,
-      "seeAlso": ["Efficiency testing"],
-      "synonyms": null
-    },
-    {
-      "huName": "Teljesítményteszt eszköz",
-      "enName": "Performance testing tool",
-      "huDescription":
-        "Teljesítményteszthez alkalmazott eszköz, melynek két különböző képessége van: terhelést generál és méri a tranzakciók számát. Az eszköz terhelést generál több felhasználó szimulációjával, illetve nagy mennyiségű bemenő adatot elküldésével. A futás során kiválasztott tranzakciók válaszidejét mérik és naplózzák, amelyből általában a terhelés és a válaszidő kapcsolatát leíró napló file-okon és ábrákon alapuló jelentések készülnek.",
-      "enDescription":
-        "A tool to support performance testing that usually has two main facilities: load generation and test transaction measurement. Load generation can simulate either multiple users or high volumes of input data. During execution, response time measurements are taken from selected transactions and these are logged. Performance testing tools normally provide reports based on test logs and graphs of load against response times.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Hordozhatósági teszt",
-      "enName": "Portability testing",
-      "huDescription":
-        "Egy szoftvertermék hordozhatóságra vonatkozó tesztelés folyamata.",
-      "enDescription":
-        "Testing to determine the portability of a software product.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Configuration testing"]
-    },
-    {
-      "huName": "Termékkockázat",
-      "enName": "Product risk",
-      "huDescription":
-        "A teszt tárgyához (magához a termékhez) közvetlenül kapcsolódó kockázat.",
-      "enDescription": "A risk directly related to the test object.",
-      "reference": null,
-      "seeAlso": ["Risk"],
-      "synonyms": null
-    },
-    {
-      "huName": "Projektkockázat",
-      "enName": "Project risk",
-      "huDescription":
-        "Egy (teszt) projekt menedzsmentjénél, iránytásánál felmerülő kockázat, mint például emberhiány, szoros határidők, változó követelmények, stb.",
-      "enDescription":
-        "A risk related to management and control of the (test) project, e.g., lack of staffing, strict deadlines, changing requirements, etc.",
-      "reference": null,
-      "seeAlso": ["Risk"],
-      "synonyms": null
-    },
-    {
-      "huName": "Minőség",
-      "enName": "Quality",
-      "huDescription":
-        "Az a szint, amikor a komponens, rendszer vagy folyamat megfelel a meghatározott követelményeknek és/vagy a felhasználó/ügyfél igényeinek és elvárásainak.",
-      "enDescription":
-        "The degree to which a component, system or process meets specified requirements and/or user/customer needs and expectations.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "ETAE regressziós teszt",
-      "enName": "Regression testing",
-      "huDescription":
-        "Egy korábban már tesztelt program módosítást követő tesztelése annak biztosítása érdekében, hogy a módosítás nem okozott hibát a szoftver nem módosított részeiben. A teszt végrehajtása a szoftver vagy a szoftverkörnyezet változtatásakor történik.",
-      "enDescription":
-        "Testing of a previously tested program following modification to ensure that defects have not been introduced or uncovered in unchanged area of the software, as a result of the changes made. It is performed when the software or its environment is changed.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Megbízhatósági teszt",
-      "enName": "Reliability testing",
-      "huDescription":
-        "A teszt folyamata meghatározza egy szoftvertermék megbízhatóságát.",
-      "enDescription":
-        "Testing to determine the reliability of a software product.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Követelmény",
-      "enName": "Requirement",
-      "huDescription":
-        "Olyan feltétel vagy képesség, amely a felhasználó számára azért szükséges, hogy megoldjon egy problémát,vagy elérjen egy célt. Ezen feltételnek vagy képességnek a rendszer vagy rendszer komponens által is megvalósíthatónak kell lennie úgy, hogy közben a szerződés, szabvány, specifikáció és egyéb formális dokumentumban támasztott követelményeknek is megfeleljen.",
-      "enDescription":
-        "A condition or capability needed by a user to solve a problem or achieve an objective that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Követelmény-menedzsment eszköz",
-      "enName": "Requirements management tool",
-      "huDescription":
-        "Olyan eszköz, amely támogatja a követelmények, a követelmény jellemzőinek (pl. prioritás, tudás gazda) rögzítését és magyarázó jegyzetek készítését, valamint megkönnyíti a különböző szintű követelmények nyomon követhetőségét és változás menedzsmentjét. Vannak olyan követelmény-menedzsment eszközök, melyek a statikus elemzéshez is segítséget nyújtanak, például konzisztencia ellenőrzéssel vagy előre definiált, követelményekre vonatkozó szabályokkal.",
-      "enDescription":
-        "A tool that supports the recording of requirements, requirements attributes (e.g., priority, knowledge responsible) and annotation, and facilitates traceability through layers of requirements and requirements change management. Some requirements management tools also provide   facilities for static analysis, such as consistency checking and violations to pre-defined requirements rules.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Felülvizsgálat",
-      "enName": "Review",
-      "huDescription":
-        "Egy termék vagy projekt státuszának értékelése. Célja, hogy feltérképezze az eltéréseket a tervezett eredményekhez képest, valamint ajánlást tegyen a továbblépéshez. Több típusa van, például: menedzsment felülvizsgálat, informális felülvizsgálat, technikai felülvizsgálat, inspekció, átvizsgálás.",
-      "enDescription":
-        "An evaluation of a product or project status to ascertain discrepancies from planned results and to recommend improvements. Examples include management review, informal review, technical review, inspection, and walkthrough.",
-      "reference": "After IEEE 1028",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Felülvizsgáló eszköz",
-      "enName": "Review tool",
-      "huDescription":
-        "Olyan eszköz, ami a felülvizsgálat folyamatát támogatja. Jellemzően a felülvizsgálatok tervezését, a változáskövetést, a felülvizsgálók közötti kommunikációt, közös felülvizsgálat végzését támogatja. Ezek mellett a mérőszámok egyfajta gyűjtőhelyeként, valamint az azokat tartalmazó jelentések alapjául is szolgál.",
-      "enDescription":
-        "A tool that provides support to the review process. Typical features include review planning and tracking support, communication support, collaborative reviews and a repository for collecting and reporting of metrics.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Felülvizsgáló",
-      "enName": "Reviewer",
-      "huDescription":
-        "A felülvizsgálaton résztvevő személy, aki azonosítja és leírja a termékben vagy projektben azonosított eltéréseket. A felülvizsgálókat célszerű úgy kiválasztani, hogy többféle nézőpontot, szerepkört képviseljenek.",
-      "enDescription":
-        "The person involved in the review that identifies and describes anomalies in the product or project under review. Reviewers can be chosen to represent different viewpoints and roles in the review process.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Checker", "Inspector"]
-    },
-    {
-      "huName": "Kockázat",
-      "enName": "Risk",
-      "huDescription":
-        "Az a tényező, amely a jövőben negatív következményeket okozhat. Általában, mint hatás és valószínűség jelenik meg.",
-      "enDescription":
-        "A factor that could result in future negative consequences.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Kockázat-alapú teszt",
-      "enName": "Risk-based testing",
-      "huDescription":
-        "A tesztelés egy olyan megközelítése, mely csökkenti a termék kockázati szintjét és tájékoztatja az érintetteket a kockázat mértékéről már a projekt kezdeti fázisában. Magában foglalhatja mind a termék kockázatainak azonosítását, mind a tesztfolyamat kockázat szerinti vezetését.",
-      "enDescription":
-        "An approach to testing to reduce the level of product risks and inform stakeholders of their status, starting in the initial stages of a project. It involves the identification of product risks and the use of risk levels to guide the test process.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Robosztussági teszt",
-      "enName": "Robustness testing",
-      "huDescription":
-        "Egy szoftvertermék robosztusságának meghatározására vonatkozó teszt.",
-      "enDescription":
-        "Testing to determine the robustness of the software product.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Jegyzőkönyv vezető",
-      "enName": "Scribe",
-      "huDescription":
-        "Az a személy, aki naplózott formában rögzíti a felülvizsgálat során megemlített összes hibát és azokat a javaslatokat, amik a folyamat javítására irányulnak. A jegyzőkönyv vezetőnek biztosítani kell, hogy a naplózás olvasható és érthető legyen.",
-      "enDescription":
-        "The person who records each defect mentioned and any suggestions for process improvement during a review meeting, on a logging form. Th scribe should ensure that the logging form is readable and understandable.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Recorder"]
-    },
-    {
-      "huName": "Szkript nyelv",
-      "enName": "Scripting language",
-      "huDescription":
-        "A tesztvégrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni.",
-      "enDescription":
-        "A programming language in which executable test scripts are written, used by a test execution tool (e.g., a capture/playback tool).",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Biztonsági teszt",
-      "enName": "Security testing",
-      "huDescription":
-        "Olyan teszt, amivel a szoftvertermék biztonságát határozzuk meg.",
-      "enDescription":
-        "Testing to determine the security of the software product.",
-      "reference": null,
-      "seeAlso": ["Functionality testing"],
-      "synonyms": null
-    },
-    {
-      "huName": "Biztonsági eszköz",
-      "enName": "Security tool",
-      "huDescription": "Olyan eszköz, ami a működési biztonságot támogatja.",
-      "enDescription": "A tool that supports operational security.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Stabilitás",
-      "enName": "Stability",
-      "huDescription":
-        "A szoftvertermék azon képessége, hogy a szoftverben történt módosítások nem várt hatásait elkerülje.",
-      "enDescription":
-        "The capability of the software product to avoid unexpected effects from modifications in the software.",
-      "reference": "ISO 9126",
-      "seeAlso": ["Maintainability"],
-      "synonyms": null
-    },
-    {
-      "huName": "Állapotátmenet teszt",
-      "enName": "State transition testing",
-      "huDescription":
-        "Olyan feketedoboz teszttervezési technika, amiben úgy tervezzük meg a teszteseteket, hogy érvényes és érvénytelen állapotátmeneteket generáljanak.",
-      "enDescription":
-        "A black-box test design technique in which test cases are designed to execute valid and invalid state transitions.",
-      "reference": null,
-      "seeAlso": ["N-switch testing"],
-      "synonyms": ["Finite state testing"]
-    },
-    {
-      "huName": "Utasítás lefedettség",
-      "enName": "Statement coverage",
-      "huDescription":
-        "A tesztkészlet által kipróbált futtatható utasítások százaléka.",
-      "enDescription":
-        "The percentage of executable statements that have been exercised by a test suite.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Statikus teszt",
-      "enName": "Static testing",
-      "huDescription":
-        "Egy komponens vagy rendszer szoftver elemeinek – pl. követekemények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés.",
-      "enDescription":
-        "Testing of a software development artifact, e.g., requirements, design or code, without execution of these artifacts, e.g., reviews or static analysis.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Stressz teszt",
-      "enName": "Stress testing",
-      "huDescription":
-        "Olyan teljesítményteszt típus, amikor úgy vizsgálunk egy komponenst vagy rendszert, hogy az előre elvárt vagy annál nagyobb terheléssel, vagy csökkentett erőforrás rendelkezésre bocsátással teszteljük - például korlátozott szerver, vagy memória hozzáféréssel.",
-      "enDescription":
-        "A type of performance testing conducted to evaluate a system or component at or beyond the limits of its anticipated or specified workloads, or with reduced availability of resources such as access to memory or servers.",
-      "reference": "After IEEE 610",
-      "seeAlso": ["Performance testing", "Load testing"],
-      "synonyms": null
-    },
-    {
-      "huName": "Stressz teszteszköz",
-      "enName": "Stress testing tool",
-      "huDescription": "Stressz tesztet támogató eszköz.",
-      "enDescription": "A tool that supports stress testing.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Csonk",
-      "enName": "Stub",
-      "huDescription":
-        "Egy szoftver komponens speciális célú vagy részleges megvalósítása. A csonkot arra használjuk, hogy támogassuk a komponens(ek) fejlesztését vagy tesztelését. Helyettesíti a meghívott komponenst.",
-      "enDescription":
-        "A skeletal or special-purpose implementation of a software component, used to develop or test a component that calls or is otherwise dependent on it. It replaces a called component.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Rendszerteszt",
-      "enName": "System testing",
-      "huDescription":
-        "Integrált rendszer tesztje abból a célból, hogy ellenőrizzük a követelményeknek való megfelelőséget.",
-      "enDescription":
-        "Testing an integrated system to verify that it meets specified requirements.",
-      "reference": "Hetzel",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Technikai felülvizsgálat",
-      "enName": "Technical review",
-      "huDescription":
-        "Egyenrangú résztvevők csoportos megbeszélése, akik a technikai megközelítés tekintetében törekednek a közös álláspont kialakítására",
-      "enDescription":
-        "A peer group discussion activity that focuses on achieving consensus on the technical approach to be taken.",
-      "reference": "Gilb and Graham, IEEE 1028",
-      "seeAlso": ["Peer review"],
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztelési megközelítés",
-      "enName": "Test approach",
-      "huDescription":
-        "A tesztstratégia megvalósítása egy konkrét projektre. Jellemzően a projekt céljain és a kockázatelemzésen alapuló döntéseket, a tesztfolyamatok kiindulópontjait, az alkalmazandó műszaki teszttervezési technikákat, belépési és kilépési kritériumokat valamint a tesztelés fajtáit tartalmazza.",
-      "enDescription":
-        "The implementation of the test strategy for a specific project. It typically includes the decisions made that follow based on the (test) project's goal and the risk assessment carried out, starting points regarding the test process, the test design techniques to be applied, exit criteria and test types to be performed.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztbázis",
-      "enName": "Test basis",
-      "huDescription":
-        "Az összes olyan dokumentum, amelyből a komponensekre vagy rendszerekre vonatkozó követelmények származnak. Ezek azok a dokumentumok, amelyeken a tesztesetek alapulnak. Ha egy ilyen dokumentumot csak formális változáskezelési folyamat során módosíthatnak, a tesztbázist ún. fagyasztott tesztbázisnak nevezik.",
-      "enDescription":
-        "All documents from which the requirements of a component or system can be inferred. The documentation on which the test cases are based. a document can be amended only by way of formal amendment procedure, then the test basis is called a frozen test basis.",
-      "reference": "After TMap",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Teszteset",
-      "enName": "Test case",
-      "huDescription":
-        "Bemeneti értékek, végrehajtási előfeltételek, elvárt eredmények és végrehajtási utófeltételek halmaza, amelyeket egy konkrét célért vagy a tesztért fejlesztettek (például egy program forgatókönyv végrehajtása, vagy egy követelménynek való megfelelés).",
-      "enDescription":
-        "A set of input values, execution preconditions, expected results and execution postconditions, developed for a particular objective or test condition, such as to exercise a particular program path or to verify compliance with a specific requirement.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Teszteset specifikáció",
-      "enName": "Test case specification",
-      "huDescription":
-        "Egy tesztelemre vonatkozó, a teszteseteket leíró dokumentáció (cél, bemenetek, teszttevékenységek, elvárt eredmények, végrehajtás előfeltételei)",
-      "enDescription":
-        "A document specifying a set of test cases (objective, inputs, test actions, expected results, and execution preconditions) for a test item.",
-      "reference": "After IEEE 829",
-      "seeAlso": ["Test specification"],
-      "synonyms": null
-    },
-    {
-      "huName": "Teszt összehasonlító eszköz",
-      "enName": "Test comparator",
-      "huDescription":
-        "Egy teszteszköz, amellyel a teszt elvárt és aktuális eredményeit automatikusan össze lehet hasonlítani.",
-      "enDescription":
-        "A test tool to perform automated test comparison of actual results with expected results.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Comparator"]
-    },
-    {
-      "huName": "Tesztfeltétel",
-      "enName": "Test condition",
-      "huDescription":
-        "A rendszer egy olyan eleme, vagy eseménye, amelyet egy tesztesettel ellenőrizni lehet, például funkció, tranzakció, jellemző, minőségi attribútum vagy strukturális elem.",
-      "enDescription":
-        "An item or event of a component or system that could be verified by one or more test cases, e.g., a function, transaction, feature, quality attribute, or structural element.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Test requirement", "Test situation"]
-    },
-    {
-      "huName": "Tesztirányítás",
-      "enName": "Test control",
-      "huDescription":
-        "Egy olyan tesztmenedzseri feladat, amelynek során javító intézkedéseket fejlesztünk és alkalmazunk annak érdekében, hogy a tesztprojektet visszatereljük a tervezett pályára, amennyiben a tesztelés felügyelete során a tervektől való eltérést tapasztalunk.",
-      "enDescription":
-        "A test management task that deals with developing and applying a set of corrective actions to get a test project on track when monitoring show  a deviation from what was planned.",
-      "reference": null,
-      "seeAlso": ["Test management"],
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztadat",
-      "enName": "Test data",
-      "huDescription":
-        "Olyan adat, amely a teszt előtt is létezik (például egy adatbázisban) és amely kölcsönhatásban van a tesztelés alatt álló rendszerrel, vagy a rendszerkomponenssel.",
-      "enDescription":
-        "Data that exists (for example, in a database) before a test is executed, and that affects or is affected by the component or system under test.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztadat előkészítő eszköz",
-      "enName": "Test data preparation tool",
-      "huDescription":
-        "Olyan teszteszköz, amellyel a teszteléshez adatot állíthatunk elő egy már meglévő adatbázisból. Az eszköz alkalmas lehet egyéb adatok generálására, adatok manipulálására, valamint szerkesztésére is.",
-      "enDescription":
-        "A type of test tool that enables data to be selected from existing databases or created, generated, manipulated and edited for use in testing.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Test generator"]
-    },
-    {
-      "huName": "Műszaki teszttervezés",
-      "enName": "Test design",
-      "huDescription":
-        "(1) Lásd műszaki tesztterv (test design) specifikáció (2) Az általános tesztcélok átalakítása mérhető tesztfeltételekké és tesztesetekké",
-      "enDescription":
-        "The process of transforming general test objectives into tangible test conditions and test cases.",
-      "reference": null,
-      "seeAlso": ["Test design specification"],
-      "synonyms": null
-    },
-    {
-      "huName": "Műszaki teszttervezési technika",
-      "enName": "Test design technique",
-      "huDescription":
-        "A tesztesetek készítésére, származtatására és kiválasztására alkalmazott eljárás.",
-      "enDescription": "Procedure used to derive and/or select test cases.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": [
-        "Test case design technique",
-        "Test specification technique",
-        "Test technique"
-      ]
-    },
-    {
-      "huName": "Műszaki teszttervező eszköz",
-      "enName": "Test design tool",
-      "huDescription":
-        "A műszaki teszttervezési tevékenységet támogató eszköz, amely tesztbemeneteket generál egyéb forrásokból, pl. CASE eszközökből, követelmény menedzsment eszközökből, tesztfeltételekből valamint magából a programkódból.",
-      "enDescription":
-        "A tool that supports the test design activity by generating test inputs from a specification that may be held in a CASE tool repository, e.g., requirements management tool, from specified test conditions held in the tool itself, or from code.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztkörnyezet",
-      "enName": "Test environment",
-      "huDescription":
-        "A tesztelést támogató eszközök együttese, beleértve minden hardver és szoftver eszközt.",
-      "enDescription":
-        "An environment containing hardware, instrumentation, simulators, software tools, and other support elements needed to conduct a test.",
-      "reference": "After IEEE 610",
-      "seeAlso": null,
-      "synonyms": ["Test bed", "Test rig"]
-    },
-    {
-      "huName": "Tesztvégrehajtás",
-      "enName": "Test execution",
-      "huDescription":
-        "A rendszeren vagy annak komponensén végzett tesztfolyamat, amelyből megkapjuk az aktuális eredményeket.",
-      "enDescription":
-        "The process of running a test on the component or system under test, producing actual result(s).",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztvégrehajtási eszköz",
-      "enName": "Test execution tool",
-      "huDescription":
-        "Olyan teszteszköz, amelynek segítségével másik szoftvert futtathatunk egy automatizált szkript (pl. felvétel/lejátszás) segítségével.",
-      "enDescription":
-        "A type of test tool that is able to execute other software using an automated test script, e.g., capture/playback.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztelési alapkörnyezet",
-      "enName": "Test harness",
-      "huDescription":
-        "A teszt végrehajtásához szükséges, a meghajtókat és csonkokat tartalmazó tesztkörnyezet.",
-      "enDescription":
-        "A test environment comprised of stubs and drivers needed to execute a test.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztszint",
-      "enName": "Test level",
-      "huDescription":
-        "Közös szervezés és menedzsment alatt álló teszttevékenységek csoportja. A tesztszint felelősségi körökhöz kapcsolódik a projekten belül. Tesztszintekre példa a komponens-teszt, integrációs teszt, rendszerteszt és felhasználó teszt.",
-      "enDescription":
-        "A group of test activities that are organized and managed together. A test level is linked to the responsibilities in a project. Examples of test levels are component test, integration test, system test and acceptance test.",
-      "reference": "After TMap",
-      "seeAlso": null,
-      "synonyms": ["Test stage"]
-    },
-    {
-      "huName": "Tesztnapló",
-      "enName": "Test log",
-      "huDescription":
-        "A tesztvégrehajtáshoz kapcsolódó részletek időrendi rögzítése.",
-      "enDescription":
-        "A chronological record of relevant details about the execution of tests.",
-      "reference": "IEEE 829",
-      "seeAlso": null,
-      "synonyms": ["Test record", "Test run log"]
-    },
-    {
-      "huName": "Tesztmenedzsment eszköz",
-      "enName": "Test management tool",
-      "huDescription":
-        "Olyan szoftver eszköz, amely támogatja a teszt menedzsmentet és irányítja a tesztfolyamat egy részét. Gyakran rendelkezik olyan funkciókkal, mint a tesztelési környezet menedzsmentje, tesztek ütemezése, eredmények naplózása, folyamatkövetés, hibakezelés és teszteredmények jelentése.",
-      "enDescription":
-        "A tool that provides support to the test management and control part of a test process. It often has several capabilities, such as testware management, scheduling of tests, the logging of results, progress tracking, incident management and test reporting.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztmenedzser",
-      "enName": "Test manager",
-      "huDescription":
-        "A teszttevékenységekért, erőforrások menedzseléséért valamint a teszt tárgyának értékeléséért felelős személy. A tesztmenedzser irányítja, adminisztrálja, tervezi és menedzseli a teszt tárgyának vizsgálatát.",
-      "enDescription":
-        "The person responsible for project management of testing activities and resources, and evaluation of a test object. The individual who directs, controls, administers, plans and regulates the evaluation of a test object.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Test leader"]
-    },
-    {
-      "huName": "Tesztcél",
-      "enName": "Test objective",
-      "huDescription":
-        "A műszaki teszttervezés, illetve tesztvégrehajtás célja.",
-      "enDescription":
-        "A reason or purpose for designing and executing a test.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztterv (test plan)",
-      "enName": "Test plan",
-      "huDescription":
-        "A teszt hatáskörét, megközelítését, erőforrásait valamint a tevékenységek tervezett ütemezését tartalmazó dokumentum. Ezen kívül meghatározza a tesztelemeket, a tesztelendő funkciókat, feladatokat, a tesztet végrehajtó személyek függetlenségét, a tesztkörnyezetet, a műszaki teszttervezési technikákat, a belépési és kilépési feltételeket, valamint kockázatokat. A teszttervezési folyamat meghatározó dokumentuma",
-      "enDescription":
-        "A document describing the scope, approach, resources and schedule of intended test activities. It identifies amongst others test items, the features to be tested, the testing tasks, who will do each task, degree of tester independence, the test environment, the test design techniques and entry and exit criteria to be used, and the rationale for their choice, and any risks requiring contingency planning. It is a record of the test planning process.",
-      "reference": "After IEEE 829",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztelési irányelvek",
-      "enName": "Test policy",
-      "huDescription":
-        "Magas szintű dokumentum, amely a szervezet elveit, megközelítésmódját, valamint céljait mutatja be a tesztelésre vonatkozóan.",
-      "enDescription":
-        "A high-level document describing the principles, approach and major objectives of the organization regarding testing.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Teszteljárás specifikáció",
-      "enName": "Test procedure specification",
-      "huDescription":
-        "A teszt futtatásának tevékenységsorozatát rögzítő dokumentum. Teszt szkript illetve manuális teszt szkript néven is ismert.",
-      "enDescription":
-        "A document specifying a sequence of actions for the execution of a test. Also known as test script or manual test script.",
-      "reference": "After IEEE 829",
-      "seeAlso": ["Test specification"],
-      "synonyms": ["Test procedure", "Test scenario"]
-    },
-    {
-      "huName": "Tesztjelentés készítés",
-      "enName": "Test reporting",
-      "huDescription":
-        "A teszttevékenységek során keletkezett adatok összegyűjtése és elemzése, ezt követően az adatokból az érintettek számára egy jelentés készítése.",
-      "enDescription":
-        "Collecting and analyzing data from testing activities and subsequently consolidating the data in a report to inform stakeholders.",
-      "reference": null,
-      "seeAlso": ["Test process"],
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztszkript",
-      "enName": "Test script",
-      "huDescription":
-        "Legtöbbször teszteljárás specifikációra használt kifejezés, elsősorban automatizált teszt esetén.",
-      "enDescription":
-        "Commonly used to refer to a test procedure specification, especially an automated one.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztstratégia",
-      "enName": "Test strategy",
-      "huDescription":
-        "Magas szintű dokumentum, amely a végrehajtandó tesztszinteket írja le, valamint azok részleteit tartalmazza a szervezetre vagy a programra (egy vagy több projektre) vonatkozóan.",
-      "enDescription":
-        "A high-level description of the test levels to be performed and the testing within those levels for an organization or programme (one or more projects).",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Összefoglaló tesztjelentés",
-      "enName": "Test summary report",
-      "huDescription":
-        "A teszttevékenységeket és eredményeket tartalmazó dokumentum. Ebben a dokumentumban található a kilépési feltételeknek megfelelően ellenőrzött tesztelemek kiértékelése is.",
-      "enDescription":
-        "A document summarizing testing activities and results. It also contains an evaluation of the corresponding test items against exit criteria.",
-      "reference": "After IEEE 829",
-      "seeAlso": null,
-      "synonyms": ["Test report"]
-    },
-    {
-      "huName": "Tesztvezérelt fejlesztés",
-      "enName": "Test-driven development (TDD)",
-      "huDescription":
-        "Szoftverfejlesztési módszertan, amelyben a teszteseteket azelőtt készítik el (és többnyire automatizálják), mielőtt a szoftver fejlesztési folyamata befejeződne, és le lehetne futtatni a teszteket.",
-      "enDescription":
-        "A way of developing software where the test cases are developed, and often automated, before the software is developed to run those test cases.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztelő",
-      "enName": "Tester",
-      "huDescription":
-        "Egy képzett szakértő, aki a rendszer vagy rendszerkomponens tesztelésében vesz részt.",
-      "enDescription":
-        "A skilled professional who is involved in the testing of a component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztelés",
-      "enName": "Testing",
-      "huDescription":
-        "Az összes szoftverfejlesztési életciklushoz kapcsolódó akár statikus, akár dinamikus folyamat, amely kapcsolatban áll a szoftvertermékek tervezésével, elkészítésével és kiértékelésével, hogy megállapítsa, hogy a szoftvertermék teljesíti-e a meghatározott követelményeket, megfelel-e a célnak. A tesztelés felelős a szoftvertermékkel kapcsolatos hibák megtalálásáért.",
-      "enDescription":
-        "The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Tesztver",
-      "enName": "Testware",
-      "huDescription":
-        "A tesztfolyamat során keletkezett különböző termékek, például dokumentáció, programkód, inputok, elvárt eredmények, eljárások, fájlok, adatbázisok, környezetek illetve bármilyen egyéb szoftver.",
-      "enDescription":
-        "Artifacts produced during the test process required to plan, design, and execute tests, such as documentation, scripts, inputs, expected results set-up and clear-up procedures, files, databases, environment, and any additional software or utilities used in testing.",
-      "reference": "After Fewster and Graham",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Nyomonkövethetőség",
-      "enName": "Traceability",
-      "huDescription":
-        "A dokumentáció és a szoftver összefüggő egységeinek vizsgálata, pl. a követelmények és a hozzájuk tartozó tesztesetek közötti kapcsolatra. Lásd függőleges nyomonkövethetőség, vízszintes nyomonkövethetőség.",
-      "enDescription":
-        "The ability to identify related items in documentation and software, such as requirements with associated tests.",
-      "reference": null,
-      "seeAlso": ["Horizontal traceability", "Vertical traceability"],
-      "synonyms": null
-    },
-    {
-      "huName": "Egységteszt keretrendszer",
-      "enName": "Unit test framework",
-      "huDescription":
-        "Olyan környezetet biztosító keretrendszer, amelyben egy komponens egyaránt tesztelhető különállóan valamint a megfelelő segédprogramokkal. Hibakeresési funkciójával támogatja a szoftverfejlesztő munkáját is.",
-      "enDescription":
-        "A tool that provides an environment for unit or component testing in which a component can be tested in isolation or with suitable stubs and drivers. It also provides other support for the developer, such as debugging capabilities.",
-      "reference": "Graham",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Használhatósági teszt",
-      "enName": "Usability testing",
-      "huDescription":
-        "Annak meghatározása, hogy a szoftvertermék mennyire érthető meg, mennyire könnyű megtanulni használatát és milyen könnyen kezelhető, ezáltal - meghatározott feltételek mentén - mennyire felhasználóbarát.",
-      "enDescription":
-        "Testing to determine the extent to which the software product is understood, easy to learn, easy to operate and attractive to the users under specified conditions.",
-      "reference": "After ISO 9126",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Használati eset teszt",
-      "enName": "Use case testing",
-      "huDescription":
-        "Olyan feketedoboz teszttervezési technika, amelyekben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették.",
-      "enDescription":
-        "A black-box test design technique in which test cases are designed to execute scenarios of use cases.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": ["Scenario testing", "User scenario testing"]
-    },
-    {
-      "huName": "V-modell",
-      "enName": "V-model",
-      "huDescription":
-        "Egy keretrendszer a szoftverfejlesztési ciklus részletes leírására, a követelményspecifikációtól kezdve az üzemeltetésig. Az V-modell illusztrálja, hogy a teszttevékenység hogyan illeszthető a szoftverfejlesztési életciklusok bármely fázisába.",
-      "enDescription":
-        "A framework to describe the software development lifecycle activities from requirements specification to maintenance. The V-model illustrates how testing activities can be integrated into each phase of the software development lifecycle.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Validáció",
-      "enName": "Validation",
-      "huDescription":
-        "Annak vizsgálata és konfirmálása, hogy a szoftver tervezett felhasználási céljának megfelelő követelmények teljesülnek-e.",
-      "enDescription":
-        "Confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled.",
-      "reference": "ISO 9000",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Verifikáció",
-      "enName": "Verification",
-      "huDescription":
-        "Az adott követelmények teljesülésének vizsgálata és konfirmálása.",
-      "enDescription":
-        "Confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled.",
-      "reference": "ISO 9000",
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Átvizsgálás",
-      "enName": "Walkthrough",
-      "huDescription":
-        "Egy dokumentum szerzője által végzett lépésenkénti bemutató abból a célból, hogy információt gyűjtsön vagy közös álláspontot alakítson ki.",
-      "enDescription":
-        "A step-by-step presentation by the author of a document in order to gather information and to establish a common understanding of its content.",
-      "reference": "Freedman and Weinberg, IEEE 1028",
-      "seeAlso": ["Peer review"],
-      "synonyms": ["Structured walkthrough"]
-    },
-    {
-      "huName": "Fehérdoboz teszttervezési technika",
-      "enName": "White-box test design technique",
-      "huDescription":
-        "Olyan eljárás, amely a teszteseteit egy komponens vagy rendszer belső struktúrájának elemzéséből származtatja.",
-      "enDescription":
-        "Procedure to derive and/or select test cases based on an analysis of the internal structure of a component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": [
-        "Structural test design technique",
-        "Structure-based test design technique",
-        "Structure-based technique",
-        "White-box technique"
-      ]
-    },
-    {
-      "huName": "Fehérdoboz teszt",
-      "enName": "White-box testing",
-      "huDescription":
-        "A szoftver belső struktúrájának elemzésén alapuló tesztelés",
-      "enDescription":
-        "Testing based on an analysis of the internal structure of the component or system.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": [
-        "Clear-box testing",
-        "Code-based testing",
-        "Glass-box testing",
-        "Logic-coverage testing",
-        "Logic-driven testing",
-        "Structural testing",
-        "Structure-based testing"
-      ]
-    },
-    {
-      "huName": "Nyomonkövethetőségi mátrix",
-      "enName": "Traceability matrix",
-      "huDescription":
-        "Olyan kétdimenziós táblázat, amely két entitást feleltet meg egymásnak (pl. a követelmények és a tesztesetek). Oda-vissza lehetővé teszi a nyomonkövetést egyik entitásról a másikra, ezáltal lehetővé válik a lefedettség meghatározása, valamint a tervezett változások kihatásainak értékelése.",
-      "enDescription":
-        "A two-dimensional table, which correlates two entities (e.g., requirements and test cases). The table allows tracing back and forth the links of one entity to the other, thus enabling the determination of coverage achieved and the assessment of impact of proposed changes.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Biztonsági teszt",
-      "enName": "Safety testing",
-      "huDescription":
-        "Olyan teszt, amivel a szoftvertermék biztonságát határozzuk meg.",
-      "enDescription": "Testing to determine the safety of a software product.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    },
-    {
-      "huName": "Feltétel teszt",
-      "enName": "Condition testing",
-      "huDescription":
-        "Olyan fehérdoboz tesztelési módszer, amely során a tesztesetek feltételekhez tartoznak.",
-      "enDescription":
-        "A white-box test design technique in which test cases are designed to execute condition outcomes.",
-      "reference": null,
-      "seeAlso": null,
-      "synonyms": null
-    }
-  ]
+    "questions": [{
+            "huName": "Alfa teszt",
+            "enName": "Alpha testing",
+            "huDescription": "Szimulált, vagy tényleges tesztelés, amelyet potenciális felhasználók, vagy egy független tesztcsapat végez a fejlesztés helyszínén, de a fejlesztői szervezettől függetlenül. Gyakran használják dobozos szoftverek belső átvételi tesztjeihez.",
+            "enDescription": "Simulated or actual operational testing by potential users/customers or an independent test team at the developers' site, but outside the development organization. Alpha testing is often employed for commercial off-the-shelf software as a form of internal acceptance testing.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Béta teszt",
+            "enName": "Beta testing",
+            "huDescription": "A szoftvernek egy szűkebb felhasználói körben való külső tesztelése a végső kiadás előtt annak érdekében, hogy meghatározzuk, a szoftver megfelel-e a felhasználók piaci igényeinek. Gyakran megfelel a dobozos (COTS) szoftverek külső átvételi tesztjének.",
+            "enDescription": "Operational testing by potential and/or existing users/customers at an external site not otherwise involved with the developers, to determine whether or not a component or system satisfies the user/customer needs and fits within the business processes. Beta testing is often employed as a form of external acceptance testing for commercial off-the-shelf software in order to acquire feedback from the market.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Field testing"]
+        },
+        {
+            "huName": "Feketedoboz teszttervezési technika",
+            "enName": "Black-box test design technique",
+            "huDescription": "Olyan módszer, amelynél a szoftver specifikáció alapján, a program belső szerkezetének ismerete nélkül tervezünk teszteket.",
+            "enDescription": "Procedure to derive and/or select test cases based on an analysis of the specification, either functional or non-functional, of a component or system without reference to its internal structure.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": [
+                "Black-box technique",
+                "Specification-based technique",
+                "Specification-based test design technique"
+            ]
+        },
+        {
+            "huName": "Feketedoboz teszt",
+            "enName": "Black-box testing",
+            "huDescription": "A program belső szerkezetére történő hivatkozás nélküli funkcionális, vagy nem-funkcionális teszt.",
+            "enDescription": "Testing, either functional or non-functional, without reference to the internal structure of the component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Specification-based testing"]
+        },
+        {
+            "huName": "Határérték elemzés",
+            "enName": "Boundary value analysis",
+            "huDescription": "A program változóinak, illetve paramétereinek szélsőértékelemzésén alapuló feketedoboz teszttervezési technika.",
+            "enDescription": "A black-box test design technique in which test cases are designed based on boundary values.",
+            "reference": null,
+            "seeAlso": ["Boundary value"],
+            "synonyms": null
+        },
+        {
+            "huName": "Kód lefedettség",
+            "enName": "Code coverage",
+            "huDescription": "Elemző módszer, amely meghatározza, hogy a szoftver mely részei lettek végrehajtva (lefedve) a teszt végrehajtása során, és melyek nem. Például: utasítás lefedettség, döntési lefedettség, feltétel lefedettség.",
+            "enDescription": "An analysis method that determines which parts of the software have been executed (covered) by the test suite and which parts have not been executed, e.g., statement coverage, decision coverage or condition coverage.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Dobozos szoftver",
+            "enName": "Commercial off-the-shelf (COTS)",
+            "huDescription": "Egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló, megjelenéssel érhető el.",
+            "enDescription": "A software product that is developed for the general market, i.e. for a large number of customers, and that is delivered to many customers in identical format.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Off-the-shelf software"]
+        },
+        {
+            "huName": "Fordítóprogram",
+            "enName": "Compiler",
+            "huDescription": "Egy olyan szoftver eszköz, amely a magas szintű programnyelvi kifejezéseket a gépi kódú megfelelőjére fordítja.",
+            "enDescription": "A software tool that translates programs expressed in a high-order language into their machine language equivalents.",
+            "reference": "IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Komplexitás",
+            "enName": "Complexity",
+            "huDescription": "A szoftver tervének, illetve illetve belső struktúrájának összetettsége megértés, karbantartás, valamint verifikálás szempontjából.",
+            "enDescription": "The degree to which a component or system has a design and/or internal structure that is difficult to understand, maintain and verify.",
+            "reference": null,
+            "seeAlso": ["Cyclomatic complexity"],
+            "synonyms": null
+        },
+        {
+            "huName": "Komponens teszt",
+            "enName": "Component testing",
+            "huDescription": "Az egyes szoftverkomponensek tesztje.",
+            "enDescription": "The testing of individual software components.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": ["Module testing", "Program testing", "Unit testing"]
+        },
+        {
+            "huName": "Konfiguráció menedzsment",
+            "enName": "Configuration management",
+            "huDescription": "A következő tevékenységek technikai és adminisztratív irányítása: a konfigurációs elemek funkcionális és fizikai karakterisztikáinak meghatározása és dokumentálása, az ezen karakterisztikákhoz képest történő változás irányítása, a változáskezelési és megvalósítási állapot nyomon követése és jelentése, illetve a különböző követelményeknek történő megfelelés.",
+            "enDescription": "A discipline applying technical and administrative direction and surveillance to identify and document the functional and physical characteristics of a configuration item, control changes to those characteristics, record and report change processing and implementation status, and verify compliance with specified requirements.",
+            "reference": "IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Konfiguráció menedzsment eszköz",
+            "enName": "Configuration management tool",
+            "huDescription": "Olyan eszköz, amely támogatja a konfigurációs elemek meghatározását és irányítását, ezek változásainak, illetve verzióinak, státuszainak nyomon követését, illetve felügyeli az ezeket tartalmazó alapverziók kiadását.",
+            "enDescription": "A tool that provides support for the identification and control of configuration items, their status over changes and versions, and the release of baselines consisting of configuration items.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Vezérlési folyam",
+            "enName": "Control flow",
+            "huDescription": "Az események (útvonalak) sorrendje a végrehajtás során.",
+            "enDescription": "A sequence of events (paths) in the execution through a component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Lefedettségi eszköz",
+            "enName": "Coverage tool",
+            "huDescription": "Olyan eszköz, amely objektíven méri, hogy mely strukturális elemeket – pl. utasításokat, elágazásokat - hajt végre a tesztkészlet.",
+            "enDescription": "A tool that provides objective measures of what structural elements, e.g., statements, branches have been exercised by a test suite.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Coverage measurement tool"]
+        },
+        {
+            "huName": "Adatfolyam",
+            "enName": "Data flow",
+            "huDescription": "Az adatobjektumok állapotsorrendjének, valamint lehetséges változásainak absztrakt megjelenítése, ahol az objektum állapota létrehozás, használat, illetve megszüntetés lehet.",
+            "enDescription": "An abstract representation of the sequence and possible changes of the state of data objects, where the state of an object is any of creation, usage, or destruction.",
+            "reference": "Beiser",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Adatvezérelt teszt",
+            "enName": "Data-driven testing",
+            "huDescription": "Olyan szkript módszer, amely egy táblázatban tárolja a bemeneteket és az elvárt értékeket oly módon, hogy egy vezérlő szkript minden tesztet végre tud hajtani belőle. Az adatvezérelt tesztet gyakran használják pl. felvevő/lejátszó tesztelő eszközök használatának támogatására.",
+            "enDescription": "A scripting technique that stores test input and expected results in a table or spreadsheet, so that a single control script can execute all of the tests in the table. Data-driven testing is often used to support the application of test execution tools such as capture/playback tools.",
+            "reference": "Fewster and Graham",
+            "seeAlso": ["Keyword-driven testing"],
+            "synonyms": null
+        },
+        {
+            "huName": "Hibakeresés",
+            "enName": "Debugging",
+            "huDescription": "A szoftver meghibásodás okainak megtalálási, analizálási és eltávolítási folyamata.",
+            "enDescription": "The process of finding, analyzing and removing the causes of failures in software.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Hibakereső eszköz",
+            "enName": "Debugging tool",
+            "huDescription": "A programozó által használt eszköz a külső hibák reprodukálására, elemzésére és a hibák okainak megtalálására. A hibakereső eszközök lehetővé teszik a program lépésenkénti végrehajtását, illetve bármely utasításánál történő megállítását, valamint a programváltozók vizsgálatát és beállítását.",
+            "enDescription": "A tool used by programmers to reproduce failures, investigate the state of programs and find the corresponding defect. Debuggers enable programmers to execute programs step by step, to halt a program at any program statement and to set and examine program variables.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Debugger"]
+        },
+        {
+            "huName": "Döntési lefedettség",
+            "enName": "Decision coverage",
+            "huDescription": "A tesztkészlet végrehajtása során a döntési eredmények meghívásának százalékos végrehajtási aránya. 100%-os döntési lefedettség 100%-os elágazási lefedettséget és 100%-os utasítás lefedettséget jelent.",
+            "enDescription": "The percentage of decision outcomes that have been exercised by a test suite. 100% decision coverage implies both 100% branch coverage and 100% statement coverage.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Döntési tábla teszt",
+            "enName": "Decision table testing",
+            "huDescription": "Feketedoboz teszttervezési módszer, amely során olyan teszteseteket tervezünk, amelyek a döntési táblában szereplő különböző okok és bemenetek kombinációit igyekeznek tesztelni.",
+            "enDescription": "A black-box test design technique in which test cases are designed to execute the combinations of inputs and/or stimuli (causes) shown in a decision table.",
+            "reference": "Egler63",
+            "seeAlso": ["Decision table"],
+            "synonyms": null
+        },
+        {
+            "huName": "Programhiba",
+            "enName": "Defect",
+            "huDescription": "A program olyan belső hibája, amely azt eredményezheti, hogy a szoftver nem tudja teljesíteni az elvárt viselkedését, azaz a program meghibásodásához vezethet.",
+            "enDescription": "A flaw in a component or system that can cause the component or system to fail to perform its required function, e.g., an incorrect statement or data definition. A defect, if encountered during execution, may cause a failure of the component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Bug", "Fault", "Problem"]
+        },
+        {
+            "huName": "Hibasűrűség",
+            "enName": "Defect density",
+            "huDescription": "A szoftverben azonosított hibák aránya a szoftver méretéhez viszonyítva (ez utóbbi szabványos mértékegységben kifejezve, mint pl. a kódsorok, vagy az osztályok, illetve funkciópontok száma).",
+            "enDescription": "The number of defects identified in a component or system divided by the size of the component or system (expressed in standard measurement terms, e.g., lines-of-code, number of classes or function points).",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Fault density"]
+        },
+        {
+            "huName": "Meghajtó",
+            "enName": "Driver",
+            "huDescription": "Egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy felhívását végzi.",
+            "enDescription": "A software component or test tool that replaces a component that takes care of the control and/or the calling of a component or system.",
+            "reference": "After TMap",
+            "seeAlso": null,
+            "synonyms": ["Test driver"]
+        },
+        {
+            "huName": "Dinamikus elemző eszköz",
+            "enName": "Dynamic analysis tool",
+            "huDescription": "A szoftverkód állapotáról futási időben információt szolgáltató eszköz. Leggyakrabban érvénytelen mutatók, memóriafoglalások – és törlések, illetve memóriaszivárgások felderítésére használják.",
+            "enDescription": "A tool that provides run-time information on the state of the software code. These tools are most commonly used to identify unassigned pointer check pointer arithmetic and to monitor the allocation, use and de-allocation of memory and to flag memory leaks.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Dinamikus teszt",
+            "enName": "Dynamic testing",
+            "huDescription": "Olyan teszt, amely magában foglalja egy komponens vagy rendszer szoftverének futtatását.",
+            "enDescription": "Testing that involves the execution of the software of a component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Belépési feltétel",
+            "enName": "Entry criteria",
+            "huDescription": "Általános és speciális feltételek halmaza, amely engedélyezi egy adott feladat végrehajtását. Az a cél, hogy ne indítsunk olyan feladatokat, amelyek több elvesztetegetett ráfordítást jelentenének, mint az elbukó belépési feltételek kijavítása",
+            "enDescription": "The set of generic and specific conditions for permitting a process to go forward with a defined task, e.g., test phase. The purpose of entry criteria is to prevent a task from starting which would entail more (wasted) effort compared to the effort needed to remove the failed entry criteria.",
+            "reference": "Gilb and Graham",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Ekvivalencia partícionálás",
+            "enName": "Equivalence partitioning",
+            "huDescription": "Feketedoboz tesztelési módszer, amely során olyan teszteseteket készítünk, amelyek az ekvivalencia partíciók egyes reprezentánsait tesztelik. Jellemzően minden egyes ekvivalencia partíciót érdemes legalább egyszer lefedni.",
+            "enDescription": "A black-box test design technique in which test cases are designed to execute representatives from equivalence partitions. In principle, test cases are designed to cover each partition at least once.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Partition testing"]
+        },
+        {
+            "huName": "Emberi eredetű hiba",
+            "enName": "Error",
+            "huDescription": "Emberi tevékenység, amely során helytelen eredmény jön létre.",
+            "enDescription": "A human action that produces an incorrect result.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": ["Mistake"]
+        },
+        {
+            "huName": "Hibasejtés",
+            "enName": "Error guessing",
+            "huDescription": "Olyan műszaki teszttervezési módszer, amely során a tesztelők tapasztalata alapján próbálják megsejteni a tesztelendő szoftverben levő hibákat, illetve ez alapján próbálnak megfelelő teszteket tervezni.",
+            "enDescription": "A test design technique where the experience of the tester is used to anticipate what defects might be present in the component or system under test as a result of errors made, and to design tests specifically to expose them.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Kimerítő teszt",
+            "enName": "Exhaustive testing",
+            "huDescription": "Olyan teszt, amely során a tesztkészletünk magába foglalja a bemeneti értékek és előfeltételek összes kombinációját.",
+            "enDescription": "A test approach in which the test suite comprises all combinations of input values and preconditions.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Complete testing"]
+        },
+        {
+            "huName": "Kilépési feltétel",
+            "enName": "Exit criteria",
+            "huDescription": "Általános és speciális feltételek halmaza, amelyet minden érintettel egyeztetve egy folyamat hivatalos befejezési feltételének tekintünk. A célja, hogy megakadályozzuk az olyan feladatok befejezettnek tekintését, amelyeknek még vannak függőben levő, be nem fejezett részei. A kilépési feltételeket a tesztelés leállításának tervezéséhez és jelentéséhez használjuk.",
+            "enDescription": "The set of generic and specific conditions, agreed upon with the stakeholders for permitting a process to be officially completed. The purpose o exit criteria is to prevent a task from being considered completed when there are still outstanding parts of the task which have not been finished Exit criteria are used to report against and to plan when to stop testing.",
+            "reference": "After Gilb and Graham",
+            "seeAlso": null,
+            "synonyms": ["Completion criteria", "Test completion criteria"]
+        },
+        {
+            "huName": "ATA,F-AT felderítő teszt",
+            "enName": "Exploratory testing",
+            "huDescription": "Informális teszttervezési módszer, amely során a tesztelő aktívan felügyeli a tesztek tervezését, a futtatás során szerzett információkat összegyűjti és hasznosítja új és jobb tesztek tervezése érdekében",
+            "enDescription": "An informal test design technique where the tester actively controls the design of the tests as those tests are performed and uses information gained while testing to design new and better tests.",
+            "reference": "After Bach",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Meghibásodás",
+            "enName": "Failure",
+            "huDescription": "A komponens, illetve a rendszer eltér az elvárt eredménytől, vagy szolgáltatástól.",
+            "enDescription": "Deviation of the component or system from its expected delivery, service or result.",
+            "reference": "After Fenton",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Meghibásodás arány",
+            "enName": "Failure rate",
+            "huDescription": "Adott kategóriájú meghibásodások aránya egy adott mértékegységben kifejezve, pl. időegységhez, a tranzakciók számához, vagy a futó gépek számához viszonyítva.",
+            "enDescription": "The ratio of the number of failures of a given category to a given unit of measure, e.g., failures per unit of time, failures per number of transactions, failures per number of computer runs.",
+            "reference": "IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Hibatámadás",
+            "enName": "Fault attack",
+            "huDescription": "Célzott próbálkozás a teszt tárgyának minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni.",
+            "enDescription": "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usuall focused on reliability or security.",
+            "reference": null,
+            "seeAlso": ["Negative testing", "Security attack"],
+            "synonyms": ["Attack"]
+        },
+        {
+            "huName": "Formális felülvizsgálat",
+            "enName": "Formal review",
+            "huDescription": "Dokumentált eljárásokal és követelményekkel (pl. inspekcióval) jellemzett felülvizsgálat.",
+            "enDescription": "A review characterized by documented procedures and requirements, e.g., inspection.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Funkcionális követelmény",
+            "enName": "Functional requirement",
+            "huDescription": "Olyan követelmény, amely a szoftverrel szemben támasztott funkcionális elvárást írja le.",
+            "enDescription": "A requirement that specifies a function that a component or system must perform.",
+            "reference": "IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Funkcionális teszt",
+            "enName": "Functional testing",
+            "huDescription": "A rendszer funkcionális specifikációján alapuló teszt.",
+            "enDescription": "Testing based on an analysis of the specification of the functionality of a component or system.",
+            "reference": null,
+            "seeAlso": ["Black-box testing"],
+            "synonyms": null
+        },
+        {
+            "huName": "Hatáselemzés",
+            "enName": "Impact analysis",
+            "huDescription": "A szoftverváltozás kihatásának elemzése a fejlesztési dokumentáció, a teszt dokumentáció, illetve a komponensek tekintetében, a követelmények változásainak megvalósítása érdekében.",
+            "enDescription": "The assessment of change to the layers of development documentation, test documentation and components, in order to implement a given change to specified requirements.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Incidens",
+            "enName": "Incident",
+            "huDescription": "Bármely olyan történés, amely vizsgálódást tesz szükségessé.",
+            "enDescription": "Any event occurring that requires investigation.",
+            "reference": "After IEEE 1008",
+            "seeAlso": null,
+            "synonyms": ["Deviation", "Software test incident", "Test incident"]
+        },
+        {
+            "huName": "Incidens naplózása",
+            "enName": "Incident logging",
+            "huDescription": "Bármely bekövetkezett incidens feljegyzése, pl. a tesztelés alatt.",
+            "enDescription": "Recording the details of any incident that occurred, e.g., during testing.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Incidens menedzsment",
+            "enName": "Incident management",
+            "huDescription": "Az incidensek felismerésének, vizsgálatának, a különböző intézkedések és rendelkezések szervezésének folyamata. Magába foglalja az incidens loggolását, osztályozását és kihatásának vizsgálatát.",
+            "enDescription": "The process of recognizing, investigating, taking action and disposing of incidents. It involves logging incidents, classifying them and identifying the impact.",
+            "reference": "After IEEE 1044",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Incidens menedzsment eszköz",
+            "enName": "Incident management tool",
+            "huDescription": "Olyan eszköz, amely megkönnyíti az incidensek felismerését és állapotainak nyomonkövetését. Gyakran munkafolyamatközpontú annak érdekében, hogy az incidens allokációját, javítását és újratesztelését támogassa, illetve hogy támogassa a jelentéskészítést.",
+            "enDescription": "A tool that facilitates the recording and status tracking of incidents. They often have workflow-oriented facilities to track and control the allocation, correction and re-testing of incidents and provide reporting facilities.",
+            "reference": null,
+            "seeAlso": ["Defect management tool"],
+            "synonyms": null
+        },
+        {
+            "huName": "Incidensjelentés",
+            "enName": "Incident report",
+            "huDescription": "Olyan dokumentum, amely minden, pl. a tesztelés alatt bekövetkezett incidenst tartalmaz, amely vizsgálatot tesz szükségessé.",
+            "enDescription": "A document reporting on any event that occurred, e.g., during the testing, which requires investigation.",
+            "reference": "After IEEE 829",
+            "seeAlso": null,
+            "synonyms": [
+                "Deviation report",
+                "Software test incident report",
+                "Test incident report"
+            ]
+        },
+        {
+            "huName": "Inkrementális fejlesztési modell",
+            "enName": "Incremental development model",
+            "huDescription": "Fejlesztési életciklus modell, ahol a projekt részét alkotó kis lépések mindegyike egy kis részt tesz hozzá az általános projektkövetelményekhez. A követelményeket priorizálják és a megfelelő inkrementális egységben a prioritási sorrend szerint szállítják. Ezen életciklusmodell néhány (de nem minden) verziójában minden alprojekt egy „mini V-modell” szerint működik, saját tervezési, megvalósítási és tesztelési fázisokkal.",
+            "enDescription": "A development lifecycle where a project is broken into a series of increments, each of which delivers a portion of the functionality in the overall project requirements. The requirements are prioritized and delivered in priority order in the appropriate increment. In some (but not all) versions of this lifecycle model, each subproject follows a mini V-model with its own design, coding and testing phases.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Informális felülvizsgálat",
+            "enName": "Informal review",
+            "huDescription": "Olyan felülvizsgálat, amely nem formális (dokumentált) eljáráson alapul.",
+            "enDescription": "A review not based on a formal (documented) procedure.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Inspekció",
+            "enName": "Inspection",
+            "huDescription": "Az egyenrangú felülvizsgálat egy típusa, amely a dokumentum vizuális vizsgálatán alapul, hogy megtaláljuk a hibákat, vagy pl. a szabványokhoz képest meglevő különbségeket, illetve a magasabb szintű dokumentációktól való eltéréseket. A leginkább formális felülvizsgálati módszer, amely emiatt mindig dokumentált eljáráson alapul.",
+            "enDescription": "A type of peer review that relies on visual examination of documents to detect defects, e.g., violations of development standards and non- conformance to higher level documentation. The most formal review technique and therefore always based on a documented procedure.",
+            "reference": "After IEEE 610, IEEE 1028",
+            "seeAlso": ["Peer review"],
+            "synonyms": null
+        },
+        {
+            "huName": "Integráció",
+            "enName": "Integration",
+            "huDescription": "A komponensek, vagy rendszerek nagyobb egységbe történő összeolvasztásának folyamata.",
+            "enDescription": "The process of combining components or systems into larger assemblies.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Integrációs teszt",
+            "enName": "Integration testing",
+            "huDescription": "Olyan teszt, amelynek célja az integrált egységek közötti interfészekben, illetve köcsönhatásokban lévő hibák megtalálása.",
+            "enDescription": "Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.",
+            "reference": null,
+            "seeAlso": [
+                "Component integration testing",
+                "System integration testing"
+            ],
+            "synonyms": null
+        },
+        {
+            "huName": "Együttműködő képességi teszt",
+            "enName": "Interoperability testing",
+            "huDescription": "Egy adott szoftver együttműködő-képességének vizsgálata.",
+            "enDescription": "Testing to determine the interoperability of a software product.",
+            "reference": null,
+            "seeAlso": ["Functionality testing"],
+            "synonyms": ["Compatibility testing"]
+        },
+        {
+            "huName": "Iteratív fejlesztési modell",
+            "enName": "Iterative development model",
+            "huDescription": "Olyan fejlesztési életciklus, amely során a projektet nagyszámú iterációk sorozatára bontják. Egy iteráció egy olyan teljes fejlesztési ciklus, amely egy végrehajtható termék (belső, vagy külső) kiadását eredményezi, a végső termék egy részhalmazát, amely iterációról iterációra növekedve válik a végső termékké.",
+            "enDescription": "A development lifecycle where a project is broken into a usually large number of iterations. An iteration is a complete development loop   resulting in a release (internal or external) of an executable product, a subset of the final product under development, which grows from iteratio to iteration to become the final product.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Kulcsszó-alapú teszt",
+            "enName": "Keyword-driven testing",
+            "huDescription": "Egy olyan, szkripteken alapuló tesztelési technológia, amelynél a teszt-szkriptekben nemcsak tesztadatok és az elvárt eredmény található, hanem az alkalmazással kapcsolatos vezérlő kulcsszavak is. Az akciószavak értelmezését a teszthez tartozó vezérlő szkriptek által meghívott speciális támogató szkriptek végzik.",
+            "enDescription": "A scripting technique that uses data files to contain not only test data and expected results, but also keywords related to the application being tested. The keywords are interpreted by special supporting scripts that are called by the control script for the test.",
+            "reference": null,
+            "seeAlso": ["Data-driven testing"],
+            "synonyms": ["Action word-driven testing"]
+        },
+        {
+            "huName": "Terheléses teszt",
+            "enName": "Load testing",
+            "huDescription": "A teljesítményteszt azon típusa, amely a komponens vagy rendszer viselkedését vizsgálja növekedő terhelés alatt (például a felhasználók számának, vagy kérések számának növelésekor). A teszt célja, hogy kiderüljön, a komponens vagy rendszer hogyan reagál a magas terhelésre (lefagy, nő a válaszidő, stb.).",
+            "enDescription": "A type of performance testing conducted to evaluate the behavior of a component or system with increasing load, e.g., numbers of parallel users and/or numbers of transactions, to determine what load can be handled by the component or system.",
+            "reference": null,
+            "seeAlso": ["Performance testing", "Stress testing"],
+            "synonyms": null
+        },
+        {
+            "huName": "ATT,F-AT karbantarthatósági teszt",
+            "enName": "Maintainability testing",
+            "huDescription": "Teszteljárás egy alkalmazás karbantarthatóságának meghatározására.",
+            "enDescription": "Testing to determine the maintainability of a software product.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Serviceability testing"]
+        },
+        {
+            "huName": "Karbantartási teszt",
+            "enName": "Maintenance testing",
+            "huDescription": "Módosítások vagy megváltozott környezet miatt a működő rendszeren végrehajtott teszt.",
+            "enDescription": "Testing the changes to an operational system or the impact of a changed environment to an operational system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Metrika",
+            "enName": "Metric",
+            "huDescription": "Méréseknél használatos skála és mérési módszertan.",
+            "enDescription": "A measurement scale and the method used for measurement.",
+            "reference": "ISO 14598",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Nem-funkcionális követelmény",
+            "enName": "Non-functional requirement",
+            "huDescription": "Olyan követelmény, amely a funkcionalitáshoz nem, de a megbízhatósághoz, hatékonysághoz, használhatósághoz, karbantarthatósághoz és hordozhatósághoz kapcsolódik.",
+            "enDescription": "A requirement that does not relate to functionality, but to attributes such as reliability, efficiency, usability, maintainability and portability.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Egyenrangú felülvizsgálat",
+            "enName": "Peer review",
+            "huDescription": "Egy szoftver-munkatermék felülvizsgálata a termék előállítójának munkatársai által, amelynek célja, hogy hibákat fedezzen fel illetve javító javaslatokat hozzon. Példák: inspekció, technikai felülvizsgálat, átvizsgálás.",
+            "enDescription": "A review of a software work product by colleagues of the producer of the product for the purpose of identifying defects and improvements. Examples are inspection, technical review and walkthrough.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Teljesítményteszt",
+            "enName": "Performance testing",
+            "huDescription": "Tesztelési folyamat, mellyel a szoftvertermék teljesítményét lehet meghatározni.",
+            "enDescription": "Testing to determine the performance of a software product.",
+            "reference": null,
+            "seeAlso": ["Efficiency testing"],
+            "synonyms": null
+        },
+        {
+            "huName": "Teljesítményteszt eszköz",
+            "enName": "Performance testing tool",
+            "huDescription": "Teljesítményteszthez alkalmazott eszköz, melynek két különböző képessége van: terhelést generál és méri a tranzakciók számát. Az eszköz terhelést generál több felhasználó szimulációjával, illetve nagy mennyiségű bemenő adatot elküldésével. A futás során kiválasztott tranzakciók válaszidejét mérik és naplózzák, amelyből általában a terhelés és a válaszidő kapcsolatát leíró napló file-okon és ábrákon alapuló jelentések készülnek.",
+            "enDescription": "A tool to support performance testing that usually has two main facilities: load generation and test transaction measurement. Load generation can simulate either multiple users or high volumes of input data. During execution, response time measurements are taken from selected transactions and these are logged. Performance testing tools normally provide reports based on test logs and graphs of load against response times.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Hordozhatósági teszt",
+            "enName": "Portability testing",
+            "huDescription": "Egy szoftvertermék hordozhatóságra vonatkozó tesztelés folyamata.",
+            "enDescription": "Testing to determine the portability of a software product.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Configuration testing"]
+        },
+        {
+            "huName": "Termékkockázat",
+            "enName": "Product risk",
+            "huDescription": "A teszt tárgyához (magához a termékhez) közvetlenül kapcsolódó kockázat.",
+            "enDescription": "A risk directly related to the test object.",
+            "reference": null,
+            "seeAlso": ["Risk"],
+            "synonyms": null
+        },
+        {
+            "huName": "Projektkockázat",
+            "enName": "Project risk",
+            "huDescription": "Egy (teszt) projekt menedzsmentjénél, iránytásánál felmerülő kockázat, mint például emberhiány, szoros határidők, változó követelmények, stb.",
+            "enDescription": "A risk related to management and control of the (test) project, e.g., lack of staffing, strict deadlines, changing requirements, etc.",
+            "reference": null,
+            "seeAlso": ["Risk"],
+            "synonyms": null
+        },
+        {
+            "huName": "Minőség",
+            "enName": "Quality",
+            "huDescription": "Az a szint, amikor a komponens, rendszer vagy folyamat megfelel a meghatározott követelményeknek és/vagy a felhasználó/ügyfél igényeinek és elvárásainak.",
+            "enDescription": "The degree to which a component, system or process meets specified requirements and/or user/customer needs and expectations.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "ETAE regressziós teszt",
+            "enName": "Regression testing",
+            "huDescription": "Egy korábban már tesztelt program módosítást követő tesztelése annak biztosítása érdekében, hogy a módosítás nem okozott hibát a szoftver nem módosított részeiben. A teszt végrehajtása a szoftver vagy a szoftverkörnyezet változtatásakor történik.",
+            "enDescription": "Testing of a previously tested program following modification to ensure that defects have not been introduced or uncovered in unchanged area of the software, as a result of the changes made. It is performed when the software or its environment is changed.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Megbízhatósági teszt",
+            "enName": "Reliability testing",
+            "huDescription": "A teszt folyamata meghatározza egy szoftvertermék megbízhatóságát.",
+            "enDescription": "Testing to determine the reliability of a software product.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Követelmény",
+            "enName": "Requirement",
+            "huDescription": "Olyan feltétel vagy képesség, amely a felhasználó számára azért szükséges, hogy megoldjon egy problémát,vagy elérjen egy célt. Ezen feltételnek vagy képességnek a rendszer vagy rendszer komponens által is megvalósíthatónak kell lennie úgy, hogy közben a szerződés, szabvány, specifikáció és egyéb formális dokumentumban támasztott követelményeknek is megfeleljen.",
+            "enDescription": "A condition or capability needed by a user to solve a problem or achieve an objective that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Követelmény-menedzsment eszköz",
+            "enName": "Requirements management tool",
+            "huDescription": "Olyan eszköz, amely támogatja a követelmények, a követelmény jellemzőinek (pl. prioritás, tudás gazda) rögzítését és magyarázó jegyzetek készítését, valamint megkönnyíti a különböző szintű követelmények nyomon követhetőségét és változás menedzsmentjét. Vannak olyan követelmény-menedzsment eszközök, melyek a statikus elemzéshez is segítséget nyújtanak, például konzisztencia ellenőrzéssel vagy előre definiált, követelményekre vonatkozó szabályokkal.",
+            "enDescription": "A tool that supports the recording of requirements, requirements attributes (e.g., priority, knowledge responsible) and annotation, and facilitates traceability through layers of requirements and requirements change management. Some requirements management tools also provide   facilities for static analysis, such as consistency checking and violations to pre-defined requirements rules.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Felülvizsgálat",
+            "enName": "Review",
+            "huDescription": "Egy termék vagy projekt státuszának értékelése. Célja, hogy feltérképezze az eltéréseket a tervezett eredményekhez képest, valamint ajánlást tegyen a továbblépéshez. Több típusa van, például: menedzsment felülvizsgálat, informális felülvizsgálat, technikai felülvizsgálat, inspekció, átvizsgálás.",
+            "enDescription": "An evaluation of a product or project status to ascertain discrepancies from planned results and to recommend improvements. Examples include management review, informal review, technical review, inspection, and walkthrough.",
+            "reference": "After IEEE 1028",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Felülvizsgáló eszköz",
+            "enName": "Review tool",
+            "huDescription": "Olyan eszköz, ami a felülvizsgálat folyamatát támogatja. Jellemzően a felülvizsgálatok tervezését, a változáskövetést, a felülvizsgálók közötti kommunikációt, közös felülvizsgálat végzését támogatja. Ezek mellett a mérőszámok egyfajta gyűjtőhelyeként, valamint az azokat tartalmazó jelentések alapjául is szolgál.",
+            "enDescription": "A tool that provides support to the review process. Typical features include review planning and tracking support, communication support, collaborative reviews and a repository for collecting and reporting of metrics.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Felülvizsgáló",
+            "enName": "Reviewer",
+            "huDescription": "A felülvizsgálaton résztvevő személy, aki azonosítja és leírja a termékben vagy projektben azonosított eltéréseket. A felülvizsgálókat célszerű úgy kiválasztani, hogy többféle nézőpontot, szerepkört képviseljenek.",
+            "enDescription": "The person involved in the review that identifies and describes anomalies in the product or project under review. Reviewers can be chosen to represent different viewpoints and roles in the review process.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Checker", "Inspector"]
+        },
+        {
+            "huName": "Kockázat",
+            "enName": "Risk",
+            "huDescription": "Az a tényező, amely a jövőben negatív következményeket okozhat. Általában, mint hatás és valószínűség jelenik meg.",
+            "enDescription": "A factor that could result in future negative consequences.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Kockázat-alapú teszt",
+            "enName": "Risk-based testing",
+            "huDescription": "A tesztelés egy olyan megközelítése, mely csökkenti a termék kockázati szintjét és tájékoztatja az érintetteket a kockázat mértékéről már a projekt kezdeti fázisában. Magában foglalhatja mind a termék kockázatainak azonosítását, mind a tesztfolyamat kockázat szerinti vezetését.",
+            "enDescription": "An approach to testing to reduce the level of product risks and inform stakeholders of their status, starting in the initial stages of a project. It involves the identification of product risks and the use of risk levels to guide the test process.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Robosztussági teszt",
+            "enName": "Robustness testing",
+            "huDescription": "Egy szoftvertermék robosztusságának meghatározására vonatkozó teszt.",
+            "enDescription": "Testing to determine the robustness of the software product.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Jegyzőkönyv vezető",
+            "enName": "Scribe",
+            "huDescription": "Az a személy, aki naplózott formában rögzíti a felülvizsgálat során megemlített összes hibát és azokat a javaslatokat, amik a folyamat javítására irányulnak. A jegyzőkönyv vezetőnek biztosítani kell, hogy a naplózás olvasható és érthető legyen.",
+            "enDescription": "The person who records each defect mentioned and any suggestions for process improvement during a review meeting, on a logging form. Th scribe should ensure that the logging form is readable and understandable.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Recorder"]
+        },
+        {
+            "huName": "Szkript nyelv",
+            "enName": "Scripting language",
+            "huDescription": "A tesztvégrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni.",
+            "enDescription": "A programming language in which executable test scripts are written, used by a test execution tool (e.g., a capture/playback tool).",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Biztonsági teszt",
+            "enName": "Security testing",
+            "huDescription": "Olyan teszt, amivel a szoftvertermék biztonságát határozzuk meg.",
+            "enDescription": "Testing to determine the security of the software product.",
+            "reference": null,
+            "seeAlso": ["Functionality testing"],
+            "synonyms": null
+        },
+        {
+            "huName": "Biztonsági eszköz",
+            "enName": "Security tool",
+            "huDescription": "Olyan eszköz, ami a működési biztonságot támogatja.",
+            "enDescription": "A tool that supports operational security.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Stabilitás",
+            "enName": "Stability",
+            "huDescription": "A szoftvertermék azon képessége, hogy a szoftverben történt módosítások nem várt hatásait elkerülje.",
+            "enDescription": "The capability of the software product to avoid unexpected effects from modifications in the software.",
+            "reference": "ISO 9126",
+            "seeAlso": ["Maintainability"],
+            "synonyms": null
+        },
+        {
+            "huName": "Állapotátmenet teszt",
+            "enName": "State transition testing",
+            "huDescription": "Olyan feketedoboz teszttervezési technika, amiben úgy tervezzük meg a teszteseteket, hogy érvényes és érvénytelen állapotátmeneteket generáljanak.",
+            "enDescription": "A black-box test design technique in which test cases are designed to execute valid and invalid state transitions.",
+            "reference": null,
+            "seeAlso": ["N-switch testing"],
+            "synonyms": ["Finite state testing"]
+        },
+        {
+            "huName": "Utasítás lefedettség",
+            "enName": "Statement coverage",
+            "huDescription": "A tesztkészlet által kipróbált futtatható utasítások százaléka.",
+            "enDescription": "The percentage of executable statements that have been exercised by a test suite.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Statikus teszt",
+            "enName": "Static testing",
+            "huDescription": "Egy komponens vagy rendszer szoftver elemeinek – pl. követekemények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés.",
+            "enDescription": "Testing of a software development artifact, e.g., requirements, design or code, without execution of these artifacts, e.g., reviews or static analysis.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Stressz teszt",
+            "enName": "Stress testing",
+            "huDescription": "Olyan teljesítményteszt típus, amikor úgy vizsgálunk egy komponenst vagy rendszert, hogy az előre elvárt vagy annál nagyobb terheléssel, vagy csökkentett erőforrás rendelkezésre bocsátással teszteljük - például korlátozott szerver, vagy memória hozzáféréssel.",
+            "enDescription": "A type of performance testing conducted to evaluate a system or component at or beyond the limits of its anticipated or specified workloads, or with reduced availability of resources such as access to memory or servers.",
+            "reference": "After IEEE 610",
+            "seeAlso": ["Performance testing", "Load testing"],
+            "synonyms": null
+        },
+        {
+            "huName": "Stressz teszteszköz",
+            "enName": "Stress testing tool",
+            "huDescription": "Stressz tesztet támogató eszköz.",
+            "enDescription": "A tool that supports stress testing.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Csonk",
+            "enName": "Stub",
+            "huDescription": "Egy szoftver komponens speciális célú vagy részleges megvalósítása. A csonkot arra használjuk, hogy támogassuk a komponens(ek) fejlesztését vagy tesztelését. Helyettesíti a meghívott komponenst.",
+            "enDescription": "A skeletal or special-purpose implementation of a software component, used to develop or test a component that calls or is otherwise dependent on it. It replaces a called component.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Rendszerteszt",
+            "enName": "System testing",
+            "huDescription": "Integrált rendszer tesztje abból a célból, hogy ellenőrizzük a követelményeknek való megfelelőséget.",
+            "enDescription": "Testing an integrated system to verify that it meets specified requirements.",
+            "reference": "Hetzel",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Technikai felülvizsgálat",
+            "enName": "Technical review",
+            "huDescription": "Egyenrangú résztvevők csoportos megbeszélése, akik a technikai megközelítés tekintetében törekednek a közös álláspont kialakítására",
+            "enDescription": "A peer group discussion activity that focuses on achieving consensus on the technical approach to be taken.",
+            "reference": "Gilb and Graham, IEEE 1028",
+            "seeAlso": ["Peer review"],
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztelési megközelítés",
+            "enName": "Test approach",
+            "huDescription": "A tesztstratégia megvalósítása egy konkrét projektre. Jellemzően a projekt céljain és a kockázatelemzésen alapuló döntéseket, a tesztfolyamatok kiindulópontjait, az alkalmazandó műszaki teszttervezési technikákat, belépési és kilépési kritériumokat valamint a tesztelés fajtáit tartalmazza.",
+            "enDescription": "The implementation of the test strategy for a specific project. It typically includes the decisions made that follow based on the (test) project's goal and the risk assessment carried out, starting points regarding the test process, the test design techniques to be applied, exit criteria and test types to be performed.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztbázis",
+            "enName": "Test basis",
+            "huDescription": "Az összes olyan dokumentum, amelyből a komponensekre vagy rendszerekre vonatkozó követelmények származnak. Ezek azok a dokumentumok, amelyeken a tesztesetek alapulnak. Ha egy ilyen dokumentumot csak formális változáskezelési folyamat során módosíthatnak, a tesztbázist ún. fagyasztott tesztbázisnak nevezik.",
+            "enDescription": "All documents from which the requirements of a component or system can be inferred. The documentation on which the test cases are based. a document can be amended only by way of formal amendment procedure, then the test basis is called a frozen test basis.",
+            "reference": "After TMap",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Teszteset",
+            "enName": "Test case",
+            "huDescription": "Bemeneti értékek, végrehajtási előfeltételek, elvárt eredmények és végrehajtási utófeltételek halmaza, amelyeket egy konkrét célért vagy a tesztért fejlesztettek (például egy program forgatókönyv végrehajtása, vagy egy követelménynek való megfelelés).",
+            "enDescription": "A set of input values, execution preconditions, expected results and execution postconditions, developed for a particular objective or test condition, such as to exercise a particular program path or to verify compliance with a specific requirement.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Teszteset specifikáció",
+            "enName": "Test case specification",
+            "huDescription": "Egy tesztelemre vonatkozó, a teszteseteket leíró dokumentáció (cél, bemenetek, teszttevékenységek, elvárt eredmények, végrehajtás előfeltételei)",
+            "enDescription": "A document specifying a set of test cases (objective, inputs, test actions, expected results, and execution preconditions) for a test item.",
+            "reference": "After IEEE 829",
+            "seeAlso": ["Test specification"],
+            "synonyms": null
+        },
+        {
+            "huName": "Teszt összehasonlító eszköz",
+            "enName": "Test comparator",
+            "huDescription": "Egy teszteszköz, amellyel a teszt elvárt és aktuális eredményeit automatikusan össze lehet hasonlítani.",
+            "enDescription": "A test tool to perform automated test comparison of actual results with expected results.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Comparator"]
+        },
+        {
+            "huName": "Tesztfeltétel",
+            "enName": "Test condition",
+            "huDescription": "A rendszer egy olyan eleme, vagy eseménye, amelyet egy tesztesettel ellenőrizni lehet, például funkció, tranzakció, jellemző, minőségi attribútum vagy strukturális elem.",
+            "enDescription": "An item or event of a component or system that could be verified by one or more test cases, e.g., a function, transaction, feature, quality attribute, or structural element.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Test requirement", "Test situation"]
+        },
+        {
+            "huName": "Tesztirányítás",
+            "enName": "Test control",
+            "huDescription": "Egy olyan tesztmenedzseri feladat, amelynek során javító intézkedéseket fejlesztünk és alkalmazunk annak érdekében, hogy a tesztprojektet visszatereljük a tervezett pályára, amennyiben a tesztelés felügyelete során a tervektől való eltérést tapasztalunk.",
+            "enDescription": "A test management task that deals with developing and applying a set of corrective actions to get a test project on track when monitoring show  a deviation from what was planned.",
+            "reference": null,
+            "seeAlso": ["Test management"],
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztadat",
+            "enName": "Test data",
+            "huDescription": "Olyan adat, amely a teszt előtt is létezik (például egy adatbázisban) és amely kölcsönhatásban van a tesztelés alatt álló rendszerrel, vagy a rendszerkomponenssel.",
+            "enDescription": "Data that exists (for example, in a database) before a test is executed, and that affects or is affected by the component or system under test.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztadat előkészítő eszköz",
+            "enName": "Test data preparation tool",
+            "huDescription": "Olyan teszteszköz, amellyel a teszteléshez adatot állíthatunk elő egy már meglévő adatbázisból. Az eszköz alkalmas lehet egyéb adatok generálására, adatok manipulálására, valamint szerkesztésére is.",
+            "enDescription": "A type of test tool that enables data to be selected from existing databases or created, generated, manipulated and edited for use in testing.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Test generator"]
+        },
+        {
+            "huName": "Műszaki teszttervezés",
+            "enName": "Test design",
+            "huDescription": "(1) Lásd műszaki tesztterv (test design) specifikáció (2) Az általános tesztcélok átalakítása mérhető tesztfeltételekké és tesztesetekké",
+            "enDescription": "The process of transforming general test objectives into tangible test conditions and test cases.",
+            "reference": null,
+            "seeAlso": ["Test design specification"],
+            "synonyms": null
+        },
+        {
+            "huName": "Műszaki teszttervezési technika",
+            "enName": "Test design technique",
+            "huDescription": "A tesztesetek készítésére, származtatására és kiválasztására alkalmazott eljárás.",
+            "enDescription": "Procedure used to derive and/or select test cases.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": [
+                "Test case design technique",
+                "Test specification technique",
+                "Test technique"
+            ]
+        },
+        {
+            "huName": "Műszaki teszttervező eszköz",
+            "enName": "Test design tool",
+            "huDescription": "A műszaki teszttervezési tevékenységet támogató eszköz, amely tesztbemeneteket generál egyéb forrásokból, pl. CASE eszközökből, követelmény menedzsment eszközökből, tesztfeltételekből valamint magából a programkódból.",
+            "enDescription": "A tool that supports the test design activity by generating test inputs from a specification that may be held in a CASE tool repository, e.g., requirements management tool, from specified test conditions held in the tool itself, or from code.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztkörnyezet",
+            "enName": "Test environment",
+            "huDescription": "A tesztelést támogató eszközök együttese, beleértve minden hardver és szoftver eszközt.",
+            "enDescription": "An environment containing hardware, instrumentation, simulators, software tools, and other support elements needed to conduct a test.",
+            "reference": "After IEEE 610",
+            "seeAlso": null,
+            "synonyms": ["Test bed", "Test rig"]
+        },
+        {
+            "huName": "Tesztvégrehajtás",
+            "enName": "Test execution",
+            "huDescription": "A rendszeren vagy annak komponensén végzett tesztfolyamat, amelyből megkapjuk az aktuális eredményeket.",
+            "enDescription": "The process of running a test on the component or system under test, producing actual result(s).",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztvégrehajtási eszköz",
+            "enName": "Test execution tool",
+            "huDescription": "Olyan teszteszköz, amelynek segítségével másik szoftvert futtathatunk egy automatizált szkript (pl. felvétel/lejátszás) segítségével.",
+            "enDescription": "A type of test tool that is able to execute other software using an automated test script, e.g., capture/playback.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztelési alapkörnyezet",
+            "enName": "Test harness",
+            "huDescription": "A teszt végrehajtásához szükséges, a meghajtókat és csonkokat tartalmazó tesztkörnyezet.",
+            "enDescription": "A test environment comprised of stubs and drivers needed to execute a test.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztszint",
+            "enName": "Test level",
+            "huDescription": "Közös szervezés és menedzsment alatt álló teszttevékenységek csoportja. A tesztszint felelősségi körökhöz kapcsolódik a projekten belül. Tesztszintekre példa a komponens-teszt, integrációs teszt, rendszerteszt és felhasználó teszt.",
+            "enDescription": "A group of test activities that are organized and managed together. A test level is linked to the responsibilities in a project. Examples of test levels are component test, integration test, system test and acceptance test.",
+            "reference": "After TMap",
+            "seeAlso": null,
+            "synonyms": ["Test stage"]
+        },
+        {
+            "huName": "Tesztnapló",
+            "enName": "Test log",
+            "huDescription": "A tesztvégrehajtáshoz kapcsolódó részletek időrendi rögzítése.",
+            "enDescription": "A chronological record of relevant details about the execution of tests.",
+            "reference": "IEEE 829",
+            "seeAlso": null,
+            "synonyms": ["Test record", "Test run log"]
+        },
+        {
+            "huName": "Tesztmenedzsment eszköz",
+            "enName": "Test management tool",
+            "huDescription": "Olyan szoftver eszköz, amely támogatja a teszt menedzsmentet és irányítja a tesztfolyamat egy részét. Gyakran rendelkezik olyan funkciókkal, mint a tesztelési környezet menedzsmentje, tesztek ütemezése, eredmények naplózása, folyamatkövetés, hibakezelés és teszteredmények jelentése.",
+            "enDescription": "A tool that provides support to the test management and control part of a test process. It often has several capabilities, such as testware management, scheduling of tests, the logging of results, progress tracking, incident management and test reporting.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztmenedzser",
+            "enName": "Test manager",
+            "huDescription": "A teszttevékenységekért, erőforrások menedzseléséért valamint a teszt tárgyának értékeléséért felelős személy. A tesztmenedzser irányítja, adminisztrálja, tervezi és menedzseli a teszt tárgyának vizsgálatát.",
+            "enDescription": "The person responsible for project management of testing activities and resources, and evaluation of a test object. The individual who directs, controls, administers, plans and regulates the evaluation of a test object.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Test leader"]
+        },
+        {
+            "huName": "Tesztcél",
+            "enName": "Test objective",
+            "huDescription": "A műszaki teszttervezés, illetve tesztvégrehajtás célja.",
+            "enDescription": "A reason or purpose for designing and executing a test.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztterv (test plan)",
+            "enName": "Test plan",
+            "huDescription": "A teszt hatáskörét, megközelítését, erőforrásait valamint a tevékenységek tervezett ütemezését tartalmazó dokumentum. Ezen kívül meghatározza a tesztelemeket, a tesztelendő funkciókat, feladatokat, a tesztet végrehajtó személyek függetlenségét, a tesztkörnyezetet, a műszaki teszttervezési technikákat, a belépési és kilépési feltételeket, valamint kockázatokat. A teszttervezési folyamat meghatározó dokumentuma",
+            "enDescription": "A document describing the scope, approach, resources and schedule of intended test activities. It identifies amongst others test items, the features to be tested, the testing tasks, who will do each task, degree of tester independence, the test environment, the test design techniques and entry and exit criteria to be used, and the rationale for their choice, and any risks requiring contingency planning. It is a record of the test planning process.",
+            "reference": "After IEEE 829",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztelési irányelvek",
+            "enName": "Test policy",
+            "huDescription": "Magas szintű dokumentum, amely a szervezet elveit, megközelítésmódját, valamint céljait mutatja be a tesztelésre vonatkozóan.",
+            "enDescription": "A high-level document describing the principles, approach and major objectives of the organization regarding testing.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Teszteljárás specifikáció",
+            "enName": "Test procedure specification",
+            "huDescription": "A teszt futtatásának tevékenységsorozatát rögzítő dokumentum. Teszt szkript illetve manuális teszt szkript néven is ismert.",
+            "enDescription": "A document specifying a sequence of actions for the execution of a test. Also known as test script or manual test script.",
+            "reference": "After IEEE 829",
+            "seeAlso": ["Test specification"],
+            "synonyms": ["Test procedure", "Test scenario"]
+        },
+        {
+            "huName": "Tesztjelentés készítés",
+            "enName": "Test reporting",
+            "huDescription": "A teszttevékenységek során keletkezett adatok összegyűjtése és elemzése, ezt követően az adatokból az érintettek számára egy jelentés készítése.",
+            "enDescription": "Collecting and analyzing data from testing activities and subsequently consolidating the data in a report to inform stakeholders.",
+            "reference": null,
+            "seeAlso": ["Test process"],
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztszkript",
+            "enName": "Test script",
+            "huDescription": "Legtöbbször teszteljárás specifikációra használt kifejezés, elsősorban automatizált teszt esetén.",
+            "enDescription": "Commonly used to refer to a test procedure specification, especially an automated one.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztstratégia",
+            "enName": "Test strategy",
+            "huDescription": "Magas szintű dokumentum, amely a végrehajtandó tesztszinteket írja le, valamint azok részleteit tartalmazza a szervezetre vagy a programra (egy vagy több projektre) vonatkozóan.",
+            "enDescription": "A high-level description of the test levels to be performed and the testing within those levels for an organization or programme (one or more projects).",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Összefoglaló tesztjelentés",
+            "enName": "Test summary report",
+            "huDescription": "A teszttevékenységeket és eredményeket tartalmazó dokumentum. Ebben a dokumentumban található a kilépési feltételeknek megfelelően ellenőrzött tesztelemek kiértékelése is.",
+            "enDescription": "A document summarizing testing activities and results. It also contains an evaluation of the corresponding test items against exit criteria.",
+            "reference": "After IEEE 829",
+            "seeAlso": null,
+            "synonyms": ["Test report"]
+        },
+        {
+            "huName": "Tesztvezérelt fejlesztés",
+            "enName": "Test-driven development (TDD)",
+            "huDescription": "Szoftverfejlesztési módszertan, amelyben a teszteseteket azelőtt készítik el (és többnyire automatizálják), mielőtt a szoftver fejlesztési folyamata befejeződne, és le lehetne futtatni a teszteket.",
+            "enDescription": "A way of developing software where the test cases are developed, and often automated, before the software is developed to run those test cases.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztelő",
+            "enName": "Tester",
+            "huDescription": "Egy képzett szakértő, aki a rendszer vagy rendszerkomponens tesztelésében vesz részt.",
+            "enDescription": "A skilled professional who is involved in the testing of a component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztelés",
+            "enName": "Testing",
+            "huDescription": "Az összes szoftverfejlesztési életciklushoz kapcsolódó akár statikus, akár dinamikus folyamat, amely kapcsolatban áll a szoftvertermékek tervezésével, elkészítésével és kiértékelésével, hogy megállapítsa, hogy a szoftvertermék teljesíti-e a meghatározott követelményeket, megfelel-e a célnak. A tesztelés felelős a szoftvertermékkel kapcsolatos hibák megtalálásáért.",
+            "enDescription": "The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Tesztver",
+            "enName": "Testware",
+            "huDescription": "A tesztfolyamat során keletkezett különböző termékek, például dokumentáció, programkód, inputok, elvárt eredmények, eljárások, fájlok, adatbázisok, környezetek illetve bármilyen egyéb szoftver.",
+            "enDescription": "Artifacts produced during the test process required to plan, design, and execute tests, such as documentation, scripts, inputs, expected results set-up and clear-up procedures, files, databases, environment, and any additional software or utilities used in testing.",
+            "reference": "After Fewster and Graham",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Nyomonkövethetőség",
+            "enName": "Traceability",
+            "huDescription": "A dokumentáció és a szoftver összefüggő egységeinek vizsgálata, pl. a követelmények és a hozzájuk tartozó tesztesetek közötti kapcsolatra. Lásd függőleges nyomonkövethetőség, vízszintes nyomonkövethetőség.",
+            "enDescription": "The ability to identify related items in documentation and software, such as requirements with associated tests.",
+            "reference": null,
+            "seeAlso": ["Horizontal traceability", "Vertical traceability"],
+            "synonyms": null
+        },
+        {
+            "huName": "Egységteszt keretrendszer",
+            "enName": "Unit test framework",
+            "huDescription": "Olyan környezetet biztosító keretrendszer, amelyben egy komponens egyaránt tesztelhető különállóan valamint a megfelelő segédprogramokkal. Hibakeresési funkciójával támogatja a szoftverfejlesztő munkáját is.",
+            "enDescription": "A tool that provides an environment for unit or component testing in which a component can be tested in isolation or with suitable stubs and drivers. It also provides other support for the developer, such as debugging capabilities.",
+            "reference": "Graham",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Használhatósági teszt",
+            "enName": "Usability testing",
+            "huDescription": "Annak meghatározása, hogy a szoftvertermék mennyire érthető meg, mennyire könnyű megtanulni használatát és milyen könnyen kezelhető, ezáltal - meghatározott feltételek mentén - mennyire felhasználóbarát.",
+            "enDescription": "Testing to determine the extent to which the software product is understood, easy to learn, easy to operate and attractive to the users under specified conditions.",
+            "reference": "After ISO 9126",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Használati eset teszt",
+            "enName": "Use case testing",
+            "huDescription": "Olyan feketedoboz teszttervezési technika, amelyekben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették.",
+            "enDescription": "A black-box test design technique in which test cases are designed to execute scenarios of use cases.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": ["Scenario testing", "User scenario testing"]
+        },
+        {
+            "huName": "V-modell",
+            "enName": "V-model",
+            "huDescription": "Egy keretrendszer a szoftverfejlesztési ciklus részletes leírására, a követelményspecifikációtól kezdve az üzemeltetésig. Az V-modell illusztrálja, hogy a teszttevékenység hogyan illeszthető a szoftverfejlesztési életciklusok bármely fázisába.",
+            "enDescription": "A framework to describe the software development lifecycle activities from requirements specification to maintenance. The V-model illustrates how testing activities can be integrated into each phase of the software development lifecycle.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Validáció",
+            "enName": "Validation",
+            "huDescription": "Annak vizsgálata és konfirmálása, hogy a szoftver tervezett felhasználási céljának megfelelő követelmények teljesülnek-e.",
+            "enDescription": "Confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled.",
+            "reference": "ISO 9000",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Verifikáció",
+            "enName": "Verification",
+            "huDescription": "Az adott követelmények teljesülésének vizsgálata és konfirmálása.",
+            "enDescription": "Confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled.",
+            "reference": "ISO 9000",
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Átvizsgálás",
+            "enName": "Walkthrough",
+            "huDescription": "Egy dokumentum szerzője által végzett lépésenkénti bemutató abból a célból, hogy információt gyűjtsön vagy közös álláspontot alakítson ki.",
+            "enDescription": "A step-by-step presentation by the author of a document in order to gather information and to establish a common understanding of its content.",
+            "reference": "Freedman and Weinberg, IEEE 1028",
+            "seeAlso": ["Peer review"],
+            "synonyms": ["Structured walkthrough"]
+        },
+        {
+            "huName": "Fehérdoboz teszttervezési technika",
+            "enName": "White-box test design technique",
+            "huDescription": "Olyan eljárás, amely a teszteseteit egy komponens vagy rendszer belső struktúrájának elemzéséből származtatja.",
+            "enDescription": "Procedure to derive and/or select test cases based on an analysis of the internal structure of a component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": [
+                "Structural test design technique",
+                "Structure-based test design technique",
+                "Structure-based technique",
+                "White-box technique"
+            ]
+        },
+        {
+            "huName": "Fehérdoboz teszt",
+            "enName": "White-box testing",
+            "huDescription": "A szoftver belső struktúrájának elemzésén alapuló tesztelés",
+            "enDescription": "Testing based on an analysis of the internal structure of the component or system.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": [
+                "Clear-box testing",
+                "Code-based testing",
+                "Glass-box testing",
+                "Logic-coverage testing",
+                "Logic-driven testing",
+                "Structural testing",
+                "Structure-based testing"
+            ]
+        },
+        {
+            "huName": "Nyomonkövethetőségi mátrix",
+            "enName": "Traceability matrix",
+            "huDescription": "Olyan kétdimenziós táblázat, amely két entitást feleltet meg egymásnak (pl. a követelmények és a tesztesetek). Oda-vissza lehetővé teszi a nyomonkövetést egyik entitásról a másikra, ezáltal lehetővé válik a lefedettség meghatározása, valamint a tervezett változások kihatásainak értékelése.",
+            "enDescription": "A two-dimensional table, which correlates two entities (e.g., requirements and test cases). The table allows tracing back and forth the links of one entity to the other, thus enabling the determination of coverage achieved and the assessment of impact of proposed changes.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Biztonsági teszt",
+            "enName": "Safety testing",
+            "huDescription": "Olyan teszt, amivel a szoftvertermék biztonságát határozzuk meg.",
+            "enDescription": "Testing to determine the safety of a software product.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        },
+        {
+            "huName": "Feltétel teszt",
+            "enName": "Condition testing",
+            "huDescription": "Olyan fehérdoboz tesztelési módszer, amely során a tesztesetek feltételekhez tartoznak.",
+            "enDescription": "A white-box test design technique in which test cases are designed to execute condition outcomes.",
+            "reference": null,
+            "seeAlso": null,
+            "synonyms": null
+        }
+    ]
 }

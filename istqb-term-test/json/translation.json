@@ -1,34 +1,80 @@
 {
-  "dictionary": {
-    "title": { "hu": "ISTQB Foglamak Teszt", "en": "ISTQB Terms Test" },
-    "description": { "hu": "Leírás ", "en": "Description " },
-    "descriptionQuestion": {
-      "hu": "Melyik leírás felel meg az alábbi definíciónak?",
-      "en": "Which description corresponds to the definition below?"
-    },
-    "youAreReady": {
-      "hu": "Ha kész vagy kezdheted.",
-      "en": "If you are ready, you can start."
-    },
-    "definitionQuestion": {
-      "hu": "Melyik definíció felel meg az alábbi leírásnak?",
-      "en": "Which definition corresponds to the following description?"
-    },
-    "answer": { "hu": "Következő", "en": "Next" },
-    "restart": { "hu": "Újraindítás", "en": "Restart" },
-    "check": { "hu": "Ellenőrzés", "en": "Check" },
-    "previous": { "hu": "Előző", "en": "Previous" },
-    "next": { "hu": "Következő", "en": "Next" },
-    "end": { "hu": "Befejezem", "en": "End" },
-    "actual": { "hu": "kérdés,", "en": " question(s)," },
-    "correct": { "hu": " helyes válasz.", "en": " corect answer(s)." },
-    "transationError": {
-      "hu": "Hiba történt a nyelvesítés közben!",
-      "en": "Something went wrong when loading language!"
-    },
-    "testError": {
-      "hu": "Hiba történt a tesztkérdések betöltésekor!",
-      "en": "Something went wrong when loading tests!"
+    "dictionary": {
+        "engilsh": {
+            "hu": "Angol",
+            "en": "English"
+        },
+        "hungarian": {
+            "hu": "Magyar",
+            "en": "Hungarian"
+        },
+        "titleTest": {
+            "hu": "ISTQB Foglamak Teszt",
+            "en": "ISTQB Terms Test"
+        },
+        "titleCard": {
+            "hu": "ISTQB Foglom kártyák",
+            "en": "ISTQB Terms Cards"
+        },
+        "definition": {
+            "hu": "Definíció",
+            "en": "Definition"
+        },
+        "description": {
+            "hu": "Leírás ",
+            "en": "Description "
+        },
+        "descriptionQuestion": {
+            "hu": "Melyik leírás felel meg az alábbi definíciónak?",
+            "en": "Which description corresponds to the definition below?"
+        },
+        "youAreReady": {
+            "hu": "Ha kész vagy kezdheted.",
+            "en": "If you are ready, you can start."
+        },
+        "definitionQuestion": {
+            "hu": "Melyik definíció felel meg az alábbi leírásnak?",
+            "en": "Which definition corresponds to the following description?"
+        },
+        "answer": {
+            "hu": "Következő",
+            "en": "Next"
+        },
+        "restart": {
+            "hu": "Újraindítás",
+            "en": "Restart"
+        },
+        "check": {
+            "hu": "Ellenőrzés",
+            "en": "Check"
+        },
+        "previous": {
+            "hu": "Előző",
+            "en": "Previous"
+        },
+        "next": {
+            "hu": "Következő",
+            "en": "Next"
+        },
+        "end": {
+            "hu": "Befejezem",
+            "en": "End"
+        },
+        "actual": {
+            "hu": "kérdés,",
+            "en": " question(s),"
+        },
+        "correct": {
+            "hu": " helyes válasz.",
+            "en": " corect answer(s)."
+        },
+        "transationError": {
+            "hu": "Hiba történt a nyelvesítés közben!",
+            "en": "Something went wrong when loading language!"
+        },
+        "testError": {
+            "hu": "Hiba történt a tesztkérdések betöltésekor!",
+            "en": "Something went wrong when loading tests!"
+        }
     }
-  }
 }
