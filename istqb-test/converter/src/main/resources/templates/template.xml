@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coospace-quiz version="4.0">
+    <item th:each="question: ${questions}" th:attr="title=${question.title}" question_type="1" score="1.00">
+        <question>
+            <p th:utext="${question.text}">
+
+            <!-- <img src="File/DownloadPicture-5e5fbf913cf1e711bdd2000c29ad373f/Medium?downloadName=i_love_almira.jpg" alt="i_love_almira.jpg" width="324" height="324" data-file_id="5e5fbf91-3cf1-e711-bdd2-000c29ad373f" /> -->
+            </p>
+        </question>
+        <data layout="0" random="1" last_answer_id="2">
+            <answer th:each="answer, stat: ${question.answers}" th:attr="id=${stat.index}, valid=${answer.valid ? 'valid' : null}">
+                <p th:text="${answer.text}">alma</p>
+            </answer>
+        </data>
+        <files th:each="file: ${question.files}">
+            <file th:attr="id=${file.id},name=${file.name},path=${file.path}" mimetype="image/jpeg" />
+        </files>
+    </item>
+</coospace-quiz>

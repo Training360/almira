@@ -1993,7 +1993,7 @@ C. Management reporting
 D. None of the above
 
 
-Q. 196 What is a group of test activities that are organized
+Q. 196: What is a group of test activities that are organized
 and managed together?
 
 A. Test procedure specification
@@ -2776,7 +2776,7 @@ C. ii ,iii is true and i,iv is false
 D. iii and iv are true and i,ii are false
 
 
-Q. 271. The Provision and Management of a controlled library containing
+Q. 271: The Provision and Management of a controlled library containing
 all the configurations items is called as
 
 A. Configuration Control
