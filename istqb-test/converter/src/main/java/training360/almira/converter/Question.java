@@ -13,6 +13,12 @@ public class Question {
 
     private List<File> files = new ArrayList<>();
 
+    public String getFormattedTitle() {
+        int start = title.indexOf(" ");
+        int number = Integer.parseInt(title.substring(start + 1));
+        return String.format("Q. %04d", number);
+    }
+
     public String getTitle() {
         return title;
     }

@@ -9,6 +9,9 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class Converter {
@@ -37,9 +40,9 @@ public class Converter {
         System.out.println(f.getAbsolutePath());
         try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
             String line = null;
-            int index = 0;
             Question question = null;
             Answer answer = null;
+            int index = 1;
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("Q. ") && line.contains(":")) {
                     // Új kérdés
@@ -47,9 +50,18 @@ public class Converter {
                     questions.add(question);
                     int end = line.indexOf(":");
                     String title = line.substring(0, end);
+
+                    int start = title.indexOf(" ");
+                    int number = Integer.parseInt(title.substring(start + 1));
+                    if (number != index) {
+                        throw new IllegalStateException("Missing number: " + index + "  " + number);
+                    }
+
                     question.setTitle(title);
+                    line = replaceSpec(line);
                     question.setText(line);
                     state = "inquestion";
+                    index++;
                 }
                 else if (line.startsWith("A. ") || line.startsWith("B. ") || line.startsWith("C. ") || line.startsWith("D. ") || line.startsWith("E. ") || line.startsWith("F. ")) {
                     answer = new Answer();
@@ -61,6 +73,7 @@ public class Converter {
                     state = "inanswer";
                 }
                 else if (state.equals("inquestion") || state.equals("inpre")) {
+                    line = replaceSpec(line);
                     if (line.startsWith("```") && !state.equals("inpre")) {
                         question.setText(question.getText() + "<pre>");
                         state = "inpre";
@@ -68,6 +81,27 @@ public class Converter {
                     else if (line.startsWith("```") && state.equals("inpre")) {
                         question.setText(question.getText() + "</pre>");
                         state = "inquestion";
+                    }
+                    else if (state.equals("inpre")){
+                        question.setText(question.getText() + "\n" + line);
+                    }
+                    else if (line.startsWith("![]")) {
+                        String filename = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
+                        File file = new File();
+                        String basename = filename.substring(filename.indexOf("/") + 1);
+                        file.setName(basename);
+                        String id = UUID.randomUUID().toString();
+                        file.setId(id);
+                        file.setPath("_files/" + id + "/" + basename);
+                        question.getFiles().add(file);
+
+                        String img = generateImg(id, filename);
+                        question.setText(question.getText() + "<br />\n" + img + "\n");
+
+                        copyFile(id, basename);
+                    }
+                    else if (line.trim().equals("")) {
+                        // Do nothing
                     }
                     else {
                         question.setText(question.getText() + "<br />\n" + line);
@@ -81,12 +115,39 @@ public class Converter {
                 else {
                     throw new IllegalStateException("Not possible");
                 }
-                index++;
             }
             return questions;
         } catch (IOException e) {
             throw new IllegalStateException("Error reading file", e);
         }
+    }
+
+    private void copyFile(String id, String basename) {
+        Path source = Paths.get("..\\txt\\images\\" + basename);
+        Path destDir = Paths.get("target\\_files\\" + id);
+        Path dest = Paths.get("target\\_files\\" + id + "\\" + basename);
+        try {
+            Files.createDirectories(destDir);
+            Files.copy(source, dest);
+        }
+        catch (IOException ioe) {
+            throw new IllegalStateException("Illegal copy.", ioe);
+        }
+    }
+
+    private String generateImg(String id, String filename) {
+        String basename = filename.substring(filename.lastIndexOf("/") + 1);
+        return "<img src='File/DownloadPicture-" + id.replace("-", "") + "/Medium?downloadName=" + basename + "' alt='" + basename + "' data-file_id='" + id + "' />";
+    }
+
+    private String replaceSpec(String s) {
+        // Sajnos utext-tel kell, hogy ő ne cserélje le pl. az img tag-eket, de így viszont a spec karaktereket
+        // nekünk kell
+        s = s.replace("&", "&amp;");
+        s = s.replace("<", "&lt;");
+        s = s.replace(">", "&gt;");
+        return s;
+
     }
 
     private Map<String,String> readAnswers() {

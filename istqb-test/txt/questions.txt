@@ -439,20 +439,20 @@ D. Testers are better at finding defects than developers.
 
 
 Q. 39: The above diagram represents the following paths through the code.
-A. vwy
-B. vwz
-C. vxy
-D. vxz
+i. vwy
+ii. vwz
+iii. vxy
+iv. vxz
 What is the MINIMUM combination of paths required to provide full
 statement coverage?
 
 Exhibit:
 ![](ISTQB39.JPG)
 
-A. A
-B. ABD
-C. ABCD
-D. ACD
+A. i.
+B. i., ii., iv.
+C. i., ii., iii., iv.
+D. i., iii., iv.
 
 
 Q. 40: Which of the following is MOST characteristic of specification
@@ -2899,12 +2899,13 @@ cases?
 
 !()[images/ISTQB282.jpg]
 
-A. Citibank card member, holding a Silver room
-B. Non Citibank-member, holding a Platinum room
-A. A – Don’t offer any upgrade, B – Don’t offer any upgrade.
-B. A – Don’t offer any upgrade, B – Offer upgrade to Gold.
-C. A – Offer upgrade to Silver, B – Offer upgrade to Silver.
-D. A – Offer upgrade to Gold, B – Don’t offer any upgrade.
+i. Citibank card member, holding a Silver room
+ii. Non Citibank-member, holding a Platinum room
+
+A. i. – Don’t offer any upgrade, ii. – Don’t offer any upgrade.
+B. i. – Don’t offer any upgrade, ii. – Offer upgrade to Gold.
+C. i. – Offer upgrade to Silver, ii. – Offer upgrade to Silver.
+D. i. – Offer upgrade to Gold, ii. – Don’t offer any upgrade.
 
 
 Q. 283: Which typical defects are easier to find using static
@@ -6045,37 +6046,14 @@ cases?
 
 !()[images/ISTQB581.jpg]
 
-A.TC1: Anand is a 32 year old married, residing in Kolkatta.
-B.TC3: Attapattu is a 65 year old married person, residing in Colombo.
+TC1: Anand is a 32 year old married, residing in Kolkatta.
+TC3: Attapattu is a 65 year old married person, residing in Colombo.
 
-A. A – Issue membership, 10% discount, B–Issue membership, offer no
+A. TC1 – Issue membership, 10% discount, TC3 – Issue membership, offer no
 discount.
-B. A – Don’t Issue membership, B – Don’t offer discount.
-C. A – Issue membership, no discount, B – Don’t Issue membership.
-D. A – Issue membership, no discount, B- Issue membership with 10%
-discount.
-
-Evaluation of different options:
-
-!()[images/ISTQB581_2.jpg]
-
-Explanation:
-For TC1: follow the path in green color
-(The person is Indian resident, so select only ‘True’ options.
-The person is aged between 18-55, so select only ‘True’
-The person is a married, so again select only ‘True’
-For this person, the actions under ‘Rule 4′ will be applied. That is,
-issue membership and no discount)
-
-For TC3: follow the path in blue color
-(The person is not Indian resident, so select only ‘False’ (under Rule 1)
-The person is not aged between 18-55. No need to select any path, as it
-is written “Don’t care”.
-The person is married. No need to select any path, as it is written
-“Don’t care”.
-For this person, the actions under ‘Rule1′ will be applied, That is,
-Don’t issue membership and no discount.)
-
+B. TC1 – Don’t Issue membership, TC3 – Don’t offer discount.
+C. TC1 – Issue membership, no discount, TC3 – Don’t Issue membership.
+D. TC1 – Issue membership, no discount, TC3- Issue membership with 10% discount.
 
 Q. 582: Which of the following is false?
 
@@ -6244,7 +6222,7 @@ C. Executing tests
 D. Writing the functional specifications
 
 
-Q.598: Which of the following are Black Box test design techniques?
+Q. 598: Which of the following are Black Box test design techniques?
 
 I. Boundary value analysis
 II. Branch condition testing
@@ -6537,6 +6515,19 @@ C. The checking rate is related to the number of pages of the inspected
 document.
 D. Its purpose is to get some benefit in an inexpensive way.
 
+Q. 621: The test strategy that is informal and non structured is:
+
+A. Equivalence partitioning
+B. Validation strategy
+C. White box testing
+D. Ad hoc testing
+
+Q. 622: The test strategy that involves understanding the program logic is:
+
+A. Equivalence partitioning
+B. White box testing
+C. Black box testing
+D. Boundary strategy
 
 Q. 623: Which of the following details would most likely be included in
 an incident report?
@@ -6573,7 +6564,7 @@ D. Making decisions about which roles will perform the test activities
 and setting the level of detail for the test procedures.
 
 
-Q.626: The programs send bad data to devices, ignore error codes coming
+Q. 626: The programs send bad data to devices, ignore error codes coming
 back, and try to use devices that are busy or aren't there. This is a:
 
 A. Calculation error
@@ -6594,7 +6585,7 @@ tools.
 D. Walkthroughs, simulation, and defect tracking.
 
 
-Q.628: If a system is not functioning as documented and the data is not
+Q. 628: If a system is not functioning as documented and the data is not
 corrupted. What priority and measure are assigned?
 
 A. Priority 1: Critical
@@ -6603,7 +6594,7 @@ C. Priority 3: Medium
 D. Priority 4: Low
 
 
-Q.629: A testing process that is conducted to test new features after
+Q. 629: A testing process that is conducted to test new features after
 regression testing of previous features.
 
 A. Operational testing
@@ -6612,7 +6603,7 @@ C. Recovery testing
 D. Regression testing
 
 
-Q.630: Which of the following are major test documents? (choose the best
+Q. 630: Which of the following are major test documents? (choose the best
 answer)
 
 1) Test plan
@@ -7893,7 +7884,7 @@ D. 25, 26, 35, 36, 45, 46, 55, 56
 
 Q. 735: Consider the following decision table for Car rental.
 
-!()[images/ISTQB735.jpg]
+![](images/ISTQB735.jpg)
 
 Given this decision table, what is the expected result for the following
 test cases?
@@ -8412,7 +8403,7 @@ each reported a problem with the User log-on process. User log-on is a
 critical component of the system. The table below describes the four
 defect reports submitted.
 
-!()[images/ISTQB774.jpg]
+![](images/ISTQB774.jpg)
 
 Which Tester has reported the incident MOST effectively, considering the
 information and priority they have supplied?
@@ -8507,7 +8498,7 @@ D. Testing improves quality in itself.
 
 Q. 782: The following table shows 6 test procedures (P to U) that must now be entered into a test execution schedule.
 
-!()[images/ISTQB782.jpg]
+![](images/ISTQB782.jpg)
 
 Business severity is regarded as the most important element in determining the sequence of the test procedures, but other dependencies must also be taken into consideration. Regression testing can only be run once all other tests have completed.
 
@@ -9065,7 +9056,7 @@ D. a and c
 
 Q. 828: Consider the following state table:
 
-!()[images/ISTQB828.jpg]
+![](images/ISTQB828.jpg)
 
 Which of the following would result in a change of state to S2 with an action of R6?
 
@@ -9633,7 +9624,7 @@ D. a, b and d are true; c and e are false
 
 Q. 876: The Following table shows 6 test procedures (P to U) that must now be entered into a test execution schedule.
 
-!()[images/ISTQB876.jpg]
+![](images/ISTQB876.jpg)
 
 Business severity is regarded as the most important element in determining the sequence of the test procedures, but other dependencies must also be taken into consideration. Regression testing can only be run once all other tests have completed.
 
@@ -9996,13 +9987,17 @@ D. State transition testing.
 Q. 905: You have started specification-based testing of a program. It calculates the
 greatest common divisor (GCD) of two integers (A and B) greater than zero.
 
-`calcGCD (A, B);`
+```
+calcGCD (A, B);
+```
 
 The following test cases (TC) have been specified.
 
-!()[images/ISTQB905.jpg]
+![](images/ISTQB905.jpg)
 
-`INT_MAX`: largest Integer
+```
+INT_MAX: largest Integer
+```
 
 Which test technique has been applied in order to determine test cases 1 through 6?
 
@@ -10208,6 +10203,26 @@ C. a and b
 D. b and d
 
 
+Q. 921: According to the ISTQB Glossary, regression testing is required for what purpose?
+
+A. To verify the success of corrective actions.
+B. To prevent a task from being incorrectly considered completed.
+C.  To ensure that defects have not been introduced by a modification.
+D. To motivate better unit testing by the programmers.
+
+Q. 922: Which of the following structure-based test design technique would be most likely to be applied to?
+
+1 Boundaries between mortgage interest rate bands.
+2 An invalid transition between two different area�s statuses.
+3 The business process flow for mortgage approval.
+4 Control flow of the program to calculate repayments.
+
+A. 2, 3 and 4
+B. 2 and 4
+C. 3 and 4
+D. 1, 2 and 3 
+
+
 Q. 923: Which test requires the execution of the software
 component?
 
@@ -10217,7 +10232,7 @@ C. Code walkthrough
 D. Execution testing
 
 
-Q.924: What is the purpose of a test completion criterion?
+Q. 924: What is the purpose of a test completion criterion?
 
 A. to know when a specific test has finished its execution
 B. to ensure that the test case specification is complete
@@ -10225,7 +10240,7 @@ C. to set the criteria used in generating test inputs
 D. to determine when to stop testing
 
 
-Q.925: Maintenance testing is:
+Q. 925: Maintenance testing is:
 
 A. updating tests when the software has changed
 B. testing a released system that has been changed
@@ -10233,7 +10248,7 @@ C. testing by users to ensure that the system meets a business need
 D. testing to maintain business advantage
 
 
-Q.926: Error guessing is best used:
+Q. 926: Error guessing is best used:
 
 A. after more formal techniques have been applied
 B. as the first approach to deriving test cases
@@ -10241,14 +10256,14 @@ C. by inexperienced testers
 D. after the system has gone live
 
 
-Q.927: For which of the following test cases does test coverage analysis not assign the highest priority?
+Q. 927: For which of the following test cases does test coverage analysis not assign the highest priority?
 
 A. The ones that cover the most important quality risk
 B. The ones that cover the requirements
 C. The ones that cover conditions
 D. The ones that cover the functions
 
-Q.928: Consider the following decision table.
+Q. 928: Consider the following decision table.
 
 Given this decision table on Car Rental, what is the expected result for the following test cases?
 
@@ -10265,7 +10280,7 @@ C. TCI: Don't supply car; TC2: Supply car with no premium charge.
 D. TCI: Supply car with premium charge; TC2: Don't supply car.
 
 
-Q.929:  Requirement 24.3. A 'Postage Assistant' will calculate the amount of postage due for letters and small packages up to 1 kilogram in weight. The inputs are: the type of item (letter, book or other package) and the weight in grams. Which of the following conform to the required contents of a test case?
+Q. 929:  Requirement 24.3. A 'Postage Assistant' will calculate the amount of postage due for letters and small packages up to 1 kilogram in weight. The inputs are: the type of item (letter, book or other package) and the weight in grams. Which of the following conform to the required contents of a test case?
 
 A. Test the three types of item to post and three different weights [Req
 24.3]
@@ -10277,7 +10292,7 @@ D. Test 1: letter 10 grams, Belgium, postage €0.25. Test 2: package 999
 grams to South Africa, postage €2.53
 
 
-Q.930: Acceptance testing may occur at more than just a single test level. With the exception of:
+Q. 930: Acceptance testing may occur at more than just a single test level. With the exception of:
 
 A. A COTS software product may be acceptance tested when it is installed
 or integrated.
@@ -10289,6 +10304,14 @@ D. Acceptance testing of a new functional enhancement may come before
 system testing.
 
 
+Q. 931: Integrity testing involves:
+
+A. The testing of pseudo code
+B. Performance testing
+C. Alpha testing
+D.The final phase of testing prior to deployment
+
+
 Q. 932: As a moderator in a typical formal review, what can be
 one of your responsibilities?
 
@@ -10298,7 +10321,7 @@ C. Leading the review o f the documents
 D. Identifying and describing the findings
 
 
-Q.933: Which is not a major task of test implementation and execution:
+Q. 933: Which is not a major task of test implementation and execution:
 
 A. Develop and prioritizing test cases, creating test data, writing
 test procedures and optionally, preparing test harness and writing
@@ -10310,7 +10333,7 @@ planning.
 D. Verifying that the test environment has been set up correctly.
 
 
-Q.934 Which of the following is not appropriate for testing interactions between paths?
+Q. 934: Which of the following is not appropriate for testing interactions between paths?
 
 A. Path that people are particularly likely to follow
 B. Choices at one menu level or data entry screen can affect the
@@ -10319,7 +10342,7 @@ C. Test reaction to all combinations of valid and invalid inputs
 D. Randomly select different paths in each test cycle
 
 
-Q.935: Which of the following is the main purpose of the component build and integration strategy?
+Q. 935: Which of the following is the main purpose of the component build and integration strategy?
 
 A. to ensure that all of the small components are tested
 B. to ensure that the system interfaces to other systems and networks
@@ -11617,12 +11640,12 @@ Bonuspoints = 100+Bonuspoints
 If (class=="first")
 discountRate = .5;
 Fare = fare * discountRate;
+```
+
 A. Statement Coverage = 1, Branch Coverage = 2
 B. Statement Coverage = 2, Branch Coverage = 2
 C. Statement Coverage = 1, Branch Coverage = 3
 D. Statement Coverage = 2, Branch Coverage = 4
-```
-
 
 Q. 1055: Given the following state transition table Which of the test
 cases below will cover the following series of state transitions? S1 SO
