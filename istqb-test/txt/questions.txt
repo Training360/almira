@@ -196,9 +196,9 @@ end_if
 The following has been added to the bottom of the code fragment above.
 
 ```
-print "Biggest dimension is " & biggest_dimension
-print "Width: " & width
-print "Length: " & length
+print "Biggest dimension is " and biggest_dimension
+print "Width: " and width
+print "Length: " and length
 ```
 
 How many more test cases are required?
@@ -361,10 +361,10 @@ iii) Assigning resources.
 iv) Building the test environment.
 v) Writing test conditions.
 
-A. i, ii & iv are true, iii & v are false.
-B. ii & iii are true, i, iv & v are false.
-C. iv & v are true, i, ii & iii are false.
-D. i, ii & iii are true iv & v are false.
+A. i, ii and iv are true, iii and v are false.
+B. ii and iii are true, i, iv and v are false.
+C. iv and v are true, i, ii and iii are false.
+D. i, ii and iii are true iv and v are false.
 
 
 Q. 33: Match the following terms and statements:
@@ -1210,10 +1210,10 @@ ii. Determine the extent of testing to be carried out.
 iii. Prioritize testing in an attempt to find critical defects as early as possible.
 iv. Determine the cost of the project.
 
-A. ii is true; i, iii, iv & v are false
+A. ii is true; i, iii, iv and v are false
 B. i, ii, iii are true and iv is false
-C. ii & iii are true; i, iv are false
-D. ii, iii & iv are true; i is false
+C. ii and iii are true; i, iv are false
+D. ii, iii and iv are true; i is false
 
 
 Q. 119: Incidents would not be raised against:
@@ -1521,8 +1521,8 @@ D. Keyword-driven testing.
 
 Q. 150: The principal attributes of tools and automation are:
 
-A. Speed & efficiency.
-B. Accuracy & precision.
+A. Speed and efficiency.
+B. Accuracy and precision.
 C. All of the above.
 D. None of the above.
 
@@ -1545,12 +1545,12 @@ C. Decision table.
 D. Decision tree.
 
 
-Q. 153: The testing technique that requires devising test cases to
-demonstrate that each program function is operational is called:
+Q. 153: Which of the testing techniques below can be described as follows:
+Devising test cases to demonstrate that each program function is operational without any knowledge of the code.
 
-A. Black-box testing
+A. Grey-box testing
 B. Glass-box testing
-C. Grey-box testing
+C. Black-box testing
 D. White-box testing
 
 
@@ -1625,8 +1625,8 @@ C. I, III and IV
 D. I and II
 
 
-Q. 161: What is the ratio of the number of failures relative to
-a category and a unit of measure?
+Q. 161: What is it called? 
+The ratio of the number of failures of a given category to a given unit of measure?
 
 A. Failure rate
 B. Defect density
@@ -1634,68 +1634,67 @@ C. Failure mode
 D. Fault tolerance
 
 
-Q. 162: Typical defects discovered by static analysis includes
+Q. 162: Typical defects discovered by static analysis includes:
 
-A. Programming standard violations
-B. Referring a variable with an undefined value
-C. Security vulnerabilities
-D. All Above
-
-
-Q. 163: EULA stands for
-
-A. End Usability License Agreement
-B. End User License Agreement
-C. End User License Arrangement
-D. End User License Attachment
+A. Violation of programming standards.
+B. Referring a variable with an undefined value.
+C. Security vulnerabilities.
+D. All above.
 
 
-Q. 164: What test can be conducted for off - the - shelf
+Q. 163: EULA stands for:
+
+A. End Usability License Agreement.
+B. End User License Agreement.
+C. End User License Arrangement.
+D. End User License Attachment.
+
+
+Q. 164: What test can be conducted for off-the-shelf
 software to get market feedback?
 
-A. Beta testing
-B. Usability testing
-C. Alpha testing
-D. COTS testing
+A. Beta testing.
+B. Usability testing.
+C. Alpha testing.
+D. COTS testing.
 
 
-Q. 165: CAST stands for
+Q. 165: CAST stands for:
 
-A. Computer Aided Software Testing
-B. Computer Aided Software Tools
-C. Computer Analysis Software Techniques
-D. None
+A. Computer Aided Software Testing.
+B. Computer Aided Software Tools.
+C. Computer Analysis Software Techniques.
+D. None of the above.
 
 
-Q. 166: How can software defects in future projects be
-prevented from reoccurring?
+Q. 166: In future projects how can software defects be prevented from reoccurring?
 
 A. Creating documentation procedures and allocating resource
-contingencies
-B. Asking programmers to perform a thorough and independent testing
+contingencies.
+B. Asking programmers to perform a thorough and independent testing.
 C. Combining levels of testing and mandating inspections of all
-documents
+documents.
 D. Documenting lessons learned and determining the root cause of
-problems
+problems.
 
 
-Q. 167: Which test may not mimic real world situations
+Q. 167: Which test may not mimic real world situations?
 
-A. Functional testing
-B. Structural Testing
-C. All of the above
-D. None of the above
-
-
-Q. 168: _______ includes both Black box and White Box Testing features
-
-A. Gray Box Testing
-B. Hybrid Testing
-C. A. & B.
-D. None
+A. Functional testing.
+B. Structural Testing.
+C. All of the above.
+D. None of the above.
 
 
-Q. 169: Which of the following are the main stages of a formal review?
+Q. 168: _______ includes both black box and white box testing features.
+
+A. Grey Box Testing.
+B. Hybrid Testing.
+C. A. and B.
+D. None of the above.
+
+
+Q. 169: Which of the followings are the main stages of a formal review?
 
 A. Initiation, Preparation, Informal Review Meeting, Status, Rework, and
 Follow up.
@@ -1709,10 +1708,10 @@ Q. 170: Tool which stores requirement statements, check for consistency
 and allow requirements to be prioritized and enable individual tests to
 be traceable to requirements, functions and features.
 
-A. Incident management tools
-B. Requirements management tools
-C. Configuration management tools
-D. None
+A. Incident management tools.
+B. Requirements management tools.
+C. Configuration management tools.
+D. None of the above.
 
 
 Q. 171: Which of the following are success factors when rolling out a
@@ -1721,8 +1720,7 @@ new tool?
 I. Roll the tool out to the entire organization to ensure reasonably
 even coverage.
 II. Avoid changing existing processes to reduce impact of the tool.
-III. Provide training and mentoring to
-new users.
+III. Provide training and mentoring to new users.
 IV. Allow users to determine where the tool fits into the process best.
 
 
@@ -1732,7 +1730,7 @@ C. III
 D. IV
 
 
-Q. 172: As a test leader you are collecting measures about defects. You
+Q. 172: As a test leader you are collecting metrics about defects. You
 recognize that after the first test cycle – covering all requirements -
 subsystem C has a defect density that is 150% higher than the average.
 Subsystem A on the other hand has a defect density that is 60% lower
@@ -1751,83 +1749,77 @@ ensure that we test all subsystems evenly.
 
 Q. 173: Which of these are objectives for software testing?
 
-A. Determine the productivity of programmers
-B. Eliminate the need for future program maintenance
-C. Eliminate every error prior to release
-D. Uncover software errors
+A. Determine the productivity of programmers.
+B. Eliminate the need for future program maintenance.
+C. Eliminate every error prior to release.
+D. Uncover software errors.
 
 
-Q. 174: Failure is _________
+Q. 174: Failure is: 
 
-A. Incorrect program behavior due to a fault in the program
-B. Bug found before product Release
-C. Bug found after product Release
-D. Bug found during Design phase
+A. Incorrect program behavior due to a fault in the program.
+B. Bug found before product release.
+C. Bug found after product release.
+D. Bug found during design phase.
 
 
-Q. 175: During the software development process, at what point can the
-test process start?
+Q. 175: During the software development process, which is the EARLIEST point when the
+test process may start?
 
 A. When the code is complete.
 B. When the design is complete.
 C. When the software requirements have been approved.
-D. When the first code module is ready for unit testing
+D. When the first code module is ready for unit testing.
 
 
-Q. 176: "How much testing is enough?"
+Q. 176: How much testing is enough?
 
-A. This question is impossible to answer
-B. This question is easy to answer
-C. The answer depends on the risk for your industry, contract and
-special requirements
-D. This answer depends on the maturity of your developers
-
-
-Q. 177: Which approaches can help increase the quality of
-software?
-I. Incorporating rigorous testing
-II. Preventing change requests
-III. Establishing defects metrics
-IV. Allocating schedule contingencies
-
-A. I and II are true; III and IV are false
-B. II and IV are true; I and II are false
-C. I and IV are true; II and III are false
-D. I and III are true; II and IV are false
+A. This question is impossible to answer.
+B. This question is easy to answer.
+C. The answer depends on the risk level for your industry, contract and
+special requirements.
+D. This answer depends on the maturity of your developers.
 
 
-Q. 178: Features to be tested, approach, item pass / fail criteria
+Q. 177: Which approaches can help increase the quality of software?
+
+I. Incorporating rigorous testing.
+II. Preventing change requests.
+III. Establishing defects metrics.
+IV. Allocating schedule contingencies.
+
+A. I and II are true; III and IV are false.
+B. II and IV are true; I and II are false.
+C. I and IV are true; II and III are false.
+D. I and III are true; II and IV are false.
+
+
+Q. 178: Features to be tested, approach, item pass/fail criteria
 and test deliverables should be specified in which document?
 
-A. Test case specification
-B. Test procedure specification
-C. Test plan
-D. Test design specification
+A. Test case specification.
+B. Test procedure specification.
+C. Test plan.
+D. Test design specification.
 
 
-Q. 179: What is the difference between component testing and
-integration testing?
+Q. 179: What is the difference between component testing and integration testing?
 
-A. Component testing tests interfaces; integration testing searches
-for defects
-B. Component testing searches for defects; integration testing tests
-Interfaces
-C. Developers perform component testing; testers perform integration
-testing
-D. Testers perform component testing; users perform integration
-testing
+A. Component testing tests interfaces; integration testing searches for defects.
+B. Component testing searches for defects; integration testing tests interfaces.
+C. Developers perform component testing; testers perform integration testing.
+D. Testers perform component testing; users perform integration testing.
 
 
-Q. 180: Fault Masking is
+Q. 180: Fault masking is:
 
-A. Error condition hiding another error condition
-B. Creating a test case which does not reveal a fault
-C. Masking a fault by developer
-D. Masking a fault by a tester
+A. Error condition hiding another error condition.
+B. Creating a test case which does not reveal a fault.
+C. Masking a fault by developer.
+D. Masking a fault by a tester.
 
 
-Q. 181: Which of the following is not a quality characteristic listed in
-ISO 9126 Standard?
+Q. 181: Which of the following is not a quality characteristic listed in ISO 9126 standard?
 
 A. Functionality
 B. Usability
@@ -1835,29 +1827,28 @@ C. Supportability
 D. Maintainability
 
 
-Q. 182: One
+Q. 182: One key reason why developers have difficulty testing their own work is:
 
-Key reason why developers have difficulty testing their own work is :
-A. Lack of technical documentation
-B. Lack of test tools on the market for developers
-C. Lack of training
-D. Lack of Objectivity
-
-
-Q. 183: Statement Coverage will not check for the following.
-
-A. Missing Statements
-B. Unused Branches
-C. Dead Code
-D. Unused Statement
+A. Lack of technical documentation.
+B. Lack of test tools on the market for developers.
+C. Lack of training.
+D. Lack of objectivity.
 
 
-Q. 184: Given the Following program
+Q. 183: Statement coverage will not check for the following:
 
-IF X <>= Z
+A. Missing Statements.
+B. Unused Branches.
+C. Dead Code.
+D. Unused Statement.
+
+
+Q. 184: Given the following program, which of the numbers listed below corresponds to the calculated McCabe’s cyclomatic complexity factor.
+
+IF X <= Z
 THEN Statement 2;
 END
-McCabe’s Cyclomatic Complexity is :
+
 A. 2
 B. 3
 C. 4
@@ -1870,34 +1861,32 @@ which calls the function to be tested and passes it test data.
 A. Stub
 B. Driver
 C. Proxy
-D. None of the above
+D. None of the above.
 
 
-Q. 186: Pick the best definition of quality
+Q. 186: Pick the best definition for software quality:
 
-A. Quality is job one
-B. Zero defects
-C. Conformance to requirements
-D. Work as designed
+A. Quality is a job well done.
+B. Zero defects.
+C. Conformance to requirements.
+D. Works as designed.
 
 
-Q. 187: Boundary value testing
+Q. 187: Boundary value testing:
 
-A. Is the same as equivalence partitioning tests
-B. Test boundary conditions on, below and above the edges of input and
+A. Is the same as equivalence partitioning testing.
+B. Tests boundary conditions on, below and above the edges of input and
 output equivalence classes
-C. Tests combinations of input circumstances
-D. Is used in white box testing strategy
+C. Tests combinations of input circumstances.
+D. Is used in white-box testing strategy.
 
 
-Q. 188: An input field takes the year of birth between 1900 and 2004
+Q. 188: An input field takes the year of birth between 1900 and 2004 included. The MINIMAL number of boundary values for testing this field are:
 
-The boundary values for testing this field are
-
-A. 0,1900,2004,2005
+A. 0, 1900, 2004, 2005
 B. 1900, 2004
-C. 1899,1900,2004,2005
-D. 1899, 1900, 1901,2003,2004,2005
+C. 1899, 1900, 2004, 2005
+D. 1899, 1900, 1901, 2003, 2004, 2005
 
 
 Q. 189: How many test cases are necessary to cover all the possible
@@ -1914,24 +1903,25 @@ then statement 3
 fi
 ```
 
-A. 2 Test Cases
-B. 3 Test Cases
-C. 4 Test Cases
+A. 2 test cases
+B. 3 test cases
+C. 4 test cases
 D. Not achievable
 
 
-Q. 190: A common test technique during component test is
+Q. 190: A common test technique during component test is:
 
-A. Statement and branch testing
-B. Usability testing
-C. Security testing
-D. Performance testing
-Q. 191: In a review meeting a moderator is a person who
+A. Statement and branch testing.
+B. Usability testing.
+C. Security testing.
+D. Performance testing.
 
-A. Takes minutes of the meeting
-B. Mediates between people
-C. Takes telephone calls
-D. Writes the documents to be reviewed
+Q. 191: In a review meeting a moderator is a person who: 
+
+A. Takes minutes of the meeting.
+B. Mediates between people.
+C. Takes telephone calls.
+D. Writes the documents to be reviewed.
 
 
 Q. 192: Acceptance test cases are based on what?
@@ -1942,69 +1932,67 @@ C. Code
 D. Decision table
 
 
-Q. 193: Which documents specify features to - be tested, approach,
-and pass / fail criteria?
+Q. 193: Which documents specify features to be tested, approach,
+and pass/fail criteria?
 
-A. Test plan and test design specification
-B. Test plan and test case specification
-C. Test procedure specification and test design specification
-D. Test case specification and test procedure specification
-
-
-Q. 194: Independent Verification & Validation is
-
-A. Done by the Developer
-B. Done by the Test Engineers
-C. Done By Management
-D. Done by an Entity Outside the Project’s sphere of influence　
+A. Test plan and test design specification.
+B. Test plan and test case specification.
+C. Test procedure specification and test design specification.
+D. Test case specification and test procedure specification.
 
 
-Q. 195: Defect Management process does not include
+Q. 194: Independent verification and validation is:
 
-A. Defect prevention
-B. Deliverable base-lining
-C. Management reporting
-D. None of the above
+A. Done by the developer.
+B. Done by the test engineers.
+C. Done by management.
+D. Done by an entity outside the project’s sphere of influence.　
 
 
-Q. 196: What is a group of test activities that are organized
+Q. 195: Defect management process does not include:
+
+A. Defect prevention.
+B. Deliverable base-lining.
+C. Management reporting.
+D. None of the above.
+
+
+Q. 196: What is called a group of test activities that are organized
 and managed together?
 
-A. Test procedure specification
-B. Test level
-C. Test case specification
-D. Test plan
+A. Test procedure specification.
+B. Test level.
+C. Test case specification.
+D. Test plan.
 
 
 Q. 197: What is the key difference between (a) contract and
 regulation acceptance testing, and (b) alpha and beta testing?
 
 A. (a) are performed outside the company and (b) are conducted by
-the test team
+the test team.
 B. (a) are conducted by regulators and (b) are performed by system
-administrato rs
+administrators.
 C. (a) are mandatory test for government applications and (b) are
-usually optional
-D. (a) are for custom-developed software and (b) are for off – the
-- shelf software
+usually optional.
+D. (a) are for custom-developed software and (b) are for off–the-shelf software.
 
 
 Q. 198: Regression testing should be performed:
 
-v) Every week
-w) After the software has changed
-x) As often as possible
-y) When the environment has changed
-z) Wwhen the project manager says
+v) Every week.
+w) After the software has changed.
+x) As often as possible.
+y) When the environment has changed.
+z) When the project manager says.
 
-A. v & w are true, x – z are false
-B. w, x & y are true, v & z are false
-C. w & y are true, v, x & z are false
-D. w is true, v, x y and z are false
-E. All of the above are true
+A. v and w are true, x, y, z are false.
+B. w, x and y are true, v and z are false.
+C. w and y are true, v, x and z are false
+D. w is true, v, x y and z are false.
 
 
-Q. 199: During which test activity could faults be found most cost
+Q. 199: During which test activity could faults be found at the most cost
 effectively?
 
 A. Execution
@@ -2013,60 +2001,54 @@ C. Planning
 D. Check Exit criteria completion
 
 
-Q. 200: What is the difference between testing software developed by
+Q. 200: What is the MOST likely problem when testing software developed by
 contractor outside your country, versus testing software developed by a
 contractor within your country?
 
-A. Does not meet people needs
-B. Cultural difference
-C. Loss of control over reallocation of resources
-D. Relinquishments of control
+A. Does not meet people needs.
+B. Cultural difference.
+C. Loss of control over reallocation of resources.
+D. Relinquishments of control.
 
 
-Q. 201: The inputs for developing a test plan are taken from
+Q. 201: The inputs for developing a test plan are taken from:
 
-A. Project plan
-B. Business plan
-C. Support plan
-D. None of the above
-
-
-Q. 202: A tool that supports traceability,
-recording of incidents or scheduling of tests is
-called:
-
-A. A dynamic analysis tool
-B. A test execution tool
-C. A debugging tool
-D. A test management tool
-E. A configuration management tool
+A. Project plan.
+B. Business plan.
+C. Support plan.
+D. None of the above.
 
 
-Q. 203: Which of the following is not a static testing technique
+Q. 202: A tool that supports traceability, recording of incidents or scheduling of tests is called:
 
-A. Error guessing
-B. Walkthrough
-C. Data flow analysis
-D. Inspections
+A. A dynamic analysis tool.
+B. A configuration management tool.
+C. A debugging tool.
+D. A test management tool.
 
+Q. 203: Which of the following is not a static testing technique?
+
+A. Error guessing.
+B. Walkthrough.
+C. Data flow analysis.
+D. Inspections.
 
 Q. 204: Which document specifies the sequence of test executions?
 
-A. Test procedure specification
-B. Test design specification
-C. Test case specification
-D. Test plan
+A. Test procedure specification.
+B. Test design specification.
+C. Test case specification.
+D. Test plan.
+
+Q. 205: Inspections can find all the following, except:
+
+A. Variables not defined in the code.
+B. Spelling and grammar faults in the documents.
+C. Requirements that have been omitted from the design documents.
+D. How much of the code has been covered by test cases?
 
 
-Q. 205: Inspections can find all the following except
-
-A. Variables not defined in the code
-B. Spelling and grammar faults in the documents
-C. Requirements that have been omitted from the design documents
-D. How much of the code has been covered
-
-
-Q. 206: Which of the following is not a characteristic for Testability?
+Q. 206: Which of the following is not a characteristic for testability?
 
 A. Operability
 B. Observability
@@ -2074,40 +2056,35 @@ C. Simplicity
 D. Robustness
 
 
-Q. 207: Software testing accounts to what percent of software
-development costs?
+Q. 207: Software testing accounts to what percent of software development costs in AVERAGE?
 
-A. 10-20
-B. 40-50
-C. 70-80
-D. 5-10
+A. 10-20%
+B. 40-50%
+C. 70-80%
+D. 5-10%
 
+Q. 208: Which tool can be used to support and control part of the test management process?
 
-Q. 208: Which tool can be used to support and control part of the
-test management process?
-
-A. Coverage management tool
-B. Test management tool
-C. Data preparation tool
-D. Performance testing tool
-
+A. Coverage management tool.
+B. Test management tool.
+C. Data preparation tool.
+D. Performance testing tool.
 
 Q. 209: If an expected result is not specified then:
 
-A. We cannot run the test
-B. It may be difficult to repeat the test
-C. It may be difficult to determine if the test has passed or failed
-D. We cannot automate the user inputs
+A. We cannot run the test.
+B. It may be difficult to repeat the test.
+C. It may be difficult to determine if the test has passed or failed.
+D. We cannot automate the user inputs.
 
 
-Q. 210: When should we stop ourtesting?
+Q. 210: When should we stop our testing?
 
-A. This question is difficult to answer
+A. This question is difficult to answer.
 B. The answer depends on the contract with the client, special
-requirements if any & risks your organization is willing to take
-C. The answer depends on the experience & maturity of your developers
-D. The answer should be standardized for the software development
-industry
+requirements if any and the amount of risks your organization is willing to take.
+C. The answer depends on the experience and maturity of your developers.
+D. The answer should be standardized for the software development industry.
 
 Q. 211: The purpose of requirement phase is
 
@@ -2140,7 +2117,7 @@ C. Is likely to be fault-free
 D. Is likely to be liked by the users
 
 
-Q. 215: Which, in general, is the least required skill of a good tester?
+Q. 215: Which, in general, is the LEAST required skill of a good tester?
 
 A. Being diplomatic
 B. Able to write software
@@ -2151,8 +2128,7 @@ D. Able to be relied on
 Q. 216: A regression test:
 
 A. Will always be automated
-B. Will help ensure unchanged areas of the software have not been
-affected
+B. Will help ensure unchanged areas of the software have not been affected
 C. Will help ensure changed areas of the software have not been affected
 D. Can only be run during user acceptance testing
 
@@ -2294,6 +2270,7 @@ B. 1 test for statement coverage, 2 for branch coverage
 C. 1 test for statement coverage. 3 for branch coverage
 D. 2 tests for statement coverage, 2 for branch coverage
 E. 2 tests for statement coverage, 3 for branch coverage
+
 Q. 231: Test managers should not:
 
 A. Report on deviations from the project plan
@@ -2580,11 +2557,11 @@ iii. Early test design can find faults
 iv. Early test design can cause changes to the requirements
 v. Early test design takes more effort
 
-A. i, iii & iv are true. Ii & v are false
-B. iii is true, I, ii, iv & v are false
-C. iii & iv are true. i, ii & v are false
-D. i, iii, iv & v are true, ii us false
-E. i & iii are true, ii, iv & v are false
+A. i, iii and iv are true. ii and v are false
+B. iii is true, I, ii, iv and v are false
+C. iii and iv are true. i, ii and v are false
+D. i, iii, iv and v are true, ii us false
+E. i and iii are true, ii, iv and v are false
 
 
 Q. 257: Given the following code, which is true about the minimum number
@@ -2951,10 +2928,10 @@ iii. As often as possible
 iv. When the environment has changed
 v. When the project manager says
 
-A. i & ii are true, iii, iv & v are false
-B. ii, iii & iv are true, i & v are false
-C. ii & iv are true, i, iii & v are false
-D. ii is true, i, iii, iv & v are false
+A. i and ii are true, iii, iv and v are false
+B. ii, iii and iv are true, i and v are false
+C. ii and iv are true, i, iii and v are false
+D. ii is true, i, iii, iv and v are false
 
 
 Q. 289: Which input combinations will a knowledgeable tester MOST
@@ -4189,7 +4166,7 @@ D. Review and contribute to test plans
 Q. 411:
 
 ```
-if (condition1 && (condition2 function1()))
+if (condition1 andand (condition2 function1()))
 statement1;
 else
 statement2;
@@ -4321,7 +4298,7 @@ Q. 424: Preparing and automating test cases before coding is called
 
 A. Test first approach
 B. Test-driven development
-C. Both A. & B.
+C. Both A. and B.
 D. None of the above
 
 Q. 425: Which one is not characteristic of test management tool?
@@ -4419,7 +4396,7 @@ C. Checking the core gaps
 D. Ensuring high level sanity
 
 
-Q. 435: Review is one of the methods of V&V. The other methods are
+Q. 435: Review is one of the methods of VandV. The other methods are
 
 A. Inspection
 B. Walkthrough
@@ -4467,7 +4444,7 @@ Q. 440: Reliability, usablility, efficiency are
 
 A. Functional characteristics
 B. Non functional characteristics
-C. Both A. & B.
+C. Both A. and B.
 D. None of the above
 
 
@@ -4661,7 +4638,7 @@ B. Both are black-box techniques: integration is low-level, use case
 is high-level
 C. Both are static testing: developers perform integration, users
 execute use case tests
-C. Both are V&V techniques: integration is for validation, use case
+C. Both are VandV techniques: integration is for validation, use case
 is for verification
 
 Q. 461: What is the main difference between a walkthrough and an
@@ -4837,7 +4814,7 @@ required?
 A. Metrics from previous similar projects
 B. Discussions with the development team
 C. Time allocated for regression testing
-D. A. & B.
+D. A. and B.
 
 
 Q. 479: Given the following sets of test management terms (v-z), and
@@ -5020,12 +4997,12 @@ iii.100% branch coverage guarantees 100% decision coverage.
 iv.100% decision coverage guarantees 100% branch coverage.
 v.100% statement coverage guarantees 100% decision coverage.
 
-A. ii is True; i, iii, iv & v are
+A. ii is True; i, iii, iv and v are
 
 False
-B. i & v are True; ii, iii & iv are False
-C. ii & iii are True; i, iv & v are False
-D. ii, iii & iv are True; i & v are False
+B. i and v are True; ii, iii and iv are False
+C. ii and iii are True; i, iv and v are False
+D. ii, iii and iv are True; i and v are False
 
 Q. 492: What is the difference between a project risk and a product
 risk?
@@ -5528,10 +5505,10 @@ II. Capacity for incremental implementation
 III. Capability of evolving with the needs of a project
 IV. Inclusion of advanced tools
 
-A.I, II &III
-B.I, II &IV
-C.II, III&IV
-D.I, III&IV
+A.I, II andIII
+B.I, II andIV
+C.II, IIIandIV
+D.I, IIIandIV
 
 
 Q. 538: When testing a grade calculation system, a tester determines
@@ -5600,7 +5577,7 @@ not do on the first application?
 
 A. Integrity, Response time
 B. Concurrency test, Scalability
-C. Update & Rollback, Response time
+C. Update and Rollback, Response time
 D. Concurrency test, Integrity
 
 
@@ -5639,7 +5616,7 @@ of a test documentation" done by
 A. Horizontal tracebility
 B. Depth tracebility
 C. Vertical tracebility
-D. Horizontal & Vertical tracebilities
+D. Horizontal and Vertical tracebilities
 
 
 Q. 548: How many test cases are needed to achieve 100 %
@@ -5680,10 +5657,10 @@ project.
 III. It ensures that alpha, beta, and system tests are performed.
 IV. It is executed in parallel with software development activities.
 
-A. I, II&III
-B.II, III&IV
-C.I, II&IV
-D.I, III&IV
+A. I, IIandIII
+B.II, IIIandIV
+C.I, IIandIV
+D.I, IIIandIV
 
 
 Q. 551: An expert based test estimation is also known as
@@ -5749,10 +5726,10 @@ II. System design
 III. Evaluation scheduling
 IV. Error reporting
 
-A.I, II&III
-B.II, III &IV
-C.I, III &IV
-D.I, II & IV
+A.I, IIandIII
+B.II, III andIV
+C.I, III andIV
+D.I, II and IV
 
 
 Q. 558: System test can begin when?
@@ -6059,8 +6036,8 @@ D. Regression testing
 Q. 585: Identify out of the following, which are the attributes of cost
 of faults?
 
-A. These are cheapest to detect during early phases of development &
-becomes more & more expensive to fix in the later phases.
+A. These are cheapest to detect during early phases of development and
+becomes more and more expensive to fix in the later phases.
 B. Although faults are most expensive to find during early development
 phases, they are cheapest to fix then.
 C. Faults are cheapest to find in the early development phases but the
@@ -8788,10 +8765,10 @@ Q. 810: Given the following sample of pseudo code:
 ```
 Read A, B, C;
 If A > B then
-Print "Primary ratio is" & A / B;
+Print "Primary ratio is" and A / B;
 End If
 If A > C then
-Print "Secondary ration is" & A / C;
+Print "Secondary ration is" and A / C;
 End If.
 ```
 
@@ -10601,10 +10578,10 @@ iii. Prioritize testing in an attempt to find critical defects as early
 as possible.
 iv. Determine the cost of the project
 
-A. ii is True; i, iii, iv & v are False
+A. ii is True; i, iii, iv and v are False
 B. i,ii,iii are true and iv is false
-C. ii & iii are True; i, iv are False
-D. ii, iii & iv are True; i is false
+C. ii and iii are True; i, iv are False
+D. ii, iii and iv are True; i is false
 
 
 Q. 964: Hand over of Testware is a part of which Phase
@@ -10619,7 +10596,7 @@ Q. 965: Static analysis tools are typically used by
 
 A. Testers
 B. Developers
-C. Testers & Developers
+C. Testers and Developers
 D. None
 
 
@@ -10740,7 +10717,7 @@ Q. 978: Which one of the following are non-functional testing methods?
 A. System testing
 B. Usability testing
 C. Performance testing
-D. Both B & C
+D. Both B and C
 
 
 Q. 979: Which of the following could be a reason for a failure
@@ -10751,9 +10728,9 @@ Q. 979: Which of the following could be a reason for a failure
 4) Environment Fault
 5) Documentation Fault
 
-A. 2 is a valid reason; 1,3,4 & 5 are not
+A. 2 is a valid reason; 1,3,4 and 5 are not
 B. 1,2,3,4 are valid reasons; 5 is not
-C. 1,2,3 are valid reasons; 4 & 5 are not
+C. 1,2,3 are valid reasons; 4 and 5 are not
 D. All of them are valid reasons for failure
 
 
@@ -10944,10 +10921,10 @@ Following will you perform?
 1) Test the areas most critical to business processes
 2) Test the areas where faults will be maximum
 3) Test the easiest functionalities
-A. 1&2 are true and 3 is false.
-B. 1,2&3 are true.
-C. 1 is true, 2&3 are false.
-D. 1&2 are false, 3 is true
+A. 1and2 are true and 3 is false.
+B. 1,2and3 are true.
+C. 1 is true, 2and3 are false.
+D. 1and2 are false, 3 is true
 
 
 Q. 998: Which of the following is a type of non-functional testing?
