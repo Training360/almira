@@ -1404,7 +1404,7 @@
         "módosítások vagy megváltozott környezet miatt a működő rendszeren végrehajtott teszt."
     },
     {
-      "name": "ATT,F-AT karbantarthatósági teszt",
+      "name": "karbantarthatósági teszt",
       "engNames": ["maintainability testing"],
       "desc":
         "teszteljárás egy alkalmazás karbantarthatóságának meghatározására."

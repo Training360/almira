@@ -488,7 +488,7 @@
             "synonyms": null
         },
         {
-            "huName": "ATT,F-AT karbantarthatósági teszt",
+            "huName": "karbantarthatósági teszt",
             "enName": "Maintainability testing",
             "huDescription": "Teszteljárás egy alkalmazás karbantarthatóságának meghatározására.",
             "enDescription": "Testing to determine the maintainability of a software product.",
