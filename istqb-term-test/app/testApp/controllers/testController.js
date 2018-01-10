@@ -109,24 +109,38 @@ angular.module("testApp").controller("testController", function ($scope, $http) 
         }
     }
 
+    function getRightAnswerIndex(parentId) {
+        var formId = "form" + parentId;
+        for (var i = 0; i < document.getElementById(formId).elements.length; i++) {
+            if (document.getElementById(formId).elements[i].value == $scope.testQuestions[parentId].rightAnswer) {
+                return i;
+            }
+        }
+    }
+
     $scope.checkAnswer = function (e, parentId, id) {
-        disableFormElements();
-        if (
-            $scope.testQuestions[parentId].isCorrect == null &&
-            $scope.testQuestions[parentId].userAnswer != ""
-        ) {
-            if (
-                $scope.testQuestions[parentId].userAnswer ==
-                $scope.testQuestions[parentId].rightAnswer
-            ) {
+        if ($scope.testQuestions[parentId].userAnswer == "") {
+            if ($scope.language == 'hu') {
+                alert('Először jelölj be egy válaszlehetőséget!');
+            }
+            else {
+                alert('Please select an answer!');
+            }
+            return;
+        }
+
+        if ($scope.testQuestions[parentId].isCorrect == null && $scope.testQuestions[parentId].userAnswer != "") {
+            disableFormElements();
+            var radioButtonId = getRightAnswerIndex(parentId);
+            var rightAnswerId = "test" + parentId + radioButtonId + "label";
+            if ($scope.testQuestions[parentId].userAnswer == $scope.testQuestions[parentId].rightAnswer) {
                 $scope.testQuestions[parentId].isCorrect = true;
                 document.getElementById($scope.colorized).className += " success-color";
                 $scope.rightAnswer++;
             } else {
                 $scope.testQuestions[parentId].isCorrect = false;
                 document.getElementById($scope.colorized).className += " error-color";
-                $scope.currectForm.children[1].innerHTML =
-                    $scope.testQuestions[parentId].rightAnswer;
+                document.getElementById(rightAnswerId).className += " success-color";
             }
         }
     };

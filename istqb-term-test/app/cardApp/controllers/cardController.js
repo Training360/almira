@@ -5,6 +5,7 @@ angular.module("cardApp").controller("cardController", function ($scope, $http) 
     $scope.setRandomData = function () {
         var randomIndex = Math.floor(Math.random() * $scope.jsonData.length);
         $scope.data = $scope.jsonData[randomIndex];
+        $scope.type = 'name';
     }
 
     $http.get("./json/questions.json").then(

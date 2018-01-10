@@ -8,12 +8,16 @@
         </p>
     </div>
 
-    <div class="test" ng-repeat="test in testQuestions" ng-show="actualTestIndex==$index && started">
+    <div class="test" ng-repeat="test in testQuestions track by $index" ng-show="actualTestIndex==$index && started">
         <form id="form{{$index}}" name="form{{$index}}">
+
+            <p ng-if="test.type=='name'">{{ translate('definitionQuestion') }}</p>
+            <p ng-if="test.type=='description'">{{ translate('descriptionQuestion') }}</p>
+
             <p class="question">
                 {{ test.question }}
             </p>
-            <p class="answer success-color"></p>
+
             <div class="design-radio" ng-repeat="answer in test.answers">
                 <input type="radio" name="test{{$parent.$index}}" class="design-radio__input" id="test{{$parent.$index}}{{$index}}" value="{{answer}}"
                     ng-click="setUserAnswer(answer, $parent.$index, $index)">
@@ -21,6 +25,7 @@
                     {{ answer }}
                 </label>
             </div>
+
             <div class="btn-group controls">
                 <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">&lt;</button>
                 <input type="submit" class="btn btn-lg" value="{{ translate('check') }}" ng-click="checkAnswer($event, actualTestIndex)">

@@ -28,12 +28,12 @@
         <!-- NAV -->
         <nav class="clearfix">
             <div class="menu embed-half">
-                <button class="btn btn-lg" ng-click="setType('name')">Definíció</button>
-                <button class="btn btn-lg" ng-click="setType('description')">Leírás</button>
+                <button ng-click="setType('name'); type = 'name'" ng-class="type == 'name' ? 'active btn btn-lg' : 'btn btn-lg'">Definíció</button>
+                <button ng-click="setType('description'); type = 'description'" ng-class="type == 'description' ? 'active btn btn-lg' : 'btn btn-lg'">Leírás</button>
             </div>
-            <div class="menu embed-half right">
-                <button class="btn btn-lg" ng-click="setLang('en')">Angol</button>
-                <button class="btn btn-lg" ng-click="setLang('hu')">Magyar</button>
+            <div class=" menu embed-half right">
+                <button ng-click="setLang('en'); lang='en'" ng-class="lang == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
+                <button ng-click="setLang('hu'); lang='hu'" ng-class="lang == 'hu' ? 'active btn btn-lg' : 'btn btn-lg'">Magyar</button>
             </div>
         </nav>
 
@@ -42,29 +42,29 @@
             <div class="full">
                 <div class="error-color">{{ errorMessage }}</div>
                 <div class="card">
-                    <p ng-show="lang == 'hu' && type == 'name'">
+                    <p ng-show="lang=='hu' && type=='name'">
                         {{ data.huName }}
                     </p>
-                    <p ng-show="lang == 'en' && type == 'name'">
+                    <p ng-show="lang=='en' && type=='name'">
                         {{ data.enName }}
                     </p>
-                    <p ng-show="lang == 'hu' && type == 'description'">
+                    <p ng-show="lang=='hu' && type=='description'">
                         {{ data.huDescription }}
                     </p>
-                    <p ng-show="lang == 'en' && type == 'description'">
+                    <p ng-show="lang=='en' && type=='description'">
                         {{ data.enDescription }}
                     </p>
                 </div>
             </div>
             <div class="btn-group controls">
-                <button class="btn btn-lg" ng-click="setRandomData()">Következő</button>
+                <button class="btn btn-lg " ng-click="setRandomData()">Következő</button>
             </div>
         </main>
 
         <!-- FOOTER -->
         <footer>
             <div class="copyright"> 2017 Yellowroad | Powered by
-                <a href="https://training360.com" target="_blank">
+                <a href="https://training360.com " target="_blank">
                     <img src="./img/training360-logo.png">
                 </a>
             </div>
