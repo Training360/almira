@@ -119,6 +119,12 @@ form {
     transition: 0.3s;
     vertical-align: middle;
     white-space: nowrap;
+    text-decoration: none;
+}
+.btn.active{
+    background: #ece819;
+    border: 1px solid transparent;
+    color: #3c3c3c;
 }
 
 .btn,
@@ -214,7 +220,7 @@ select {
     cursor: pointer;
     display: block;
     line-height: 24px;
-    padding: 10px 0 10px 40px;
+    padding: 10px 10px 10px 50px;
     position: relative;
 }
 
@@ -225,7 +231,7 @@ select {
     content: "";
     display: inline-block;
     height: 22px;
-    left: 0;
+    left: 10px;
     position: absolute;
     top: 10px;
     width: 22px;
@@ -236,7 +242,7 @@ select {
     content: "";
     display: inline-block;
     height: 12px;
-    left: 6px;
+    left: 16px;
     position: absolute;
     top: 16px;
     width: 12px;
