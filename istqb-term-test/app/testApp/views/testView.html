@@ -28,7 +28,7 @@
 
             <div class="btn-group controls">
                 <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">&lt;</button>
-                <input type="submit" class="btn btn-lg" value="{{ translate('check') }}" ng-click="checkAnswer($event, actualTestIndex)">
+                <button type="submit" class="btn btn-lg" ng-click="checkAnswer($event, actualTestIndex)">{{ translate('check') }}</button>
                 <button class="btn btn-lg" ng-show="actualTestIndex < 19" ng-click="nextQuestion()">&gt;</button>
                 <button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">{{ translate('end') }}</button>
             </div>
