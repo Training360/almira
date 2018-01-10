@@ -139,7 +139,6 @@ angular.module("testApp").controller("testController", function ($scope, $http) 
             } else {
                 $scope.testQuestions[parentId].isCorrect = false;
                 document.getElementById($scope.testQuestions[parentId].colorized).className += " error-color";
-                console.log($scope.testQuestions[parentId].colorized);
                 document.getElementById(rightAnswerId).className += " success-color";
             }
         }
