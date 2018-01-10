@@ -21,7 +21,7 @@
         <!-- HEADER -->
         <header>
             <div class="header">
-                <h1>{{ translate('titleCard') }}</h1>
+                <h1>ISTQB Fogalom kártyák</h1>
             </div>
         </header>
 
@@ -32,8 +32,8 @@
                 <button ng-click="setType('description'); type = 'description'" ng-class="type == 'description' ? 'active btn btn-lg' : 'btn btn-lg'">Leírás</button>
             </div>
             <div class=" menu embed-half right">
-                <button ng-click="setLang('en'); lang='en'" ng-class="lang == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
-                <button ng-click="setLang('hu'); lang='hu'" ng-class="lang == 'hu' ? 'active btn btn-lg' : 'btn btn-lg'">Magyar</button>
+                <button ng-click="setLanguage('en')" ng-class="language == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
+                <button ng-click="setLanguage('hu')" ng-class="language == 'hu' ? 'active btn btn-lg' : 'btn btn-lg'">Magyar</button>
             </div>
         </nav>
 
@@ -42,16 +42,20 @@
             <div class="full">
                 <div class="error-color">{{ errorMessage }}</div>
                 <div class="card">
-                    <p ng-show="lang=='hu' && type=='name'">
+
+                    <p class="question" ng-show="type=='name'">{{ translate('definitionQuestion') }}</p>
+                    <p class="question" ng-show="type=='description'">{{ translate('descriptionQuestion') }}</p>
+
+                    <p ng-show="language=='hu' && type=='name'">
                         {{ data.huName }}
                     </p>
-                    <p ng-show="lang=='en' && type=='name'">
+                    <p ng-show="language=='en' && type=='name'">
                         {{ data.enName }}
                     </p>
-                    <p ng-show="lang=='hu' && type=='description'">
+                    <p ng-show="language=='hu' && type=='description'">
                         {{ data.huDescription }}
                     </p>
-                    <p ng-show="lang=='en' && type=='description'">
+                    <p ng-show="language=='en' && type=='description'">
                         {{ data.enDescription }}
                     </p>
                 </div>

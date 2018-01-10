@@ -1,7 +1,6 @@
 angular.module("common", [])
     .controller("languageController", function ($scope, $http) {
         $scope.language = "hu";
-
         $scope.languageIsSelected = false;
 
         $http.get("./json/translation.json").then(

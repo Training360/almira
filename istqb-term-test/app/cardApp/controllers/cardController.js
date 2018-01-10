@@ -1,6 +1,5 @@
 angular.module("cardApp").controller("cardController", function ($scope, $http) {
     $scope.type = 'name';
-    $scope.lang = 'hu';
 
     $scope.setRandomData = function () {
         var randomIndex = Math.floor(Math.random() * $scope.jsonData.length);
@@ -20,10 +19,6 @@ angular.module("cardApp").controller("cardController", function ($scope, $http) 
 
     $scope.setType = function (type) {
         $scope.type = type;
-    }
-
-    $scope.setLang = function (lang) {
-        $scope.lang = lang;
     }
 
 });
