@@ -283,7 +283,7 @@
             "synonyms": ["Completion criteria", "Test completion criteria"]
         },
         {
-            "huName": "ATA,F-AT felderítő teszt",
+            "huName": "felderítő teszt",
             "enName": "Exploratory testing",
             "huDescription": "Informális teszttervezési módszer, amely során a tesztelő aktívan felügyeli a tesztek tervezését, a futtatás során szerzett információkat összegyűjti és hasznosítja új és jobb tesztek tervezése érdekében",
             "enDescription": "An informal test design technique where the tester actively controls the design of the tests as those tests are performed and uses information gained while testing to design new and better tests.",
