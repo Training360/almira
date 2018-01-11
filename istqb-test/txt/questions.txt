@@ -3694,7 +3694,7 @@ D. Testing various configurations, beta testing, load testing.
 
 Q. 383: Without testing all possible transitions, which test suite will test all marital statuses?
 
-![](images/ISTQB574.JPG)
+![](images/ISTQB574.jpg)
 
 A. SO-S1-S2-S4-S1-S4
 B. SO-S1-S2-S3-S1-S2
@@ -3743,11 +3743,13 @@ D. No other white box coverage criteria is guaranteed to be fulfilled 100%.
 
 
 Q. 388: Using the diagram below, which test suite will uncover invalid state transitions for employee status reporting software?
-[]
-A. Prospective - Active - Resigned - Active - Terminated - Purged
-B. Prospective - Active - On Leave - Active - Resigned - Retired
-C. Prospective - Active - Retired - Active - On Leave - Purged
-D. Prospective - Active - On Leave - Active - Retired - Active
+
+![](images/ISTQB388.jpg)
+
+A. Prospective - Active - Retired - Active - Terminated
+B. Prospective - Active - Maternity leave - Terminated
+C. Prospective - Active - Retired - Active - Suspended - Active
+D. Prospective - Active - Suspended - Active - Retired - Active
 
 
 Q. 389: Which test approaches or strategies are characterized by the descriptions below?
@@ -3861,7 +3863,7 @@ D. Maintenance testing
 
 Q. 400: Regarding the diagram below, which test suite will check for ALL valid state transitions using the LEAST effort?
 
-![](images/ISTQB574.JPG)
+![](images/ISTQB574.jpg)
 
 A. SO-S1-S2-S4-S1-S4-S1-S2-S3-S1
 B. SO-S1-S2-S4-S1-S2-S3-S1
@@ -3871,13 +3873,13 @@ D. SO-S1-S2-S4-S1-S4-S1-S2-S3
 
 Q. 401: Input and output combinations that will be treated the same way by the system can be tested using which technique?
 
-A. Boundary value
-B. Equivalence partition
-C. Decision table
-D. State transition
+A. Boundary value.
+B. Equivalence partition.
+C. Decision table.
+D. State transition.
 
 
-Q. 402: Branch coverage is:
+Q. 402: Which statement is correct? Branch coverage is:
 
 A. Another name for decision coverage.
 B. Another name for all-edges coverage.
@@ -3893,7 +3895,7 @@ C. Test analysis and design
 D. Test implementation
 
 
-Q. 404: An integration testing where no incremental testing takes place prior to all of the system’s components being combined.
+Q. 404: An integration testing where no incremental testing takes place prior to all of the system’s components being combined is the:
 
 A. System testing.
 B. Component Testing.
@@ -3901,12 +3903,12 @@ C. Incremental Testing.
 D. Big bang testing.
 
 
-Q. 405: How is a test case design technique may be called for a component in which test cases are designed to execute statements?
+Q. 405: How may a test case design technique be called for a component in which test cases are designed to execute statements?
 
-A. State transition Testing
-B. Static Testing
-C. Transition testing
-D. Statement testing
+A. State transition Testing.
+B. Static Testing.
+C. Transition testing.
+D. Statement testing.
 
 
 Q. 406: Who should have technical and also business background?
@@ -3925,8 +3927,7 @@ C. Expected results.
 D. Targets and misses.
 
 
-Q. 408: Features to be tested, approach refinements and feature pass/fail criteria BUT excluding environmental needs should
-be specified in which document?
+Q. 408: Features to be tested, approach refinements and feature pass/fail criteria BUT excluding environmental needs should be specified in which document?
 
 A. Test case specification.
 B. Test plan.
@@ -4092,92 +4093,71 @@ C. Neither dynamic nor static.
 D. Performed by the testing team.
 
 
-Q. 427: Risk analysis talks about
+Q. 427: Risk analysis talks about:
 
-A. The data required for testing, the infrastructure requirements to
-manage the data as well as the methods for preparing test data,
-requirements, converters and sources
+A. The data required for testing, the infrastructure requirements to manage the data as well as the methods for preparing test data, requirements, converters and sources.
+B. Details what types of tests must be conducted, what stages of testing are required and outlines the sequence and timing of tests.
+C. A testing goal. It is a statement of what the tester is expected to accomplish or validate during a testing activity. These guide the development of test cases and procedures.
+D. None of the above.
 
-B. Details what types of tests must be conducted, what stages of testing
-are required and outlines the sequence and timing of tests
+Q. 428: What are the 2 major components to be taken into consideration with risk analysis?
 
-C. A testing goal. It is a statement of what the tester is expected to
-accomplish or validate during a testing activity. These guide the
-development of test cases and procedures
-
-D. None of the above
-
-
-Q. 428: What are the 2 major components taken into consideration with
-risk analysis?
-
-A. The probability the negative event will occur
-B. The potential loss or impact associated with the event
+A. The probability the negative event will occur.
+B. The potential loss or impact associated with the event.
 C. Both A. and B.
 D. Neither A. nor B.
 
+Q. 429: If the application is complex, but NOT data intensive and is to be tested on one configuration and 2 rounds, the easiest method to test is:
 
-Q. 429: If the application is complex, but NOT data intensive and is to
-be tested on one configuration and 2 rounds, the easiest method to test
-is
+A. Manual testing.
+B. Automated testing.
+C. Both.
+D. None.
 
-A. Manual testing
-B. Automation testing
-C. Both
-D. None
-
-
-Q. 430: Which of the following are typical tester tasks?
+Q. 430: Which of the followings are typical tester tasks?
 
 A. Decide what should be automated, to what degree, and how.
-B. Set up configuration management of testware; review tests developed
-by others.
+B. Set up configuration management of testware; review tests developed by others.
 C. Prepare and acquire test data; review tests developed by others.
-D. Initiate the specification, preparation, implementation and execution
-of tests and monitor and control the execution.
+D. Initiate the specification, preparation, implementation and execution of tests and monitor and control the execution.
 
-Q. 431: Structural Testing
+Q. 431: Structural Testing is:
 
-A. Same as black box testing
-B. Same as white box testing
-C. Same as functional testing
+A. Same as black box testing.
+B. Same as white box testing.
+C. Same as functional testing.
 D. None of the above.
 
+Q. 432: Which test approach uses all combinations of input values and preconditions?
 
-Q. 432: Which test approach uses all combinations of input
-values and preconditions?
+A. Component testing.
+B. Error guessing.
+C. Keyword driven testing.
+D. Exhaustive testing.
 
-A. Component testing
-B. Error guessing
-C. Keyword driven testing
-D. Exhaustive testing
+Q. 433: Which technique describes process flows through a system based on its likely usage?
 
-Q. 433: Which technique describes process flows through a system
-based on its likely usage?
+A. Data driven testing.
+B. State transition testing.
+C. Decision table testing.
+D. Use case testing.
 
-A. Data driven testing
-B. State transition testing
-C. Decision table testing
-D. Use case testing
+Q. 434: Regression testing mainly helps in:
 
-
-Q. 434: Regression testing mainly helps in
-
-A. Re-testing fixed defects
-B. Checking for side-effects of fixes
-C. Checking the core gaps
-D. Ensuring high level sanity
+A. Re-testing fixed defects.
+B. Checking for side-effects of fixes.
+C. Checking the core gaps.
+D. Ensuring high level sanity.
 
 
-Q. 435: Review is one of the methods of VandV. The other methods are
+Q. 435: Review is one of the methods of Verification and Validation. The other methods are:
 
 A. Inspection
 B. Walkthrough
 C. Testing
-D. All of the above
+D. All of the above.
 
-
-Q. 436: Which review is inexpensive
+Q. 436: Which review is inexpensive?
 
 A. Informal Review
 B. Walkthrough
@@ -4185,85 +4165,69 @@ C. Technical review
 D. Inspection
 
 
-Q. 437: Following are some of the testing risks
+Q. 437: Below some of the testing risks are listed. Which is correct?
 
-A. Budget, Test environment
-B. Budget, Number of qualified test resources
-C. Budget, Number of qualified test resources, Test environment
-D. None of the above
+A. Budget, test environment.
+B. Budget, number of qualified test resources.
+C. Budget, number of qualified test resources, test environment.
+D. None of the above.
 
-
-Q. 438: Random Testing
+Q. 438: The term random testing means:
 
 A. Program is tested randomly sampling the input.
-B. A black-box testing technique
+B. A black-box testing technique.
 C. Both A. and B.
 D. None of the above.
 
+Q. 439: Which of the following is TRUE when introducing a new tool into a test environment?
 
-Q. 439: Which of the following is TRUE when introducing a new tool into
-a test environment?
+A. Changes to existing test processes should not be needed with the new tool.
+B. A site license will be needed to reduce the cost per seat of the tool.
+C. The tool should be rolled out as quickly as possible to maximize Return on Investment (ROI).
+D. Introducing the tool to the organization should start with a pilot project.
 
-A. Changes to existing test processes should not be needed with the new
-tool.
-B. A site license will be needed to reduce the cost per seat of the
-tool.
-C. The tool should be rolled out as quickly as possible to maximize ROI.
-D. Introducing the tool to the organization should start with a pilot
-project.
+Q. 440: The terms reliability, usablility, efficiency are:
 
-
-Q. 440: Reliability, usablility, efficiency are
-
-A. Functional characteristics
-B. Non functional characteristics
+A. Functional characteristics.
+B. Non functional characteristics.
 C. Both A. and B.
-D. None of the above
+D. None of the above.
 
+Q. 441: The test plan is:
 
-Q. 441: Test Plan
+A. Road map for testing.
+B. Tells about the actual results and expected results.
+C. Both A and B.
+D. None of the above.
 
-A. Road map for testing
-B. Tells about the actual results and expected results
-C. Both a and b
-D. None of the above
+Q. 442: User Acceptance Testing is:
 
+A. Same as Alpha Testing.
+B. Same as Beta Testing.
+C. Combination of Alpha and Beta Testing.
+D. None of the above.
 
-Q. 442: User Acceptance Testing
+Q. 443: Path coverage includes:
 
-size=2 face=Arial>
-A. Same as Alpha Testing
-B. Same as Beta Testing
-C. Combination of Alpha and Beta Testing
-D. None of the above
+A. Statement coverage.
+B. Condition coverage.
+C. Decision coverage.
+D. None of these.
 
+Q. 444: Which of the following demonstrates independence in testing?
 
-Q. 443: Path coverage includes
+J. Independent testers are external to the organization.
+K. Independent testers are part of the development team.
+L. Independent testers are from the user community.
+M. Programmers who wrote the code serve as independent testers.
+N. Customers who wrote the requirements serve as independent testers.
 
-A. Statement coverage
-B. Condition coverage
-C. Decision coverage
-D. None of these
-
-
-Q. 444: Which of the following demonstrates independence in
-testing?
-
-J. Independent testers are external to the organization
-K. Independent testers are part of the development team
-L. Independent testers are from the user community
-M. Programmers who wrote the code serve as independent testers
-N. Customers who wrote the requirements serve as independent
-testers
 A. J. L and N
 B. J. K, L and N
 C. K. M and N
 D. J, L, M and N
 
-
-Q. 445: Recovery testing is a system test that forces the software to
-fail and verifies that data recovery is properly performed. The
-following should be checked for correctness
+Q. 445: Recovery testing is a system test that forces the software to fail and verifies that data recovery is properly performed. The following should be checked for correctness:
 
 1. Re-initialization
 2. Restart
@@ -4275,7 +4239,6 @@ B. 1, 2 and 3
 C. 1, 2, 3 and 4
 D. 2 and 4
 
-
 Q. 446: Data flow analysis studies:
 
 A. Possible communications bottlenecks in a program.
@@ -4283,40 +4246,34 @@ B. The rate of change of data values as a program executes.
 C. The use of data on paths through the code.
 D. The intrinsic complexity of the code.
 
-
 Q. 447: Which of the following is NOT a white box technique?
 
-A. Statement testing
-B. Path testing
-C. Data flow testing
-D. State transition testing
+A. Statement testing.
+B. Path testing.
+C. Data flow testing.
+D. State transition testing.
 
 
-Q. 448: Which one of the following describes the major benefit of
-verification early in the life cycle?
+Q. 448: Which one of the following statements describes the MAJOR benefit of verification early in the life cycle?
 
 A. It allows the identification of changes in user requirements.
 B. It facilitates timely set up of the test environment.
 C. It reduces defect multiplication.
 D. It allows testers to become involved early in the project.
 
+Q. 449: Which test is usually run many times and generally evolve slowly?
 
-Q. 449: Which test is usually run many times and generally
-evolve slowly?
-
-A. Performance testing
-B. Stress testing
-C. Reliability testing
-D. Regression testing
+A. Performance testing.
+B. Stress testing.
+C. Reliability testing.
+D. Regression testing.
 
 
 Q. 450: Alpha testing is:
 
-A. Post-release testing by end user representatives at the developer’s
-site.
+A. Post-release testing by end user representatives at the developer’s site.
 B. The first testing that is performed.
-C. Pre-release testing by end user representatives at the developer’s
-site.
+C. Pre-release testing by end user representatives at the developer’s site.
 D. Pre-release testing by end user representatives at their sites.
 
 
@@ -4327,49 +4284,43 @@ B. It is easier to manage testing in stages.
 C. We can run different tests in different environments.
 D. The more stages we have, the better the testing.
 
+Q. 452: Which of the following would NOT normally form part of a test plan?
 
-Q. 452: Which of the following would NOT normally form part of a test
-plan?
-
-A. Features to be tested
-B. Incident reports
-C. Risks
-D. Schedule
+A. Features to be tested.
+B. Incident reports.
+C. Risks.
+D. Schedule.
 
 
-Q. 453: What should be considered when introducing a tool into
-an organization?
+Q. 453: What should be considered when introducing a tool into an organization?
 
-A. Assessing the organizational maturity
-B. Counting the number of systems to be tested
-C. Calculating the ratio between programmers and testers
-D. Reviewing the exit criteria of previous projects
+A. Assessing the organizational maturity.
+B. Counting the number of systems to be tested.
+C. Calculating the ratio between programmers and testers.
+D. Reviewing the exit criteria of previous projects.
 
 
-Q. 454: Which one of the following statements about system testing is
-NOT true?
+Q. 454: Which one of the following statements about system testing is NOT true?
 
 A. System tests are often performed by independent teams.
 B. Functional testing is used more than structural testing.
 C. Faults found during system tests can be very expensive to fix.
 D. End-users should be involved in system tests.
 
-
 Q. 455: Which of the following is not described in a unit test standard?
 
-A. Syntax testing
-B. Equivalence partitioning
-C. Stress testing
-D. Modified condition/decision coverage
+A. Syntax testing.
+B. Equivalence partitioning.
+C. Stress testing.
+D. Modified condition/decision coverage.
 
 
-Q. 456: Which of the following is likely to benefit most from the use of
-test tools providing test capture and replay facilities?
+Q. 456: Which of the following is likely to benefit most from the use of test tools providing test capture and replay facilities?
 
-A. Regression testing
-B. Integration testing
-C. System testing
-D. User acceptance testing
+A. Regression testing.
+B. Integration testing.
+C. System testing.
+D. User acceptance testing.
 
 
 Q. 457: Which of the following is false?
@@ -4380,55 +4331,37 @@ C. Incidents can be analysed to assist in test process improvement.
 D. An incident can be raised against documentation.
 
 
-Q. 458: Which document specifies the execution order of test
-cases?
+Q. 458: Which document specifies the execution order of test cases?
 
-A. Test design specification
-B. Test item
-C. Test procedure specification
-D. Test plan
-
+A. Test design specification.
+B. Test item.
+C. Test procedure specification.
+D. Test plan.
 
 Q. 459: Which of the following statements is NOT correct?
 
-A. A minimal test set that achieves 100% LCSAJ coverage will also
-achieve 100% branch coverage.
-B. A minimal test set that achieves 100% path coverage will also achieve
-100% statement coverage.
-C. A minimal test set that achieves 100% path coverage will generally
-detect more faults than one that achieves 100% statement coverage.
-D. A minimal test set that achieves 100% statement coverage will
-generally detect more faults than one that achieves 100% branch
-coverage.
+A. A minimal test set that achieves 100% LCSAJ coverage will also achieve 100% branch coverage.
+B. A minimal test set that achieves 100% path coverage will also achieve 100% statement coverage.
+C. A minimal test set that achieves 100% path coverage will generally detect more faults than one that achieves 100% statement coverage.
+D. A minimal test set that achieves 100% statement coverage will generally detect more faults than one that achieves 100% branch coverage.
 
 
 Q. 460: How are integration testing and use case testing
 similar and dissimilar?
 
-A. Both checks for interactions: integration for components, use
-case for actions
-B. Both are black-box techniques: integration is low-level, use case
-is high-level
-C. Both are static testing: developers perform integration, users
-execute use case tests
-C. Both are VandV techniques: integration is for validation, use case
-is for verification
+A. Both checks for interactions: integration for components, use case for actions.
+B. Both are black-box techniques: integration is low-level, use case is high-level.
+C. Both are static testing: developers perform integration, users execute use case tests.
+C. Both are Verification and Validation techniques: integration is for validation, use case is for verification.
 
-Q. 461: What is the main difference between a walkthrough and an
-inspection?
+Q. 461: What is the main difference between a walkthrough and an inspection?
 
-A. An inspection is lead by the author, whilst a walkthrough is lead by
-a trained moderator.
-B. An inspection has a trained leader, whilst a walkthrough has no
-leader.
-C. Authors are not present during inspections, whilst they are during
-walkthroughs.
-D. A walkthrough is lead by the author, whilst an inspection is lead by
-a trained moderator.
+A. An inspection is lead by the author, whilst a walkthrough is lead by a trained moderator.
+B. An inspection has a trained leader, whilst a walkthrough has no leader.
+C. Authors are not present during inspections, whilst they are during walkthroughs.
+D. A walkthrough is lead by the author, whilst an inspection is lead by a trained moderator.
 
-
-Q. 462: Which of these activities provides the biggest potential cost
-saving from the use of CAST?
+Q. 462: Which of these activities provides the biggest potential cost saving from the use of CAST?
 
 A. Test management
 B. Test design
@@ -4436,29 +4369,22 @@ C. Test execution
 D. Test planning
 
 
-Q. 463: Which of the following is NOT true of incidents?
+Q. 463: Which of the following is NOT true about incidents?
 
-A. Incident resolution is the responsibility of the author of the
-software under test.
+A. Incident resolution is the responsibility of the author of the software under test.
 B. Incidents may be raised against user requirements.
 C. Incidents require investigation and/or correction.
 D. Incidents are raised when expected and actual results differ.
 
-
 Q. 464: Which of the following characterizes the cost of faults?
 
-A. They are cheapest to find in the early development phases and the
-most expensive to fix in the latest test phases.
-B. They are easiest to find during system testing but the most expensive
-to fix then.
-C. Faults are cheapest to find in the early development phases but the
-most expensive to fix then.
-D. Although faults are most expensive to find during early development
-phases, they are cheapest to fix then.
+A. They are cheapest to find in the early development phases and the most expensive to fix in the latest test phases.
+B. They are easiest to find during system testing but the most expensive to fix then.
+C. Faults are cheapest to find in the early development phases but the most expensive to fix then.
+D. Although faults are most expensive to find during early development phases, they are cheapest to fix then.
 
 
-Q. 465: Which one of the following statements, about capture-replay
-tools, is NOT correct?
+Q. 465: Which one of the following statements regarding capture-replay tools is NOT correct?
 
 A. They are used to support multi-user testing.
 B. They are used to capture and animate user requirements.
@@ -4484,11 +4410,8 @@ D. Is not repeatable and should not be used.
 
 Q. 468: In a system designed to work out the tax to be paid:
 
-An employee has $4000 of salary tax free. The next $1500 is taxed at 10%
-The next $28000 is taxed at 22%
-Any further amount is taxed at 40%
-Which of these groups of numbers would fall into the same equivalence
-class?
+An employee has $4000 of salary tax free. The next $1500 is taxed at 10%. The next $28000 is taxed at 22%. Any further amount is taxed at 40%.
+Which of these groups of numbers would fall into the same equivalence class?
 
 A. $4800; $14000; $28000
 B. $5200; $5500; $28000
@@ -4498,21 +4421,19 @@ D. $5800; $28000; $32000
 
 Q. 469: The oracle assumption:
 
-A. Is that there is some existing system against which test output may
-be checked.
-B. Is that the tester can routinely identify the correct outcome of a
-test.
-C. Is that the tester knows everything about the software under test.
-D. Is that the tests are reviewed by experienced testers.
+A. Is that there is some existing system against which test output may be checked?
+B. Is that the tester can routinely identify the correct outcome of a test?
+C. Is that the tester knows everything about the software under test?
+D. Is that the tests are reviewed by experienced testers?
 
 
-Q. 470: In prioritising what to test, the most important objective is
-to:
+Q. 470: In prioritising what to test, the most important objective is to:
 
 A. Find as many faults as possible.
 B. Test high risk areas.
 C. Obtain good test coverage.
 D. Test whatever is easiest to test.
+
 Q. 471: The most important thing about early test design is that it:
 
 A. Makes test preparation easier.
@@ -4521,16 +4442,12 @@ C. Can prevent fault multiplication.
 D. Will find all faults.
 
 
-Q. 472: Which of the following are potential drawbacks of
-independence in testing?
+Q. 472: Which of the following are potential drawbacks of independence in testing?
 
-01. Independent testers may feel they are not part of the
-development team
-02. Developers may lose a sense of personal responsibility for
-quality
-03. Project managers will not have as much control on the project
-04. Customers may end up requesting features that are
-technically impossible
+01. Independent testers may feel they are not part of the development team.
+02. Developers may lose a sense of personal responsibility for quality.
+03. Project managers will not have as much control on the project.
+04. Customers may end up requesting features that are technically impossible.
 
 A. 01 and 02
 B. 01, 02 and 03
@@ -4549,17 +4466,14 @@ D. Tests interfaces to other systems.
 Q. 474: Which of the following requirements is testable?
 
 A. The system shall be user friendly.
-B. The safety-critical parts of the system s
-all contain 0 faults.
-C. The response time shall be less than one second for the specified
-design load.
+B. The safety-critical parts of the systems all contain zero faults.
+C. The response time shall be less than one second for the specified design load.
 D. The system shall be built to be portable.
 
 
 Q. 475: An important benefit of code inspections is that they:
 
-A. Enable the code to be tested before the execution environment is
-ready.
+A. Enable the code to be tested before the execution environment is ready.
 B. Can be performed by the person who wrote the code.
 C. Can be performed by inexperienced staff.
 D. Are cheap to perform.
@@ -4572,27 +4486,23 @@ B. Test planning.
 C. Test configuration.
 D. Test specification.
 
-
 Q. 477: A failure is:
 
-A. Found in the software; the result of an error.
-B. Departure from specified behaviour.
+A. Found in the software as the result of an error.
+B. A deviation from the specified behaviour.
 C. An incorrect step, process or data definition in a computer program.
 D. A human action that produces an incorrect result.
 
 
-Q. 478: How would you estimate the amount of re-testing likely to be
-required?
+Q. 478: How would you estimate the amount of re-testing likely to be required?
 
-A. Metrics from previous similar projects
-B. Discussions with the development team
-C. Time allocated for regression testing
-D. A. and B.
+A. Using metrics from similar previous projects.
+B. Holding discussions with the development team.
+C. Based on time allocated for regression testing.
+D. A. and B. both.
 
 
-Q. 479: Given the following sets of test management terms (v-z), and
-activity descriptions (1-5), which one of the following best pairs the
-two sets?
+Q. 479: Given the following sets of test management terms (v-z), and activity descriptions (1-5), which one is the BEST pairing of the two sets?
 
 v - Test control
 w - Test monitoring
@@ -4600,26 +4510,20 @@ x - Test estimation
 y - Incident management
 z - Configuration control
 
-1 - Calculation of required test resources
-2 - Maintenance of record of test results
-3 - Re-allocation of resources when tests overrun
-4 - Report on deviation from test plan
-5 - Tracking of anomalous test results
+1 - Calculation of required test resources.
+2 - Maintenance of record of test results.
+3 - Re-allocation of resources when tests overrun.
+4 - Report on deviation from test plan.
+5 - Tracking of anomalous test results.
 
-A. v-3,w-2,x-1,y-5,z-4
-B. v-2,w-5,x-1,y-4,z-3
-C. v-3,w-4,x-1,y-5,z-2
-D. v-2,w-1,x-4,y-3,z-5
+A. v-3, w-2, x-1, y-5, z-4
+B. v-2, w-5, x-1, y-4, z-3
+C. v-3, w-4, x-1, y-5, z-2
+D. v-2, w-1, x-4, y-3, z-5
 
 Q. 480: In a system designed to work out the tax to be paid:
 
-An employee has $4000 of salary tax free. The next $1500 is taxed at 10%
-The next $28000 is taxed at 22%
-
-Any further amount is taxed at 40%
-
-To the nearest whole pound, which of these is a valid Boundary Value
-Analysis test case?
+An employee has $4000 of salary tax free. The next $1500 is taxed at 10%. The next $28000 is taxed at 22%. Any further amount is taxed at 40%. To the nearest integer value, which of these is a valid boundary value analysis test case?
 
 A. $1500
 B. $32001
@@ -4627,45 +4531,33 @@ C. $33501
 D. $28000
 
 
-Q. 481: Which of the following is NOT true of test coverage criteria?
+Q. 481: Which of the following is NOT true about test coverage criteria?
 
-A. Test coverage criteria can be measured in terms of items exercised by
-a test suite.
-B. A measure of test coverage criteria is the percentage of user
-requirements covered.
-C. A measure of test coverage criteria is the percentage of faults
-found.
-D. Test coverage criteria are often used when specifying test completion
-criteria.
+A. Test coverage criteria can be measured in terms of items exercised by a test suite.
+B. A measure of test coverage criteria is the percentage of user requirements covered.
+C. A measure of test coverage criteria is the percentage of faults found.
+D. Test coverage criteria are often used when specifying test completion criteria.
 
-
-
-Q. 482: Analyze the following highly simplified procedure:
+Q. 482: Analyze the following highly simplified business procedure. What is the minimum number of tests needed to ensure that all the questions have been asked, all combinations have occurred and all replies given?
 
 Ask: "What type of ticket do you require, single or return?"
 IF the customer wants ‘return’
 Ask: "What rate, Standard or Cheap-day?"
 IF the customer replies ‘Cheap-day’
-Say: "That will be �11:20"
+Say: "That will be $11.20"
 ELSE
-Say: "That will be �19:50"
+Say: "That will be $19.50"
 ENDIF
 ELSE
-Say: "That will be �9:75"
+Say: "That will be $9:75"
 ENDIF
-
-Now decide the minimum number of tests that are needed to ensure that
-all the questions have been asked, all combinations have occurred and
-all replies given.
 
 A. 3
 B. 4
 C. 5
 D. 6
 
-
-Q. 483: Which of the following should NOT normally be an objective for a
-test?
+Q. 483: Which of the following should NOT normally be an objective for a test?
 
 A. To find faults in the software.
 B. To assess whether the software is ready for release.
@@ -4681,8 +4573,7 @@ C. No more faults are found.
 D. The users won’t find any serious faults.
 
 
-Q. 485: Which of the following is the best source of Expected Outcomes
-for User Acceptance Test scripts?
+Q. 485: Which of the following is the BEST source of Expected Outcomes for User Acceptance Test scripts?
 
 A. Actual results
 B. Program specification
@@ -4690,16 +4581,13 @@ C. User requirements
 D. System specification
 
 
-Q. 486: Which of the following are disadvantages of capturing tests by
-recording the actions of a manual tester?
+Q. 486: Which of the following are disadvantages of capturing tests by recording the actions of a manual tester?
 
-i The script may be unstable when unexpected events occur.
-ii Data for a number of similar tests is automatically stored separately
-from the script.
-iii Expected results must be added to the captured script.
-iv The captured script documents the exact inputs entered by the tester.
-v When replaying a captured test, the tester may need to debug the
-script if it doesn’t play correctly.
+i) The script may be unstable when unexpected events occur.
+ii) Data for a number of similar tests is automatically stored separately from the script.
+iii) Expected results must be added to the captured script.
+iv) The captured script documents the exact inputs entered by the tester.
+v) When replaying a captured test, the tester may need to debug the script if it doesn’t play correctly.
 
 A. i, iii, iv, v.
 B. ii, iv and v.
@@ -4707,95 +4595,65 @@ C. i, ii and iv.
 D. i and v.
 
 
-Q. 487: Which of the following is a characteristic of good testing in
-any life cycle model?
+Q. 487: Which of the following is a characteristic of good testing in any life cycle model?
 
 A. All document reviews involve the development team.
-B. Some, but not all, development activities have corresponding test
-activities.
+B. Some, but not all, development activities have corresponding test activities.
 C. Each test level has test objectives specific to that level.
-D. Analysis and design of tests begins as soon as development is
-complete.
+D. Analysis and design of tests begins as soon as development is complete.
 
 
-Q. 488: The process of designing test cases consists of the following
-activities:
+Q. 488: The process of designing test cases consists of the following activities.
+According to the process of identifying and designing tests, what is the correct order of these activities?
 
-i. Elaborate and describe test cases in detail by using test design
-techniques.
+i. Elaborate and describe test cases in detail by using test design techniques.
 ii. Specify the order of test case execution.
-iii. Analyse requirements and specifications to determine test
-conditions.
+iii. Analyse requirements and specifications to determine test conditions.
 iv. Specify expected results.
-
-According to the process of identifying and designing tests, what is the
-correct order of these activities?
 
 A. iii, i, iv, ii.
 B. iii, iv, i, ii.
 C. iii, ii, i, iv.
 D. ii, iii, i, iv.
 
-Q. 489: Which is the MOST important advantage of independence in
-testing?
+Q. 489: Which is the MOST important advantage of independence in testing?
 
-A. An independent tester may find defects more quickly than the person
-who wrote the software.
-B. An independent tester may be more focused on showing how the software
-works than the person who wrote the software.
-C. An independent tester may be more effective and efficient because
-they are less familiar with the software than the person who wrote it.
-D. An independent tester may be more effective at finding defects missed
-by the person who wrote the software.
+A. An independent tester may find defects more quickly than the person who wrote the software.
+B. An independent tester may be more focused on showing how the software works than the person who wrote the software.
+C. An independent tester may be more effective and efficient because they are less familiar with the software than the person who wrote it.
+D. An independent tester may be more effective at finding defects missed by the person who wrote the software.
 
 
-Q. 490: Given the following specification, which of the following values
-for age are in the SAME equivalence partition?
-
-If you are less than 18, you are too young to be insured. Between 18 and
-30 inclusive, you will receive a 20% discount. Anyone over 30 is not
-eligible for a discount.
+Q. 490: Given the following specification, which of the following values for age are in the SAME equivalence partition?
+If you are less than 18, you are too young to be insured. Between 18 and 30 inclusive, you will receive a 20% discount. Anyone over 30 is not eligible for a discount.
 
 A. 17, 18, 19.
 B. 29, 30, 31.
 C. 18, 29, 30.
 D. 17, 29, 31.
 
-
 Q. 491: Consider the following statements:
 
-i.100% statement coverage guarantees 100% branch coverage.
-ii.100% branch coverage guarantees 100% statement coverage.
-iii.100% branch coverage guarantees 100% decision coverage.
-iv.100% decision coverage guarantees 100% branch coverage.
-v.100% statement coverage guarantees 100% decision coverage.
+i) 100% statement coverage guarantees 100% branch coverage.
+ii) 100% branch coverage guarantees 100% statement coverage.
+iii) 100% branch coverage guarantees 100% decision coverage.
+iv) 100% decision coverage guarantees 100% branch coverage.
+v) 100% statement coverage guarantees 100% decision coverage.
 
-A. ii is True; i, iii, iv and v are
+A. ii is true; i, iii, iv and v are false.
+B. i and v are true; ii, iii and iv are false.
+C. ii and iii are true; i, iv and v are false.
+D. ii, iii and iv are true; i and v are false.
 
-False
-B. i and v are True; ii, iii and iv are False
-C. ii and iii are True; i, iv and v are False
-D. ii, iii and iv are True; i and v are False
+Q. 492: What is the difference between a project risk and a product risk?
 
-Q. 492: What is the difference between a project risk and a product
-risk?
-
-A. Project risks are potential failure areas in the software or system;
-product risks are risks that surround the project’s capability to
-deliver its objectives.
-B. Project risks are the risks that surround the project’s capability to
-deliver its objectives; product risks are potential failure areas in the
-software or system.
-C. Project risks are typically related to supplier issues,
-organizational factors and technical issues; product risks are typically
-related to skill and staff shortages.
-D. Project risks are risks that delivered software will not work;
-product risks are typically related to supplier issues, organizational
-factors and technical issues.
+A. Project risks are potential failure areas in the software or system; product risks are risks that surround the project’s capability to deliver its objectives.
+B. Project risks are the risks that surround the project’s capability to deliver its objectives; product risks are potential failure areas in the software or system.
+C. Project risks are typically related to supplier issues, organizational factors and technical issues; product risks are typically related to skill and staff shortages.
+D. Project risks are risks that delivered software will not work; product risks are typically related to supplier issues, organizational factors and technical issues.
 
 
-Q. 493: During which fundamental test process activity do we determine
-if MORE tests are needed?
+Q. 493: During which fundamental test process activity do we determine if MORE tests are needed?
 
 A Test implementation and execution.
 B Evaluating test exit criteria.
@@ -4811,8 +4669,7 @@ C. To produce a test schedule.
 D. To produce a work breakdown structure.
 
 
-Q. 495: Which of the following defines the sequence in which tests
-should be executed?
+Q. 495: Which of the following defines the sequence in which tests should be executed?
 
 A. Test plan.
 B. Test procedure specification.
@@ -4838,22 +4695,17 @@ D. To determine how the existing system may be affected by changes.
 
 Q. 498: In a system designed to work out the tax to be paid:
 
-An employee has �4000 of salary tax free.
-The next �1500 is taxed at 10%.
-The next �28000 after that is taxed at 22%.
-Any further amount is taxed at 40%.
+An employee has $4000 of salary tax free. The next $1500 is taxed at 10%. The next $28000 after that is taxed at 22%. Any further amount is taxed at 40%.
 
-To the nearest whole pound, which of these is a valid Boundary Value
-Analysis test case?
+To the nearest whole numerical value, which of these is a valid Boundary Value Analysis test case?
 
-A. $28000.
-B. $33501.
-C. $32001.
-D. $1500.
+A. $28000
+B. $33501
+C. $32001
+D. $1500
 
 
-Q. 499: Which of the following tools is most likely to contain a
-comparator?
+Q. 499: Which of the following tools is most likely to contain a comparator?
 
 A. Dynamic Analysis tool.
 B. Test Execution tool.
@@ -4861,30 +4713,22 @@ C. Static Analysis tool.
 D. Security tool.
 
 
-Q. 500: When software reliability measures are used to determine when to
-stop testing, the best types of test cases to use are those that
+Q. 500: When software reliability measures are used to determine when to stop testing, the best types of test cases to use are those that:
 
-A. Exercise system functions in proportion to the frequency they will be
-used in the released product
-B. Push the system beyond its designed operation limits and are likely
-to make the system fail
-C. Exercise unusual and obscure scenarios that may not have been
-considered in design
-D. Exercise the most complicated and the most error-prone portions of
-the system
+A. Exercise system functions in proportion to the frequency they will be used in the released product.
+B. Push the system beyond its designed operation limits and are likely to make the system fail.
+C. Exercise unusual and obscure scenarios that may not have been considered in design.
+D. Exercise the most complicated and the most error-prone portions of the system.
 
 Q. 501: Which of the following statements is MOST OFTEN true?
 
 A. Source-code inspections are often used in component testing.
-B. Component testing searches for defects in programs that are
-separately testable.
+B. Component testing searches for defects in programs that are separately testable.
 C. Component testing is an important part of user acceptance testing.
-D. Component testing aims to expose problems in the interactions between
-software and hardware components.
+D. Component testing aims to expose problems in the interactions between software and hardware components.
 
 
-Q. 502: Which of the following is an objective of a pilot project for
-the introduction of a testing tool?
+Q. 502: Which of the following is an objective of a pilot project for the introduction of a testing tool?
 
 A. Evaluate testers’ competence to use the tool.
 B. Complete the testing of a key project.
@@ -4892,9 +4736,7 @@ C. Assess whether the benefits will be achieved at reasonable cost.
 D. Discover what the requirements for the tool are.
 
 
-Q. 503: What is an informal test design technique where a
-tester uses information gained while testing to design new and
-better tests?
+Q. 503: What is an informal test design technique where a tester uses information gained while testing to design new and better tests?
 
 A. Error guessing
 B. Exploratory testing
@@ -4902,8 +4744,7 @@ C. Use case testing
 D. Decision table testing
 
 
-Q. 504: Which of the following is determined by the level of product
-risk identified?
+Q. 504: Which of the following is determined by the level of product risk identified?
 
 A. Extent of testing.
 B. Scope for the use of test automation.
@@ -4913,19 +4754,18 @@ D. Requirement for regression testing.
 
 Q. 505: When should testing be stopped?
 
-A. When all the planned tests have been run
-B. When time has run out
-C. When all faults have been fixed correctly
-D. It depends on the risks for the system being tested
+A. When all the planned tests have been run.
+B. When time has run out.
+C. When all faults have been fixed correctly.
+D. It depends on the risks for the system being tested.
 
 
-Q. 506: Which of following statements is true? Select ALL correct
-options Regression testing should be performed:
+Q. 506: Which of following statements is true? Select the correct options regarding regression testing timing.
 
-i Once a month
-ii When a defect has been fixed
-iii When the test environment has changed
-iv When the software has changed
+i Once a month.
+ii When a defect has been fixed.
+iii When the test environment has changed.
+iv When the software has changed.
 
 A. ii and iv.
 B. ii, iii and iv.
@@ -4933,16 +4773,12 @@ C. i, ii and iii.
 D. i and iii.
 
 
-Q. 507: The following statements are used to describe the basis for
-creating test cases using either black or white box techniques:
+Q. 507: The following statements are used to describe the basis for creating test cases using either black or white box techniques. Which combination of the statements describes the basis for black box techniques?
 
 i Information about how the software is constructed.
 ii Models of the system, software or components.
 iii Analysis of the test basis documentation.
 iv Analysis of the internal structure of the components.
-
-Which combination of the statements describes the basis for black box
-techniques?
 
 A. ii and iii.
 B. ii and iv.
@@ -4950,26 +4786,21 @@ C. i and iv.
 D. i and iii.
 
 
-Q. 508: Which of the following requirements would be tested by a
-functional system test?
+Q. 508: Which of the following requirements would be tested by a functional system test?
 
-A. The system must be able to perform its functions for an average of 23
-hours 50 mins per day.
+A. The system must be able to perform its functions for an average of 23 hours 50 mins per day.
 B. The system must perform adequately for up to 30 users.
 C. The system must allow a user to amend the address of a customer.
 D. The system must allow 12,000 new customers per year.
 
 
-Q. 509: Based on the error guessing test design technique,
-which of the following will an experienced tester MOST LIKELY
-test in calendar software?
+Q. 509: Based on the error guessing test design technique, which of the following will an experienced tester MOST LIKELY test in calendar software?
 
-i. First two letters of the month, e.g., MA can represent March
-or May
-ii. First letter of the day, e.g., T can mean Tuesday or Thursday
-iii. Leap year
-iv. Number of days in a month
-v. Three-digit days and months
+i. First two letters of the month, e.g., MA can represent March or May.
+ii. First letter of the day, e.g., T can mean Tuesday or Thursday.
+iii. Leap year.
+iv. Number of days in a month.
+v. Three-digit days and months.
 
 A. i, ii, iv and v
 B. iii and iv
@@ -4977,13 +4808,12 @@ C. i, ii, iii and iv
 D. i, ii and v
 
 
-Q. 510: Which of the following are valid objectives for incident
-reports?i. Provide developers and other parties with feedback about the
-problem to enable identification, isolation and correction as necessary.
+Q. 510: Which of the following are valid objectives for incident reports?
+
+i. Provide developers and other parties with feedback about the problem to enable identification, isolation and correction as necessary.
 ii. Provide ideas for test process improvement.
 iii. Provide a vehicle for assessing tester competence.
-iv. Provide testers with a means of tracking the quality of the system
-under test.
+iv. Provide testers with a means of tracking the quality of the system under test.
 
 A. i, ii, iii.
 B. i, ii, iv.
@@ -4993,10 +4823,10 @@ D. ii, iii, iv.
 
 Q. 511: What is the objective of debugging?
 
-i To localise a defect.
-ii To fix a defect.
-iii To show value.
-iv To increase the range of testing.
+i. To localise a defect.
+ii. To fix a defect.
+iii. To show value.
+iv. To increase the range of testing.
 
 A. i, iii.
 B. ii, iii, iv.
@@ -5004,13 +4834,12 @@ C. ii, iv.
 D. i, ii.
 
 
-Q. 512: Consider the following techniques. Which are static and which
-are dynamic techniques?
+Q. 512: Consider the following techniques. Which are static and which are dynamic techniques?
 
 i. Equivalence Partitioning.
 ii. Use Case Testing.
-iii.Data Flow Analysis.
-iv.Exploratory Testing.
+iii. Data Flow Analysis.
+iv. Exploratory Testing.
 v. Decision Testing.
 vi Inspections.
 
@@ -5020,9 +4849,7 @@ C. ii, iii and vi are static, i, iv and v are dynamic.
 D. vi is static, i-v are dynamic.
 
 
-Q. 513: Given the following code, which statement is true about the
-minimum number of test cases required for full statement and branch
-coverage?
+Q. 513: Given the following code, which statement is true about the minimum number of test cases required for full statement and branch coverage?
 
 ```
 Read p
@@ -5035,24 +4862,21 @@ Print "p Large"
 ENDIF
 ```
 
-A. 1 test for statement coverage, 3 for branch coverage
-B. 1 test for statement coverage, 2 for branch coverage
-C. 1 test for statement coverage, 1 for branch coverage
-D. 2 tests for statement coverage, 2 for branch coverage
+A. 1 test for statement coverage, 3 for branch coverage.
+B. 1 test for statement coverage, 2 for branch coverage.
+C. 1 test for statement coverage, 1 for branch coverage.
+D. 2 tests for statement coverage, 2 for branch coverage.
 
 
 Q. 514: Which of the following is a benefit of independent testing?
 
-A. Code cannot be released into production until independent testing is
-complete.
+A. Code cannot be released into production until independent testing is complete.
 B. Testing is isolated from development.
 C. Developers do not have to take as much responsibility for quality.
-D. Independent testers see other and different defects, and are
-unbiased.
+D. Independent testers observe defects differently, and are unbiased.
 
 
-Q. 515: Which activity in the fundamental test process includes
-evaluation of the testability of the requirements and system?
+Q. 515: Which activity in the fundamental test process includes evaluation of the testability of the requirements and system?
 
 A. Test analysis and design.
 B. Test planning and control.
@@ -5060,8 +4884,7 @@ C. Test closure.
 D. Test implementation and execution.
 
 
-Q. 516: In which of the following orders would the phases of a formal
-review usually occur?
+Q. 516: In which of the following orders would the phases of a formal review usually occur?
 
 A. Planning, preparation, kick off, meeting, rework, follow up.
 B. Kick off, planning, preparation, meeting, rework, follow up.
@@ -5069,16 +4892,14 @@ C. Preparation, planning, kick off, meeting, rework, follow up.
 D. Planning, kick off, preparation, meeting, rework, follow up.
 
 
-Q. 517: For testing, which of the options below best represents the main
-concerns of Configuration Management?
+Q. 517: For testing, which of the options below best represents the main concerns of Configuration Management?
 
-i. All items of testware are identified and version controlled;
-ii. All items of testware are used in the final acceptance test;
-iii. All items of testware are stored in a common repository;
-iv. All items of testware are tracked for change;
-v. All items of testware are assigned to a responsible owner;
-vi. All items of testware are related to each other and to development
-items.
+i. All items of testware are identified and version controlled.
+ii. All items of testware are used in the final acceptance test.
+iii. All items of testware are stored in a common repository.
+iv. All items of testware are tracked for change.
+v. All items of testware are assigned to a responsible owner.
+vi. All items of testware are related to each other and to development items.
 
 A. i, iv, vi.
 B. ii, iii, v.
@@ -5094,21 +4915,19 @@ C. The time since the last change was made to the system.
 D. Defects found at the last regression test run.
 
 
-Q. 519: What is typically the MOST important reason to use risk to drive
-testing efforts?
+Q. 519: What is typically the MOST important reason to use risk evaluation to drive testing efforts?
 
 A. Because testing everything is not feasible.
-B. Because risk-based testing is the most efficient approach to finding
-bugs.
+B. Because risk-based testing is the most efficient approach to finding bugs.
 C. Because risk-based testing is the most effective way to show value.
 D. Because software is inherently risky.
 
 Q. 520: Which of the following are valid objectives for testing?
 
-i.To find defects.
-ii.To gain confidence in the level of quality.
-iii.To identify the cause of defects.
-iv.To prevent defects.
+i. To find defects.
+ii. To gain confidence in the level of quality.
+iii. To identify the cause of defects.
+iv. To prevent defects.
 
 A. i,ii, and iii.
 B. ii, iii and iv.
@@ -5125,20 +4944,14 @@ D. Uncalled functions.
 
 
 Q. 522: Which of the following would be a valid measure of test progress?
+
 A. Number of undetected defects.
 B. Total number of defects in the product.
 C. Number of test cases not yet executed.
 D. Effort required to fix all defects.
 
-Q. 523: In a system designed to work out the tax to be paid:
-
-An employee has $4000 of salary tax free.
-The next $1500 is taxed at 10%.
-The next $28000 after that is taxed at 22%.
-Any further amount is taxed at 40%.
-
-To the nearest whole pound, which of these groups of numbers fall into
-three DIFFERENT equivalence classes?
+Q. 523: In a system designed to work out the tax to be paid an employee has $4000 of salary tax free. The next $1500 is taxed at 10%. The next $28000 after that is taxed at 22%. Any further amount is taxed at 40%.
+To the nearest whole numeric value, which of these groups of numbers represent three DIFFERENT equivalence classes?
 
 A. $4000; $5000; $5500.
 B. $32001; $34000; $36500.
@@ -5148,11 +4961,11 @@ D. $4000; $4200; $5600.
 
 Q. 524: Which of the following test activities can be automated?
 
-i Reviews and inspections.
-ii Metrics gathering.
-iii Test planning.
-iv Test execution.
-v Data generation.
+i. Reviews and inspections.
+ii. Metrics gathering.
+iii. Test planning.
+iv. Test execution.
+v. Data generation.
 
 A. i, iii, iv.
 B. i, ii, iii.
@@ -5160,8 +4973,7 @@ C. ii, iv, v.
 D. ii, iii, v.
 
 
-Q. 525: In a REACTIVE approach to testing when would you expect the bulk
-of the test design work to be begun?
+Q. 525: In a REACTIVE approach to testing when would you expect the bulk of the test design work to be started?
 
 A. After the software or system has been produced.
 B. During development.
@@ -5171,98 +4983,90 @@ D. During requirements analysis.
 
 Q. 526: Which statement about expected outcomes is FALSE?
 
-A. Expected outcomes are defined by the software's behaviour
-B. Expected outcomes are derived from a specification, not from the code
-C. Expected outcomes should be predicted before a test is run
-D. Expected outcomes may include timing constraints such as response
-times
+A. Expected outcomes are defined by the software's behaviour.
+B. Expected outcomes are derived from a specification, not from the code.
+C. Expected outcomes should be predicted before a test is run.
+D. Expected outcomes may include timing constraints such as response times.
 
 
 Q. 527: Functional system testing is:
 
-A. Testing that the system functions with other systems
-B. Testing that the components that comprise the system function
-together
-C. Testing the end to end functionality of the system as a whole
-D. Testing the system performs functions within specified response times
+A. Testing that the system functions with other systems.
+B. Testing that the components that comprise the system function together.
+C. Testing the end to end functionality of the system as a whole.
+D. Testing the system performs functions within specified response times.
 
 
-Q. 528: Which of the following items would not come under Configuration
-Management?
+Q. 528: Which of the following items would not come under Configuration Management?
 
-A. Operating systems
-B. Test documentation
-C. Live data
-D. User requirement documents
+A. Operating systems.
+B. Test documentation.
+C. Live data.
+D. User requirement documents.
 
 
 Q. 529: What is NOT included in typical costs for an inspection process?
 
-A. Setting up forms and databases
-B. Analysing metrics and improving processes
-C. Writing the documents to be inspected
-D. Time spent on the document outside the meeting
+A. Setting up forms and databases.
+B. Analysing metrics and improving processes.
+C. Writing the documents to be inspected.
+D. Time spent on the document outside the meeting.
 
 
-Q. 530: Which of the following statements about component testing is
-FALSE?
+Q. 530: Which of the following statements about component testing is FALSE?
 
-A. Black box test design techniques all have an associated test
-measurement technique
-B. White box test design techniques all have an associated test
-measurement technique
-C. Cyclomatic complexity is not a test measurement technique
-D. Black box test measurement techniques all have an associated test
-design technique
+A. Black box test design techniques all have an associated test measurement technique.
+B. White box test design techniques all have an associated test measurement technique.
+C. Cyclomatic complexity is not a test measurement technique.
+D. Black box test measurement techniques all have an associated test design technique.
 
 
-Q. 531: Which of the following is NOT a reasonable test objective:
+Q. 531: Which of the following is NOT a reasonable test objective?
 
-A. To find faults in the software
-B. To prove that the software has no faults
-C. To give confidence in the software
-D. To find performance problems
-
-
-Q. 532: Which of the following uses Impact Analysis most?
-
-A. Component testing
-B. Non-functional system testing
-C. User acceptance testing
-D. Maintenance testing
+A. To find faults in the software.
+B. To prove that the software has no faults.
+C. To give confidence in the software.
+D. To find performance problems.
 
 
-Q. 533: What type of review requires formal entry and exit criteria,
-including metrics:
+Q. 532: Which of the following testing uses Impact Analysis most?
 
-A. Walkthrough
-B. Inspection
-C. Management review
-D. Post project review
-
-
-Q. 534: Maintenance means
-
-A. Updating tests when the software has changed
-B. Testing a released system that has been changed
-C. Testing by users to ensure that the system meets a business need
-D. Testing to maintain business advantage
+A. Component testing.
+B. Non-functional system testing.
+C. User acceptance testing.
+D. Maintenance testing.
 
 
-Q. 535: A Test Plan Outline contains which of the following:-
+Q. 533: What type of review requires formal entry and exit criteria, including metrics:
+
+A. Walkthrough.
+B. Inspection.
+C. Management review.
+D. Post project review.
+
+
+Q. 534: Maintenance in testing means:
+
+A. Updating tests when the software has changed.
+B. Testing a released system that has been changed.
+C. Testing by users to ensure that the system meets a business need.
+D. Testing to maintain business advantage.
+
+
+Q. 535: A Test Plan Outline contains which of the following:
 
 i. Test Items
 ii. Test Scripts
 iii. Test Deliverables
 iv. Responsibilities
 
-A. I,ii,iii are true and iv is false
-B. i,iii,iv are true and ii is false
-C. ii,iii are true and i and iv are false
-D. i,ii are false and iii , iv are true
+A. i, ii, iii are true and iv is false.
+B. i, iii, iv are true and ii is false.
+C. ii, iii are true and i and iv are false.
+D. i, ii are false and iii, iv are true.
 
 
-Q. 536: All of the following might be done during unit testing except
+Q. 536: All of the following might be done during unit testing except:
 
 A. Desk check
 B. Manual support testing
@@ -5270,23 +5074,20 @@ C. Walkthrough
 D. Compiler based testing
 
 
-Q. 537: Which of the following is a requirement of an effective software
-environment?
+Q. 537: Which of the following is a requirement of an effective software environment?
 
-I. Ease of use
-II. Capacity for incremental implementation
-III. Capability of evolving with the needs of a project
-IV. Inclusion of advanced tools
+i. Ease of use.
+ii. Capacity for incremental implementation.
+iii. Capability of evolving with the needs of a project.
+iv. Inclusion of advanced tools.
 
-A.I, II andIII
-B.I, II andIV
-C.II, IIIandIV
-D.I, IIIandIV
+A. i, ii and iii
+B. i, ii and iv
+C. ii, iii and iv
+D. i, iii and iv
 
 
-Q. 538: When testing a grade calculation system, a tester determines
-that all scores from 90 to 100 will yield a grade of A, but scores below
-90 will not. This analysis is known as:
+Q. 538: When testing a grade calculation system, a tester determines that all scores from 90 to 100 will yield a grade of A, but scores below 90 will not. This analysis is known as:
 
 A. Equivalence partitioning
 B. Boundary value analysis
@@ -5294,8 +5095,7 @@ C. Decision table
 D. Hybrid analysis
 
 
-Q. 539: The bug tracking system will need to capture these phases for
-each bug.
+Q. 539: The bug tracking system will need to capture these phases for each bug.
 
 I. Phase injected
 II. Phase detected
@@ -5308,8 +5108,7 @@ C. II, III and IV
 D. I, III and IV
 
 
-Q. 540: Which of the following software change management activities is
-most vital to assessing the impact of proposed software modifications?
+Q. 540: Which of the following software change management activities is most vital to assessing the impact of proposed software modifications?
 
 A. Baseline identification
 B. Configuration auditing
@@ -5317,9 +5116,7 @@ C. Change control
 D. Version control
 
 
-Q. 541: A type of integration testing in which software elements,
-hardware elements,or both are combined all at once into a component or
-an overall system, rather than in stages.
+Q. 541: A type of integration testing in which software elements, hardware elements, or both are combined all at once into a component or an overall system, rather than in stages.
 
 A. System Testing
 B. Big-Bang Testing
@@ -5327,36 +5124,24 @@ C. Integration Testing
 D. Unit Testing
 
 
-Q. 542: You are the test manager and you are about the start the system
-testing. The developer team says that due to change in requirements they
-will be able to deliver the system to you for testing 5 working days
-after the due date. You can not change the resources( work hours, test
-tools, etc.) What steps you will take to be able to finish the testing
-in time.
+Q. 542: You are the test manager and you are about the start the system testing. The developer team says that due to change in requirements they will be able to deliver the system to you for testing 5 working days after the due date. You cannot change the resources (work hours, test tools, etc.). What steps will you take to be able to finish the testing in time?
 
-A. Tell to the development team to deliver the system in time so that
-testing activity will be finish in time.
-B. Extend the testing plan, so that you can accommodate the slip going
-to occur
-C. Rank the functionality as per risk and concentrate more on critical
-functionality testing
-D. Add more resources so that the slippage should be avoided
+A. Tell the development team to deliver the system in time so that testing activity could be finished in time.
+B. Extend the testing plan, so that you can accommodate the slip going to occur.
+C. Rank the functionality as per risk and concentrate more on critical functionality testing.
+D. Add more resources so that the slippage should be avoided.
 
 
-Q. 543: There is one application, which runs on a single terminal. There
-is another application that works on multiple terminals. What are the
-test techniques you will use on the second application that you would
+Q. 543: There is one application, which runs on a single terminal. There is another application that works on multiple terminals. What are the test techniques you may use on the second application that you would
 not do on the first application?
 
-A. Integrity, Response time
-B. Concurrency test, Scalability
-C. Update and Rollback, Response time
-D. Concurrency test, Integrity
+A. Integrity, Response time.
+B. Concurrency test, Scalability.
+C. Update and Rollback, Response time.
+D. Concurrency test, Integrity.
 
 
-Q. 544: Which technique can be used to achieve input and output
-coverage? It can be applied to human input, input via interfaces to a
-system, or interface parameters in integration testing.
+Q. 544: Which technique can be used to achieve input and output coverage? It can be applied to human input, input via interfaces to a system, or interface parameters in integration testing.
 
 A. Error Guessing
 B. Boundary Value Analysis
@@ -5364,36 +5149,32 @@ C. Decision Table testing
 D. Equivalence partitioning
 
 
-Q. 545: Which of the following assertions about code coverage
-are correct?
+Q. 545: Which of the following assertions about code coverage are correct?
 
-A. Statement coverage usually requires more test case suites
-B. 100 % statement coverage guarantees 100 % decision coverage
-C. 100 % decision coverage implies 100 % statement coverage
-D. Decision tables cannot be used to list statement coverage
-values
+A. Statement coverage usually requires more test case suites.
+B. 100% statement coverage guarantees 100% decision coverage.
+C. 100% decision coverage implies 100% statement coverage.
+D. Decision tables cannot be used to list statement coverage values.
 
 
-Q. 546: Which of the following statements is true about white-box
-testing?
+Q. 546: Which of the following statements is true about white-box testing?
 
-A. It includes functional testing
-B. It includes loop testing
-C. It is usually done after black-box testing
-D. It is usually done during the integration testing phase
+A. It includes functional testing.
+B. It includes loop testing.
+C. It is usually done after black-box testing.
+D. It is usually done during the integration testing phase.
 
 
 Q. 547: "The tracing of requirements for a test level through the layers
-of a test documentation" done by
+of a test documentation" is done by:
 
-A. Horizontal tracebility
-B. Depth tracebility
-C. Vertical tracebility
-D. Horizontal and Vertical tracebilities
+A. Horizontal tracebility.
+B. Depth tracebility.
+C. Vertical tracebility.
+D. Horizontal and vertical tracebilities.
 
 
-Q. 548: How many test cases are needed to achieve 100 %
-condition coverage?
+Q. 548: Given ths code detail below, how many test cases are needed to achieve 100% condition coverage?
 
 ```
 if ((temperature < 0) or
@@ -5413,7 +5194,7 @@ C. 2
 D. 3
 
 
-Q. 549: Big bang approach is related to
+Q. 549: Big bang approach is related to what kind of testing?
 
 A. Regression testing
 B. Inter system testing
@@ -5421,22 +5202,20 @@ C. Re-testing
 D. Integration testing
 
 
-Q. 550: Which of the following statements is true about a software
-verification and validation program?
+Q. 550: Which of the following statements is true about a software verification and validation process?
 
 I. It strives to ensure that quality is built into software.
-II. It provides management with insights into the state of a software
-project.
+II. It provides management with insights into the state of a software project.
 III. It ensures that alpha, beta, and system tests are performed.
 IV. It is executed in parallel with software development activities.
 
-A. I, IIandIII
-B.II, IIIandIV
-C.I, IIandIV
-D.I, IIIandIV
+A. I, II and III
+B. II, III and IV
+C. I, II and IV
+D. I, III and IV
 
 
-Q. 551: An expert based test estimation is also known as
+Q. 551: An expert based test estimation is also known as:
 
 A. Narrow band Delphi
 B. Wide band Delphi
@@ -5444,95 +5223,80 @@ C. Bespoke Delphi
 D. Robust Delphi
 
 
-Q. 552: A test harness is a
+Q. 552: A test harness is:
 
-A. A high level document describing the principles, approach and major
-objectives of the organization regarding testing
-B. A distance set of test activities collected into a manageable phase
-of a project
-C. A test environment comprised of stubs and drives needed to conduct a
-test
-D. A set of several test cases for a component or system under test
+A. A high level document describing the principles, approach and major objectives of the organization regarding testing.
+B. A distance set of test activities collected into a manageable phase of a project.
+C. A test environment comprised of stubs and drives needed to conduct a test.
+D. A set of several test cases for a component or system under test.
 
 
-Q. 553: ‘Be bugging’ is known as
+Q. 553: ‘Bebugging’ is known as:
 
-A. Preventing the defects by inspection
-B. Fixing the defects by debugging
-C. Adding known defects by seeding
-D. A process of fixing the defects by tester
+A. Preventing the defects by inspection.
+B. Fixing the defects by debugging.
+C. Adding known defects by seeding.
+D. A process of fixing the defects by tester.
 
 
-Q. 554: A project manager has been transferred to a major software
-development project that is in the implementation phase. The highest
-priority for this project manager should be to
+Q. 554: A project manager has been transferred to a major software development project that is in the implementation phase. The highest priority for this project manager should be to:
 
-A. Establish a relationship with the customer
-B. Learn the project objectives and the existing project plan
-C. Modify the project’ s organizational structure to meet the manager’s
-management style
-D. Ensure that the project proceeds at its current pace
+A. Establish a relationship with the customer.
+B. Learn the project objectives and the existing project plan.
+C. Modify the project’ s organizational structure to meet the manager’s management style.
+D. Ensure that the project proceeds at its current pace.
 
 Q. 555: "This life cycle model is basically driven by schedule and
-budget risks" This statement is best suited for
+budget risks" This statement is best applied for the:
 
-A. Water fall model
+A. Waterfall model
 B. Spiral model
 C. Incremental model
 D. V-Model
 
 
-Q. 556: Which of the following characteristics is primarily associated
-with software reusability?
+Q. 556: Which of the following characteristics is primarily associated with software reusability?
 
-A. The extent to which the software can be used in other applications
-B. The extent to which the software can be used by many different users
-C. The capability of the software to be moved to a different platform
-D. The capability of one system to be coupled with another system
+A. The extent to which the software can be used in other applications.
+B. The extent to which the software can be used by many different users.
+C. The capability of the software to be moved to a different platform.
+D. The capability of one system to be coupled with another system.
 
 
-Q. 557: Which of the following functions is typically supported by a
-software quality information system?
+Q. 557: Which of the following functions is typically supported by a software quality information system?
 
 I. Record keeping
 II. System design
 III. Evaluation scheduling
 IV. Error reporting
 
-A.I, IIandIII
-B.II, III andIV
-C.I, III andIV
-D.I, II and IV
+A. I, II and III
+B. II, III and IV
+C. I, III and IV
+D. I, II and IV
 
 
 Q. 558: System test can begin when?
 
-I. The test team competes a three day smoke test and reports on the
-results to the system test phase entry meeting
-II. The development team provides software to the test team 3 business
-days prior to starting of the system testing
-III. All components are under formal, automated configuration and
-release management control
+I. The test team competes a three day smoke test and reports on the results to the system test phase entry meeting.
+II. The development team provides software to the test team 3 business days prior to starting of the system testing.
+III. All components are under formal, automated configuration and release management control.
 
-A. I and II only
-B. II and III only
-C. I and III only
-D. I, II and III
+A. I and II only.
+B. II and III only.
+C. I and III only.
+D. I, II and III.
 
 
-Q. 559: ‘Defect Density’ calculated in terms of
+Q. 559: ‘Defect Density’ calculated in terms of:
 
-A. The number of defects identified in a component or system divided by
-the size of the component or the system
-B. The number of defects found by a test phase divided by the number
-found by that test phase and any other means after wards
-C. The number of defects identified in the component or system divided
-by the number of defects found by a test phase
-D. The number of defects found by a test phase divided by the number
-found by the size of the system
+A. The number of defects identified in a component or system divided by the size of the component or the system.
+B. The number of defects found by a test phase divided by the number found by that test phase and any other means afterwards.
+C. The number of defects identified in the component or system divided by the number of defects found by a test phase.
+D. The number of defects found by a test phase divided by the number found by the size of the system.
 
 
-Q. 560: Test charters are used in ________ testing
+Q. 560: Test charters are used in what kind of testing?
 
 A. Exploratory testing
 B. Usability testing
@@ -5540,7 +5304,7 @@ C. Component testing
 D. Maintainability testing
 
 
-Q. 561: Item transmittal report is also known as
+Q. 561: Item transmittal report is also known as:
 
 A. Incident report
 B. Release note
@@ -5548,21 +5312,19 @@ C. Review report
 D. Audit report
 
 
-Q. 562: COTS is known as
+Q. 562: COTS is short for:
 
-A. Commercial off the shelf software
-B. Compliance of the software
-C. Change control of the software
-D. Capable off the shelf software
+A. Commercial off the shelf software.
+B. Compliance of the software.
+C. Change control of the software.
+D. Capable off the shelf software.
 
 
-Q. 563: Change request should be submitted through development or
-program management. A change request must be written and should include
-the following criteria.
+Q. 563: Change request should be submitted through development or program management. A change request must be written and should include the following criteria:
 
-I. Definition of the change
-II. Documentation to be updated
-III. Name of the tester or developer
+I. Definition of the change.
+II. Documentation to be updated.
+III. Name of the tester or developer.
 IV. Dependencies of the change request.
 
 A. I, III and IV
@@ -5571,18 +5333,15 @@ C. II, III and IV
 D. I, II and IV
 
 
-Q. 564: Change X requires a higher level of authority than Change Y in
-which of the following pairs? Change X Change Y
+Q. 564: In which of the following pairs is it true, that Change X (first) requires a higher level of authority than Change Y (second)?
 
-A. Code in development Code in production
-B. Specifications during requirements analysis Specifications during
-systems test
-C. Documents requested by the technical development group Documents
-requested by customers
-D. A product distributed to several sites A product with a single user
+A. Code in development; Code in production.
+B. Specifications during requirements analysis; Specifications during systems test.
+C. Documents requested by the technical development group; Documents requested by customers.
+D. A product distributed to several sites; A product with a single user.
 
 
-Q. 565: Cause effect graphing is related to the standard
+Q. 565: Cause-effect graphing is related to which of the following standards?
 
 A. BS7799
 B. BS 7925/2
@@ -5590,55 +5349,38 @@ C. ISO/IEC 926/1
 D. ISO/IEC 2382/1
 
 
-Q. 566: The primary goal of comparing a user manual with the actual
-behavior of the running program during system testing is to
+Q. 566: The primary goal of comparing a user manual with the actual behavior of the running program during system testing is to:
 
-A. Find bugs in the program
-B. Check the technical accuracy of the document
-C. Ensure the ease of use of the document
-D. Ensure that the program is the latest version
-
-
-Q. 567: During the testing of a module tester ‘X’ finds a bug and
-assigned it to developer. But developer rejects the same, saying that
-it’s not a bug. What ‘X’ should do?
-
-A. Report the issue to the test manager and try to settle with the
-developer.
-B. Retest the module and confirm the bug
-C. Assign the same bug to another developer
-D. Send to the detailed information of the bug encountered and check the
-reproducibility
+A. Find bugs in the program.
+B. Check the technical accuracy of the document.
+C. Ensure the ease of use of the document.
+D. Ensure that the program is the latest version.
 
 
-Q. 568: One of the more daunting challenges of managing a test project
-is that so many dependencies converge at test execution. One missing
-configuration file or hard ware device can render all your test results
-meaning less. You can end up with an entire platoon of testers sitting
-around for days. Who is responsible for this incident?
+Q. 567: During the testing of a module tester ‘X’ finds a bug and assignes it to developer. But developer rejects the same, saying that it’s not a bug. What is it ‘X’ should do?
 
-A. Test managers faults only
-B. Test lead faults only
-C. Test manager and project manager faults
-D. Testers faults only
-
-Q. 569: You are a tester for testing a large system. The system data
-model is very large with many attributes and there are a lot of inter
-dependencies with in the fields. What steps would you use to test the
-system and also what are the efforts of the test you have taken on the
-test plan
-
-A. Improve super vision, More reviews of artifacts or program means
-stage containment of the defects.
-B. Extend the test plan so that you can test all the inter dependencies
-C. Divide the large system in to small modules and test the
-functionality
-D. Test the interdependencies first, after that check the system as a
-whole
+A. Report the issue to the test manager and try to settle with the developer.
+B. Retest the module and confirm the bug.
+C. Assign the same bug to another developer.
+D. Send to the developer the detailed information of the bug encountered and check the reproducibility.
 
 
-Q. 570: Testing of software used to convert data from existing systems
-for use in replacement systems
+Q. 568: One of the more daunting challenges of managing a test project is that so many dependencies converge at test execution. One missing configuration file or hardware device can render all your test results meaningless. You can end up with an entire platoon of testers sitting around for days. Who is responsible for this incident?
+
+A. Test managers faults only.
+B. Test lead faults only.
+C. Test manager and project manager faults.
+D. Testers faults only.
+
+Q. 569: You are a tester for testing a large system. The system data model is very large with many attributes and there are a lot of interdependencies within the fields. What steps would you use to test the system and also what are the efforts of the test you have taken on the test plan?
+
+A. Improve supervision, more reviews of artifacts or program means stage containment of the defects.
+B. Extend the test plan so that you can test all the interdependencies.
+C. Divide the large system into small modules and test the functionality.
+D. Test the interdependencies first, after that check the system as a whole.
+
+
+Q. 570: Testing of software used to convert data from existing systems for use in replacement systems may be called as:
 
 A. Data driven testing
 B. Migration testing
@@ -5646,17 +5388,15 @@ C. Configuration testing
 D. Back to back testing
 
 
-Q. 571: A test manager wants to use the resources available for the
-automated testing of a web application. The best choice is
+Q. 571: A test manager wants to use the resources available for the automated testing of a web application. Which is the BEST choice?
 
-A. Test automater, web specialist, DBA, test lead
-B. Tester, test automater, web specialist, DBA
-C. Tester, test lead, test automater, DBA
-D. Tester, web specialist, test lead, test automater
+A. Test automater, web specialist, DBA, test lead.
+B. Tester, test automater, web specialist, DBA.
+C. Tester, test lead, test automater, DBA.
+D. Tester, web specialist, test lead, test automater.
 
 
-Q. 572: What type of risk includes potential failure areas in the
-software?
+Q. 572: What type of risk includes potential failure areas in the software?
 
 A. Probed risks
 B. Product risks
@@ -5664,24 +5404,22 @@ C. Economic risks
 D. Requirements risks
 
 
-Q. 573: Consider the following statements
+Q. 573: Consider the following statements. Which combination is correct?
 
-i. A incident may be closed without being fixed
-ii. Incidents may not be raised against documentation
-iii. The final stage of incident tracking is fixing
-iv. The incident record does not include information on test
-environments
-v. Incidents should be raised when someone other than the author of the
-software performs the test
-A. ii and v are true, I, iii and iv are false
-B. i and v are true, ii, iii and iv are false
-C. i, iv and v are true, ii and iii are false
-D. i and ii are true, iii, iv and v are false
+i. A incident may be closed without being fixed.
+ii. Incidents may not be raised against documentation.
+iii. The final stage of incident tracking is fixing.
+iv. The incident record does not include information on test environments.
+v. Incidents should be raised when someone other than the author of the software performs the test.
 
+A. ii and v are true, i, iii and iv are false.
+B. i and v are true, ii, iii and iv are false.
+C. i, iv and v are true, ii and iii are false.
+D. i and ii are true, iii, iv and v are false.
 
 
-Q. 574: Which test suite will check for an invalid transition using the
-diagram below?
+
+Q. 574: Which test suite will check for an invalid transition considering the diagram below?
 
 ![](images/ISTQB574.JPG)　
 
@@ -5691,92 +5429,75 @@ C. S0-S1-S3-S1-S2-S1
 D. S0-S1-S2-S3-S1-S2
 
 
-Q. 575: Who OFTEN performs system testing and acceptance testing,
-respectively?
+Q. 575: Which of these actors respectively perform system testing and acceptance testing MOST frequently?
 
-A. Senior programmers and professional testers
-B. Technical system testers and potential customers
-C. Independent test team and users of the system
-D. Development team and customers of the system
-
-
-Q. 576: Which test levels are USUALLY included in the common type of
-V-model?
-
-A. Integration testing, system testing, acceptance testing, and
-regression testing
-B. Component testing, integration testing, system testing, and
-acceptance testing
-C. Incremental testing, exhaustive testing, exploratory testing, and
-data driven testing
-D. Alpha testing, beta testing, black-box testing, and white-box testing
+A. Senior programmers and professional testers.
+B. Technical system testers and potential customers.
+C. Independent test team and users of the system.
+D. Development team and customers of the system.
 
 
-Q. 577: Which general testing principles are characterized by the
-descriptions below?
+Q. 576: Which test levels are USUALLY included in the common type of V-model?
+
+A. Integration testing, system testing, acceptance testing, and regression testing.
+B. Component testing, integration testing, system testing, and acceptance testing.
+C. Incremental testing, exhaustive testing, exploratory testing, and data driven testing.
+D. Alpha testing, beta testing, black-box testing, and white-box testing.
+
+
+Q. 577: Which general testing principles are characterized by the descriptions below?
 
 W) Early testing
 X) Defect clustering
 Y) Pesticide paradox
 Z) Absence-of-errors fallacy
-1) Testing should start at the beginning of the project
-2) Conformance to requirements and fitness for use
-3) Small Number of modules contain the most defects
-4) Test cases must be regularly renewed and revised
+
+1) Testing should start at the beginning of the project.
+2) Conformance to requirements and fitness for use.
+3) Small Number of modules contain the most defects.
+4) Test cases must be regularly renewed and revised.
 
 A. W1, X2, Y3, and Z4
 B. W1, X3, Y4, and Z2
 C. W2, X3, Y1, and Z4
 D. W1, X4, Y2, and Z3
 
-Q. 578: How are (a) static analysis tools and (b) performance
-testing tools different?
+Q. 578: How are (a) static analysis tools and (b) performance testing tools different?
 
-A. (a) helps in enforcing coding standards; (b) tests system
-performance
-B. (a) analyzes security vulnerabilities; (b) measures the
-effectiveness of test cases
-C. (a) prepares codes prior to testing; (b) prepares codes prior
-to stress testing
-D. (a) highlights unreachable conditions; (b) improves system
-performance
+A. (a) helps in enforcing coding standards; (b) tests system performance.
+B. (a) analyzes security vulnerabilities; (b) measures the effectiveness of test cases.
+C. (a) prepares codes prior to testing; (b) prepares codes prior to stress testing.
+D. (a) highlights unreachable conditions; (b) improves system performance.
 
 
-Q. 579: In an Examination a candidate has to score minimum of 24 marks
-in order to clear the exam. The maximum that he can score is 40 marks.
-Identify the Valid Equivalence values if the student clears the exam.
+Q. 579: In an Examination a candidate has to score minimum of 24 points in order to clear the exam. The maximum that he can score is 40 points. Identify the valid equivalence values if the student clears the exam.
 
-a) 22,23,26
-b) 21,39,40
-c) 29,30,31
-d) 0,15,22
+a) 22, 23, 26
+b) 21, 39, 40
+c) 29, 30, 31
+d) 0, 15, 22
 
-Q. 580: Which of the following describe test control actions that may
-occur during testing?
+Q. 580: Which of the following describes test control actions that may occur during testing?
 
-I. Setting an entry criterion that developers must retest fixes before
-fixes are accepted into a build.
-II. Changing the test schedule due to availability of a test
-environment.
-III. Re-prioritizing tests when development delivers software late
+I. Setting an entry criteria that developers must retest fixes before fixes are accepted into a build.
+II. Changing the test schedule due to availability of a test environment.
+III. Re-prioritizing tests when development delivers software late.
 
 A. I only
 B. II only
 C. I, II and III
 D. I and III
 
-Q. 581: What is the expected result for each of the following test
-cases?
+Q. 581: What is the expected result for each of the following test cases?
 
 !()[images/ISTQB581.jpg]
 
-TC1: Anand is a 32 year old married, residing in Kolkatta.
-TC3: Attapattu is a 65 year old married person, residing in Colombo.
+TC1: Anand is a 32 year old married person, residing in Kolkatta (India).
+TC3: Attapattu is a 65 year old married person, residing in Colombo (Sri Lanka).
 
-A. TC1 – Issue membership, 10% discount, TC3 – Issue membership, offer no
-discount.
-B. TC1 – Don’t Issue membership, TC3 – Don’t offer discount.
-C. TC1 – Issue membership, no discount, TC3 – Don’t Issue membership.
+A. TC1 – Issue membership, 10% discount, TC3 – Issue membership, offer no discount.
+B. TC1 – Don’t issue membership, TC3 – Don’t offer discount.
+C. TC1 – Issue membership, no discount, TC3 – Don’t issue membership.
 D. TC1 – Issue membership, no discount, TC3- Issue membership with 10% discount.
 
 Q. 582: Which of the following is false?
@@ -5790,15 +5511,12 @@ D. An incident can be raised against documentation.
 Q. 583: Which of the following is false?
 
 A. In a system two different failures may have different severities.
-B. A system is necessarily more reliable after debugging for the removal
-of a fault.
+B. A system is necessarily more reliable after debugging for the removal of a fault.
 C. A fault need not affect the reliability of a system.
-D. Undetected errors may lead to faults and eventually to incorrect
-behavior.
+D. Undetected errors may lead to faults and eventually to incorrect behavior.
 
 
-Q. 584: A testing process that is conducted to test new features after
-regression testing of previous features.
+Q. 584: A testing process that is conducted to test new features after regression testing of previous features is called:
 
 A. Operational testing
 B. Progressive testing
@@ -5806,27 +5524,20 @@ C. Recovery testing
 D. Regression testing
 
 
-Q. 585: Identify out of the following, which are the attributes of cost
-of faults?
+Q. 585: Identify out of the following, which are the possible attributes of cost of faults?
 
-A. These are cheapest to detect during early phases of development and
-becomes more and more expensive to fix in the later phases.
-B. Although faults are most expensive to find during early development
-phases, they are cheapest to fix then.
-C. Faults are cheapest to find in the early development phases but the
-most expensive to fix then.
-D. They are easiest to find during system testing but the most expensive
-to fix then.
+A. These are cheapest to detect during early phases of development and becomes more and more expensive to fix in the later phases.
+B. Although faults are most expensive to find during early development phases, they are cheapest to fix then.
+C. Faults are cheapest to find in the early development phases but the most expensive to fix then.
+D. They are easiest to find during system testing but the most expensive to fix then.
 
 
-Q. 586: What is non-functional testing?
+Q. 586: What is a non-functional testing?
 
-A. Testing an integrated system to verify that it meets specified
-requirements
-B. Testing the internal structure of the system to ensure it’s built
-correctly
-C. Testing the way the system works without regard to the level of test
-D. Testing characteristics such as usability or reliability
+A. Testing an integrated system to verify that it meets specified requirements.
+B. Testing the internal structure of the system to ensure it’s built correctly.
+C. Testing the way the system works without regard to the level of test.
+D. Testing characteristics such as usability or reliability.
 
 
 Q. 587: Which of the following is a form of functional testing?
@@ -5837,17 +5548,12 @@ C. Performance testing
 D. Security testing
 
 
-Q. 588: Which of the following statements about decision tables are
-TRUE?
+Q. 588: Which of the following statements about decision tables are TRUE?
 
-I. Decision tables are useful when dealing with multiple inputs that do
-not interact.
-II. The strength of a decision table is that it creates combinations of
-inputs that might not otherwise been evaluated.
-III. Decision tables are useful when trying to capture system
-requirements that contain logical conditions.
-IV. Each column of a decision table corresponds to a business rule that
-defines a unique combination of conditions.
+I. Decision tables are useful when dealing with multiple inputs that do not interact.
+II. The strength of a decision table is that it creates combinations of inputs that might not otherwise been evaluated.
+III. Decision tables are useful when trying to capture system requirements that contain logical conditions.
+IV. Each column of a decision table corresponds to a business rule that defines a unique combination of conditions.
 
 A. II, III and IV
 B. I and IV
@@ -5855,14 +5561,13 @@ C. I, II and III
 D. I and III
 
 
-Q. 589: Which of the following are metrics (measurements) that a test
-group may use to monitor progress?
+Q. 589: Which of the following are metrics (measurements) that a test group may use to monitor progress?
 
 
-I. Subjective confidence of the testers in the product
-II. The number of testers currently testing
-III. Percentage of planned test cases prepared
-IV. Defects found and fixed
+I. Subjective confidence of the testers in the product.
+II. The number of testers currently testing.
+III. Percentage of planned test cases prepared.
+IV. Defects found and fixed.
 
 A. I only
 B. I, III and IV
@@ -5875,12 +5580,10 @@ Q. 590: A test case has which of the following elements?
 A. A test environment description and test instructions.
 B. A set of inputs, execution preconditions, and expected outcomes.
 C. A test plan, test inputs, and logging instructions.
-D. Execution instructions and a function description to determine
-correct outcome.
+D. Execution instructions and a function description to determine correct outcome.
 
 
-Q. 591: Which of the following is a fundamental principle of software
-defect prevention?
+Q. 591: Which of the following is a fundamental principle of software defect prevention?
 
 A. Software quality engineering must evaluate all errors.
 B. A balance of white-box and black-box testing is necessary.
@@ -5888,32 +5591,23 @@ C. A single root cause taxonomy should be used by all projects.
 D. Feedback to the individuals who introduced the defect is essential.
 
 
-Q. 592: When software reliability measures are used to determine when to
-stop testing, the best types of test cases to use are those that
+Q. 592: When software reliability measures are used to determine when to stop testing, the best types of test cases to use are those that:
 
-A. Push the system beyond its designed operation limits and are likely
-to make the system fail
-B. Exercise unusual and obscure scenarios that may not have been
-considered in design
-C. Exercise system functions in proportion to the frequency they will be
-used in the released product
-D. Exercise the most complicated and the most error-prone portions of
-the system
+A. Push the system beyond its designed operation limits and are likely to make the system fail.
+B. Exercise unusual and obscure scenarios that may not have been considered in design.
+C. Exercise system functions in proportion to the frequency they will be used in the released product.
+D. Exercise the most complicated and the most error-prone portions of the system.
 
 
-Q. 593: Which of the following statements about static analysis is
-FALSE?
+Q. 593: Which of the following statements about static analysis is FALSE?
 
-A. Static analysis can find defects that are likely to be missed by
-dynamic testing.
+A. Static analysis can find defects that are likely to be missed by dynamic testing.
 B. Static analysis is a good way to force failures in the software.
-C. Static analysis tools examine code or other types of product
-documentation.
+C. Static analysis tools examine code or other types of product documentation.
 D. Static analysis can result in cost saving by finding bugs early.
 
 
-Q. 594: Which of the following statements is true about white-box
-testing?
+Q. 594: Which of the following statements is true about white-box testing?
 
 A. It includes functional testing.
 B. It includes loop testing.
@@ -5921,32 +5615,30 @@ C. It is usually done after black-box testing.
 D. It is usually done during the integration testing phase.
 
 
-Q. 595: A set of behavioral and performance requirements which, in
-aggregate, determine the functional properties of a software system.
+Q. 595: A set of behavioral and performance requirements which, in aggregate, determine the functional properties of a software system is called.
 
-A. Functional requirement
-B. Functional specifications
-C. Functional test cases
+A. Functional requirements.
+B. Functional specifications.
+C. Functional test cases.
+D. Functional and non-functional requirements.
 
-Q. 596: Which of the following provides the test group with the ability
-to reference all documents and software items unambiguously?
+Q. 596: Which of the following provides the test group with the ability to reference all documents and software items unambiguously?
 
-A. Agile testing methodology
-B. Effective use of tools
-C. Configuration management
-D. Requirements traceability matrix
-
-
-Q. 597: Which of the following is not a job responsibility of a software
-tester?
-
-A. Identifying test cases
-B. Preparing test data
-C. Executing tests
-D. Writing the functional specifications
+A. Agile testing methodology.
+B. Effective use of tools.
+C. Configuration management.
+D. Requirements traceability matrix.
 
 
-Q. 598: Which of the following are Black Box test design techniques?
+Q. 597: Which of the following is not a job responsibility of a software tester?
+
+A. Identifying test cases.
+B. Preparing test data.
+C. Executing tests.
+D. Writing the functional specifications.
+
+
+Q. 598: Which of the following are black box test design techniques?
 
 I. Boundary value analysis
 II. Branch condition testing
@@ -5963,7 +5655,7 @@ Q. 599: Which of the following are test management tool capabilities?
 
 I. The enforcement of coding standards.
 II. Support for requirements traceability activities.
-III. The generation of testing progress reports
+III. The generation of testing progress reports.
 IV. Generation of test process improvement information.
 
 A. II, III and IV
@@ -5972,54 +5664,45 @@ C. I, III and IV
 D. III and IV
 
 
-Q. 600: Errors that are cosmetic in nature are usually assigned a ______
-severity level.
+Q. 600: Errors that are cosmetic in nature are usually assigned which severity level?
 
 A. Fatal (Severity)
 B. Low (Severity)
 C. Serious (Severity)
-D. Not Serious at all
+D. Not Serious at all.
 
 
 Q. 601: Which of the following statements is correct?
 
 A. The objective of testing is always to find defects by causing failures when executing.
-B. Test activities end after the tests are executed and deviations are
-documented.
+B. Test activities end after the tests are executed and deviations are documented.
 C. The true level of quality cannot be learned by dynamic testing.
-D. Both dynamic and static testing can be used to achieve similar
-objectives.
+D. Both dynamic and static testing can be used to achieve similar objectives.
 
 
-Q. 602: Which activities are included in the Test Analysis and Design
-phase?
+Q. 602: Which activities are included in the Test Analysis and Design phase?
 
 A. Design of test cases that verify that user functions are correct.
-B. The design of test cases for testing the internal structure of the
-system.
-C. Test case design that is based on an analysis of the behavior of the
-component without reference to its internal workings.
-D. The design of test cases to ensure that the organization has defined
-exactly what the customer wants.
+B. The design of test cases for testing the internal structure of the system.
+C. Test case design that is based on an analysis of the behavior of the component without reference to its internal workings.
+D. The design of test cases to ensure that the organization has defined exactly what the customer wants.
 
 
 Q. 603: Which type of document might be reviewed at a Review/Inspection session?
 
-A. Employee performance review
-B. Test Plan
-C. Project Status Report
-D. Defect Tracking Form
+A. Employee performance review.
+B. Test Plan.
+C. Project Status Report.
+D. Defect Tracking Form.
 
 
-Q. 604: Which of the following statements are true about component
-testing?
+Q. 604: Which of the following statements are true about component testing?
 
 I. Structural testing is rarely done during component testing.
 II. The test basis for component testing is often the code.
 III. Defects are tracked throughout component testing.
 IV. Robustness testing may be a part of component testing.
-V. The component testing environment should be as much like production
-as possible.
+V. The component testing environment should be as much like the production environment as possible.
 
 A. I, II, III and IV
 B. II
@@ -6027,33 +5710,23 @@ C. II and IV
 D. I, III and V
 
 
-Q. 605: Which activities are included in Test Analysis and Design? TOO
-SIMILAR TO 56????
+Q. 605: Which activities are included in Test Analysis and Design? 
 
-A. Developing test procedures, identifying test data, developing test
-harnesses, identifying required tools.
-B. Reviewing the test basis, identifying test conditions, identifying
-test data, and designing the environment set-up.
-C. Reviewing requirements, determining the test approach, designing and
-prioritizing test cases.
-D. Evaluating test object testability, verifying the test environment
-set up, identifying required infrastructure.
+A. Developing test procedures, identifying test data, developing test harnesses, identifying required tools.
+B. Reviewing the test basis, identifying test conditions, identifying test data, and designing the environment set-up.
+C. Reviewing requirements, determining the test approach, designing and prioritizing test cases.
+D. Evaluating test object testability, verifying the test environment set up, identifying required infrastructure.
 
 
 Q. 606: Which of the following statements is NOT correct?
 
-A. Testers cannot help developers improve their skills through good
-defect documentation.
-B. People align their plans with objectives set by management if they
-understand them.
-C. Testing is a constructive activity when seen in the management of
-product risks.
-D. Avoiding the author bias is a good reason to have an independent test
-group.
+A. Testers cannot help developers improve their skills through good defect documentation.
+B. People align their plans with objectives set by management if they understand them.
+C. Testing is a constructive activity when seen in the management of product risks.
+D. Avoiding the author bias is a good reason to have an independent test group.
 
 
-Q. 607: Which of the following are major test documents? (choose the
-best answer)
+Q. 607: Which of the following are major test documents? (choose the BEST answer)
 
 1) Test plan
 2) Test case
@@ -6064,11 +5737,10 @@ best answer)
 A. 1 and 2
 B. 1, 3, and 4
 C. 1, 3, 4, and 5
-D. All the above
+D. All the above.
 
 
-Q. 608: What do walkthroughs, technical reviews and inspections have in
-common?
+Q. 608: What do walkthroughs, technical reviews and inspections have in common?
 
 I. They have defect finding as an objective.
 II. Pre-meeting preparation is required.
@@ -6081,28 +5753,21 @@ C. I and III
 D. II, III and IV
 
 
-Q. 609: Which of the following is a risk of using a test execution tool
-based on record and playback?
+Q. 609: Which of the following is a risk of using a test execution tool based on record and playback?
 
-A. The ability to run automated scripts unattended may require increased
-hardware capacity.
+A. The ability to run automated scripts unattended may require increased hardware capacity.
 B. Testers may be tempted to create too many automated test scripts.
-C. Manual testers may be replaced by the tool and not be available when
-needed.
-D. Automated scripts may be unstable when encountering unexpected
-events.
+C. Manual testers may be replaced by the tool and not to be available when needed.
+D. Automated scripts may be unstable when encountering unexpected events.
 
 
-Q. 610: Which of the following statements are true for the equivalence
-partitioning test technique?
+Q. 610: Which of the following statements are true for the equivalence partitioning test technique?
 
-I. Divides possible inputs into classes that have the same behavior
-II. Can be used to create both positive and negative test cases
-III. Makes use of only positive test cases for the equivalence
-partitions
-IV. Must always include at least two values from every equivalence
-partition
-V. Can be used only for input testing
+I. Divides possible inputs into classes that have the same behavior.
+II. Can be used to create both positive and negative test cases.
+III. Makes use of only positive test cases for the equivalence partitions.
+IV. Must always include at least two values from every equivalence partition.
+V. Can be used only for input testing.
 
 A. I and II
 B. I, II and V
@@ -6110,8 +5775,7 @@ C. I, III and IV
 D. I and V
 
 
-Q. 611: The use of test automation would provide the best return on
-investment for which of the following?
+Q. 611: The use of test automation would provide the best return on investment for which of the following?
 
 A. Unit testing
 B. Usability testing
