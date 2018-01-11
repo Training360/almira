@@ -1214,7 +1214,7 @@
         "olyan módszer, amelynél a szoftver specifikáció alapján, a program belső szerkezetének ismerete nélkül tervezünk teszteket."
     },
     {
-      "name": "ATA,F-AT felderítő teszt",
+      "name": "felderítő teszt",
       "engNames": ["exploratory testing"],
       "desc":
         "informális teszttervezési módszer, amely során a tesztelő aktívan felügyeli a tesztek tervezését, a futtatás során szerzett információkat összegyűjti és hasznosítja új és jobb tesztek tervezése érdekében"
@@ -1404,7 +1404,7 @@
         "módosítások vagy megváltozott környezet miatt a működő rendszeren végrehajtott teszt."
     },
     {
-      "name": "ATT,F-AT karbantarthatósági teszt",
+      "name": "karbantarthatósági teszt",
       "engNames": ["maintainability testing"],
       "desc":
         "teszteljárás egy alkalmazás karbantarthatóságának meghatározására."
