@@ -1,4 +1,3 @@
-﻿
 Q. 1: How many test cases are required to achive 100% 0-switch coverage respectively from status X2?
 
 Exhibit:
@@ -131,7 +130,7 @@ following series of state transitions contains an INVALID transition
 which may indicate a fault in the system design?
 
 Exhibit:
-![](images/ISTQB13.JPG)
+![](images/ISTQB13.jpg)
 
 A. Login Browse Basket Checkout Basket Checkout Pay Logout.
 B. Login Browse Basket Checkout Pay Logout.
@@ -446,7 +445,7 @@ iii. vxy
 iv. vxz
 
 Exhibit:
-![](ISTQB39.JPG)
+![](ISTQB39.jpg)
 
 A. i.
 B. i., ii., iv.
@@ -2804,7 +2803,7 @@ D. Negative Testing
 Q. 286: Consider the following state transition diagram of a switch.
 Which of the following represents an invalid state transition?
 
-![](images/ISTQB286.JPG)
+![](images/ISTQB286.jpg)
 A. OFF to ON
 B. ON to OFF
 C. FAULT to ON
@@ -5421,7 +5420,7 @@ D. i and ii are true, iii, iv and v are false.
 
 Q. 574: Which test suite will check for an invalid transition considering the diagram below?
 
-![](images/ISTQB574.JPG)　
+![](images/ISTQB574.jpg)　
 
 A. S0-S1-S2-S3-S1-S4
 B. S0-S1-S4-S1-S2-S3
@@ -6438,7 +6437,7 @@ D. 100% statement coverage always means 100% decision coverage.
 Q. 678: If you are flying with an economy ticket, there is a possibility that you may get upgraded to business class, especially if you hold a
 gold card in the airline's frequent flier program. If you don't hold a gold card, there is a possibility that you will get 'bumped off' the flight if it is full and you check in late. This is shown in following diagram. Note that each box (i.e. statement) has been numbered.
 
-![](images/ISTQB678.JPG)
+![](images/ISTQB678.jpg)
 
 Three tests have been run:
 
@@ -6486,7 +6485,7 @@ D. V, W and Y
 
 Q. 682: Given the state diagram in following Figure, which test case is the minimum series of valid transitions to cover every state?
 
-![](images/ISTQB682.JPG)
+![](images/ISTQB682.jpg)
 
 A. SS - S1 - S2 - S4 - S1 - S3 - ES
 B. SS - S1 - S2 - S3 - S4 - S3 - S4 - ES
@@ -10179,7 +10178,7 @@ D. Statement Coverage = 2, Branch Coverage = 4
 Q. 1055: Given the following state transition table, which of the test cases below will cover the following series of state transitions? 
 S1-SO-S1-S2-SO 
 
-![](images/ISTQB1055.JPG)
+![](images/ISTQB1055.jpg)
 
 A. D, A, B, C.
 B. A, B, C, D.
