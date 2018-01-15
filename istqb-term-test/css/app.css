@@ -99,11 +99,15 @@ main .controls .btn{
     width: 100%;
 }
 
+main .controls .btn{
+    margin-bottom:10px;
+}
+
 @media (min-width: 960px) {
     .controls {
         text-align: left;
         position: absolute;
-        bottom: 0
+        bottom: 0;
     }
 }
 
