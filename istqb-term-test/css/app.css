@@ -95,12 +95,15 @@ form {
     text-align: center;
     position: relative;
 }
+main .controls .btn{
+    width: 100%;
+}
 
-@media (min-width: 640px) {
+@media (min-width: 960px) {
     .controls {
-        position: absolute;
         text-align: left;
-        bottom: 15px;
+        position: absolute;
+        bottom: 0
     }
 }
 
@@ -260,11 +263,16 @@ select {
     transform: translate(0, 0);
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 nav button {
     width: calc(100% - 5px);
 }
 
-@media (min-width: 640px) {
+
+@media (min-width: 960px) {
     .card {
         position: absolute;
         left: 50%;
