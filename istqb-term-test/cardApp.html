@@ -28,8 +28,8 @@
         <!-- NAV -->
         <nav class="clearfix">
             <div class="menu embed-half">
-                <button ng-click="setType('name'); type = 'name'" ng-class="type == 'name' ? 'active btn btn-lg' : 'btn btn-lg'">Definíció</button>
-                <button ng-click="setType('description'); type = 'description'" ng-class="type == 'description' ? 'active btn btn-lg' : 'btn btn-lg'">Leírás</button>
+                <button ng-click="setType('name')" ng-class="typeClassName">Definíció</button>
+                <button ng-click="setType('description')" ng-class="typeClassDescription">Leírás</button>
             </div>
             <div class=" menu embed-half right">
                 <button ng-click="setLanguage('en')" ng-class="language == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
@@ -41,7 +41,7 @@
         <main>
             <div class="full">
                 <div class="error-color">{{ errorMessage }}</div>
-                <div class="card">
+                <div class="card" ng-click="changeCard()" title="Mutasd a megoldást">
 
                     <p class="question" ng-show="type=='name'">{{ translate('definitionQuestion') }}</p>
                     <p class="question" ng-show="type=='description'">{{ translate('descriptionQuestion') }}</p>

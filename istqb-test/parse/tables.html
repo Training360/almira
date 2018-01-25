@@ -7,6 +7,13 @@
   <style>
     .table {
       width: auto;
+      margin-left: 100px;      
+    }
+    .maxSize {
+    width: 800px;
+    } 
+    .mediumSize {
+    width: 700px;
     }
   </style>
 </head>
@@ -14,7 +21,6 @@
 
   <!--
   <h1>Q. </h1>
-
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
@@ -313,7 +319,7 @@
 
 <h1>Q. 782</h1>
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered maxSize">
   <thead>
     <tr>
       <th>Test Procedure ID</th>
@@ -351,7 +357,7 @@
       <td>T</td>
       <td>3</td>
       <td>None</td>
-      <td>Delivery of the code for this part of system is running very late</td>
+      <td>Delivery of the code for this part</br> of the system is running very late</td>
     </tr>
     <tr>
       <td>U</td>
@@ -364,7 +370,7 @@
 
 <h1>Q. 774</h1>
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered maxSize">
   <thead>
     <tr>
       <th>Tester ID</th>
@@ -377,7 +383,7 @@
     <tr>
       <td>Tester 1</td>
       <td>User Log-on validation error</td>
-      <td>Entered user ID of Ram Kumar & password ABC123 but got an error message</td>
+      <td>Entered user ID of Ram Kumar & password ABC123 </br>but got an error message</td>
       <td>1</td>
     </tr>
     <tr>
@@ -403,7 +409,7 @@ This test has worked many times before<br /></td>
       <td><b>Inputs:</b> User ID Ram Kumar & password ABC123<br />
 <b>Expected result:</b> Main menu screen<br />
 <b>Actual result:</b> "Incorrect password"<br />
-N. B: The same inputs worked yesterday, before code release 1.2 was delivered<br /></td>
+N. B: The same inputs worked yesterday, </br>before code release 1.2 was delivered<br /></td>
       <td>1</td>
     </tr>
   </tbody>
@@ -455,7 +461,7 @@ N. B: The same inputs worked yesterday, before code release 1.2 was delivered<br
 
 <h1>Q. 876</h1>
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered maxSize">
   <thead>
     <tr>
       <th>Test Procedure ID</th>
@@ -469,7 +475,7 @@ N. B: The same inputs worked yesterday, before code release 1.2 was delivered<br
       <td>P</td>
       <td>3</td>
       <td>None</td>
-      <td>Delivery of the code for this part of system is running very late</td>
+      <td>Delivery of the code for this part</br> of the system is running very late</td>
     </tr>
     <tr>
       <td>Q</td>
@@ -547,6 +553,180 @@ N. B: The same inputs worked yesterday, before code release 1.2 was delivered<br
     </tr>
   </tbody>
 </table>
+
+ <h1>Q. 794</h1>
+  <table class="table table-striped table-bordered mediumSize">
+    <thead>
+      <tr class="info">
+        <th></th>
+        <th>On</th>
+        <th>Off</th>
+        <th >Channel 1</th>
+        <th>Channel 2</th>
+        <th>Channel &gt; 2</th>
+        <th>Standby</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="info">Standby</td>
+        <td>Live</td>
+        <td>N</td>
+        <td>N</td>
+        <td>N</td>
+        <td>N</td>
+        <td>N</td>
+      </tr>
+      <tr>
+        <td class="info">Live</td>
+        <td>N</td>
+        <td>Standby</td>
+        <td>Display </br> Channel 1</td>
+        <td>Display </br> Channel 2</td>
+        <td>N</td>
+        <td>Standby</td>
+      </tr>
+      <tr>
+        <td class="info">Display </br> Channel 1</td>
+        <td>N</td>
+        <td>N</td>
+        <td>N</td>
+        <td>Display </br> Channel 2</td>
+        <td>Live</td>
+        <td>Standby</td>
+      </tr>
+      <tr>
+        <td class="info">Display </br> Channel 2</td>
+        <td>N</td>
+        <td>N</td>
+        <td>Display </br> Channel 1</td>
+        <td>N</td>
+        <td>Live</td>
+        <td>Standby</td>
+      </tr>         
+    </tbody>
+  </table>
+  
+ <h1>Q. 820</h1>
+  <table class="table table-striped table-bordered mediumSize">
+    <thead>
+      <tr class="info">
+        <th></th>
+        <th>Rule 1</th>
+        <th>Rule 2</th>
+        <th>Rule 3</th>
+        <th>Rule 4</th>       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="info">Conditions</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="info">Frequent Flyer</td>
+        <td>Gold</td>
+        <td>Gold</td>
+        <td>Silver</td>
+        <td>Silver</td>
+      </tr>
+      <tr>
+        <td class="info">Class reserved</td>
+        <td>Business class</td>
+        <td>Economy class</td>
+        <td>Business class</td>
+        <td>Economy class</td>
+      </tr>
+      <tr>
+        <td class="info">Actions</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>      
+      <tr>
+        <td class="info">Free upgrade</td>
+        <td>First class</td>
+        <td>Business class</td>
+        <td>None</td>
+        <td>Business class</td>
+      </tr> 
+      <tr>
+        <td class="info">Discounted upgrade</td>
+        <td>N/A</td>
+        <td>First class</td>
+        <td>First class</td>
+        <td>None</td>
+      </tr>                
+    </tbody>
+  </table> 
+  
+ <h1>Q. 842</h1>
+  <table class="table table-striped table-bordered mediumSize">
+    <thead>
+      <tr class="info">
+        <th></th>
+        <th>Rule 1</th>
+        <th>Rule 2</th>
+        <th>Rule 3</th>
+        <th>Rule 4</th>       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="info">Conditions</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="info">Existing medical condition</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td class="info">Smoker</td>
+        <td>Don't care</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td class="info">Skiing</td>
+        <td>Don't care</td>
+        <td>Don't care</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>      
+      <tr>
+        <td class="info">Actions</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>      
+      <tr>
+        <td class="info">Insure</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr> 
+      <tr>
+        <td class="info">Offer discount</td>
+        <td>N/A</td>
+        <td>No</td>
+        <td>15%</td>
+        <td>10%</td>
+      </tr>                
+    </tbody>
+  </table>    
 
 <h1>Q. 928 = Q. 735</h1>
 

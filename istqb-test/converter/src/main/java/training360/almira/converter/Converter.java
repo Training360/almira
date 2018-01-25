@@ -2,16 +2,13 @@ package training360.almira.converter;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import org.thymeleaf.context.IContext;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 import java.util.*;
 
 public class Converter {
@@ -36,10 +33,10 @@ public class Converter {
 
         List<Question> questions = new ArrayList<>();
         String state = "inquestion";
-        java.io.File f = new java.io.File("..\\txt\\questions.txt");
-        System.out.println(f.getAbsolutePath());
-        try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
-            String line = null;
+        Path p = getPath("../txt/questions.txt");
+        System.out.println(p.toAbsolutePath());
+        try (BufferedReader reader = new BufferedReader(new FileReader(p.toFile()))) {
+            String line;
             Question question = null;
             Answer answer = null;
             int index = 1;
@@ -123,9 +120,9 @@ public class Converter {
     }
 
     private void copyFile(String id, String basename) {
-        Path source = Paths.get("..\\txt\\images\\" + basename);
-        Path destDir = Paths.get("target\\_files\\" + id);
-        Path dest = Paths.get("target\\_files\\" + id + "\\" + basename);
+        Path source = getPath("../txt/images/" + basename);
+        Path destDir = getPath("target/_files/" + id);
+        Path dest = getPath("target/_files/" + id + "/" + basename);
         try {
             Files.createDirectories(destDir);
             Files.copy(source, dest);
@@ -152,8 +149,8 @@ public class Converter {
 
     private Map<String,String> readAnswers() {
         Map<String,String> answers = new HashMap<>();
-        java.io.File f = new java.io.File("..\\txt\\answers.txt");
-        try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
+        Path f = getPath("../txt/answers.txt");
+        try (BufferedReader reader = new BufferedReader(new FileReader(f.toFile()))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 int i = line.indexOf(":");
@@ -176,5 +173,10 @@ public class Converter {
         templateResolver.setPrefix("/templates/");
         templateResolver.setSuffix(".xml");
 
+    }
+
+    private Path getPath(String s) {
+        String converted;
+        return Paths.get(s.replace("/", FileSystems.getDefault().getSeparator()));
     }
 }
