@@ -27,9 +27,13 @@
         </header>
 
         <!-- NAV -->
-        <nav>
-            <div class="menu right">
-                <a class="btn btn-lg" href="./testApp.html">{{ translate('restart') }}</a>
+        <nav class="clearfix">
+            <div class="menu embed-half">
+                <button ng-click="setLanguage('en')" ng-class="language == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
+                <button ng-click="setLanguage('hu')" ng-class="language == 'hu' ? 'active btn btn-lg' : 'btn btn-lg'">Magyar</button>
+            </div>
+            <div class=" menu embed-half right">
+                <a class="btn btn-lg" href="./testApp.html">Újraindítás</a>
             </div>
         </nav>
 

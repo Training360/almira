@@ -1,0 +1,947 @@
+{
+    "terms": [
+        {
+            "name": "adatfolyam",
+            "engNames": [
+                "data flow"
+            ],
+            "desc": "az adatobjektumok állapotsorrendjének, valamint lehetséges változásainak absztrakt megjelenítése, ahol az objektum állapota létrehozás, használat, illetve megszüntetés lehet."
+        },
+        {
+            "name": "adatvezérelt teszt",
+            "engNames": [
+                "data-driven testing"
+            ],
+            "desc": "olyan szkript módszer, amely egy táblázatban tárolja a bemeneteket és az elvárt értékeket oly módon, hogy egy vezérlő szkript minden tesztet végre tud hajtani belőle. Az adatvezérelt tesztet gyakran használják pl. felvevő/lejátszó tesztelő eszközök használatának támogatására."
+        },
+        {
+            "name": "alfa teszt",
+            "engNames": [
+                "alpha testing"
+            ],
+            "desc": "szimulált, vagy tényleges tesztelés, amelyet potenciális felhasználók, vagy egy független tesztcsapat végez a fejlesztés helyszínén, de a fejlesztői szervezettől függetlenül. Gyakran használják dobozos szoftverek belső átvételi tesztjeihez."
+        },
+        {
+            "name": "állapotátmenet teszt",
+            "engNames": [
+                "state transition testing"
+            ],
+            "desc": "olyan feketedoboz teszttervezési technika, amiben úgy tervezzük meg a teszteseteket, hogy érvényes és érvénytelen állapotátmeneteket generáljanak."
+        },
+        {
+            "name": "átvizsgálás",
+            "engNames": [
+                "walkthrough"
+            ],
+            "desc": "egy dokumentum szerzője által végzett lépésenkénti bemutató abból a célból, hogy információt gyűjtsön vagy közös álláspontot alakítson ki."
+        },
+        {
+            "name": "belépési feltétel",
+            "engNames": [
+                "entry criteria"
+            ],
+            "desc": "általános és speciális feltételek halmaza, amely engedélyezi egy adott feladat végrehajtását. Az a cél, hogy ne indítsunk olyan feladatokat, amelyek több elvesztetegetett ráfordítást jelentenének, mint az elbukó belépési feltételek kijavítása"
+        },
+        {
+            "name": "béta teszt",
+            "engNames": [
+                "beta testing",
+                "field testing"
+            ],
+            "desc": "a szoftvernek egy szűkebb felhasználói körben való külső tesztelése a végső kiadás előtt annak érdekében, hogy meghatározzuk, a szoftver megfelel-e a felhasználók piaci igényeinek. Gyakran megfelel a dobozos (COTS) szoftverek külső átvételi tesztjének."
+        },
+        {
+            "name": "biztonsági teszt",
+            "engNames": [
+                "security testing",
+                "safety testing"
+            ],
+            "desc": "olyan teszt, amivel a szoftvertermék biztonságát határozzuk meg."
+        },
+        {
+            "name": "biztonsági eszköz",
+            "engNames": [
+                "security tool"
+            ],
+            "desc": "olyan eszköz, ami a működési biztonságot támogatja."
+        },
+        {
+            "name": "csonk",
+            "engNames": [
+                "stub"
+            ],
+            "desc": "egy szoftver komponens speciális célú vagy részleges megvalósítása. A csonkot arra használjuk, hogy támogassuk a komponens(ek) fejlesztését vagy tesztelését. Helyettesíti a meghívott komponenst."
+        },
+        {
+            "name": "dinamikus elemző eszköz",
+            "engNames": [
+                "dynamic analysis tool"
+            ],
+            "desc": "a szoftverkód állapotáról futási időben információt szolgáltató eszköz. Leggyakrabban érvénytelen mutatók, memóriafoglalások – és törlések, illetve memóriaszivárgások felderítésére használják."
+        },
+        {
+            "name": "dinamikus teszt",
+            "engNames": [
+                "dynamic testing"
+            ],
+            "desc": "olyan teszt, amely magában foglalja egy komponens vagy rendszer szoftverének futtatását."
+        },
+        {
+            "name": "dobozos szoftver",
+            "engNames": [
+                "off-the-shelf software",
+                "commercial off-the-shelf (COTS)"
+            ],
+            "desc": "egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló, megjelenéssel érhető el."
+        },
+        {
+            "name": "döntési lefedettség",
+            "engNames": [
+                "decision coverage"
+            ],
+            "desc": "a tesztkészlet végrehajtása során a döntési eredmények meghívásának százalékos végrehajtási aránya. 100%-os döntési lefedettség 100%-os elágazási lefedettséget és 100%-os utasítás lefedettséget jelent."
+        },
+        {
+            "name": "döntési tábla teszt",
+            "engNames": [
+                "decision table testing"
+            ],
+            "desc": "feketedoboz teszttervezési módszer, amely során olyan teszteseteket tervezünk, amelyek a döntési táblában szereplő különböző okok és bemenetek kombinációit igyekeznek tesztelni."
+        },
+        {
+            "name": "egyenrangú felülvizsgálat",
+            "engNames": [
+                "peer review"
+            ],
+            "desc": "egy szoftver-munkatermék felülvizsgálata a termék előállítójának munkatársai által, amelynek célja, hogy hibákat fedezzen fel illetve javító javaslatokat hozzon. Példák: inspekció, technikai felülvizsgálat, átvizsgálás."
+        },
+        {
+            "name": "egységteszt keretrendszer",
+            "engNames": [
+                "unit test framework"
+            ],
+            "desc": "olyan környezetet biztosító keretrendszer, amelyben egy komponens egyaránt tesztelhető különállóan valamint a megfelelő segédprogramokkal. Hibakeresési funkciójával támogatja a szoftverfejlesztő munkáját is."
+        },
+        {
+            "name": "együttműködő képességi teszt",
+            "engNames": [
+                "interoperability testing"
+            ],
+            "desc": "egy adott szoftver együttműködő-képességének vizsgálata."
+        },
+        {
+            "name": "ekvivalencia partícionálás",
+            "engNames": [
+                "equivalence partitioning"
+            ],
+            "desc": "feketedoboz tesztelési módszer, amely során olyan teszteseteket készítünk, amelyek az ekvivalencia partíciók egyes reprezentánsait tesztelik. Jellemzően minden egyes ekvivalencia partíciót érdemes legalább egyszer lefedni."
+        },
+        {
+            "name": "emberi eredetű hiba",
+            "engNames": [
+                "error",
+                "mistake"
+            ],
+            "desc": "emberi tevékenység, amely során helytelen eredmény jön létre."
+        },
+        {
+            "name": "fehérdoboz teszt",
+            "engNames": [
+                "white-box testing",
+                "glass-box testing",
+                "clear-box testing"
+            ],
+            "desc": "a szoftver belső struktúrájának elemzésén alapuló tesztelés"
+        },
+        {
+            "name": "fehérdoboz teszttervezési technika",
+            "engNames": [
+                "white-box test design technique"
+            ],
+            "desc": "olyan eljárás, amely a teszteseteit egy komponens vagy rendszer belső struktúrájának elemzéséből származtatja."
+        },
+        {
+            "name": "feketedoboz teszt",
+            "engNames": [
+                "black-box testing"
+            ],
+            "desc": "a program belső szerkezetére történő hivatkozás nélküli funkcionális, vagy nem-funkcionális teszt."
+        },
+        {
+            "name": "feketedoboz teszttervezési technika",
+            "engNames": [
+                "black-box test design technique",
+                "black-box test design technique"
+            ],
+            "desc": "olyan módszer, amelynél a szoftver specifikáció alapján, a program belső szerkezetének ismerete nélkül tervezünk teszteket."
+        },
+        {
+            "name": "ATA,F-AT felderítő teszt",
+            "engNames": [
+                "exploratory testing"
+            ],
+            "desc": "informális teszttervezési módszer, amely során a tesztelő aktívan felügyeli a tesztek tervezését, a futtatás során szerzett információkat összegyűjti és hasznosítja új és jobb tesztek tervezése érdekében"
+        },
+        {
+            "name": "feltétel teszt",
+            "engNames": [
+                "condition testing"
+            ],
+            "desc": "olyan fehérdoboz tesztelési módszer, amely során a tesztesetek feltételekhez tartoznak."
+        },
+        {
+            "name": "felülvizsgálat",
+            "engNames": [
+                "review"
+            ],
+            "desc": "egy termék vagy projekt státuszának értékelése. Célja, hogy feltérképezze az eltéréseket a tervezett eredményekhez képest, valamint ajánlást tegyen a továbblépéshez. Több típusa van, például: menedzsment felülvizsgálat, informális felülvizsgálat, technikai felülvizsgálat, inspekció, átvizsgálás."
+        },
+        {
+            "name": "felülvizsgáló",
+            "engNames": [
+                "reviewer"
+            ],
+            "desc": "a felülvizsgálaton résztvevő személy, aki azonosítja és leírja a termékben vagy projektben azonosított eltéréseket. A felülvizsgálókat célszerű úgy kiválasztani, hogy többféle nézőpontot, szerepkört képviseljenek."
+        },
+        {
+            "name": "felülvizsgáló eszköz",
+            "engNames": [
+                "review tool"
+            ],
+            "desc": "olyan eszköz, ami a felülvizsgálat folyamatát támogatja. Jellemzően a felülvizsgálatok tervezését, a változáskövetést, a felülvizsgálók közötti kommunikációt, közös felülvizsgálat végzését támogatja. Ezek mellett a mérőszámok egyfajta gyűjtőhelyeként, valamint az azokat tartalmazó jelentések alapjául is szolgál."
+        },
+        {
+            "name": "fordítóprogram",
+            "engNames": [
+                "compiler"
+            ],
+            "desc": "egy olyan szoftver eszköz, amely a magas szintű programnyelvi kifejezéseket a gépi kódú megfelelőjére fordítja."
+        },
+        {
+            "name": "formális felülvizsgálat",
+            "engNames": [
+                "formal review"
+            ],
+            "desc": "dokumentált eljárásokal és követelményekkel (pl. inspekcióval) jellemzett felülvizsgálat."
+        },
+        {
+            "name": "funkcionális követelmény",
+            "engNames": [
+                "functional requirement"
+            ],
+            "desc": "olyan követelmény, amely a szoftverrel szemben támasztott funkcionális elvárást írja le."
+        },
+        {
+            "name": "funkcionális teszt",
+            "engNames": [
+                "functional testing"
+            ],
+            "desc": "a rendszer funkcionális specifikációján alapuló teszt."
+        },
+        {
+            "name": "használati eset teszt",
+            "engNames": [
+                "use case testing"
+            ],
+            "desc": "olyan feketedoboz teszttervezési technika, amelyekben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették."
+        },
+        {
+            "name": "használhatósági teszt",
+            "engNames": [
+                "usability testing"
+            ],
+            "desc": "annak meghatározása, hogy a szoftvertermék mennyire érthető meg, mennyire könnyű megtanulni használatát és milyen könnyen kezelhető, ezáltal - meghatározott feltételek mentén - mennyire felhasználóbarát."
+        },
+        {
+            "name": "határérték elemzés",
+            "engNames": [
+                "boundary value analysis"
+            ],
+            "desc": "a program változóinak, illetve paramétereinek szélsőértékelemzésén alapuló feketedoboz teszttervezési technika."
+        },
+        {
+            "name": "hatáselemzés",
+            "engNames": [
+                "impact analysis"
+            ],
+            "desc": "a szoftverváltozás kihatásának elemzése a fejlesztési dokumentáció, a teszt dokumentáció, illetve a komponensek tekintetében, a követelmények változásainak megvalósítása érdekében."
+        },
+        {
+            "name": "hibakeresés",
+            "engNames": [
+                "debugging"
+            ],
+            "desc": "a szoftver meghibásodás okainak megtalálási, analizálási és eltávolítási folyamata."
+        },
+        {
+            "name": "hibakereső eszköz",
+            "engNames": [
+                "debugging tool"
+            ],
+            "desc": "a programozó által használt eszköz a külső hibák reprodukálására, elemzésére és a hibák okainak megtalálására. A hibakereső eszközök lehetővé teszik a program lépésenkénti végrehajtását, illetve bármely utasításánál történő megállítását, valamint a programváltozók vizsgálatát és beállítását."
+        },
+        {
+            "name": "hibasejtés",
+            "engNames": [
+                "error guessing"
+            ],
+            "desc": "olyan műszaki teszttervezési módszer, amely során a tesztelők tapasztalata alapján próbálják megsejteni a tesztelendő szoftverben levő hibákat, illetve ez alapján próbálnak megfelelő teszteket tervezni."
+        },
+        {
+            "name": "hibasűrűség",
+            "engNames": [
+                "defect density",
+                "fault density"
+            ],
+            "desc": "a szoftverben azonosított hibák aránya a szoftver méretéhez viszonyítva (ez utóbbi szabványos mértékegységben kifejezve, mint pl. a kódsorok, vagy az osztályok, illetve funkciópontok száma)."
+        },
+        {
+            "name": "hibatámadás",
+            "engNames": [
+                "attack",
+                "fault attack"
+            ],
+            "desc": "célzott próbálkozás a teszt tárgyának minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni."
+        },
+        {
+            "name": "hordozhatósági teszt",
+            "engNames": [
+                "portability testing"
+            ],
+            "desc": "egy szoftvertermék hordozhatóságra vonatkozó tesztelés folyamata."
+        },
+        {
+            "name": "incidens",
+            "engNames": [
+                "incident"
+            ],
+            "desc": "bármely olyan történés, amely vizsgálódást tesz szükségessé."
+        },
+        {
+            "name": "incidensjelentés",
+            "engNames": [
+                "incident report"
+            ],
+            "desc": "olyan dokumentum, amely minden, pl. a tesztelés alatt bekövetkezett incidenst tartalmaz, amely vizsgálatot tesz szükségessé."
+        },
+        {
+            "name": "incidens naplózása",
+            "engNames": [
+                "incident logging"
+            ],
+            "desc": "bármely bekövetkezett incidens feljegyzése, pl. a tesztelés alatt."
+        },
+        {
+            "name": "incidens menedzsment",
+            "engNames": [
+                "incident management"
+            ],
+            "desc": "az incidensek felismerésének, vizsgálatának, a különböző intézkedések és rendelkezések szervezésének folyamata. Magába foglalja az incidens loggolását, osztályozását és kihatásának vizsgálatát."
+        },
+        {
+            "name": "incidens menedzsment eszköz",
+            "engNames": [
+                "incident management tool"
+            ],
+            "desc": "olyan eszköz, amely megkönnyíti az incidensek felismerését és állapotainak nyomonkövetését. Gyakran munkafolyamatközpontú annak érdekében, hogy az incidens allokációját, javítását és újratesztelését támogassa, illetve hogy támogassa a jelentéskészítést."
+        },
+        {
+            "name": "informális felülvizsgálat",
+            "engNames": [
+                "informal review"
+            ],
+            "desc": "olyan felülvizsgálat, amely nem formális (dokumentált) eljáráson alapul."
+        },
+        {
+            "name": "inkrementális fejlesztési modell",
+            "engNames": [
+                "incremental development model"
+            ],
+            "desc": "fejlesztési életciklus modell, ahol a projekt részét alkotó kis lépések mindegyike egy kis részt tesz hozzá az általános projektkövetelményekhez. A követelményeket priorizálják és a megfelelő inkrementális egységben a prioritási sorrend szerint szállítják. Ezen életciklusmodell néhány (de nem minden) verziójában minden alprojekt egy „mini V-modell” szerint működik, saját tervezési, megvalósítási és tesztelési fázisokkal."
+        },
+        {
+            "name": "inspekció",
+            "engNames": [
+                "inspection"
+            ],
+            "desc": "az egyenrangú felülvizsgálat egy típusa, amely a dokumentum vizuális vizsgálatán alapul, hogy megtaláljuk a hibákat, vagy pl. a szabványokhoz képest meglevő különbségeket, illetve a magasabb szintű dokumentációktól való eltéréseket. A leginkább formális felülvizsgálati módszer, amely emiatt mindig dokumentált eljáráson alapul."
+        },
+        {
+            "name": "integráció",
+            "engNames": [
+                "integration"
+            ],
+            "desc": "a komponensek, vagy rendszerek nagyobb egységbe történő összeolvasztásának folyamata."
+        },
+        {
+            "name": "integrációs teszt",
+            "engNames": [
+                "integration testing"
+            ],
+            "desc": "olyan teszt, amelynek célja az integrált egységek közötti interfészekben, illetve köcsönhatásokban lévő hibák megtalálása."
+        },
+        {
+            "name": "iteratív fejlesztési modell",
+            "engNames": [
+                "iterative development model"
+            ],
+            "desc": "olyan fejlesztési életciklus, amely során a projektet nagyszámú iterációk sorozatára bontják. Egy iteráció egy olyan teljes fejlesztési ciklus, amely egy végrehajtható termék (belső, vagy külső) kiadását eredményezi, a végső termék egy részhalmazát, amely iterációról iterációra növekedve válik a végső termékké."
+        },
+        {
+            "name": "jegyzőkönyv vezető",
+            "engNames": [
+                "scribe",
+                "recorder"
+            ],
+            "desc": "az a személy, aki naplózott formában rögzíti a felülvizsgálat során megemlített összes hibát és azokat a javaslatokat, amik a folyamat javítására irányulnak. A jegyzőkönyv vezetőnek biztosítani kell, hogy a naplózás olvasható és érthető legyen."
+        },
+        {
+            "name": "karbantartási teszt",
+            "engNames": [
+                "maintenance testing"
+            ],
+            "desc": "módosítások vagy megváltozott környezet miatt a működő rendszeren végrehajtott teszt."
+        },
+        {
+            "name": "ATT,F-AT karbantarthatósági teszt",
+            "engNames": [
+                "maintainability testing"
+            ],
+            "desc": "teszteljárás egy alkalmazás karbantarthatóságának meghatározására."
+        },
+        {
+            "name": "kilépési feltétel",
+            "engNames": [
+                "exit criteria"
+            ],
+            "desc": "általános és speciális feltételek halmaza, amelyet minden érintettel egyeztetve egy folyamat hivatalos befejezési feltételének tekintünk. A célja, hogy megakadályozzuk az olyan feladatok befejezettnek tekintését, amelyeknek még vannak függőben levő, be nem fejezett részei. A kilépési feltételeket a tesztelés leállításának tervezéséhez és jelentéséhez használjuk."
+        },
+        {
+            "name": "kimerítő teszt",
+            "engNames": [
+                "exhaustive testing"
+            ],
+            "desc": "olyan teszt, amely során a tesztkészletünk magába foglalja a bemeneti értékek és előfeltételek összes kombinációját."
+        },
+        {
+            "name": "kockázat",
+            "engNames": [
+                "risk"
+            ],
+            "desc": "az a tényező, amely a jövőben negatív következményeket okozhat. Általában, mint hatás és valószínűség jelenik meg."
+        },
+        {
+            "name": "kockázat-alapú teszt",
+            "engNames": [
+                "risk-based testing"
+            ],
+            "desc": "a tesztelés egy olyan megközelítése, mely csökkenti a termék kockázati szintjét és tájékoztatja az érintetteket a kockázat mértékéről már a projekt kezdeti fázisában. Magában foglalhatja mind a termék kockázatainak azonosítását, mind a tesztfolyamat kockázat szerinti vezetését."
+        },
+        {
+            "name": "komplexitás",
+            "engNames": [
+                "complexity"
+            ],
+            "desc": "a szoftver tervének, illetve illetve belső struktúrájának összetettsége megértés, karbantartás, valamint verifikálás szempontjából."
+        },
+        {
+            "name": "komponens teszt",
+            "engNames": [
+                "component testing"
+            ],
+            "desc": "az egyes szoftverkomponensek tesztje."
+        },
+        {
+            "name": "konfiguráció menedzsment",
+            "engNames": [
+                "configuration management"
+            ],
+            "desc": "a következő tevékenységek technikai és adminisztratív irányítása: a konfigurációs elemek funkcionális és fizikai karakterisztikáinak meghatározása és dokumentálása, az ezen karakterisztikákhoz képest történő változás irányítása, a változáskezelési és megvalósítási állapot nyomon követése és jelentése, illetve a különböző követelményeknek történő megfelelés."
+        },
+        {
+            "name": "konfiguráció menedzsment eszköz",
+            "engNames": [
+                "configuration management tool"
+            ],
+            "desc": "olyan eszköz, amely támogatja a konfigurációs elemek meghatározását és irányítását, ezek változásainak, illetve verzióinak, státuszainak nyomon követését, illetve felügyeli az ezeket tartalmazó alapverziók kiadását."
+        },
+        {
+            "name": "kód lefedettség",
+            "engNames": [
+                "code coverage"
+            ],
+            "desc": "elemző módszer, amely meghatározza, hogy a szoftver mely részei lettek végrehajtva (lefedve) a teszt végrehajtása során, és melyek nem. Például: utasítás lefedettség, döntési lefedettség, feltétel lefedettség."
+        },
+        {
+            "name": "követelmény",
+            "engNames": [
+                "requirement"
+            ],
+            "desc": "olyan feltétel vagy képesség, amely a felhasználó számára azért szükséges, hogy megoldjon egy problémát,vagy elérjen egy célt. Ezen feltételnek vagy képességnek a rendszer vagy rendszer komponens által is megvalósíthatónak kell lennie úgy, hogy közben a szerződés, szabvány, specifikáció és egyéb formális dokumentumban támasztott követelményeknek is megfeleljen."
+        },
+        {
+            "name": "követelmény-menedzsment eszköz",
+            "engNames": [
+                "requirements management tool"
+            ],
+            "desc": "olyan eszköz, amely támogatja a követelmények, a követelmény jellemzőinek (pl. prioritás, tudás gazda) rögzítését és magyarázó jegyzetek készítését, valamint megkönnyíti a különböző szintű követelmények nyomon követhetőségét és változás menedzsmentjét. Vannak olyan követelmény-menedzsment eszközök, melyek a statikus elemzéshez is segítséget nyújtanak, például konzisztencia ellenőrzéssel vagy előre definiált, követelményekre vonatkozó szabályokkal."
+        },
+        {
+            "name": "kulcsszó-alapú teszt",
+            "engNames": [
+                "action word-driven testing",
+                "keyword-driven testing"
+            ],
+            "desc": "egy olyan, szkripteken alapuló tesztelési technológia, amelynél a teszt-szkriptekben nemcsak tesztadatok és az elvárt eredmény található, hanem az alkalmazással kapcsolatos vezérlő kulcsszavak is. Az akciószavak értelmezését a teszthez tartozó vezérlő szkriptek által meghívott speciális támogató szkriptek végzik."
+        },
+        {
+            "name": "lefedettségi eszköz",
+            "engNames": [
+                "coverage tool"
+            ],
+            "desc": "olyan eszköz, amely objektíven méri, hogy mely strukturális elemeket – pl. utasításokat, elágazásokat - hajt végre a tesztkészlet."
+        },
+        {
+            "name": "megbízhatósági teszt",
+            "engNames": [
+                "reliability testing"
+            ],
+            "desc": "a teszt folyamata meghatározza egy szoftvertermék megbízhatóságát."
+        },
+        {
+            "name": "meghajtó",
+            "engNames": [
+                "driver"
+            ],
+            "desc": "egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy felhívását végzi."
+        },
+        {
+            "name": "meghibásodás",
+            "engNames": [
+                "failure"
+            ],
+            "desc": "a komponens, illetve a rendszer eltér az elvárt eredménytől, vagy szolgáltatástól."
+        },
+        {
+            "name": "meghibásodás arány",
+            "engNames": [
+                "failure rate"
+            ],
+            "desc": "adott kategóriájú meghibásodások aránya egy adott mértékegységben kifejezve, pl. időegységhez, a tranzakciók számához, vagy a futó gépek számához viszonyítva."
+        },
+        {
+            "name": "metrika",
+            "engNames": [
+                "metric"
+            ],
+            "desc": "méréseknél használatos skála és mérési módszertan."
+        },
+        {
+            "name": "minőség",
+            "engNames": [
+                "quality"
+            ],
+            "desc": "az a szint, amikor a komponens, rendszer vagy folyamat megfelel a meghatározott követelményeknek és/vagy a felhasználó/ügyfél igényeinek és elvárásainak."
+        },
+        {
+            "name": "műszaki teszttervezés",
+            "engNames": [
+                "test design"
+            ],
+            "desc": "(1) Lásd műszaki tesztterv (test design) specifikáció (2) Az általános tesztcélok átalakítása mérhető tesztfeltételekké és tesztesetekké"
+        },
+        {
+            "name": "műszaki teszttervezési technika",
+            "engNames": [
+                "test design technique"
+            ],
+            "desc": "a tesztesetek készítésére, származtatására és kiválasztására alkalmazott eljárás."
+        },
+        {
+            "name": "műszaki teszttervező eszköz",
+            "engNames": [
+                "test design tool"
+            ],
+            "desc": "a műszaki teszttervezési tevékenységet támogató eszköz, amely tesztbemeneteket generál egyéb forrásokból, pl. CASE eszközökből, követelmény menedzsment eszközökből, tesztfeltételekből valamint magából a programkódból."
+        },
+        {
+            "name": "nem-funkcionális követelmény",
+            "engNames": [
+                "non-functional requirement"
+            ],
+            "desc": "olyan követelmény, amely a funkcionalitáshoz nem, de a megbízhatósághoz, hatékonysághoz, használhatósághoz, karbantarthatósághoz és hordozhatósághoz kapcsolódik."
+        },
+        {
+            "name": "nyomonkövethetőség",
+            "engNames": [
+                "traceability"
+            ],
+            "desc": "a dokumentáció és a szoftver összefüggő egységeinek vizsgálata, pl. a követelmények és a hozzájuk tartozó tesztesetek közötti kapcsolatra. Lásd függőleges nyomonkövethetőség, vízszintes nyomonkövethetőség."
+        },
+        {
+            "name": "nyomonkövethetőségi mátrix",
+            "engNames": [
+                "traceability matrix"
+            ],
+            "desc": "olyan kétdimenziós táblázat, amely két entitást feleltet meg egymásnak (pl. a követelmények és a tesztesetek). Oda-vissza lehetővé teszi a nyomonkövetést egyik entitásról a másikra, ezáltal lehetővé válik a lefedettség meghatározása, valamint a tervezett változások kihatásainak értékelése."
+        },
+        {
+            "name": "összefoglaló tesztjelentés",
+            "engNames": [
+                "test summary report"
+            ],
+            "desc": "a teszttevékenységeket és eredményeket tartalmazó dokumentum. Ebben a dokumentumban található a kilépési feltételeknek megfelelően ellenőrzött tesztelemek kiértékelése is."
+        },
+        {
+            "name": "programhiba",
+            "engNames": [
+                "bug",
+                "defect",
+                "fault"
+            ],
+            "desc": "a program olyan belső hibája, amely azt eredményezheti, hogy a szoftver nem tudja teljesíteni az elvárt viselkedését, azaz a program meghibásodásához vezethet."
+        },
+        {
+            "name": "projektkockázat",
+            "engNames": [
+                "project risk"
+            ],
+            "desc": "egy (teszt) projekt menedzsmentjénél, iránytásánál felmerülő kockázat, mint például emberhiány, szoros határidők, változó követelmények, stb."
+        },
+        {
+            "name": "ETAE regressziós teszt",
+            "engNames": [
+                "regression testing"
+            ],
+            "desc": "egy korábban már tesztelt program módosítást követő tesztelése annak biztosítása érdekében, hogy a módosítás nem okozott hibát a szoftver nem módosított részeiben. A teszt végrehajtása a szoftver vagy a szoftverkörnyezet változtatásakor történik."
+        },
+        {
+            "name": "rendszerteszt",
+            "engNames": [
+                "system testing"
+            ],
+            "desc": "integrált rendszer tesztje abból a célból, hogy ellenőrizzük a követelményeknek való megfelelőséget."
+        },
+        {
+            "name": "robosztussági teszt",
+            "engNames": [
+                "robustness testing"
+            ],
+            "desc": "egy szoftvertermék robosztusságának meghatározására vonatkozó teszt."
+        },
+        {
+            "name": "stabilitás",
+            "engNames": [
+                "stability"
+            ],
+            "desc": "a szoftvertermék azon képessége, hogy a szoftverben történt módosítások nem várt hatásait elkerülje."
+        },
+        {
+            "name": "statikus teszt",
+            "engNames": [
+                "static testing"
+            ],
+            "desc": "egy komponens vagy rendszer szoftver elemeinek – pl. követekemények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés."
+        },
+        {
+            "name": "stressz teszt",
+            "engNames": [
+                "stress testing"
+            ],
+            "desc": "olyan teljesítményteszt típus, amikor úgy vizsgálunk egy komponenst vagy rendszert, hogy az előre elvárt vagy annál nagyobb terheléssel, vagy csökkentett erőforrás rendelkezésre bocsátással teszteljük - például korlátozott szerver, vagy memória hozzáféréssel."
+        },
+        {
+            "name": "stressz teszteszköz",
+            "engNames": [
+                "stress testing tool"
+            ],
+            "desc": "stressz tesztet támogató eszköz."
+        },
+        {
+            "name": "szkript nyelv",
+            "engNames": [
+                "scripting language"
+            ],
+            "desc": "a tesztvégrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni."
+        },
+        {
+            "name": "technikai felülvizsgálat",
+            "engNames": [
+                "technical review"
+            ],
+            "desc": "egyenrangú résztvevők csoportos megbeszélése, akik a technikai megközelítés tekintetében törekednek a közös álláspont kialakítására"
+        },
+        {
+            "name": "teljesítményteszt",
+            "engNames": [
+                "performance testing"
+            ],
+            "desc": "tesztelési folyamat, mellyel a szoftvertermék teljesítményét lehet meghatározni."
+        },
+        {
+            "name": "teljesítményteszt eszköz",
+            "engNames": [
+                "performance testing tool"
+            ],
+            "desc": "teljesítményteszthez alkalmazott eszköz, melynek két különböző képessége van: terhelést generál és méri a tranzakciók számát. Az eszköz terhelést generál több felhasználó szimulációjával, illetve nagy mennyiségű bemenő adatot elküldésével. A futás során kiválasztott tranzakciók válaszidejét mérik és naplózzák, amelyből általában a terhelés és a válaszidő kapcsolatát leíró napló file-okon és ábrákon alapuló jelentések készülnek."
+        },
+        {
+            "name": "terheléses teszt",
+            "engNames": [
+                "load testing"
+            ],
+            "desc": "a teljesítményteszt azon típusa, amely a komponens vagy rendszer viselkedését vizsgálja növekedő terhelés alatt (például a felhasználók számának, vagy kérések számának növelésekor). A teszt célja, hogy kiderüljön, a komponens vagy rendszer hogyan reagál a magas terhelésre (lefagy, nő a válaszidő, stb.)."
+        },
+        {
+            "name": "termékkockázat",
+            "engNames": [
+                "product risk"
+            ],
+            "desc": "a teszt tárgyához (magához a termékhez) közvetlenül kapcsolódó kockázat."
+        },
+        {
+            "name": "teszt összehasonlító eszköz",
+            "engNames": [
+                "test comparator"
+            ],
+            "desc": "egy teszteszköz, amellyel a teszt elvárt és aktuális eredményeit automatikusan össze lehet hasonlítani."
+        },
+        {
+            "name": "tesztadat",
+            "engNames": [
+                "test data"
+            ],
+            "desc": "olyan adat, amely a teszt előtt is létezik (például egy adatbázisban) és amely kölcsönhatásban van a tesztelés alatt álló rendszerrel, vagy a rendszerkomponenssel."
+        },
+        {
+            "name": "tesztadat előkészítő eszköz",
+            "engNames": [
+                "test data preparation tool"
+            ],
+            "desc": "olyan teszteszköz, amellyel a teszteléshez adatot állíthatunk elő egy már meglévő adatbázisból. Az eszköz alkalmas lehet egyéb adatok generálására, adatok manipulálására, valamint szerkesztésére is."
+        },
+        {
+            "name": "tesztbázis",
+            "engNames": [
+                "test basis"
+            ],
+            "desc": "az összes olyan dokumentum, amelyből a komponensekre vagy rendszerekre vonatkozó követelmények származnak. Ezek azok a dokumentumok, amelyeken a tesztesetek alapulnak. Ha egy ilyen dokumentumot csak formális változáskezelési folyamat során módosíthatnak, a tesztbázist ún. fagyasztott tesztbázisnak nevezik."
+        },
+        {
+            "name": "tesztcél",
+            "engNames": [
+                "test objective"
+            ],
+            "desc": "a műszaki teszttervezés, illetve tesztvégrehajtás célja."
+        },
+        {
+            "name": "tesztelés",
+            "engNames": [
+                "testing"
+            ],
+            "desc": "az összes szoftverfejlesztési életciklushoz kapcsolódó akár statikus, akár dinamikus folyamat, amely kapcsolatban áll a szoftvertermékek tervezésével, elkészítésével és kiértékelésével, hogy megállapítsa, hogy a szoftvertermék teljesíti-e a meghatározott követelményeket, megfelel-e a célnak. A tesztelés felelős a szoftvertermékkel kapcsolatos hibák megtalálásáért."
+        },
+        {
+            "name": "tesztelési alapkörnyezet",
+            "engNames": [
+                "test harness"
+            ],
+            "desc": "a teszt végrehajtásához szükséges, a meghajtókat és csonkokat tartalmazó tesztkörnyezet."
+        },
+        {
+            "name": "teszteljárás specifikáció",
+            "engNames": [
+                "test procedure specification"
+            ],
+            "desc": "a teszt futtatásának tevékenységsorozatát rögzítő dokumentum. Teszt szkript illetve manuális teszt szkript néven is ismert."
+        },
+        {
+            "name": "tesztfeltétel",
+            "engNames": [
+                "test condition",
+                "test situation"
+            ],
+            "desc": "a rendszer egy olyan eleme, vagy eseménye, amelyet egy tesztesettel ellenőrizni lehet, például funkció, tranzakció, jellemző, minőségi attribútum vagy strukturális elem."
+        },
+        {
+            "name": "tesztelési irányelvek",
+            "engNames": [
+                "test policy"
+            ],
+            "desc": "magas szintű dokumentum, amely a szervezet elveit, megközelítésmódját, valamint céljait mutatja be a tesztelésre vonatkozóan."
+        },
+        {
+            "name": "tesztelési megközelítés",
+            "engNames": [
+                "test approach"
+            ],
+            "desc": "a tesztstratégia megvalósítása egy konkrét projektre. Jellemzően a projekt céljain és a kockázatelemzésen alapuló döntéseket, a tesztfolyamatok kiindulópontjait, az alkalmazandó műszaki teszttervezési technikákat, belépési és kilépési kritériumokat valamint a tesztelés fajtáit tartalmazza."
+        },
+        {
+            "name": "tesztelő",
+            "engNames": [
+                "tester"
+            ],
+            "desc": "egy képzett szakértő, aki a rendszer vagy rendszerkomponens tesztelésében vesz részt."
+        },
+        {
+            "name": "teszteset",
+            "engNames": [
+                "test case"
+            ],
+            "desc": "bemeneti értékek, végrehajtási előfeltételek, elvárt eredmények és végrehajtási utófeltételek halmaza, amelyeket egy konkrét célért vagy a tesztért fejlesztettek (például egy program forgatókönyv végrehajtása, vagy egy követelménynek való megfelelés)."
+        },
+        {
+            "name": "teszteset specifikáció",
+            "engNames": [
+                "test case specification"
+            ],
+            "desc": "egy tesztelemre vonatkozó, a teszteseteket leíró dokumentáció (cél, bemenetek, teszttevékenységek, elvárt eredmények, végrehajtás előfeltételei)"
+        },
+        {
+            "name": "tesztirányítás",
+            "engNames": [
+                "test control"
+            ],
+            "desc": "egy olyan tesztmenedzseri feladat, amelynek során javító intézkedéseket fejlesztünk és alkalmazunk annak érdekében, hogy a tesztprojektet visszatereljük a tervezett pályára, amennyiben a tesztelés felügyelete során a tervektől való eltérést tapasztalunk."
+        },
+        {
+            "name": "tesztjelentés készítés",
+            "engNames": [
+                "test reporting"
+            ],
+            "desc": "a teszttevékenységek során keletkezett adatok összegyűjtése és elemzése, ezt követően az adatokból az érintettek számára egy jelentés készítése."
+        },
+        {
+            "name": "tesztkörnyezet",
+            "engNames": [
+                "test bed",
+                "test environment",
+                "test rig"
+            ],
+            "desc": "a tesztelést támogató eszközök együttese, beleértve minden hardver és szoftver eszközt."
+        },
+        {
+            "name": "tesztmenedzser",
+            "engNames": [
+                "test manager"
+            ],
+            "desc": "a teszttevékenységekért, erőforrások menedzseléséért valamint a teszt tárgyának értékeléséért felelős személy. A tesztmenedzser irányítja, adminisztrálja, tervezi és menedzseli a teszt tárgyának vizsgálatát."
+        },
+        {
+            "name": "tesztmenedzsment eszköz",
+            "engNames": [
+                "test management tool"
+            ],
+            "desc": "olyan szoftver eszköz, amely támogatja a teszt menedzsmentet és irányítja a tesztfolyamat egy részét. Gyakran rendelkezik olyan funkciókkal, mint a tesztelési környezet menedzsmentje, tesztek ütemezése, eredmények naplózása, folyamatkövetés, hibakezelés és teszteredmények jelentése."
+        },
+        {
+            "name": "tesztnapló",
+            "engNames": [
+                "test log",
+                "test record"
+            ],
+            "desc": "a tesztvégrehajtáshoz kapcsolódó részletek időrendi rögzítése."
+        },
+        {
+            "name": "tesztstratégia",
+            "engNames": [
+                "test strategy"
+            ],
+            "desc": "magas szintű dokumentum, amely a végrehajtandó tesztszinteket írja le, valamint azok részleteit tartalmazza a szervezetre vagy a programra (egy vagy több projektre) vonatkozóan."
+        },
+        {
+            "name": "tesztszint",
+            "engNames": [
+                "test level",
+                "test stage"
+            ],
+            "desc": "közös szervezés és menedzsment alatt álló teszttevékenységek csoportja. A tesztszint felelősségi körökhöz kapcsolódik a projekten belül. Tesztszintekre példa a komponens-teszt, integrációs teszt, rendszerteszt és felhasználó teszt."
+        },
+        {
+            "name": "tesztszkript",
+            "engNames": [
+                "test script"
+            ],
+            "desc": "legtöbbször teszteljárás specifikációra használt kifejezés, elsősorban automatizált teszt esetén."
+        },
+        {
+            "name": "tesztterv (test plan)",
+            "engNames": [
+                "test plan"
+            ],
+            "desc": "a teszt hatáskörét, megközelítését, erőforrásait valamint a tevékenységek tervezett ütemezését tartalmazó dokumentum. Ezen kívül meghatározza a tesztelemeket, a tesztelendő funkciókat, feladatokat, a tesztet végrehajtó személyek függetlenségét, a tesztkörnyezetet, a műszaki teszttervezési technikákat, a belépési és kilépési feltételeket, valamint kockázatokat. A teszttervezési folyamat meghatározó dokumentuma"
+        },
+        {
+            "name": "tesztver",
+            "engNames": [
+                "testware"
+            ],
+            "desc": "a tesztfolyamat során keletkezett különböző termékek, például dokumentáció, programkód, inputok, elvárt eredmények, eljárások, fájlok, adatbázisok, környezetek illetve bármilyen egyéb szoftver."
+        },
+        {
+            "name": "tesztvezérelt fejlesztés",
+            "engNames": [
+                "test-driven development (TDD)",
+                "test-driven development (TDD)"
+            ],
+            "desc": "szoftverfejlesztési módszertan, amelyben a teszteseteket azelőtt készítik el (és többnyire automatizálják), mielőtt a szoftver fejlesztési folyamata befejeződne, és le lehetne futtatni a teszteket."
+        },
+        {
+            "name": "tesztvégrehajtás",
+            "engNames": [
+                "test execution"
+            ],
+            "desc": "a rendszeren vagy annak komponensén végzett tesztfolyamat, amelyből megkapjuk az aktuális eredményeket."
+        },
+        {
+            "name": "tesztvégrehajtási eszköz",
+            "engNames": [
+                "test execution tool"
+            ],
+            "desc": "olyan teszteszköz, amelynek segítségével másik szoftvert futtathatunk egy automatizált szkript (pl. felvétel/lejátszás) segítségével."
+        },
+        {
+            "name": "utasítás lefedettség",
+            "engNames": [
+                "statement coverage"
+            ],
+            "desc": "a tesztkészlet által kipróbált futtatható utasítások százaléka."
+        },
+        {
+            "name": "újratesztelés",
+            "engNames": [
+                "re-testing"
+            ],
+            "desc": "olyan teszt, amikor azokat a teszteseteket futtatjuk, amelyek a legutóbbi tesztfuttatásnál elbuktak. Célja a hibajavítás sikerességének ellenőrzésére."
+        },
+        {
+            "name": "validáció",
+            "engNames": [
+                "validation"
+            ],
+            "desc": "annak vizsgálata és konfirmálása, hogy a szoftver tervezett felhasználási céljának megfelelő követelmények teljesülnek-e."
+        },
+        {
+            "name": "verifikáció",
+            "engNames": [
+                "verification"
+            ],
+            "desc": "az adott követelmények teljesülésének vizsgálata és konfirmálása."
+        },
+        {
+            "name": "vezérlési folyam",
+            "engNames": [
+                "control flow"
+            ],
+            "desc": "az események (útvonalak) sorrendje a végrehajtás során."
+        },
+        {
+            "name": "V-modell",
+            "engNames": [
+                "V-model"
+            ],
+            "desc": "egy keretrendszer a szoftverfejlesztési ciklus részletes leírására, a követelményspecifikációtól kezdve az üzemeltetésig. Az V-modell illusztrálja, hogy a teszttevékenység hogyan illeszthető a szoftverfejlesztési életciklusok bármely fázisába."
+        }
+    ]
+}
