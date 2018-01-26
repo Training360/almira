@@ -3,16 +3,16 @@
     <div class="message" ng-show="started">
         <p>
             <strong>{{ numberOfQuestions }}</strong> /
-            <strong>{{ actualTestIndex }} </strong>{{ translate('actual') }}
-            <span class="corect-answer">{{ rightAnswer }} </span> {{ translate('correct') }}
+            <strong>{{ actualTestIndex }} </strong> kérdés,
+            <span class="corect-answer">{{ rightAnswer }} </span> helyes válasz.
         </p>
     </div>
 
     <div class="test" ng-repeat="test in testQuestions track by $index" ng-show="actualTestIndex==$index && started">
         <form id="form{{$index}}" name="form{{$index}}">
 
-            <p ng-if="test.type=='name'">{{ translate('definitionQuestion') }}</p>
-            <p ng-if="test.type=='description'">{{ translate('descriptionQuestion') }}</p>
+            <p ng-if="test.type=='name'">Melyik definíció felel meg az alábbi leírásnak?</p>
+            <p ng-if="test.type=='description'">Melyik leírás felel meg az alábbi definíciónak?</p>
 
             <p class="question">
                 {{ test.question }}
@@ -27,10 +27,10 @@
             </div>
 
             <div class="btn-group controls">
-                <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">&lt;</button>
-                <button type="submit" class="btn btn-lg" ng-click="checkAnswer($event, actualTestIndex)">{{ translate('check') }}</button>
-                <button class="btn btn-lg" ng-show="actualTestIndex < 19" ng-click="nextQuestion()">&gt;</button>
-                <button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">{{ translate('end') }}</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">Előző</button>
+                <button type="submit" class="btn btn-lg" ng-click="checkAnswer($event, actualTestIndex)" ng-show="showCheckButton">Ellenőrzés</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex < 19 && !showCheckButton" ng-click="nextQuestion()">Következő</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">Küldés</button>
             </div>
         </form>
     </div>

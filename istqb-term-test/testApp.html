@@ -12,7 +12,7 @@
     <script src="./app/testApp/directives/testDirective.js"></script>
     <script src="./app/shared/controllers/languageController.js"></script>
     <script src="./app/testApp/controllers/testController.js"></script>
-    <title>{{ translate('titleTest') }}</title>
+    <title>ISTQB Fogalmak Teszt</title>
 </head>
 
 <body id="testApp">
@@ -22,26 +22,30 @@
         <!-- HEADER -->
         <header>
             <div class="header">
-                <h1>{{ translate('titleTest') }}</h1>
+                <h1>ISTQB Fogalmak Teszt</h1>
             </div>
         </header>
 
         <!-- NAV -->
         <nav class="clearfix">
-            <div class="menu embed-half">
-                <button ng-click="setLanguage('en')" ng-class="language == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
-                <button ng-click="setLanguage('hu')" ng-class="language == 'hu' ? 'active btn btn-lg' : 'btn btn-lg'">Magyar</button>
+            <div class="menu embed-half" ng-show="!languageIsSelected">
+                <button ng-click="setLanguage('en');generateQuestions()" ng-class="language == 'en' ? 'active btn btn-lg' : 'btn btn-lg'">Angol</button>
+                <button ng-click="setLanguage('hu');generateQuestions()" ng-class="language == 'hu' ? 'active btn btn-lg' : 'btn btn-lg'">Magyar</button>
             </div>
-            <div class=" menu embed-half right">
+            <div class=" menu embed-half" ng-show="languageIsSelected">
                 <a class="btn btn-lg" href="./testApp.html">Újraindítás</a>
             </div>
         </nav>
 
         <!-- MAIN -->
         <main>
+            <div class="full" ng-show="!languageIsSelected">
+                <h3>
+                    Válaszd ki a nyelvet!
+                </h3>
+            </div>
             <div class="full">
                 <div class="error-color">{{ errorMessage }}</div>
-                <index-directive></index-directive>
                 <test-directive></test-directive>
             </div>
         </main>
