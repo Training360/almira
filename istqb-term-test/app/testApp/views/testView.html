@@ -3,7 +3,7 @@
     <div class="message" ng-show="started">
         <p>
             <strong>{{ numberOfQuestions }}</strong> /
-            <strong>{{ actualTestIndex }} </strong> kérdés,
+            <strong>{{ actualTestIndex + 1 }} </strong> kérdés,
             <span class="corect-answer">{{ rightAnswer }} </span> helyes válasz.
         </p>
     </div>
@@ -28,9 +28,10 @@
 
             <div class="btn-group controls">
                 <button class="btn btn-lg" ng-show="actualTestIndex > 0" ng-click="previousQuestion()">Előző</button>
-                <button type="submit" class="btn btn-lg" ng-click="checkAnswer($event, actualTestIndex)" ng-show="showCheckButton">Ellenőrzés</button>
-                <button class="btn btn-lg" ng-show="actualTestIndex < 19 && !showCheckButton" ng-click="nextQuestion()">Következő</button>
-                <button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">Küldés</button>
+                <button type="submit" class="btn btn-lg" ng-click="checkAnswer($event, actualTestIndex) " ng-show="testQuestions[$index].isCorrect == null">Ellenőrzés</button>
+                <button class="btn btn-lg" ng-show="actualTestIndex < 19 && testQuestions[$index].isCorrect !== null" ng-click="nextQuestion()">Következő</button>
+                <!--button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">Küldés</button-->
+                <a class="btn btn-lg" ng-show="actualTestIndex == 19" href="./testApp.html">Befejezés</a>
             </div>
         </form>
     </div>

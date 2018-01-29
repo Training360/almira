@@ -6,7 +6,6 @@ angular.module("testApp").controller("testController", function ($scope, $http) 
         $scope.currentForm;
         $scope.actualTestIndex = 0;
         $scope.testQuestions = [];
-        $scope.showCheckButton = true;
     };
     $scope.init();
 
@@ -138,16 +137,13 @@ angular.module("testApp").controller("testController", function ($scope, $http) 
                 document.getElementById(rightAnswerId).className += " success-color";
             }
         }
-        $scope.showCheckButton = false;
     };
 
     $scope.previousQuestion = function () {
         $scope.actualTestIndex -= 1;
-        $scope.showCheckButton = false;
     };
 
     $scope.nextQuestion = function () {
-        $scope.showCheckButton = true;
         $scope.actualTestIndex += 1;
     };
 });
