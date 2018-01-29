@@ -31,7 +31,7 @@
                 <button type="submit" class="btn btn-lg" ng-click="checkAnswer($event, actualTestIndex) " ng-show="testQuestions[$index].isCorrect == null">Ellenőrzés</button>
                 <button class="btn btn-lg" ng-show="actualTestIndex < 19 && testQuestions[$index].isCorrect !== null" ng-click="nextQuestion()">Következő</button>
                 <!--button class="btn btn-lg" ng-show="actualTestIndex == 19" ng-click="nextQuestion()">Küldés</button-->
-                <a class="btn btn-lg" ng-show="actualTestIndex == 19" href="./testApp.html">Befejezés</a>
+                <a class="btn btn-lg" ng-show="actualTestIndex == 19 && testQuestions[$index].isCorrect !== null" href="./testApp.html">Befejezés</a>
             </div>
         </form>
     </div>
