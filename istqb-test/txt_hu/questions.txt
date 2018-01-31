@@ -1,0 +1,393 @@
+Q. 1: Mi a legfontosabb jellemzője a specifikáció alapú tesztelési technikáknak?
+
+A. A teszteket a szoftver felépítéséről nyerhető információk alapján állítják össze.
+B. A teszteket formális vagy informális modellek alapján állítják össze, ahol a modellek a szoftver, vagy annak komponensei által megoldandó problémákat írják le.
+C. A teszteket a tesztelő képességei és tapasztalata alapján állítják össze.
+D. A teszteket a rendszer vagy annak komponensei szerkezeti elemeinek lefedettségi foka alapján állítják össze.
+
+Q. 2: Egy kimerítő teszt készlet az alábbiakat foglalná magába:
+
+A. A beviteli értékek és az előfeltételek összes kombinációját.
+B. A beviteli értékek és a kimeneti értékek összes kombinációját.
+C. A beviteli értékek és az előfeltételek összes párosítását.
+D. Az összes állapotot és állapot átmenetet.
+
+Q. 3: A tesztelésre vonatkozó alábbi állítások közül melyik igaz?
+
+A. A tesztelést az életciklusban a lehető legkorábban kell elkezdeni.
+B. A tesztelést a kód megírása után kell kezdeni, így már van egy rendszerünk, amivel dolgozni tudunk.
+C. A tesztelést leginkább gazdaságosan az életciklus utolsó szakaszában végezhetjük.
+D. Tesztelést csak független tesztcsapat végezhet.
+
+Q. 4: Olyan teszteljárás esetén, amely ügyfél adatok módosításait ellenőrzi az adatbázisban, az alábbiak közül melyik két lépés lenne a legkevésbé fontos, ha nincs időnk arra, hogy az összes lépést elvégezzük?
+
+1 Nyissuk meg az adatbázist és ellenőrizzük le az ügyfél meglétét.
+2 Változtassuk meg az ügyfél párkapcsolati állapotát egyedülállóról házasra.
+3 Változtassuk meg az ügyfél lakcímében az utcanevet Köves utcáról Kavics utcára.
+4 Változtassuk meg az ügyfél hitelkeretét 300 eFt-ról 500 eFt-ra.
+5 Cseréljük az ügyfél keresztnevét pontosan ugyanarra a keresztnévre.
+6 Zárjuk le az ügyfél rekordot és zárjuk le az adatbázist.
+
+A. 1 és 4 tesztek
+B. 2 és 3 tesztek
+C. 5 és 6 tesztek
+D. 3 és 5 tesztek
+
+Q. 5: Nézzük meg a következő termék vagy projekt kockázat listákat:
+
+I   A díjak hibás számítása megrövidítheti a szervezetet.
+II  Előfordulhat, hogy egy szállító késve szállít le egy rendszerkomponenst.
+III Egy hiba lehetővé teheti hackerek számára, hogy adminisztratív jogokat szerezzenek.
+IV A rendszerben alkalmazott új technológia esetén előfordulhat, hogy hiányos a tudásunk.
+V  Egy hiba prioritizálási folyamat túlterhelheti a fejlesztési csapatot.
+
+A következő állítások közül melyik igaz?
+
+A. I elsődlegesen termék kockázat, amíg II, III, IV és V elsődlegesen projekt kockázatok.
+B. II és V elsődlegesen termék kockázatok, amíg I, III és V elsődlegesen projekt kockázatok.
+C. I és III elsődlegesen termék kockázatok, amíg II, IV és V elsődlegesen projekt kockázatok.
+D. III és V elsődlegesen termék kockázatok, amíg I, II és IV elsődlegesen projekt kockázatok.
+
+Q. 6: Vizsgálja meg az alábbi, a regressziós tesztekre vonatkozó állításokat:
+
+I   Jól felhasználhatóan automatizálhatóak, amennyiben jól lettek megtervezve.
+II  Ugyanazok, mint a megerősítési tesztek (újra tesztelés).
+III Arra szolgálnak, hogy a változtatással járó kockázatokat csökkentsék, amelyek hátrányosan érinthetik a rendszer egyéb részeit.
+IV Csak akkor hatékonyak, ha automatizálva vannak.
+
+Az állítások közül melyik pár igaz?
+
+A. I és II
+B. I és III
+C. II és III
+D. II és IV
+
+Q. 7: A következők közül melyek alkalmasak arra, hogy felmérjük a lefedettséget szerkezet-alapú (fehér doboz) teszt technikák számára?
+
+V Döntési kimenetek vizsgálata.
+W Partíciók vizsgálata.
+X Határértékek vizsgálata.
+Y Feltételek, vagy többszörös feltételek vizsgálata.
+Z Utasítások vizsgálata.
+
+A. V, W vagy Y
+B. W, X vagy Y
+C. V, Y vagy Z
+D. W, X vagy Z
+
+Q. 8: Nézze át egy incidens jelentés alábbi részletét:
+
+1. Berakok egy tételt a vásárlókosárba.
+2. Berakok egy másik tételt (eltérő tétel) a vásárlókosárba.
+3. Kiveszem az első tételt a vásárlókosárból, de bent hagyom a második tételt.
+4. Rákattintok a Fizetés gombra.
+5. Azt várom, hogy a rendszer felhozza az első fizetési képernyőt. Helyette egy felbukkanó hibaüzenetet kapok: "Nincs tétel a vásárlókosárban. Kattintson az OK-ra a vásárlás folytatásához."
+6. Rákattintok az OK-ra.
+7. Azt várom, hogy a rendszer visszatér a főablakba, lehetővé téve számomra további tételek hozzáadását és kivételét a vásárlókosárban. Ezzel szemben a böngésző leáll.
+8. Az 5. és 7. lépésben leírt hiba három próbálkozás során mindegyikben előfordult, amikor az 1,2,3,4 és 6. lépéseket hajtottam végre.
+
+Feltételezve, hogy nincs további leíró információ a jelentésben, a jó incidens jelentés alábbi fontos szempontjai közül melyik hiányzik ebből az incidens jelentésből?
+
+A. A hiba reprodukálását szolgáló lépések.
+B. Az összefoglalás.
+C. Az eseti előfordulás ellenőrzése.
+D. Tárgyilagos hangvétel használata.
+
+Q. 9: A következők közül melyik az előnye és melyik a kockázata a tesztelés támogatásra használt eszközöknek?
+
+1 Túlságosan megbízunk az eszközben.
+2 Nagyobb konzisztencia és megismételhetőség.
+3 Tárgyilagos értékelés.
+4 Irreális elvárások.
+5 Az eszköz által generált tesztkészlet karbantartására szánt munkamennyiség alulbecslése.
+6 A tesztekről vagy a tesztelésről kapott információk egyszerű hozzáférhetősége.
+7 A monoton munka mennyisége csökken.
+
+A. Előnyök: 3, 4, 6 és 7. Kockázatok: 1, 2 és 5
+B. Előnyök: 1, 2, 3 és 7, Kockázatok: 4, 5 és 6
+C. Előnyök: 2, 3, 6 és 7. Kockázatok: 1, 4 és 5
+D. Előnyök: 2, 3, 5 és 6. Kockázatok: 1, 4 és 7
+
+Q. 10: Az alábbiak közül melyik segíti elő a tárgyilagos tesztelést?
+
+A. Egység tesztelés.
+B. Rendszer tesztelés.
+C. Független tesztelés.
+D. Destruktív tesztelés.
+
+Q. 11: A specifikációk felülvizsgálatával kapcsolatosan az alábbi állítások közül melyik igaz?
+
+A. A felülvizsgálat általánosságban nem költséghatékony, mert a megbeszélések időigényesek és előkészítést, valamint utánkövetést igényelnek.
+B. A felülvizsgálat esetén nincs szükség felkészülésre vagy utánkövetésre.
+C. A felülvizsgálatokat a szerzőnek kell irányítania.
+D. A felülvizsgálatok a rendszer költséghatékony korai statikus tesztelései.
+
+Q. 12: Tekintse a tesztfolyamat tevékenységeinek alábbi listáját:
+
+I Elemzés és tervezés.
+II Teszt lezárási tevékenységek.
+III A kilépési feltételek és a jelentés értékelése.
+IV Tervezés és kontroll.
+V Megvalósítás és kivitelezés.
+
+A következők közül melyik helyezi ezeket a korrekt logikai sorrendjükbe?
+
+A. I, II, III, IV és V
+B. IV, I, V, III és II.
+C. IV, I, V, II és III.
+D. I, IV, V, III és II.
+
+Q. 13: A teszt célok változnak az egyes projektek között, ezért ezeket a teszt tervben le kell fektetni. A következő teszt célok közül melyik kerülhet konfliktusba a jó tesztelői gondolkodással?
+
+A. A kiszállítás előtt annak bebizonyítása, hogy a rendszer működik.
+B. Annyi hiba megtalálása, amennyi csak lehetséges.
+C. A termék kockázat összevont szintjének csökkentése.
+D. A hibák megelőzése a korai beavatkozáson keresztül.
+
+Q. 14: Mely teszt tevékenységeket támogatják a tesztadat előkészítő eszközök?
+
+A. Teszt menedzsment és kontroll.
+B. Tesz specifikáció és tervezés.
+C. Teszt kivitelezés és naplózás.
+D. Teljesítmény és monitorozás.
+
+
+Q. 15: Amennyiben turistaosztályon repül, lehetősége van arra, hogy business osztályra átso-rolják, különösen akkor, ha aranykártyája van a légitársaság "frequent flyer" programja keretében. Ha nem rendelkezik aranykártyával, elképzelhető, hogy megtagadják a beszállást, amennyiben a járat tele van és későn jelentkezett be. Ezt a logikát mutatja be az alábbi ábra. Minden "doboz", (azaz tevékenység vagy döntés) meg lett számozva.
+
+![](images/ISTQB15.jpg)
+
+Három tesztet már lefuttatunk:
+
+Teszt 1: Aranykártyával rendelkező személy, akit átsorolnak business osztályra.
+Teszt 2: Aranykártyával nem rendelkező személy, aki turistaosztályon marad.
+Teszt 3: Olyan személy, akitől megtagadják a beszállást.
+
+Milyen további tesztek szükségesek ahhoz, hogy 100% döntési lefedettséget érjünk el?
+
+A. Aranykártyával rendelkező személy, aki turistaosztályon marad és egy aranykártyával nem rendelkező személy, akit átsorolnak business osztályra.
+B. Aranykártyával rendelkező személy és egy aranykártyával nem rendelkező személy, ahol mindkettőjüket átsorolják business osztályra.
+C. Aranykártyával rendelkező személy és egy aranykártyával nem rendelkező személy ahol mindkettőjük turistaosztályon marad.
+D. Aranykártyával rendelkező személy, akit átsorolnak business osztályra és egy aranykártyával nem rendelkező személy, aki turistaosztályon marad.
+
+
+Q. 16: Tekintsük a következő eszköztípusokat:
+
+V Teszt menedzsment eszközök
+W Statikus elemzési eszközök
+X Modellező eszközök
+Y Dinamikus elemzési eszközök
+Z Teljesítmény tesztelő eszközök
+
+A következő eszköz kombinációk közül melyik az, amelyet a fejlesztők leginkább használnak?
+
+A. W, X és Y
+B. V, Y és Z
+C. V, W és Z
+D. X, Y és Z
+
+Q. 17: Mi a teszt feltétel?
+
+A. Egy bemenet, a várt kimenet, előfeltétel és utófeltétel.
+B. Azok a lépések, amelyek megtétele a rendszert egy adott pontra viszik.
+C. Valami, ami tesztelhető.
+D. A szoftver egy specifikus állapota, amelyet el kell érni, mielőtt a teszt lefuttatható.
+
+Q. 18: A következők közül melyik a legfontosabb különbség a teszt becslés mennyiségi mutatók alapú és a szakértelem alapú megközelítésében?
+
+A. A mennyiségi mutatók alapú megközelítés pontosabb, mint a szakértelem alapú megközelítés.
+B. A mennyiségi mutatók alapú megközelítés korábbi adatok alapján végzett számításokat használ, míg a szakértelem alapú megközelítés a csapat tudásán alapul.
+C. A mennyiségi mutatók alapú megközelítés felhasználható arra, hogy igazoljon egy, a szakértelem alapú megközelítésen alapuló becslést, de ez fordítva nem igaz.
+D. A szakértelem alapú megközelítés hosszabb időt igényel, mint a mennyiségi mutatók alapú megközelítés.
+
+Q. 19: Ha a hőmérséklet 18 fok alá esik, a fűtés bekapcsol. Amikor a hőmérséklet eléri a 21 fokot, a fűtés kikapcsol. Mi a teszt bemeneti értékek minimális készlete, amely az összes érvényes ekvivalencia partíciót lefedi?
+
+A. 15, 19 és 25 fok
+B. 17, 18, 20 és 21 fok
+C. 18, 20 és 22 fok
+D. 16 és 26 fok
+
+
+Q. 20: Az alábbi, funkcionális tesztelésre vonatkozó állítások közül melyik igaz?
+
+A. A szerkezeti tesztelés fontosabb mint a funkcionális tesztelés, mert ez a kódot célozza meg.
+B. A funkcionális tesztelés hasznos az életciklus során és alkalmazható üzleti elemzők, tesztelők, fejlesztők és felhasználók részéről.
+C. A funkcionális tesztelés hatékonyabb, mint a statikus tesztelés, mert ilyenkor a rendszert ténylegesen futtatjuk és látjuk, mi történik.
+D. Az inspekció a funkcionális tesztelés egy formája.
+
+Q. 21: Mi az ellenőrző (confirmation) tesztelés célja?
+
+A. A felhasználók bizalmának megerősítése, hogy a rendszer meg fog felelni az üzleti igényeiknek.
+B. Annak ellenőrzése, hogy egy hibát sikerült megfelelően kijavítani.
+C. Annak ellenőrzése, hogy nem kerültek be, vagy nem kerültek elő váratlan eltérések a végrehajtott változtatások következtében.
+D. Annak ellenőrzése, hogy egy komponens részletezett logikája megfelel a specifikációjának.
+
+Q. 22: Mely sikerfaktorok szükségesek a jó eszköztámogatáshoz egy szervezeten belül?
+
+A. A legjobb eszköz megszerzése és annak biztosítása, hogy az összes tesztelő használja.
+B. A folyamatok adaptálása, hogy illeszkedjenek az eszköz használatához és az eszközhasználat valamint az előnyök monitorozása.
+C. Ambiciózus célok kitűzése az eszköz nyújtotta előnyökben és szoros határidők kitűzése ezek elérésére.
+D. Más sikeres szervezetek gyakorlatának adoptálása és annak biztosítása, hogy az eszköz használatának kezdeti módjait fenn tudjuk tartani.
+
+Q. 23: Az alábbiak közül melyik írja le legjobban az integrációs tesztelést?
+
+A. A tesztelést azért végezzük, hogy az interfészek, és az integrált komponensek közötti kölcsönhatások hibáit felfedezzük.
+B. A tesztelés célja annak igazolása, hogy egy komponens készen áll az integrációra.
+C. A tesztelés célja annak igazolása, hogy a tesztkörnyezet integrálható a termékkel.
+D. Automatizált szoftver tesztkészletek integrálása a termékkel.
+
+Q. 24: Az ISTQB fogalomszótár (glossary) szerint a debuggolás:
+
+A. Része az alapvető tesztelési folyamatnak.
+B. Magába foglalja a meghibásodás okának a javítását.
+C. Magába foglalja ismert hibák szándékos bevitelét a rendszerbe.
+D. Egy tesztfolyamat lépéseit követi.
+
+Q. 25: A következők közül melyik lehet az alapvető oka egy hibának pénzügyi szoftver esetén, amelyben helytelen kamatráta került kiszámításra?
+
+A. Nem állt rendelkezésre kellő mennyiségű forrás a kiszámított kamatráta kifizetésére.
+B. Elégtelen számításokat végeztek a kamatos kamatra.
+C. Elégtelen oktatást kaptak a fejlesztők a kamatos kamat kiszámítására vonatkozó szabályokból.
+D. Pontatlan kalkulátorokat használtak a várt eredmények kiszámítására.
+
+Q. 26: Tételezzük fel, hogy a postai díjak a következők: Közönséges levél esetén: $0.25 10 gramm súlyig; $0.35 50 gramm súlyig; $0.45 75 gramm súlyig; $0.55 100 gramm súlyig. Mely teszt bemeneti értékeket (grammok) válasszuk ki határérték elemzés során?
+
+A. 0, 9, 19, 49, 50, 74, 75, 99, 100
+B. 10, 50, 75, 100, 250, 1000
+C. 0, 1, 10, 11, 50, 51, 75, 76, 100, 101
+D. 25, 26, 35, 36, 45, 46, 55, 56
+
+
+Q. 27: Tekintsük a következő döntési táblát egy autókölcsönzés során:
+
+![](images/ISTQB27.jpg)
+
+Ennek a döntési táblának az alapján mi a várt eredmény az alábbi tesztesetek során?
+
+TCI: 26 éves ügyfél üzleti úton, de korábbi szabálytalanságok feljegyezve a jogosítványban.
+TC2: 62 éves turista korábbi szabálytalanságok nélkül.
+
+A. TCI: Nem adható ki az autó; TC2: Kiadható az autó, prémium díjszámítás.
+B. TCI: Kiadható az autó, prémium díjszámítás; TC2: Kiadható az autó, normál díjszámítás.
+C. TCI: Nem adható ki az autó;  TC2: Kiadható az autó, normál díjszámítás.
+D. TCI: Kiadható az autó, prémium díjszámítás; TC2: Nem adható ki az autó
+
+Q. 28: Mi a felderítő tesztelés?
+
+A. Az a folyamat, amikor feltételezzük vagy találgatjuk hol fordulhat elő hiba.
+B. Szisztematikus megközelítés a bemenet specifikus ekvivalens csoportjainak azonosítására.
+C. A tesztelést megbízott mérnök végzi.
+D. Egyidejű teszt tervezés, teszt kivitelezés, teszt naplózás és tapasztalatszerzés.
+
+Q. 29: Mit jelent az, ha egy tesztkészlet 90%-os utasítás lefedettséget ért el?
+
+A. 10 közül 9 döntési kimenet lett végrehajtva a tesztkészlet által.
+B. 10 közül 9 utasítás lett végrehajtva a tesztkészlet által.
+C. 10 közül 9 teszt lett lefuttatva ezen a szoftver készleten.
+D. 10 közül 9 követelmény meghatározás helyes a szoftver esetében.
+
+Q. 30: Teszt terv készül speciálisan a tesztelés olyan szintjére, ahol az elsődleges cél a rendszerrel szembeni bizalom megalapozása. Ennek a dokumentumnak mi a valószínűsíthető neve?
+
+A. Mester teszt terv
+B. Rendszer teszt terv
+C. Elfogadási teszt terv
+D. Projekt terv
+
+Q. 31: Követelmény 24.3. Egy "Postai tisztviselő" kiszámítja a levelekre és kiscsomagokra (1 kg súlyig) fizetendő postai díjat. A bemenetek a következők: a tétel típusa (levél, könyv vagy más csomag) és a súly grammokban megadva. A következők közül melyik felel meg a tesztesetben megadott tartalomnak?
+
+A. Teszteljük le a háromféle postázandó tételt és három különböző súlyértéket [Req 24.3].
+B. Teszt 1: levél, 10 gramm, postaköltség €0.25. Teszt 2: könyv, 500 gramm, postaköltség €1.00. Teszt 3: csomag, 999 gramm, postaköltség €2.53 [Req 24.3]
+C. Teszt 1: levél, 10 gramm Belgiumba irányítva. Teszt 2: könyv 500 gramm USA-ba irányítva. Teszt 3: csomag, 999 gramm Dél-Afrikába irányítva [Req 24.3]
+D. Teszt 1: levél 10 gramm, Belgiumba irányítva, postaköltség €0.25. Teszt 2: csomag 999 gramm Dél-Afrikába irányítva, postaköltség €2.53
+
+
+Q. 32: Mi az alábbiak közül a legjobb megfogalmazása a statikus elemzésnek?
+
+A. Kötegelt programok elemzése.
+B. Tesz tervek felülvizsgálata.
+C. A program kód vagy más szoftver termékek elemzése.
+D. Fekete doboz tesztelés alkalmazása.
+
+Q. 33: Egy projekt esetében a rendszerteszt kivitelezését nyolc hétre tervezzük. Egyheti tesztelés után az egyik tesztelő azt javasolja, hogy a teszt tervben megállapított teszt cél – "a rendszerteszt során annyi hibát kell megtalálni, amennyi csak lehetséges" – jobban megközelíthető, ha a tesztelési erőfeszítéseinket az alábbi tesztelési elvek egyikének megfelelően átirányítjuk. Melyik ez az elv?
+
+A. A kimerítő teszt lehetetlensége.
+B. A korai tesztelés fontossága.
+C. A hibák hiányából levont téves következtetés elve.
+D. A hibák csoportosulásának elve.
+
+Q. 34: Tekintsük a következő tevékenységeket, amelyek kapcsolatban lehetnek a konfiguráció menedzsmenttel:
+
+I   Azonosítsuk és dokumentáljuk egy teszt tétel jellemzőit.
+II  Kontrolláljuk egy teszt tétel jellemzőinek változását.
+III Ellenőrizzünk egy teszt tételt a változtatás során bevitt hibákra.
+IV Rögzítsük és foglaljuk jelentésbe a teszt tételen történt változtatások állapotát.
+V  Ellenőrizzük, hogy a teszt tételen végzett változtatások rendbe hozták-e a hibát.
+
+A következő állítások közül melyik igaz?
+
+A. Csak az I. konfiguráció menedzsment feladat.
+B. Az összes konfiguráció menedzsment feladat.
+C. I., II. és III. konfiguráció menedzsment feladatok.
+D. I., II. és IV. konfiguráció menedzsment feladatok.
+
+Q. 35: Tekintsük a következő állapotátmenet diagramot. A diagram alapján melyik alábbi teszteset fedi le az összes érvényes átmenetet?
+
+![](images/ISTQB35.jpg)
+
+A. SS-S1-S2-S4-S1-S3-ES
+B. SS-S1-S2-S3-S4-S3-S4-ES
+C. SS-S1-S2-S4-S1-S3-S4-S1-S3-ES
+D. SS-S1-S4-S2-S1-S3-ES
+
+
+Q. 36: Egy teszt terv a következő igényeket fogalmazta meg a kilépési feltételek között:
+
+- A rendszert tesztet addig kell folytatni, amíg az összes jelentős termék kockázatot lefedtük a termék kockázatot elemző dokumentumban meghatározott mértékben.
+- A rendszert tesztet addig kell folytatni, amíg nem marad egyetlen kötelezően javítandó hiba sem, összevetve a termék kockázatot elemző dokumentumban specifikált jelentős termék kockázattal.
+A teszt kivitelezése során a tesztcsapat 430 kötelezően javítandó hibát észlel az kibocsátást megelőzően és az összes kötelezően javítandó hiba javításra kerül. A kibocsátás után az ügyfelek 212 új hibát találnak, amelyek közül egyik sem lett észlelve a tesztelés során. Ez azt jelenti, hogy a fontos hibáknak csak a 67%-át találták meg a kibocsátás előtt, amely arány jóval az iparági átlag alatt van. Az a feladata, hogy találja meg az alapvető okát a nagyszámú meghibásodásnak. Tekintse meg az alábbi magyarázatokat:
+
+I Nem végezték el az összes tesztet, amit a jelentős termék kockázatokra terveztek.
+II A szervezetnek irreális elvárásai vannak a hibaszázalékról, amelyet a tesztelés képes megtalálni.
+III Egy verzió kontroll probléma azt eredményezte, hogy a szoftver egy olyan verziója lett kibocsátva, amelyet a korábbi tesztelés során használtak.
+IV A termék kockázati elemzés nem azonosította az összes, az ügyfél nézőpontjából fontos kockázati elemet.
+V A termék kockázati elemzés nem lett frissítve a projekt során, amikor új információk kerültek elő.
+A következő állítások közül melyik mutatja, hogy mely magyarázatok a lehetséges alapvető okok?
+A. II, III és IV lehetséges magyarázatok, de I és V nem lehetséges.
+B. Mind az öt lehetséges magyarázat.
+C. I, IV és V lehetséges magyarázatok, de II és III nem lehetséges.
+D. III, IV és V lehetséges magyarázatok, de I és II nem lehetséges.
+
+Q. 37: Mi a legfontosabb faktor a felülvizsgálatok sikeres végrehajtásában?
+
+A. Külön írnok a naplózási megbeszélés során.
+B. Képzett résztvevők és felülvizsgálat vezetők.
+C. A rendelkezésre álló eszközök a felülvizsgálati folyamat támogatására.
+D. Egy felülvizsgált teszt terv.
+
+Q. 38: Tekintsük az alábbi állításokat a karbantartási tesztelésre vonatkozóan:
+
+I   Szükséges hozzá mind újratesztelés és regressziós tesztelés, és szükségesek lehetnek további új tesztek.
+II  Ez a tesztelés arra szolgál, hogy bemutassa, mennyire egyszerű lesz a rendszer karbantartása.
+III Nehéz körülhatárolni, ezért gondos kockázati és hatás analízis szükséges hozzá.
+IV Nem szükséges végrehajtani vészhelyzeti bug javítások esetén.
+
+Az alábbi állítások közül melyik igaz?
+
+A. I és III
+B. I és IV
+C. II és III
+D. II és IV
+
+Q. 39: Mely két specifikáció alapú tesztelési technika van egymással a legszorosabb kapcsolatban?
+
+A. Döntési táblák és állapotátmenet tesztelés.
+B. Ekvivalencia partícionálás és állapotátmenet tesztelés.
+C. Döntési táblák és határérték elemzés.
+D. Ekvivalencia partícionálás és határérték elemzés.
+
+
+Q. 40: Az alábbiak közül melyik előnye a független tesztelésnek?
+
+A. A független tesztelőknek nem kell időt tölteni azzal, hogy a projekt csapattal kommunikálnak
+B. A programozóknak nem kell aggódniuk a munkájuk minőségével kapcsolatban és arra koncentrálhatnak, hogy több kódot állítsanak elő.
+C. A többiek a projekten nyomást gyakorolhatnak a független tesztelőkre, hogy felgyorsítsák a tesztelést az ütemterv vége felé.
+D. A független tesztelők időnként megkérdőjelezik a követelmények, tervek és megvalósítások mögötti feltételezéseket.
