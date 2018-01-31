@@ -1,4 +1,4 @@
-Q. 1: How many test cases are required to achive 100% 0-switch coverage respectively from status X2?
+﻿Q. 1: How many test cases are required to achive 100% 0-switch coverage respectively from status X2?
 
 Exhibit:
 
@@ -3095,7 +3095,7 @@ C. 13, 16 and 19 years
 D. 12, 13 and 20 years
 
 
-Q. 337: Which technique if OFTEN considered as an extension of equivalence partitioning?
+Q. 337: Which technique is OFTEN considered as an extension of equivalence partitioning?
 
 A. Decision table testing.
 B. State transition testing.

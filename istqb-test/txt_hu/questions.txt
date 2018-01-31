@@ -1,4 +1,4 @@
-Q. 1: Mi a legfontosabb jellemzője a specifikáció alapú tesztelési technikáknak?
+﻿Q. 1: Mi a legfontosabb jellemzője a specifikáció alapú tesztelési technikáknak?
 
 A. A teszteket a szoftver felépítéséről nyerhető információk alapján állítják össze.
 B. A teszteket formális vagy informális modellek alapján állítják össze, ahol a modellek a szoftver, vagy annak komponensei által megoldandó problémákat írják le.
@@ -341,8 +341,8 @@ D. SS-S1-S4-S2-S1-S3-ES
 
 Q. 36: Egy teszt terv a következő igényeket fogalmazta meg a kilépési feltételek között:
 
-- A rendszert tesztet addig kell folytatni, amíg az összes jelentős termék kockázatot lefedtük a termék kockázatot elemző dokumentumban meghatározott mértékben.
-- A rendszert tesztet addig kell folytatni, amíg nem marad egyetlen kötelezően javítandó hiba sem, összevetve a termék kockázatot elemző dokumentumban specifikált jelentős termék kockázattal.
+- A rendszer tesztet addig kell folytatni, amíg az összes jelentős termék kockázatot lefedtük a termék kockázatot elemző dokumentumban meghatározott mértékben.
+- A rendszer tesztet addig kell folytatni, amíg nem marad egyetlen kötelezően javítandó hiba sem, összevetve a termék kockázatot elemző dokumentumban specifikált jelentős termék kockázattal.
 A teszt kivitelezése során a tesztcsapat 430 kötelezően javítandó hibát észlel az kibocsátást megelőzően és az összes kötelezően javítandó hiba javításra kerül. A kibocsátás után az ügyfelek 212 új hibát találnak, amelyek közül egyik sem lett észlelve a tesztelés során. Ez azt jelenti, hogy a fontos hibáknak csak a 67%-át találták meg a kibocsátás előtt, amely arány jóval az iparági átlag alatt van. Az a feladata, hogy találja meg az alapvető okát a nagyszámú meghibásodásnak. Tekintse meg az alábbi magyarázatokat:
 
 I Nem végezték el az összes tesztet, amit a jelentős termék kockázatokra terveztek.
@@ -350,7 +350,9 @@ II A szervezetnek irreális elvárásai vannak a hibaszázalékról, amelyet a t
 III Egy verzió kontroll probléma azt eredményezte, hogy a szoftver egy olyan verziója lett kibocsátva, amelyet a korábbi tesztelés során használtak.
 IV A termék kockázati elemzés nem azonosította az összes, az ügyfél nézőpontjából fontos kockázati elemet.
 V A termék kockázati elemzés nem lett frissítve a projekt során, amikor új információk kerültek elő.
+
 A következő állítások közül melyik mutatja, hogy mely magyarázatok a lehetséges alapvető okok?
+
 A. II, III és IV lehetséges magyarázatok, de I és V nem lehetséges.
 B. Mind az öt lehetséges magyarázat.
 C. I, IV és V lehetséges magyarázatok, de II és III nem lehetséges.
