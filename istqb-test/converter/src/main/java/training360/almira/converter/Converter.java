@@ -40,6 +40,8 @@ public class Converter {
             Question question = null;
             Answer answer = null;
             int index = 1;
+            StringBuilder questionText = new StringBuilder();
+            boolean prevEmpty = false;
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("Q. ") && line.contains(":")) {
                     // Új kérdés
@@ -56,11 +58,20 @@ public class Converter {
 
                     question.setTitle(title);
                     line = replaceSpec(line);
-                    question.setText(line);
+
+                    questionText.append(line).append("<br />\n");
                     state = "inquestion";
                     index++;
+                    prevEmpty = false;
                 }
                 else if (line.startsWith("A. ") || line.startsWith("B. ") || line.startsWith("C. ") || line.startsWith("D. ") || line.startsWith("E. ") || line.startsWith("F. ")) {
+
+                    if (line.startsWith("A")) {
+                        // Válasz kezdődik, kérdést lezárjuk
+                        question.setText(questionText.toString());
+                        questionText = new StringBuilder();
+                    }
+
                     answer = new Answer();
                     question.getAnswers().add(answer);
                     answer.setText(line);
@@ -69,20 +80,25 @@ public class Converter {
                     }
                     state = "inanswer";
                 }
-                else if (state.equals("inquestion") || state.equals("inpre")) {
+                else if (state.equals("inpre")) {
                     line = replaceSpec(line);
-                    if (line.startsWith("```") && !state.equals("inpre")) {
-                        question.setText(question.getText() + "<pre>");
-                        state = "inpre";
-                    }
-                    else if (line.startsWith("```") && state.equals("inpre")) {
-                        question.setText(question.getText() + "</pre>");
+                    if (line.startsWith("```")) {
+                        questionText.append("</pre>\n");
                         state = "inquestion";
                     }
-                    else if (state.equals("inpre")){
-                        question.setText(question.getText() + "\n" + line);
+                    else {
+                        questionText.append(line).append("\n");
+                    }
+                }
+                else if (state.equals("inquestion")) {
+                    line = replaceSpec(line);
+                    if (line.startsWith("```")) {
+                        questionText.append("<pre>");
+                        state = "inpre";
+                        prevEmpty = false;
                     }
                     else if (line.startsWith("![]")) {
+                        // Kép
                         String filename = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
                         File file = new File();
                         String basename = filename.substring(filename.indexOf("/") + 1);
@@ -93,15 +109,21 @@ public class Converter {
                         question.getFiles().add(file);
 
                         String img = generateImg(id, filename);
-                        question.setText(question.getText() + "<br />\n" + img + "\n");
+                        questionText.append(img).append("<br />\n");
 
                         copyFile(id, basename);
+                        prevEmpty = false;
                     }
                     else if (line.trim().equals("")) {
-                        // Do nothing
+                        if (!prevEmpty) {
+                            // Dupla sortörések kiszűrése
+                            questionText.append("<br />\n");
+                        }
+                        prevEmpty = true;
                     }
                     else {
-                        question.setText(question.getText() + "<br />\n" + line);
+                        questionText.append(line).append("<br />\n");
+                        prevEmpty = false;
                     }
                 }
                 else if (state.equals("inanswer")) {
