@@ -91,7 +91,7 @@ huTerms = [
         "off-the-shelf software",
         "commercial off-the-shelf (COTS)"
       ],
-      "desc": "egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló, megjelenéssel érhető el."
+      "desc": "egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló megjelenéssel érhető el."
     },
     {
       "name": "döntési lefedettség",
@@ -242,7 +242,7 @@ huTerms = [
       "engNames": [
         "use case testing"
       ],
-      "desc": "olyan feketedoboz teszttervezési technika, amelyekben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették."
+      "desc": "olyan feketedoboz teszttervezési technika, amelyben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették."
     },
     {
       "name": "használhatósági teszt",
@@ -256,7 +256,7 @@ huTerms = [
       "engNames": [
         "boundary value analysis"
       ],
-      "desc": "a program változóinak, illetve paramétereinek szélsőértékelemzésén alapuló feketedoboz teszttervezési technika."
+      "desc": "a program változóinak, illetve paramétereinek szélsőérték elemzésén alapuló feketedoboz teszttervezési technika."
     },
     {
       "name": "hatáselemzés",
@@ -300,14 +300,14 @@ huTerms = [
         "attack",
         "fault attack"
       ],
-      "desc": "célzott próbálkozás a teszt tárgyának minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni."
+      "desc": "célzott próbálkozás a teszt tárgya minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni."
     },
     {
       "name": "hordozhatósági teszt",
       "engNames": [
         "portability testing"
       ],
-      "desc": "egy szoftvertermék hordozhatóságra vonatkozó tesztelés folyamata."
+      "desc": "egy szoftvertermék hordozhatóságára vonatkozó tesztelés folyamata."
     },
     {
       "name": "incidens",
@@ -512,7 +512,7 @@ huTerms = [
       "engNames": [
         "driver"
       ],
-      "desc": "egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy felhívását végzi."
+      "desc": "egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy meghívását végzi."
     },
     {
       "name": "meghibásodás",
@@ -640,7 +640,7 @@ huTerms = [
       "engNames": [
         "static testing"
       ],
-      "desc": "egy komponens vagy rendszer szoftver elemeinek – pl. követekemények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés."
+      "desc": "egy komponens vagy rendszer szoftver elemeinek – pl. követelmények, szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés."
     },
     {
       "name": "stressz teszt",
@@ -858,7 +858,7 @@ huTerms = [
       "desc": "közös szervezés és menedzsment alatt álló teszttevékenységek csoportja. A tesztszint felelősségi körökhöz kapcsolódik a projekten belül. Tesztszintekre példa a komponens-teszt, integrációs teszt, rendszerteszt és felhasználó teszt."
     },
     {
-      "name": "tesztszkript",
+      "name": "teszt szkript",
       "engNames": [
         "test script"
       ],
@@ -887,14 +887,14 @@ huTerms = [
       "desc": "szoftverfejlesztési módszertan, amelyben a teszteseteket azelőtt készítik el (és többnyire automatizálják), mielőtt a szoftver fejlesztési folyamata befejeződne, és le lehetne futtatni a teszteket."
     },
     {
-      "name": "tesztvégrehajtás",
+      "name": "teszt végrehajtás",
       "engNames": [
         "test execution"
       ],
       "desc": "a rendszeren vagy annak komponensén végzett tesztfolyamat, amelyből megkapjuk az aktuális eredményeket."
     },
     {
-      "name": "tesztvégrehajtási eszköz",
+      "name": "teszt végrehajtási eszköz",
       "engNames": [
         "test execution tool"
       ],

@@ -290,7 +290,7 @@ terms = [
         "synonyms": [
             "attack"
         ],
-        "desc": "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usuall focused on reliability or security."
+        "desc": "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usually focused on reliability or security."
     },
     {
         "name": "formal review",
