@@ -661,7 +661,7 @@ huTerms = [
       "engNames": [
         "scripting language"
       ],
-      "desc": "a tesztvégrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni."
+      "desc": "a teszt végrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni."
     },
     {
       "name": "technikai felülvizsgálat",
@@ -731,7 +731,7 @@ huTerms = [
       "engNames": [
         "test objective"
       ],
-      "desc": "a műszaki teszttervezés, illetve tesztvégrehajtás célja."
+      "desc": "a műszaki teszttervezés, illetve teszt végrehajtás célja."
     },
     {
       "name": "tesztelés",
@@ -840,7 +840,7 @@ huTerms = [
         "test log",
         "test record"
       ],
-      "desc": "a tesztvégrehajtáshoz kapcsolódó részletek időrendi rögzítése."
+      "desc": "a teszt végrehajtáshoz kapcsolódó részletek időrendi rögzítése."
     },
     {
       "name": "tesztstratégia",

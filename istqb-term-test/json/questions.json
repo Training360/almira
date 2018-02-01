@@ -42,7 +42,7 @@
         {
             "huName": "Határérték elemzés",
             "enName": "Boundary value analysis",
-            "huDescription": "A program változóinak, illetve paramétereinek szélsőértékelemzésén alapuló feketedoboz teszttervezési technika.",
+            "huDescription": "A program változóinak, illetve paramétereinek szélsőérték elemzésén alapuló feketedoboz teszttervezési technika.",
             "enDescription": "A black-box test design technique in which test cases are designed based on boundary values.",
             "reference": null,
             "seeAlso": ["Boundary value"],
@@ -60,7 +60,7 @@
         {
             "huName": "Dobozos szoftver",
             "enName": "Commercial off-the-shelf (COTS)",
-            "huDescription": "Egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló, megjelenéssel érhető el.",
+            "huDescription": "Egy, az általános piaci igényeknek megfelelő szoftvertermék, pl.: nagy számú vevő számára, amely minden vásárlónak hasonló megjelenéssel érhető el.",
             "enDescription": "A software product that is developed for the general market, i.e. for a large number of customers, and that is delivered to many customers in identical format.",
             "reference": null,
             "seeAlso": null,
@@ -204,7 +204,7 @@
         {
             "huName": "Meghajtó",
             "enName": "Driver",
-            "huDescription": "Egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy felhívását végzi.",
+            "huDescription": "Egy szoftver komponens, vagy teszt eszköz, amely kiváltja azt a komponenst, amely egy másik komponens, vagy a rendszer vezérlését, és/vagy meghívását végzi.",
             "enDescription": "A software component or test tool that replaces a component that takes care of the control and/or the calling of a component or system.",
             "reference": "After TMap",
             "seeAlso": null,
@@ -312,8 +312,8 @@
         {
             "huName": "Hibatámadás",
             "enName": "Fault attack",
-            "huDescription": "Célzott próbálkozás a teszt tárgyának minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni.",
-            "enDescription": "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usuall focused on reliability or security.",
+            "huDescription": "Célzott próbálkozás a teszt tárgya minőségének, különösképpen a megbízhatóságának meghatározására azáltal, hogy speciális meghibásodásokat próbálunk meg szándékosan előidézni.",
+            "enDescription": "Directed and focused attempt to evaluate a specific quality characteristic of a test object by attempting to force specific failures to occur. Usually focused on reliability or security.",
             "reference": null,
             "seeAlso": ["Negative testing", "Security attack"],
             "synonyms": ["Attack"]
@@ -553,7 +553,7 @@
         {
             "huName": "Hordozhatósági teszt",
             "enName": "Portability testing",
-            "huDescription": "Egy szoftvertermék hordozhatóságra vonatkozó tesztelés folyamata.",
+            "huDescription": "Egy szoftvertermék hordozhatóságára vonatkozó tesztelés folyamata.",
             "enDescription": "Testing to determine the portability of a software product.",
             "reference": null,
             "seeAlso": null,
@@ -688,7 +688,7 @@
         {
             "huName": "Szkript nyelv",
             "enName": "Scripting language",
-            "huDescription": "A tesztvégrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni.",
+            "huDescription": "A teszt végrehajtási eszközök (pl. felvevő/lejátszó eszközök) által is használt programozási nyelv, amiben futtatható teszt szkripteket lehet írni.",
             "enDescription": "A programming language in which executable test scripts are written, used by a test execution tool (e.g., a capture/playback tool).",
             "reference": null,
             "seeAlso": null,
@@ -742,7 +742,7 @@
         {
             "huName": "Statikus teszt",
             "enName": "Static testing",
-            "huDescription": "Egy komponens vagy rendszer szoftver elemeinek – pl. követekemények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés.",
+            "huDescription": "Egy komponens vagy rendszer szoftver elemeinek – pl. követelmények szoftver műszaki terv, vagy kód - tesztje specifikáció vagy megvalósítási szinten a szoftver futtatása nélkül. Például felülvizsgálat, vagy statikus forráskód elemzés.",
             "enDescription": "Testing of a software development artifact, e.g., requirements, design or code, without execution of these artifacts, e.g., reviews or static analysis.",
             "reference": null,
             "seeAlso": null,
@@ -915,7 +915,7 @@
             "synonyms": ["Test bed", "Test rig"]
         },
         {
-            "huName": "Tesztvégrehajtás",
+            "huName": "Teszt végrehajtás",
             "enName": "Test execution",
             "huDescription": "A rendszeren vagy annak komponensén végzett tesztfolyamat, amelyből megkapjuk az aktuális eredményeket.",
             "enDescription": "The process of running a test on the component or system under test, producing actual result(s).",
@@ -924,7 +924,7 @@
             "synonyms": null
         },
         {
-            "huName": "Tesztvégrehajtási eszköz",
+            "huName": "Teszt végrehajtási eszköz",
             "enName": "Test execution tool",
             "huDescription": "Olyan teszteszköz, amelynek segítségével másik szoftvert futtathatunk egy automatizált szkript (pl. felvétel/lejátszás) segítségével.",
             "enDescription": "A type of test tool that is able to execute other software using an automated test script, e.g., capture/playback.",
@@ -953,7 +953,7 @@
         {
             "huName": "Tesztnapló",
             "enName": "Test log",
-            "huDescription": "A tesztvégrehajtáshoz kapcsolódó részletek időrendi rögzítése.",
+            "huDescription": "A teszt végrehajtáshoz kapcsolódó részletek időrendi rögzítése.",
             "enDescription": "A chronological record of relevant details about the execution of tests.",
             "reference": "IEEE 829",
             "seeAlso": null,
@@ -980,7 +980,7 @@
         {
             "huName": "Tesztcél",
             "enName": "Test objective",
-            "huDescription": "A műszaki teszttervezés, illetve tesztvégrehajtás célja.",
+            "huDescription": "A műszaki teszttervezés, illetve teszt végrehajtás célja.",
             "enDescription": "A reason or purpose for designing and executing a test.",
             "reference": null,
             "seeAlso": null,
@@ -1023,7 +1023,7 @@
             "synonyms": null
         },
         {
-            "huName": "Tesztszkript",
+            "huName": "Teszt szkript",
             "enName": "Test script",
             "huDescription": "Legtöbbször teszteljárás specifikációra használt kifejezés, elsősorban automatizált teszt esetén.",
             "enDescription": "Commonly used to refer to a test procedure specification, especially an automated one.",
@@ -1115,7 +1115,7 @@
         {
             "huName": "Használati eset teszt",
             "enName": "Use case testing",
-            "huDescription": "Olyan feketedoboz teszttervezési technika, amelyekben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették.",
+            "huDescription": "Olyan feketedoboz teszttervezési technika, amelyben a műszaki tesztterveket (test design) különböző használati eset forgatókönyvek futtatására készítették.",
             "enDescription": "A black-box test design technique in which test cases are designed to execute scenarios of use cases.",
             "reference": null,
             "seeAlso": null,
