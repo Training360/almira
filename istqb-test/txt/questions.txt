@@ -4959,7 +4959,7 @@ C. Vertical tracebility.
 D. Horizontal and vertical tracebilities.
 
 
-Q. 548: Given ths code detail below, how many test cases are needed to achieve 100% condition coverage?
+Q. 548: Given the code detail below, how many test cases are needed to achieve 100% decision coverage?
 
 ```
 if ((temperature < 0) or
