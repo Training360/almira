@@ -8,6 +8,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Converter {
 
@@ -15,16 +16,55 @@ public class Converter {
 
     private static final String PREFIX = "../txt/";
 
+    private static final String UTF8_BOM = "\uFEFF";
+
+    private static final Path CONTENT_PATH = Paths.get("target", "content");
+
     public static void main(String[] args) {
-        String result = new Converter().convert();
-        System.out.println(result);
+        new Converter().convert();
     }
 
-    private String convert() {
-        Context context = new Context();
+    private void convert() {
+        createDirectories();
         List<Question> questions = readQuestions();
-        context.setVariable("questions", questions);
-        return templateEngine.process("template", context);
+
+        writeQuestions(questions);
+    }
+
+    private void writeQuestions(List<Question> questions) {
+        Map<String, List<Question>> questionsByFolder = questions.stream().collect(Collectors.groupingBy(q -> Optional.ofNullable(q.getFolder()).orElse("")));
+        questionsByFolder.forEach((folder, questionsInFolder) -> {
+            Path path = CONTENT_PATH.resolve(folder);
+            try {
+                if (!Files.exists(path)) {
+                    Files.createDirectory(path);
+                }
+            }
+            catch (IOException ioe) {
+                throw new IllegalStateException("Cannot create folder: " + path, ioe);
+            }
+
+            path = path.resolve("quizitems.xml");
+            Context context = new Context();
+            context.setVariable("questions", questionsInFolder.stream().limit(5).collect(Collectors.toList()));
+            try {
+                templateEngine.process("template", context, Files.newBufferedWriter(path));
+            }
+            catch (IOException ioe) {
+                throw new IllegalStateException("Cannot write file: " + path, ioe);
+            }
+
+        });
+    }
+
+
+    private void createDirectories() {
+        try {
+            Files.createDirectories(CONTENT_PATH);
+        }
+        catch (IOException ioe) {
+            throw new IllegalStateException("Cannot create directories: " + CONTENT_PATH, ioe);
+        }
     }
 
     private List<Question> readQuestions() {
@@ -43,6 +83,7 @@ public class Converter {
             StringBuilder questionText = new StringBuilder();
             boolean prevEmpty = false;
             while ((line = reader.readLine()) != null) {
+                line = removeBom(line);
                 if (line.startsWith("Q. ") && line.contains(":")) {
                     // Új kérdés
                     question = new Question();
@@ -58,6 +99,11 @@ public class Converter {
 
                     question.setTitle(title);
                     line = replaceSpec(line);
+
+                    if (hasFolder(line)) {
+                        question.setFolder(getFolder(line));
+                        line = filterFolder(line);
+                    }
 
                     questionText.append(line).append("<br />\n");
                     state = "inquestion";
@@ -142,10 +188,30 @@ public class Converter {
         }
     }
 
+    private String filterFolder(String line) {
+        // Mögötte lévő space-t is filterelni kell
+        return line.replace(line.substring(line.indexOf("("), line.indexOf(")") + 2), "");
+    }
+
+    private String getFolder(String line) {
+        return line.substring(line.indexOf("(") + 1, line.indexOf(")"));
+    }
+
+    private boolean hasFolder(String line) {
+        return line.substring(line.indexOf(":") + 2, line.indexOf(":") + 3).equals("(");
+    }
+
+    private String removeBom(String s) {
+        if (s.startsWith(UTF8_BOM)) {
+            s = s.substring(1);
+        }
+        return s;
+    }
+
     private void copyFile(String id, String basename) {
         Path source = getPath(PREFIX + "images/" + basename);
-        Path destDir = getPath("target/_files/" + id);
-        Path dest = getPath("target/_files/" + id + "/" + basename);
+        Path destDir = CONTENT_PATH.resolve("_files").resolve(id);
+        Path dest = destDir.resolve(basename);
         try {
             Files.createDirectories(destDir);
             Files.copy(source, dest);
@@ -198,7 +264,7 @@ public class Converter {
 
     }
 
-    private Path getPath(String s) {
+    private static Path getPath(String s) {
         return Paths.get(s.replace("/", FileSystems.getDefault().getSeparator()));
     }
 }

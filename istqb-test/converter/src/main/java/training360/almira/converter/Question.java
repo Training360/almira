@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Question {
 
+    private String folder;
+
     private String title;
 
     private String text = "";
@@ -17,6 +19,14 @@ public class Question {
         int start = title.indexOf(" ");
         int number = Integer.parseInt(title.substring(start + 1));
         return String.format("Q. %04d", number);
+    }
+
+    public String getFolder() {
+        return folder;
+    }
+
+    public void setFolder(String folder) {
+        this.folder = folder;
     }
 
     public String getTitle() {
