@@ -9,6 +9,8 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class Converter {
 
@@ -29,10 +31,54 @@ public class Converter {
         List<Question> questions = readQuestions();
 
         writeQuestions(questions);
+
+        createZip();
+    }
+
+    private void createZip() {
+        try (ZipOutputStream out = new ZipOutputStream(Files.newOutputStream(CONTENT_PATH.resolve("content.zip")))) {
+            Files.walk(CONTENT_PATH.resolve("_files")).filter((p -> Files.isRegularFile(p)))
+                .forEach(p -> {
+                    try {
+                        String path = p.toString().substring(p.toString().indexOf("_files"));
+
+                        ZipEntry e = new ZipEntry(path);
+                        out.putNextEntry(e);
+                        Files.copy(p, out);
+                        out.closeEntry();
+                    }
+                    catch (IOException ioe) {
+                        throw new IllegalArgumentException("Cannot put file", ioe);
+                    }
+                });
+
+            Files.walk(CONTENT_PATH).filter(p -> p.getFileName().toString().equals("quizitems.xml"))
+                    .sorted(Comparator.comparing(p -> p.toString().length()))
+                    .forEach(p -> {
+                        try {
+                            String path = p.toString().substring(p.toString().indexOf("content") + 8);
+
+                            ZipEntry e = new ZipEntry(path);
+                            out.putNextEntry(e);
+                            Files.copy(p, out);
+                            out.closeEntry();
+                        }
+                        catch (IOException ioe) {
+                            throw new IllegalArgumentException("Cannot put file", ioe);
+                        }
+                            }
+                    );
+
+        }
+        catch (IOException ioe) {
+            throw new IllegalArgumentException("Cannot create content.zip", ioe);
+        }
     }
 
     private void writeQuestions(List<Question> questions) {
-        Map<String, List<Question>> questionsByFolder = questions.stream().collect(Collectors.groupingBy(q -> Optional.ofNullable(q.getFolder()).orElse("")));
+        Map<String, List<Question>> questionsByFolder = questions
+                .stream()
+                .collect(Collectors.groupingBy(q -> Optional.ofNullable(q.getFolder()).orElse("")));
         questionsByFolder.forEach((folder, questionsInFolder) -> {
             Path path = CONTENT_PATH.resolve(folder);
             try {
@@ -46,7 +92,7 @@ public class Converter {
 
             path = path.resolve("quizitems.xml");
             Context context = new Context();
-            context.setVariable("questions", questionsInFolder.stream().limit(5).collect(Collectors.toList()));
+            context.setVariable("questions", questionsInFolder);
             try {
                 templateEngine.process("template", context, Files.newBufferedWriter(path));
             }
