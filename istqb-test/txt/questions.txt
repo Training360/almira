@@ -1634,14 +1634,6 @@ C. Requirements that have been omitted from the design documents.
 D. How much of the code has been covered by test cases?
 
 
-Q. 206: Which of the following is not a characteristic for testability?
-
-A. Operability
-B. Observability
-C. Simplicity
-D. Robustness
-
-
 Q. 207: Software testing accounts to what percent of software development costs in AVERAGE?
 
 A. 10-20%
@@ -1678,12 +1670,6 @@ B. To understand user needs.
 C. To define the scope of testing.
 D. All of the above.
 
-Q. 212: Which of these can be successfully tested using Loop Testing methodology?
-
-A. Simple Loops
-B. Nested Loops
-C. Concatenated Loops
-D. All of the above.
 
 Q. 213: Cyclomatic complexity measurement comes under which testing method?
 
@@ -1773,13 +1759,6 @@ C. Expected results.
 D. Targets and misses.
 
 
-Q. 225: A tool that supports traceability, recording of incidents or scheduling of tests is called:
-
-A. A dynamic analysis tool.
-B. A test execution tool.
-C. A debugging tool.
-D. A test management tool.
-
 Q. 226: The cost of fixing a fault:
 
 A. Is not important.
@@ -1801,12 +1780,6 @@ B. A fault.
 C. A failure.
 D. A defect.
 
-Q. 229: Which of the following can be tested as part of operational testing?
-
-A. Component interaction.
-B. Probe effect.
-C. State transition.
-D. Disaster recovery.
 
 Q. 230: Given the following sequence of operational steps, what is the right number of tests for the appropriate 100% coverage:
 
@@ -1837,12 +1810,6 @@ B. Performance, load and stress testing
 C. Requirements-based testing
 D. Top-down integration testing
 
-Q. 233: When a new testing tool is purchased, it should be used first by:
-
-A. A small team to establish the best way to use the tool.
-B. Everyone who may eventually have some use for the tool.
-C. The independent testing team.
-D. The managers to see what projects it should be used in.
 
 Q. 234: Which of the following is NOT part of performance testing:
 
@@ -1905,12 +1872,6 @@ B. Test deliverables.
 C. Test tasks.
 D. Test specification.
 
-Q. 241: The standard that gives definitions of testing terms is:
-
-A. ISO/IEC 12207
-B. BS7925-1
-C. BS7925-2
-D. ANSI/IEEE 829
 
 Q. 242: What are the main objectives of software project risk management?
 
@@ -1948,12 +1909,6 @@ B. 6
 C. 5
 D. 4
 
-Q. 245: Which of the following statements about the component testing standard is false?
-
-A. Black box design techniques all have an associated measurement technique.
-B. White box design techniques all have an associated measurement technique.
-C. Cyclomatic complexity is not a test measurement technique.
-D. Black box measurement techniques all have an associated test design technique.
 
 Q. 246: Could reviews or inspections be considered part of testing?
 
@@ -2272,18 +2227,6 @@ C. How many more test cases are to be written.
 D. Different tools to perform regression testing.
 
 
-Q. 278: Drivers are also known as:
-
-i. Spade
-ii. Test harness
-iii. Scaffolding
-
-A. i, ii are true, iii is false.
-B. i, iii are true, ii is false.
-C. ii, iii are true, i is false.
-D. All of the above are true.
-
-
 Q. 279: Which of the following is not a type of incremental testing approach?
 
 A. Top down.
@@ -2438,25 +2381,6 @@ A. The goal/purpose of testing is to demonstrate that the program works.
 B. The purpose of testing is to demonstrate that the program is defect free.
 C. The purpose of testing is to demonstrate that the program does what it is supposed to do.
 D. Testing is executing software for the purpose of finding defects.
-
-
-Q. 294: Given the pseudocode below, what is the minimum number of tests for full statement coverage and branch coverage?
-
-```
-Read P
-Read Q
-If p+q > 100 then
-Print "Large"
-End if
-If p > 50 then
-Print "pLarge"
-End if
-```
-
-A. Statement coverage is 2, branch coverage is 2
-B. Statement coverage is 3 and branch coverage is 2
-C. Statement coverage is 1 and branch coverage is 2
-D. Statement Coverage is 4 and Branch coverage is 2
 
 
 Q. 295: Match every stage of the software development life cycle (SDLC) with the testing life cycle:
