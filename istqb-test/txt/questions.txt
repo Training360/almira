@@ -99,11 +99,6 @@ B. ii. and iv. are more for developers.
 C. ii, iii and iv. are more for developers.
 D. ii. and iii. are more for developers.
 
-Q. 11: Which of the following is correct?
-A. Impact analysis assesses the effect of a defect on the system found in regression testing.
-B. Impact analysis assesses the effect of a new person joining the regression test team.
-C. Impact analysis assesses whether or not a defect found in regression testing has been fixed correctly.
-D. Impact analysis assesses the effect of a change to the system to determine how much regression testing is to be performed.
 
 Q. 12: In software testing what is the main purpose of exit criteria?
 
@@ -122,7 +117,6 @@ A. Login Browse Basket Checkout Basket Checkout Pay Logout.
 B. Login Browse Basket Checkout Pay Logout.
 C. Login Browse Basket Checkout Basket Logout.
 D. Login Browse Basket Browse Basket Checkout Pay Logout.
-
 
 
 Q. 14: Which of the following is a KEY test closure task?
@@ -319,14 +313,6 @@ C. White-box technique.
 D. Structure-based technique.
 
 
-Q. 31: Which of the following categories is a test comparator tool USUALLY associated with?
-
-A. Tool support for performance and monitoring.
-B. Tool support for static testing.
-C. Tool support for test execution and logging.
-D. Tool support for the management of testing and tests.
-
-
 Q. 32: Which activities form part of test planning?
 
 i) Developing test cases.
@@ -376,23 +362,6 @@ B. Validating models of the software.
 C. Testing code executed in a special test harness.
 D. Enforcement of coding standards.
 
-
-Q. 36: Which test approaches or strategies are characterized BEST by the descriptions below?
-
-S. Process-compliant approaches.
-T. Heuristic approaches.
-U. Consultative approaches.
-V. Regression-averse approaches.
-
-1. Includes reuse of existing test material.
-2. Listens to suggestions from technology experts.
-3. Adheres to industry-specific standards.
-4. Runs test execution and evaluation concurrently.
-
-A. S4, T3, U2, V1
-B. S1, T2, U3, V4
-C. S2, T3, U1, V4
-D. S3, T4, U2, V1
 
 Q. 37: What principle is described BEST when test designs are written by a third party organisation?
 
@@ -480,14 +449,6 @@ C. That you have tested every IF statement in the program.
 D. That you have tested every combination of values of IF statements in the program.
 
 
-Q. 46: There are several risks of managing your project's schedule with a statistical reliability model. These include the followings:
-
-A. Testers spend more energy early in the product trying to find bugs than preparing to do the rest of the project's work more efficiently.
-B. Managers might not realize that the testing effort is ineffective late in the project, because they expect a low rate of bug finding, so the low rate achieved doesn't alarm them.
-C. The end-of-project pressure on testers may results less found bugs, or less reported bugs.
-D. All of the above.
-
-
 Q. 47: Typical defects that are easier to find by reviews than during dynamic testing are the followings: 
 
 A. Deviations from standards.
@@ -510,14 +471,6 @@ A. Structure-based and experience-based techniques.
 B. Black-box and specification-based techniques.
 C. Specification-based and structure-based techniques.
 D. Structure-based technique and exhaustive testing.
-
-
-Q. 50: Measurement dysfunction is a problem because:
-
-A. Even though the numbers you receive may appear better, to achieve these numbers people are doing other aspects of their work much less well.
-B. We don't know how to measure a variable (our measurement is dysfunctional) and so we don't know how to interpret the result.
-C. You are measuring the wrong thing and thus reaching the wrong conclusions.
-D. All of the above.
 
 
 Q. 51: Important consequences of the impossibility of complete testing are:
@@ -635,36 +588,12 @@ C. Test case
 D. Test data
 
 
-Q. 64: The ___________ will be performed by the people at the client own locations.
-
-A. Alpha testing
-B. Field testing
-C. Performance testing
-D. System testing
-
-
-Q. 65: Which of the following standards refers to the Software product quality?
-
-A. ISO 9126
-B. ISO 829
-C. ISO 1012
-D. ISO 1028
-
-
 Q. 66: Which is NOT a black box testing technique?
 
 A. Equivalence partition
 B. Decision tables
 C. Transition diagrams
 D. Decision testing
-
-
-Q. 67: Find the mismatch:
-
-A. Test data preparation tools – Manipulate Data bases.
-B. Test design tools – Generate test inputs.
-C. Requirement management tools – Enable individual tests to be traceable.
-D. Configuration management tools – Check for consistence.
 
 
 Q. 68: Which of the following MAIN activities are part of the fundamental test process?
@@ -691,36 +620,12 @@ C. Switch the topic to an issue about which the person does not have a strong op
 D. Express an opinion that differs from the person’s opinion in order to encourage others to express their ideas.
 
 
-Q. 71: Stochastic testing using statistical information or operational profiles uses the following approach:
-
-A. Heuristic testing approach.
-B. Methodical testing approach.
-C. Model based testing approach.
-D. Process or standard compliant testing approach.
-
-
 Q. 72: Which software model can’t be used in functional testing?
 
 A. Process flow model.
 B. State transition model.
 C. Menu structure model.
 D. Plain language specification model.
-
-
-Q. 73: Arc testing is otherwise known as:
-
-A. Branch testing.
-B. Agile testing.
-C. Beta testing.
-D. Ad-hoc testing.
-
-
-Q. 74: The purpose of exit criteria is
-
-A. Define when to stop testing.
-B. End of test level.
-C. When a set of tests has achieved a specific precondition.
-D. All of the above.
 
 
 Q. 75: Which factors contribute to humans making mistakes that can lead to faulty software?
@@ -765,14 +670,6 @@ C. Check the branch coverage.
 D. Check the decision tables.
 
 
-Q. 79: Which test can be performed at all test levels?
-
-A. System testing.
-B. Operational testing.
-C. Structural testing.
-D. Integration testing.
-
-
 Q. 80: Which is NOT part of the fundamental test process?
 
 A. Planning and control.
@@ -781,36 +678,12 @@ C. Analysis and design.
 D. None of the above.
 
 
-Q. 81: The ________ are used within individual workbenches to produce the right output products.
-
-A. Tools and techniques
-B. Procedures and standards
-C. Processes and walkthroughs
-D. Reviews and update
-
-
-Q. 82: Which aspects of testing will establish traceability help?
-
-A. Configuration management and test data generation.
-B. Test case specification and change control.
-C. Test condition and test procedure specification.
-D. Impact analysis and requirements coverage.
-
-
 Q. 83: The principle of Cyclomatic complexity, considering L as edges or links, N as nodes, P as independent paths can be described by the following equation:
 
 A. L-N +2P
 B. N-L +2P
 C. N-L +P
 D. N-L +P
-
-
-Q. 84: Function Point Analysis (FPA) is used: 
-
-A. To measure the functional requirements of the project.
-B. To measure the size of the functionality of an Information system.
-C. To measure the functional testing effort.
-D. To measure the functional flow.
 
 
 Q. 85: A _____ is the step-by-step method followed to ensure that standards are met.
@@ -967,14 +840,6 @@ A. System Level Testing.
 B. Integration Level Testing.
 C. Unit Level Testing.
 D. Component Testing.
-
-
-Q. 100: Methodologies adopted while performing Maintenance Testing are:
-
-A. Breadth Test and Depth Test.
-B. Re-testing.
-C. Confirmation Testing.
-D. Sanity Testing.
 
 
 Q. 101: The switch is turned off once the temperature falls below 18 and then it is turned on when the temperature is more than 21.  Identify the equivalance values which belong to the same class.
