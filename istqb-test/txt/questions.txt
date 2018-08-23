@@ -3090,19 +3090,6 @@ C. Testing is not a part of quality assurance.
 D. Testing is the same as debugging.
 
 
-Q. 376: Given the following code how many test cases should be run to achieve 100% decision coverage?
-
-```
-WHILE (condition A) Do B
-END WHILE
-```
-
-A. 2
-B. Indefinite
-C. 1
-D. 4
-
-
 Q. 377: In a flight reservation system, the number of available seats in each plane model is an input. A plane may have any positive number of available seats, up to the given capacity of the plane. Using boundary value analysis, a list of available seat values were generated. Which of the following lists is correct?
 
 A. 1, 2, capacity-1, capacity, capacity+1.
@@ -3167,20 +3154,6 @@ A. The test object, the test material and the test environment.
 B. The problem reports and the test material.
 C. Only the test object. The test cases need to be adapted during agile testing.
 D. The test object and the test material.
-
-
-Q. 385: Given the code below how many test cases should be run in order to achieve 100% path coverage?
-
-```
-WHILE (condition A)
-Do B
-END WHILE
-```
-
-A. One
-B. Indefinite
-C. Two
-D. Four
 
 
 Q. 386: What is the purpose of test exit criteria in the test plan?
