@@ -865,14 +865,6 @@ C. Comparing actual results.
 D. Designing the tests.
 
 
-Q. 104: Link Testing is also known as:
-
-A. Component Integration testing.
-B. Component System Testing.
-C. Component Sub System Testing.
-D. Maintenance testing.
-
-
 Q. 105: Who are the persons involved in a Formal Review:
 
 i. Manager
@@ -958,14 +950,6 @@ C. Error-prone software delivered.
 D. Software is delivered, that does not perform its intended functions.
 
 
-Q. 115: Which of the following is a key characteristics of walkthrough testing
-
-A. Scenario, Dry Run, Peer Group.
-B. Pre-meeting Preparations.
-C. Formal Follow Up Process.
-D. Includes Metrics.
-
-
 Q. 116: Which of the following techniques is NOT a white box technique?
 
 A. Statement testing and coverage.
@@ -1040,22 +1024,6 @@ C. impractical and impossible.
 D. always possible.
 
 
-Q. 124: Which tool needs to interface with other office automation software in order to generate reports in the format required by the organization?
-
-A. Progress tracking tools.
-B. Test management tools.
-C. Metrics management tools.
-D. Test execution tools.
-
-
-Q. 125: Which one DOES NOT come under international standard?
-
-A. IEC
-B. IEEE
-C. ISO
-D. All of the above
-
-
 Q. 126: In which phase are used static tests? 
 
 A. Requirements.
@@ -1095,35 +1063,12 @@ B. Writing a test summary report for stakeholders.
 C. Handing the testware over to the maintenance organization.
 D. Identifying any required infrastructure and tools.
 
-Q. 131: How much percentage of the life cycle costs of a software are spent on maintenance (in average)?
-
-A. 10%
-B. 30%
-C. 50%
-D. 70%
-
 
 Q. 132: When a defect is detected and fixed, the software should be retested to confirm that the original defect has been successfully removed. This is called:
 
 A. Regression testing.
 B. Maintenance testing.
 C. Confirmation testing.
-D. None of the above.
-
-
-Q. 133: Which of the following is a valid objective of an incident report?
-
-A. Prove that the tester is contributing to the quality of the system.
-B. Provides test management ideas for test process improvement.
-C. Gives a statistical way to determine which modules to redesign.
-D. Provides developers a way to evaluate their individual work processes.
-
-
-Q. 134: When to stop testing?
-
-A. Stop when scheduled time for testing expires.
-B. Stop if 75% of the pre-defined number of errors is detected.
-C. Stop when all the test cases execute with detecting few errors.
 D. None of the above.
 
 
@@ -1162,14 +1107,6 @@ A. Reviewer
 B. Author
 C. Moderator
 D. Auditor
-
-
-Q. 139: Performs sufficient testing to evaluate every possible path and condition in the application system. The only test method that guarantees the proper functioning of the application system is called as:
-
-A. Regression Testing
-B. Exhaustive Testing
-C. Basic Path Testing
-D. Branch Testing
 
 
 Q. 140: Which of the following statements contains a valuable objective for a test team?
@@ -1212,14 +1149,6 @@ A. Test leader: S and V; Tester: T and U
 B. Test leader: S, T and V; Tester: U
 C. Test leader: S, U and V; Tester: T
 D. Test leader: S; Tester: T, U and V
-
-
-Q. 144: What type of tools are to be used for Regression Testing?
-
-A. Performance.
-B. Record/Playback.
-C. A and B.
-D. None.
 
 
 Q. 145: System Integration testing should be done after:
@@ -1274,14 +1203,6 @@ C. All of the above.
 D. None of the above.
 
 
-Q. 151: In ______ the tester doesn't know anything about the sofware being tested; he/she just clicks or types randomly.
-
-A. Random testing
-B. Gorilla testing
-C. Ad-hoc testing
-D. Dumb monkey testing
-
-
 Q. 152: A series of probing questions about the completeness and attributes of an application system is called:
 
 A. Checklist.
@@ -1297,22 +1218,6 @@ A. Grey-box testing
 B. Glass-box testing
 C. Black-box testing
 D. White-box testing
-
-
-Q. 154: A white-box testing technique that measures the percentage of decision directions executed by the test case designed is called:
-
-A. Condition coverage
-B. Decision/Condition coverage
-C. Decision Coverage
-D. Branch coverage
-
-
-Q. 155: Which summarizes the testing activities associated with one or more test design specifications?
-
-A. Test Summary report.
-B. Test Log.
-C. Test Incident Report.
-D. Test Script.
 
 
 Q. 156: Which test is the LEAST likely to investigate both functional and non-functional requirements?
@@ -1396,14 +1301,6 @@ A. Beta testing.
 B. Usability testing.
 C. Alpha testing.
 D. COTS testing.
-
-
-Q. 165: CAST stands for:
-
-A. Computer Aided Software Testing.
-B. Computer Aided Software Tools.
-C. Computer Analysis Software Techniques.
-D. None of the above.
 
 
 Q. 166: In future projects how can software defects be prevented from reoccurring?
@@ -1660,22 +1557,6 @@ A. Done by the developer.
 B. Done by the test engineers.
 C. Done by management.
 D. Done by an entity outside the project’s sphere of influence.　
-
-
-Q. 195: Defect management process does not include:
-
-A. Defect prevention.
-B. Deliverable base-lining.
-C. Management reporting.
-D. None of the above.
-
-
-Q. 196: What is called a group of test activities that are organized and managed together?
-
-A. Test procedure specification.
-B. Test level.
-C. Test case specification.
-D. Test plan.
 
 
 Q. 197: What is the key difference between (a) contract and regulation acceptance testing, and (b) alpha and beta testing?
