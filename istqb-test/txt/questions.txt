@@ -6876,7 +6876,7 @@ C. c, a, d, b.
 D. a, c, d, b.
 
 
-Q. 779: During which activity of the Fundamental Test Process test process do you review the test basis?
+Q. 779: During which activity of the Fundamental Test Process do you review the test basis?
 
 A. Evaluating exit criteria and reporting.
 B. Test implementation and execution.
