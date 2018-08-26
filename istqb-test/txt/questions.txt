@@ -1035,7 +1035,7 @@ D. All of the above.
 Q. 127: What is the disadvantage of Black Box Testing
 
 A. Chances of having repetition of tests that are already done by programmer.
-B. The test inputs needs to be obtained from large sample space.
+B. The test inputs need to be obtained from large sample space.
 C. It is difficult to identify all possible inputs in limited testing time. So writing test cases is slow and difficult.
 D. All above.
 
