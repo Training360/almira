@@ -2046,7 +2046,7 @@ iv. Verifying the test environment.
 
 A. iv is correct and i, ii, iii are incorrect.
 B. i, ii, iii is correct and iv is incorrect.
-C. ii is correct and i, ii, iii are incorrect.
+C. ii is correct and i, ii, iv are incorrect.
 D. iii and iv are correct and i, ii are incorrect.
 
 
