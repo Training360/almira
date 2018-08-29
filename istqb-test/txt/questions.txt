@@ -2531,7 +2531,7 @@ Q. 310: Given the code below, what is the smallest number of test cases required
 ```
 if(x>y) x=x+1;
 else y=y+1;
-while(x>y)
+while(x<y)
 {
 y=x*y; x=x+1;
 }
