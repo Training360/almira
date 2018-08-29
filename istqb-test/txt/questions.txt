@@ -4277,25 +4277,6 @@ C. ii, iii and vi are static, i, iv and v are dynamic.
 D. vi is static, i-v are dynamic.
 
 
-Q. 513: Given the following code, which statement is true about the minimum number of test cases required for full statement and branch coverage?
-
-```
-Read p
-Read q
-IF p+q > 100 THEN
-Print "Large"
-ENDIF
-IF p > 50 THEN
-Print "p Large"
-ENDIF
-```
-
-A. 1 test for statement coverage, 3 for branch coverage.
-B. 1 test for statement coverage, 2 for branch coverage.
-C. 1 test for statement coverage, 1 for branch coverage.
-D. 2 tests for statement coverage, 2 for branch coverage.
-
-
 Q. 514: Which of the following is a benefit of independent testing?
 
 A. Code cannot be released into production until independent testing is complete.
