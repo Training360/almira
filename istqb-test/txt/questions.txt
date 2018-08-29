@@ -6730,27 +6730,6 @@ C. To reduce the amount of impact analysis we must do when modifying a system.
 D. To discover any defects introduced or uncovered as a result of a change.
 
 
-Q. 769: For the following pseudocode detail, how many test cases are needed to get 100% statement coverage?
-
-```
-Procedure X
-Read (Color) // Input color from user
-IF (Color == "Red") THEN
-Call Roses(Color)
-ELSEIF (Color == "Blue") THEN
-Call Violets(Color)
-ELSE
-PRINT "User is no Shakespeare"
-SaveToDatabase(Color)
-End Procedure X
-```
-
-A. 5
-B. 3
-C. 1
-D. 2
-
-
 Q. 770: Which of the following statements about static analysis is FALSE?
 
 A. Static analysis can find defects that are likely to be missed by dynamic testing.
