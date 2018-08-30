@@ -3313,7 +3313,7 @@ Q. 402: Which statement is correct? Branch coverage is:
 
 A. Another name for decision coverage.
 B. Another name for all-edges coverage.
-C. Another name for basic path coverage.
+C. Another name for condition coverage.
 D. All the above.
 
 
