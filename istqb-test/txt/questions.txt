@@ -1947,9 +1947,9 @@ D. Testing a system feature using only the software required for that function.
 
 Q. 251: Which of the following is NOT a black-box technique:
 
-A. Equivalence partitioning.
+A. Use case based testig
 B. State transition testing.
-C. LCSAJ
+C. Decision testing
 D. Boundary value analysis.
 
 Q. 252: Select the MOST appropriate statement about expected results:
@@ -2131,7 +2131,7 @@ D. Internal and external system reliability.
 Q. 269: Which of the following techniques is NOT a black-box technique?
 
 A. State transition testing.
-B. LCSAJ (Linear Code Sequence and Jump).
+B. Condition testing
 C. Equivalence partitioning.
 D. Boundary value analysis.
 
@@ -3134,7 +3134,7 @@ Q. 382: Which of the following list contains only non-functional tests?
 
 A. Interoperability (compatibility) testing, reliability testing, performance testing.
 B. System testing, performance testing.
-C. Load testing, stress testing, component testing, portability testing.
+C. Load testing, stress testing, performance testing, portability testing.
 D. Testing various configurations, beta testing, load testing.
 
 
@@ -3406,10 +3406,10 @@ D. All of the above.
 
 Q. 413: In ________, test cases (i.e inputs to the software) are created based on the specifications.
 
-A. State Transition Testing.
-B. Random Testing.
-C. Syntax Testing.
-D. Penetration testing. 
+A. State Transition Testing
+B. Random Testing
+C. Use Case Based Testing
+D. Penetration testing 
 
 
 Q. 414: Stochastic testing is an example of which test approach or strategy?
@@ -3793,7 +3793,7 @@ B. An inspection has a trained leader, whilst a walkthrough has no leader.
 C. Authors are not present during inspections, whilst they are during walkthroughs.
 D. A walkthrough is lead by the author, whilst an inspection is lead by a trained moderator.
 
-Q. 462: Which of these activities provides the biggest potential cost saving from the use of CAST?
+Q. 462: Which of these activities provides the biggest potential cost saving from the use of Computer Aided Software Testing (CAST)?
 
 A. Test management
 B. Test design
