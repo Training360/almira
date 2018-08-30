@@ -3772,10 +3772,10 @@ D. Test plan.
 
 Q. 459: Which of the following statements is NOT correct?
 
-A. A minimal test set that achieves 100% LCSAJ coverage will also achieve 100% branch coverage.
-B. A minimal test set that achieves 100% path coverage will also achieve 100% statement coverage.
-C. A minimal test set that achieves 100% path coverage will generally detect more faults than one that achieves 100% statement coverage.
-D. A minimal test set that achieves 100% statement coverage will generally detect more faults than one that achieves 100% branch coverage.
+A. A minimal test set that achieves 100% condition coverage will also achieve 100% branch coverage.
+B. A minimal test set that achieves 100% branch coverage will also achieve 100% statement coverage.
+C. A minimal test set that achieves 100% decision coverage will generally detect more faults than one that achieves 100% statement coverage.
+D. A minimal test set that achieves 100% multiple condition coverage will generally detect more faults than one that achieves 100% branch coverage.
 
 
 Q. 460: How are integration testing and use case testing
