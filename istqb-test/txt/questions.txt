@@ -2432,10 +2432,10 @@ D. Acceptance testing
 
 Q. 299: Which of the following statements is true about static analysis?
 
-A. Compiling code is not a form of static analysis.
-B. Static analysis need not be performed before imperative code is executed.
+A. Running the code in a test environment is a form of static analysis.
+B. Static analysis must be performed before imperative code is executed.
 C. Static analysis can find faults that are hard to find with dynamic testing.
-D. Extensive statistic analysis will not be needed if white-box testing is to be performed.
+D. Extensive static analysis will not be needed if white-box testing is to be performed.
 
 
 Q. 300: In a system designed to work out the tax to be paid: An employee has $4000 of salary tax free. The next $1500 is taxed at 10%. The next $28000 is taxed at 22%. Any further amount is taxed at 40%. Which of these groups of numbers would fall into the same equivalence class?
@@ -5097,7 +5097,7 @@ C. Test case design that is based on an analysis of the behavior of the componen
 D. The design of test cases to ensure that the organization has defined exactly what the customer wants.
 
 
-Q. 603: Which type of document might be reviewed at a Review/Inspection session?
+Q. 603: Which type of document is most likely to be reviewed at a Review/Inspection session?
 
 A. Employee performance review.
 B. Test Plan.
@@ -5146,7 +5146,7 @@ Q. 607: Which of the following are major test documents? (choose the BEST answer
 A. 1 and 2
 B. 1, 3, and 4
 C. 1, 3, 4, and 5
-D. All the above.
+D. All of the above.
 
 
 Q. 608: What do walkthroughs, technical reviews and inspections have in common?
@@ -5285,7 +5285,7 @@ B. Metrics are included in the inspection process.
 C. The checking rate is related to the number of pages of the inspected document.
 D. Its purpose is to get some benefit in an inexpensive way.
 
-Q. 621: The test strategy that is informal and non structured is called as:
+Q. 621: The test strategy that is informal and non-structured is called as:
 
 A. Equivalence partitioning.
 B. Validation strategy.
@@ -5357,20 +5357,6 @@ A. Operational testing
 B. Progressive testing
 C. Recovery testing
 D. Regression testing
-
-
-Q. 630: Which of the following are major test documents? (choose the best answer)
-
-1) Test plan
-2) Test case
-3) Test design
-4) Test procedure
-5) Defect report
-
-A. 1 and 2
-B. 1, 3, and 4
-C. 1, 3, 4, and 5
-D. All of the above.
 
 
 Q. 631: For the following piece of pseudocode, how many test cases are needed to get 100% statement coverage?
@@ -5449,7 +5435,7 @@ D. II and IV
 
 Q. 637: Which of the following is TRUE about Alpha Testing?
 
-A. It is performed by potential or existing customers.
+A. It is performed at the software manufacturer's location.
 B. It also referred to as “field testing”.
 C. It is performed by customers at their own locations.
 D. Developers execute the tests.
@@ -7094,25 +7080,17 @@ Q. 804: Which tests are described BEST by the following characteristics?
 W. Component testing
 X. Integration testing
 Y. Alpha testing
-Z. Robustness testing
+Z. Test driven development
 
-1. Testing the interaction between components.
-2. Fixing defects as soon as they are found.
+1. Testing the cooperation between components.
+2. Fixing defects before release by the software developer's whole team.
 3. Automating test cases before coding.
 4. Testing separately testable components.
 
 A. W1, X4, Y3 and Z2
-B. W2, W4, X1 and Z1
-C. W2, W3, W4 and X1
-D. W3, X1, X2 and X4
-
-
-Q. 805: Why should expected results be defined before execution?
-
-A. To assist in test automation.
-B. To improve test efficiency.
-C. To reduce the possibility of incorrect results.
-D. To improve design of the software.
+B. W2, Y4, X1 and Z1
+C. W4, Y2, Z3 and X1
+D. W3, X1, Y2 and Z4
 
 
 Q. 806: Which characteristics describe BEST a walkthrough?
@@ -7388,9 +7366,9 @@ D. By performing static analysis of the code supported by tools the need for the
 Q. 832: Which of the following are true of software development models?
 
 a. Component Integration testing is present in all good development models.
-b. Acceptance testing can take place before system testing starts.
-c. Acceptance testing should only start when system testing is complete.
-d. There may be fewer than four test levels in a V-model.
+b. Acceptance testing can take place in parallel with system testing.
+c. Acceptance testing should start before system testing is complete.
+d. There may be fewer than five test levels in a V-model.
 
 A. b and d
 B. a and b
@@ -7584,13 +7562,13 @@ Q. 849: Given the following sample of pseudo code:
 ```
 Input ExamScore
 If ExamScore <= 75 then
-Print "Candidate has failed"
+	Print "Candidate has failed"
 Else
-Print "Candidate has passed"
-If ExamScore >= 120 then
-Print "Candidate has achieved a distinction"
+	Print "Candidate has passed"
+	If ExamScore >= 120 then
+		Print "Candidate has achieved a distinction"
+	EndIf
 EndIf
-EndIf.
 ```
 
 What is the minimum number of test cases required to guarantee 100% decision coverage?
@@ -7603,10 +7581,10 @@ D. 4
 Q. 850: Match the following formal review roles and responsibilities:
 
 Roles
-1. Moderator.
-2. Recorder.
-3. Reviewer.
-4. Manager.
+1. Moderator
+2. Recorder
+3. Reviewer
+4. Manager
 
 Responsibilities
 
@@ -7717,7 +7695,7 @@ D. 2.0, 12.1, 27.0, 150.1
 
 Q. 861: What should be the MAIN objective of testing during development?
 
-A. To cause as many failures as possible so that defects in the software are identified and can be fixed.
+A. To find as many failures as possible so that defects in the software are identified and can be fixed.
 B. To confirm that the system works as expected and that requirements have been met.
 C. To assess the quality of the software with no intention of fixing defects.
 D. To give information to stakeholders of the risk of releasing the system at a given time.
@@ -7786,10 +7764,10 @@ D. Monitoring and documenting progress.
 
 Q. 869: Retirement of a software or a system would trigger which type of testing?
 
-A. Load testing.
-B. Portability testing.
-C. Maintenance testing.
-D. Maintainability testing.
+A. Load testing
+B. Portability testing
+C. Maintenance testing
+D. Maintainability testing
 
 
 Q. 870:  Which of the following statements about black box and white box techniques is correct?
@@ -7857,19 +7835,6 @@ A. b, c and d are true; a and e are false.
 B. a is true; b, c, d and e are false.
 C. c, d and e are true; a and b are false.
 D. a, b and d are true; c and e are false.
-
-
-Q. 876: The following table shows 6 test procedures (P to U) that must be entered into a test execution schedule.
-
-![](images/ISTQB876.jpg)
-
-Business severity is regarded as the most important element in determining the sequence of the test procedures, but other dependencies must also be taken into consideration. Regression testing can only be run once all other tests have completed. 
-Which of the following represents the MOST effective sequence for the test execution schedule (where the first entry in the sequence is the first procedure to be run, the second entry is the second to be run and so on)?
-
-A. R, Q, S, T, U, P
-B. S, R, P, U, Q, T
-C. Q, R, S, T, P, U
-D. S, R, U, P, Q, T
 
 
 Q. 877: Which of the following activities would improve how a tool is deployed within an organization?
@@ -7943,7 +7908,7 @@ D. The purpose of testing is to demonstrate the absence of defects.
 Q. 883:  Which of the following statements is the MOST valid goal for a test team?
 
 A. Determine whether enough component testing was executed.
-B. Cause as many failures as possible so that faults can be identified and corrected.
+B. Find as many failures as possible so that faults can be identified and corrected.
 C. Prove that all faults are identified.
 D. Prove that any remaining faults will not cause any failures.
 
@@ -7974,7 +7939,7 @@ D. Testers and reviewers expect that defects in the software product have alread
 
 Q. 887: Which of the following statements are TRUE?
 
-A. Software testing may be required to meet legal or contractual requirements.
+A. Software testing may be performed to meet legal or contractual requirements.
 B. Software testing is mainly needed to improve the quality of the developer’s work.
 C. Rigorous testing and fixing of defects found can help reduce the risk of problems occurring in an operational environment.
 D. Rigorous testing is sometimes used to prove that all failures have been found.
@@ -8032,10 +7997,10 @@ C. Regression tests are typically well-suited for test automation.
 D. Regression tests are performed to find out if code changes have introduced or uncovered defects.
 
 
-A. A, C, D and E are true; B is false.
-B. A, C, E are true; B and D are false.
-C. C and D are true; A, B and E are false.
-D. B and E are true; A, C and D are false.
+A. A, C and D are true; B is false.
+B. A, C are true; B and D are false.
+C. C and D are true; A and B are false.
+D. B true; A, C and D are false.
 
 Q. 894: Which of the following comparisons of component testing and system testing are TRUE?
 
@@ -8176,9 +8141,9 @@ Q. 906: Consider the following state transition diagram and test case table:
 Which of the following statements are TRUE?
 
 A. The test case table exercises the shortest number of transitions.
-B. The test case gives only the valid state transitions.
-C. The test case gives only the invalid state transitions.
-D. The test case exercises the longest number of transitions.
+B. The test case table gives only the valid state transitions.
+C. The test case table gives only the invalid state transitions.
+D. The test case table exercises the longest number of transitions.
 
 A. Only A is true; B, C and D are false.
 B. Only B is true; A, C and D are false.
@@ -8378,7 +8343,7 @@ C. by inexperienced testers.
 D. after the system has gone live.
 
 
-Q. 927: For which of the following test cases does test coverage analysis NOT assign the highest priority?
+Q. 927: For which of the following test cases test coverage analysis DOES NOT assign the highest priority?
 
 A. The ones that cover the most important quality risk.
 B. The ones that cover the requirements.
@@ -8414,7 +8379,7 @@ C. Acceptance testing after a change has been released to the user community.
 D. Acceptance testing of a new functional enhancement may come before system testing.
 
 
-Q. 931: Integrity testing involves:
+Q. 931: System testing is :
 
 A. The testing of pseudo code
 B. Performance testing
@@ -8436,14 +8401,6 @@ A. Develop and prioritizing test cases, creating test data, writing test procedu
 B. Logging the outcome of test execution and recording the identities and versions of the software under test, test tools and testware.
 C. Checking test logs against the exit criteria specified in test planning.
 D. Verifying that the test environment has been set up correctly.
-
-
-Q. 934: Which of the following is not appropriate for testing interactions between paths?
-
-A. Path that people are particularly likely to follow.
-B. Choices at one menu level or data entry screen can affect the presentation of choices elsewhere.
-C. Test reaction to all combinations of valid and invalid inputs.
-D. Randomly select different paths in each test cycle.
 
 
 Q. 935: Which of the following is the main purpose of the component build and integration strategy?
@@ -8475,7 +8432,7 @@ Q. 938: What is the MAIN objective when reviewing a software deliverable?
 A. To identify potential application failures by use of a test specification.
 B. To identify defects in any software work product.
 C. To identify spelling mistakes in a requirements specification.
-D. To identify standards inconsistencies in the code.
+D. To identify standard inconsistencies in the code.
 
 
 Q. 939: As part of which test process do you determine the exit criteria?
@@ -8552,13 +8509,6 @@ B. Explain the documents to the participants.
 C. Gather metrics.
 D. Allocate the individual roles.
 
-Q. 948: A defect arrival rate curve:
-
-A. Shows the number of newly discovered defects per unit time.
-B. Shows the number of open defects per unit time.
-C. Shows the cumulative total number of defects found up to this time.
-D. Any of these, depending on the company.
-
 
 Q. 949: We can achieve complete statement coverage but still miss bugs because:
 
@@ -8566,14 +8516,6 @@ A. The failure occurs only if you reach a statement taking the TRUE branch of an
 B. The failure depends on the program's inability to handle specific data values, rather than on the program's flow of control.
 C. We are not required to test code that customers are unlikely to execute.
 D. All of the above.
-
-
-Q. 950: Maintenance releases and technical assistance centers are examples of which of the following costs of quality?
-
-A. External failure
-B. Internal failure
-C. Appraisal
-D. Prevention
 
 
 Q. 951: Bug life cycle
@@ -8608,7 +8550,7 @@ C. Business scenarios
 D. Static testing
 
 
-Q. 955: The ___________ technique can be used to achieve input and output coverage.
+Q. 955: The ___________ technique can be used to achieve input and output range coverage.
 
 A. Boundary value analysis
 B. Equivalence partitioning
@@ -8616,7 +8558,7 @@ C. Decision table testing
 D. State transition testing
 
 
-Q. 956: __________ is performed at the developing organization’s site.
+Q. 956: __________ is typically performed after development, at the developing organization’s site.
 
 A. Unit testing
 B. Regression testing
@@ -8636,7 +8578,7 @@ Q. 958: Which is NOT a software characteristics?
 
 A. Reliability
 B. Usability
-C. Scalability
+C. Reproducibility
 D. Maintainability
 
 
@@ -8649,11 +8591,11 @@ iv. Responsibilities
 
 A. i, ii, iii are true and iv is false.
 B. i, iii, iv are true and ii is false.
-C. ii, iii are true and i and iv are false.
-D. i, ii are false and iii, iv are true.
+C. ii, iii are true and i, iv are false.
+D. iii, iv are true and i, ii are false. 
 
 
-Q. 960: Which of the following is not a major task of Exit criteria?
+Q. 960: Which of the following is NOT a major task of working with exit criteria?
 
 A. Checking test logs against the exit criteria specified in test planning.
 B. Logging the outcome of test execution.
@@ -8749,8 +8691,8 @@ D. The purpose of software testing is demonstrating the absence of defects in so
 
 Q. 970: Testing without a real plan and test cases is called:
 
-A. Gorilla testing
-B. Monkey testing
+A. Fault guessing testing
+B. Exploratory testing
 C. Ad hoc testing
 D. All of the above
 
@@ -8986,12 +8928,12 @@ C. 30, 36, 39
 D. 32, 37, 40
 
 
-Q. 996: One of the following is not a part of white box testing as per BS7925-II standards.
+Q. 996: One of the following is NOT a white box testing.
 
-A. Random testing
-B. Data Flow testing.
+A. Decision testing
+B. Condition testing.
 C. Statement testing.
-D. Syntax testing.
+D. State transition testing.
 
 
 Q. 997: The release of a piece of software is badly needed for full operation of the product. What tests should be performed first?
@@ -9009,9 +8951,9 @@ D. 1 and 2 are false, 3 is true.
 Q. 998: Which of the following is a type of non-functional testing?
 
 A. Usability testing.
-B. Statement Coverage.
-C. Dataflow testing.
-D. Cause-effect graphing.
+B. Statement Coverage testing.
+C. Use case testing.
+D. State transition testing.
 
 
 Q. 999: Exclusive use of white box testing in a test-phase will:
@@ -9034,20 +8976,20 @@ D. $33501
 Q. 1001: Which of the following is true?
 
 A. Component testing should be black box, system testing should be white box.
-B. If u find a lot of bugs in testing, you should not be very confident about the quality of software.
+B. If you find a lot of bugs in testing, you should not be very confident about the quality of the software.
 C. The fewer bugs you find, the better your testing was. 
 D. The more tests you run, the more bugs you will find.
 
 Q. 1002: In the pseudocode below, how many tests are required to achieve 100% statement coverage?
 
-1. If x=3 then
-2. Display_messageX;
-3. If y=2 then
-4. Display_messageY;
-5. Else
-6. Display_messageZ;
-7. Else
-8. Display_messageZ;
+	IF x=3 THEN
+	Display_messageX;
+	IF y=2 THEN
+	Display_messageY;
+	ELSE
+	Display_messageZ;
+	ELSE
+	Display_messageW;
 
 A. 1
 B. 2
@@ -9173,14 +9115,6 @@ C. After component testing
 D. After system testing
 
 
-Q. 1016: White Box Testing is:
-
-A. Same as glass box testing.
-B. Same as clear box testing.
-C. Both A. and B.
-D. None of the above.
-
-
 Q. 1017: Equivalence partitioning consists of various activities. Which is correct?
 
 A. Ensure that test cases test each input and output equivalence class at least once.
@@ -9193,7 +9127,7 @@ Q. 1018: Static Analysis:
 
 A. Same as static testing
 B. Done by the developers
-C. Both A. and B
+C. Both A and B
 D. None of the above
 
 
@@ -9204,12 +9138,12 @@ B. Author
 C. Reviewer
 D. Recorder
 
-Q. 1020: The _________ may facilitate the testing of components or part of a system by simulation the environment in which the test object will run.
+Q. 1020: A _________ may facilitate the testing of components or part of a system by simulating the environment in which the test object will run.
 
-A. Test Design tool
-B. Test data preparation tool
-C. Test execution tool
-D. Test harness
+A. test design tool
+B. test data preparation tool
+C. test execution tool
+D. test driver or stub
 
 Q. 1021: Which testing technique do you prefer for the following situations? 
 There is severe time pressure and inadequate specification.
@@ -9295,7 +9229,7 @@ Q. 1029: In practice, which Life Cycle model may have more, fewer or different l
 A. Waterfall Model
 B. V-Model
 C. Spiral Model
-D. RAD Model
+D. Rapid Application Development (RAD) Model
 
 Q. 1030: ‘Entry criteria’ should address questions such as:
 
@@ -9312,7 +9246,7 @@ D. II, III and IV.
 
 Q. 1031: From the given choices below, which one is the ‘Confidence testing’?
 
-A. Sanity testing
+A. Acceptance testing
 B. System testing
 C. Smoke testing
 D. Regression testing
@@ -9325,10 +9259,10 @@ II. Business risk
 III. Project constraints
 IV. Product documentation
 
-A. I and II are true. III and IV are false
-B. III is true, I, II, and IV are false
-C. I, II, and IV are true; III is false
-D. I, II, and III are true, IV is false
+A. I and II are true, III and IV are false
+B. III is true, I, II and IV are false
+C. I, II and IV are true, III is false
+D. I, II and III are true, IV is false
 
 Q. 1033: The following code segment contains a potential "divide by 0" error.
 
@@ -9459,7 +9393,7 @@ Q. 1045: Which of the following statements describe why exploratory testing is a
 
 a. It can help derive test cases based on the internal structure of systems.
 b. It is useful when there are limited specification documents available.
-c. It is useful when there testing is constrained due to time pressures.
+c. It is useful when testing is constrained due to time pressures.
 d. It is a cheaper alternative to more formal test design techniques.
 
 A. b and c
@@ -9575,7 +9509,7 @@ C. D, A, B.
 D. A, B, C.
 
 
-Q. 1056: Which of the following is not considered as a benefit of testing tools?
+Q. 1056: Which of the following is NOT considered as a potential benefit of testing tools?
 
 A. Ability to detect tiny changes that a human could not do.
 B. Easy to implement and maintain.
@@ -9617,5 +9551,5 @@ Q. 1060: One of the differences between the Modified Condition Decision Coverage
 
 A. The Condition Coverage ensures all paths through a module are executed whereas the Modified Condition Decision Coverage ensures each path in a decision can independently affect the outcome.
 B. The Modified Condition Decision Coverage ensures all alternative paths are executed whereas the Condition Coverage ensure all main paths are executed.
-C. The Condition Coverage ensures each condition takes all possible outcomes at lease once whereas the Modified Condition Decision Coverage requires both maximum and minimum values within each field.
+C. The Condition Coverage ensures each condition takes all possible outcomes at least once whereas the Modified Condition Decision Coverage requires both maximum and minimum values within each field.
 D. The Modified Condition Decision Coverage relies on the tester’s skill and past experience whereas the Condition Coverage relies on the way in which the system moves from one condition to another.
