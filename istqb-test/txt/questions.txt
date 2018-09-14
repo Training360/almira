@@ -3604,9 +3604,9 @@ B. Budget, number of qualified test resources.
 C. Budget, number of qualified test resources, test environment.
 D. None of the above.
 
-Q. 438: The term random testing means:
+Q. 438: The term random testing refers to:
 
-A. Program is tested randomly sampling the input.
+A. Program is tested with randomly sampling the input.
 B. A black-box testing technique.
 C. Both A. and B.
 D. None of the above.
@@ -5841,12 +5841,12 @@ Test 1: Gold card holder who gets upgraded to business class.
 Test 2: Non-gold card holder who stays in economy.
 Test 3: A person who is bumped off from the flight.
 
-What is the statement coverage of these three tests?
+What is the minimum statement coverage of these three tests?
 
-A. 60%
-B. 70%
-C. 80%
-D. 90%
+A. min 60%
+B. min 70%
+C. min 80%
+D. min 90%
 
 
 Q. 679: Why error guessing and exploratory testing are advantageous to do?
@@ -8919,13 +8919,12 @@ C. Analysis of Specifications.
 D. Entry and Exit criteria.
 
 
-Q. 995: If a candidate is given an exam of 40 questions, and should get 25 points to pass (61%) and should get 80% for pass with distinction, what are the
-equivalence classes?
+Q. 995: If a candidate is given an exam of 40 questions, and should get 25 points to pass (61%) and should get 80% for pass with distinction, what numbers below cover all the valid equivalence classes?
 
 A. 23, 24, 25
 B. 0, 12, 25
 C. 30, 36, 39
-D. 32, 37, 40
+D. 18, 32, 37
 
 
 Q. 996: One of the following is NOT a white box testing.
@@ -9125,8 +9124,8 @@ D. All of the above.
 
 Q. 1018: Static Analysis: 
 
-A. Same as static testing
-B. Done by the developers
+A. Part of static testing
+B. Done mainly by the developers
 C. Both A and B
 D. None of the above
 
