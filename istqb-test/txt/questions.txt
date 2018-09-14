@@ -1405,7 +1405,7 @@ III. Establishing defects metrics.
 IV. Allocating schedule contingencies.
 
 A. I and II are true; III and IV are false.
-B. II and IV are true; I and II are false.
+B. III and IV are true; I and II are false.
 C. I and IV are true; II and III are false.
 D. I and III are true; II and IV are false.
 
