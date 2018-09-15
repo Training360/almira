@@ -8450,7 +8450,7 @@ B. Reporting discrepancies as incidents.
 C. Identifying test conditions or test requirements.
 D. Assessing if more tests are needed.
 
-Q. 941: A thermometer measures temperature in whole degrees only. If the temperature falls below 18 degrees, the heating is switched off. It is switched on again when the temperature reaches 21 degrees. What are the best values in degrees to cover all equivalence partitions?
+Q. 941: A thermometer measures temperature in whole degrees only. If the temperature falls below 18 degrees, the heating is switched on. It is switched off again when the temperature reaches 21 degrees. What are the best values in degrees to cover all equivalence partitions?
 
 A. 15, 19 and 25.
 B. 17, 18 and 19.
