@@ -1,0 +1,109 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic&subset=latin,latin-ext);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+.remark-slide {
+  background: #fff url(ribbon.png) no-repeat left bottom/contain;
+}
+
+.remark-slide-content {
+  background-color: transparent;
+  color: #595959;
+  font-family: 'Calibri Light';
+  font-size: 33px;
+  font-weight: 300;
+  padding: 0.2em 1.7em 0.2em 1.7em;
+}
+
+.remark-slide-content.inverse {
+  background-color: #25292c;
+  color: #ea5432;
+  font-family: 'Calibri Light';
+  font-size: 24px;
+  padding-top: 0px;
+}
+
+.remark-slide-content.inverse h1 {
+  color: #ffffff;
+  font-family: 'Source Sans Pro Light';
+  font-weight: 300;
+  font-size: 63px;
+}
+
+.remark-slide-content.inverse h2 {
+  color: #ffffff;
+  font-family: 'Source Sans Pro Light';
+}
+
+
+.remark-slide-content h1 {
+  color: #25292c;
+  font-family: 'Source Sans Pro Light';
+  font-weight: 300;
+  font-size: 61px;
+}
+.remark-slide-content h2 {
+  color: #25292c;
+}
+
+.remark-slide-content h1 .remark-inline-code {
+	font-size: 63px;
+}
+
+.remark-slide-content strong {
+  font-weight: bold;
+}
+
+.remark-slide-content a {
+	color: #ea5432;
+	text-decoration: none;
+}
+
+.remark-slide-content ul {
+  list-style: none;
+}
+
+.remark-slide-content li {
+  padding-bottom: 9px;
+  padding-left: 8px;
+  text-indent: -22px;
+}
+
+
+.remark-slide-content li:before {
+  /* content: "\25A0"; */
+  content: "●";
+  color: #ea5432;
+  vertical-align: 6px;
+  padding-right: 13px;
+  font-size: 12pt;
+}
+
+.remark-code {
+  font-family: 'Courier New';
+}
+
+.remark-inline-code {
+  font-size: 31px;
+  font-family: 'Courier New';
+  background-color: #F0F0F0;
+}
+
+
+.remark-slide-content .remark-slide-number {
+  display: none;
+}
+
+.training360-logo {
+  display: block;
+  text-align:right;
+  padding-bottom: 300px;
+}
+
+.training360-logo img {
+  width:220px;
+}
+
+
+/* .remark-slide-content li::before {
+  content: "●";
+} */

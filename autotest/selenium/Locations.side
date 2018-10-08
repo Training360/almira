@@ -1,0 +1,149 @@
+{
+  "id": "18bbd8a2-15fb-428e-a768-fd2d0a4a6d5b",
+  "version": "1.1",
+  "name": "Untitled Project",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "a411e61f-55cf-478f-aaa7-dbc24946bc16",
+    "name": "Create location",
+    "commands": [{
+      "id": "0f2a4650-2ba8-4ae4-a971-142b6805fe11",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc9d8e59-aea8-47c1-9e8f-b6cbdaad0925",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-location-link",
+      "targets": [
+        ["id=create-location-link", "id"],
+        ["linkText=Create location", "linkText"],
+        ["css=#create-location-link", "css"],
+        ["xpath=//a[contains(text(),'Create location')]", "xpath:link"],
+        ["xpath=//a[@id='create-location-link']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0ac303b-a1ff-4e95-862b-3533e6620893",
+      "comment": "",
+      "command": "click",
+      "target": "id=location-name",
+      "targets": [
+        ["id=location-name", "id"],
+        ["css=#location-name", "css"],
+        ["xpath=//input[@id='location-name']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c85c0f1-af7b-40a9-9cea-02aa24ee07d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=location-name",
+      "targets": [
+        ["id=location-name", "id"],
+        ["css=#location-name", "css"],
+        ["xpath=//input[@id='location-name']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tótkomlós"
+    }, {
+      "id": "4bd8e634-1450-4e35-8804-46a0e91231ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=location-coords",
+      "targets": [
+        ["id=location-coords", "id"],
+        ["css=#location-coords", "css"],
+        ["xpath=//input[@id='location-coords']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cc9f9bd-5afd-4936-b851-392cfee8bbfd",
+      "comment": "",
+      "command": "type",
+      "target": "id=location-coords",
+      "targets": [
+        ["id=location-coords", "id"],
+        ["css=#location-coords", "css"],
+        ["xpath=//input[@id='location-coords']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "49.69,16.56"
+    }, {
+      "id": "26c4a5f6-e16f-4430-bdc6-06967f208955",
+      "comment": "",
+      "command": "click",
+      "target": "css=input.btn.btn-primary",
+      "targets": [
+        ["css=input.btn.btn-primary", "css"],
+        ["xpath=//input[@value='Create location']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cf67437-34b7-468a-b4c2-441453bc5ccc",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=message-div",
+      "targets": [
+        ["id=message-div", "id"],
+        ["css=#message-div", "css"],
+        ["//p[@id='message-div']", "xpath:attributes"],
+        ["//p", "xpath:position"]
+      ],
+      "value": "Location has created"
+    }, {
+      "id": "cd7b883f-170e-448a-ab04-96df741d6944",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css"],
+        ["//html", "xpath:position"]
+      ],
+      "value": "Sopron"
+    }, {
+      "id": "2648ed82-873a-4470-8c16-e1d7b64e065b",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='locations-table']/tr/td[3]",
+      "targets": [
+        ["//table[@id='locations-table']/tr/td[3]", "xpath:idRelative"],
+        ["//td[3]", "xpath:position"]
+      ],
+      "value": "49.69, 16.56"
+    }, {
+      "id": "d513613c-4923-4c9c-9db3-2e641bfa3eb5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//*[@id=\"location-form\" and @hidden=\"hidden\"]",
+      "targets": [
+        ["//table[@id='locations-table']/tr/td[3]", "xpath:idRelative"],
+        ["//td[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "fe4c0071-cee3-452d-9db1-2cce908ced24",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

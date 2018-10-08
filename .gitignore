@@ -7,3 +7,7 @@ target
 .settings
 .classpath
 .project
+
+__pycache__/
+geckodriver.log
+venv/

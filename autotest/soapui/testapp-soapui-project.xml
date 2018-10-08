@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f0ce3cbf-86e0-447d-8411-285913ee1352" activeEnvironment="Default" name="testapp" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestServerServiceSoapBinding TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="5035cc55-ad41-4118-ba89-8e52644c15e0" wsaVersion="NONE" name="TestServerServiceSoapBinding" type="wsdl" bindingName="{http://ui.testapp/}TestServerServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://tadev.training360.com/testapp-ws-server/services/testserver?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://tadev.training360.com/testapp-ws-server/services/testserver?wsdl"><con:part><con:url>http://tadev.training360.com/testapp-ws-server/services/testserver?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="TestServerService" targetNamespace="http://ui.testapp/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ui.testapp/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ui.testapp/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getTest" type="tns:getTest"/>
+      <xs:element name="getTestResponse" type="tns:getTestResponse"/>
+      <xs:element name="saveResult" type="tns:saveResult"/>
+      <xs:element name="saveResultResponse" type="tns:saveResultResponse"/>
+      <xs:element name="test" type="tns:test"/>
+      <xs:complexType name="getTest">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getTestResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="test" type="tns:test"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="test">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="questions" nillable="true" type="tns:question"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="question">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="answers">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="answer" type="tns:answer"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="question" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="answer">
+        <xs:sequence>
+          <xs:element name="point" type="xs:int"/>
+          <xs:element minOccurs="0" name="text" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="testResult" type="tns:testResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="testResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endTime" type="xs:dateTime"/>
+          <xs:element name="maxPoint" type="xs:int"/>
+          <xs:element name="result" type="xs:int"/>
+          <xs:element minOccurs="0" name="startTime" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="user" type="tns:user"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="user">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveResultResponse">
+        <xs:sequence/>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getTestResponse">
+    <wsdl:part element="tns:getTestResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveResult">
+    <wsdl:part element="tns:saveResult" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveResultResponse">
+    <wsdl:part element="tns:saveResultResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTest">
+    <wsdl:part element="tns:getTest" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TestServerService">
+    <wsdl:operation name="getTest">
+      <wsdl:input message="tns:getTest" name="getTest"></wsdl:input>
+      <wsdl:output message="tns:getTestResponse" name="getTestResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveResult">
+      <wsdl:input message="tns:saveResult" name="saveResult"></wsdl:input>
+      <wsdl:output message="tns:saveResultResponse" name="saveResultResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestServerServiceSoapBinding" type="tns:TestServerService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getTest">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTestResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestServerService">
+    <wsdl:port binding="tns:TestServerServiceSoapBinding" name="TestServerServiceEndpointPort">
+      <soap:address location="http://tadev.training360.com/testapp-ws-server/services/testserver"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tadev.training360.com/testapp-ws-server/services/testserver</con:endpoint></con:endpoints><con:operation id="52ddd9f3-320e-4953-be37-54f7e6cf2c0a" isOneWay="false" action="" name="getTest" bindingOperationName="getTest" type="Request-Response" outputName="getTestResponse" inputName="getTest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="255c3c71-da7c-4daa-af75-87b5335d9a5b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://tadev.training360.com/testapp-ws-server/services/testserver</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ui="http://ui.testapp/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ui:getTest/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ui.testapp/TestServerService/getTest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="96c90264-2884-4aa0-8be1-9491c83edb80" isOneWay="false" action="" name="saveResult" bindingOperationName="saveResult" type="Request-Response" outputName="saveResultResponse" inputName="saveResult" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9c20cde0-358f-4a59-b6e7-398703ce7e21" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://tadev.training360.com/testapp-ws-server/services/testserver</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ui="http://ui.testapp/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ui:saveResult>\r
+         <!--Optional:-->\r
+         <testResult>\r
+            <!--Optional:-->\r
+            <endTime>2018-09-26</endTime>\r
+            <maxPoint>10</maxPoint>\r
+            <result>5</result>\r
+            <!--Optional:-->\r
+            <startTime>2018-09-26</startTime>\r
+            <!--Optional:-->\r
+            <user>\r
+               <!--Optional:-->\r
+               <userName>vicziani</userName>\r
+            </user>\r
+         </testResult>\r
+      </ui:saveResult>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ui.testapp/TestServerService/saveResult"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="3b71a83e-c719-418e-bb0e-f4702ad92cf0" name="TestServerServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b8db87e3-24cc-46bc-a54a-6580306ab9fa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getTest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="69dfdcfe-adb4-408d-9e60-e5b56d35b968" name="getTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TestServerServiceSoapBinding</con:interface><con:operation>getTest</con:operation><con:request name="getTest" id="e919b86f-5793-49aa-9714-95bc8eba77c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://tadev.training360.com/testapp-ws-server/services/testserver</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ui="http://ui.testapp/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ui:getTest/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="4962ad6d-b183-4c95-9993-b95ec44c2677" name="Contains"><con:configuration><token>1b válasz</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://ui.testapp/TestServerService/getTest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="28360908-d9fd-4185-be20-e68218254925" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="saveResult TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="ce9168d8-2ec7-4065-bc8b-87e25b7ef045" name="saveResult"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TestServerServiceSoapBinding</con:interface><con:operation>saveResult</con:operation><con:request name="saveResult" id="44691b8e-1b18-4c0e-8f83-08813c3f2988"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tadev.training360.com/testapp-ws-server/services/testserver</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ui="http://ui.testapp/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ui:saveResult>\r
+         <!--Optional:-->\r
+         <testResult>\r
+            <!--Optional:-->\r
+            <endTime>?</endTime>\r
+            <maxPoint>?</maxPoint>\r
+            <result>?</result>\r
+            <!--Optional:-->\r
+            <startTime>?</startTime>\r
+            <!--Optional:-->\r
+            <user>\r
+               <!--Optional:-->\r
+               <userName>?</userName>\r
+            </user>\r
+         </testResult>\r
+      </ui:saveResult>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://ui.testapp/TestServerService/saveResult"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -139,9 +139,9 @@ public class Converter {
 
                     int start = title.indexOf(" ");
                     int number = Integer.parseInt(title.substring(start + 1));
-                    if (number != index) {
-                        throw new IllegalStateException("Missing number: " + index + "  " + number);
-                    }
+//                    if (number != index) {
+//                        throw new IllegalStateException("Missing number: " + index + "  " + number);
+//                    }
 
                     question.setTitle(title);
                     line = replaceSpec(line);

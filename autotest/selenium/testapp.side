@@ -1,0 +1,127 @@
+{
+  "id": "acf00885-5188-400a-ad91-5b49fd55c95b",
+  "version": "1.1",
+  "name": "Testapp tests",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "30f98eee-b50c-45b4-aa4d-e81b17aa4a04",
+    "name": "Fill test",
+    "commands": [{
+      "id": "b266b77b-6569-4141-8b38-5baacad6cbcb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e0c83d0-0656-482c-ba20-f6b4ba8a8194",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtUserName",
+      "targets": [
+        ["id=txtUserName", "id"],
+        ["css=#txtUserName", "css"],
+        ["xpath=//input[@id='txtUserName']", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8aedca45-5c73-418c-b265-f1fbf411c66f",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtUserName",
+      "targets": [
+        ["id=txtUserName", "id"],
+        ["css=#txtUserName", "css"],
+        ["xpath=//input[@id='txtUserName']", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "vicziani"
+    }, {
+      "id": "0d5f422e-9b8a-4042-a1fb-a61f8350a1d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button[type=\"button\"]",
+      "targets": [
+        ["css=button[type=\"button\"]", "css"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f517b3a7-3158-45f5-8301-ae0fdb757fa4",
+      "comment": "",
+      "command": "click",
+      "target": "id=rbnAnswer0",
+      "targets": [
+        ["id=rbnAnswer0", "id"],
+        ["name=rbnAnswer", "name"],
+        ["css=#rbnAnswer0", "css"],
+        ["xpath=//input[@id='rbnAnswer0']", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53766732-1b5f-4cc8-a345-e97f44d194cd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[2]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68076742-786e-4516-9662-9fbc0315fe27",
+      "comment": "",
+      "command": "click",
+      "target": "id=rbnAnswer1",
+      "targets": [
+        ["id=rbnAnswer1", "id"],
+        ["css=#rbnAnswer1", "css"],
+        ["xpath=//input[@id='rbnAnswer1']", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bdb7fdd-e2b8-4f02-9505-a93fb7a575e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button[type=\"button\"]",
+      "targets": [
+        ["css=button[type=\"button\"]", "css"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//form[@id='testForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36bb3fee-1462-43a6-8428-f2befd197244",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p",
+      "targets": [
+        ["css=p", "css"],
+        ["//form[@id='testForm']/p", "xpath:idRelative"],
+        ["//p", "xpath:position"]
+      ],
+      "value": "Your result is 0/2"
+    }]
+  }],
+  "suites": [{
+    "id": "11241e24-f331-4c81-bf2b-3c33b9576625",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["30f98eee-b50c-45b4-aa4d-e81b17aa4a04"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

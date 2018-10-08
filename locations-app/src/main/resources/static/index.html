@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Locations</title>
+    <script src="js/locations.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<h1>Locations</h1>
+
+<p id="message-div"></p>
+
+<p id="pagination-div">
+    <a href="" id="prev-link">Previous</a>
+    <span id="start-span"></span>
+    <a href="" id="next-link">Next</a>
+</p>
+
+<table id="locations-table" class="table table-striped">
+
+</table>
+
+    <a href="#" id="create-location-link">Create location</a>
+
+<form id="location-form" hidden="hidden">
+    <div class="form-group">
+        <label for="location-name">Name</label>
+        <input type="text" id="location-name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="location-coords">Coordinates</label>
+        <input type="text" id="location-coords" class="form-control"/>
+    </div>
+    <input type="submit" value="Create location" class="btn btn-primary">
+    <input type="button" value="Cancel" class="btn btn-secondary" id="create-cancel-button">
+</form>
+
+<form id="update-location-form" hidden="hidden">
+    <input type="hidden" id="update-location-id" />
+    <div class="form-group">
+        <label for="update-location-name">Name</label>
+        <input type="text" id="update-location-name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="update-location-coords">Coordinates</label>
+        <input type="text" id="update-location-coords" class="form-control"/>
+    </div>
+    <input type="submit" value="Update location" class="btn btn-primary">
+    <input type="button" value="Cancel" class="btn btn-secondary" id="update-cancel-button">
+</form>
+
+</div>
+
+</body>
+</html>

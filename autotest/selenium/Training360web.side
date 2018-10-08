@@ -1,0 +1,81 @@
+{
+  "id": "1eadd341-be5b-4de9-ae9a-8e740534a11c",
+  "version": "1.1",
+  "name": "Training360web",
+  "url": "http://training360.com",
+  "tests": [{
+    "id": "2acadd92-4680-442f-9ccf-82123aa12d71",
+    "name": "Keresés",
+    "commands": [{
+      "id": "f60a9788-a0d6-4ef3-aaf5-fa77d9a9d63b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6c2e8fe-ea66-40f0-ba81-ad60759b05aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=T1",
+      "targets": [
+        ["id=T1", "id"],
+        ["name=T1", "name"],
+        ["css=#T1", "css"],
+        ["xpath=//input[@id='T1']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f53582c-66f7-4595-9988-3fe30a1b471f",
+      "comment": "",
+      "command": "type",
+      "target": "id=T1",
+      "targets": [
+        ["id=T1", "id"],
+        ["name=T1", "name"],
+        ["css=#T1", "css"],
+        ["xpath=//input[@id='T1']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": "java"
+    }, {
+      "id": "c9d1c542-a12b-4b57-a4e0-7835ba821756",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.page.search",
+      "targets": [
+        ["css=div.page.search", "css"],
+        ["xpath=//form[@id='form1']/div[6]/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc72a8ee-9647-4ec5-954d-743bf3fd7045",
+      "comment": "",
+      "command": "click",
+      "target": "id=search_submit",
+      "targets": [
+        ["id=search_submit", "id"],
+        ["name=search_submit", "name"],
+        ["css=#search_submit", "css"],
+        ["xpath=//input[@id='search_submit']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[6]/div/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e6903286-16d0-4d17-9e9a-a239b9a884c6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2acadd92-4680-442f-9ccf-82123aa12d71"]
+  }],
+  "urls": ["http://training360.com/"],
+  "plugins": []
+}
