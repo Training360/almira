@@ -1,11 +1,12 @@
-package com.training360.locationsapp.entities;
+package com.training360.locationsapp.ws;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(propOrder = {"id", "name", "lat", "lon"})
-public class Location {
+public class UpdateLocationRequest {
 
-    private Long id;
+    private long id;
 
     private String name;
 
@@ -13,21 +14,15 @@ public class Location {
 
     private double lon;
 
-    public Location(Long id, String name, double lat, double lon) {
-        this.id = id;
-        this.name = name;
-        this.lat = lat;
-        this.lon = lon;
-    }
-
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
+    @XmlAttribute(required = true)
     public String getName() {
         return name;
     }
@@ -50,15 +45,5 @@ public class Location {
 
     public void setLon(double lon) {
         this.lon = lon;
-    }
-
-    @Override
-    public String toString() {
-        return "Location{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lat=" + lat +
-                ", lon=" + lon +
-                '}';
     }
 }

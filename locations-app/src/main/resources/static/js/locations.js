@@ -19,7 +19,16 @@ window.onload = function() {
     document.getElementById("create-cancel-button").onclick = cancelCreate;
 
     document.getElementById("create-location-link").onclick = prepareCreateLocation;
+
+    updateWebservicesLink();
 };
+
+function updateWebservicesLink() {
+    let address = window.location + "/services";
+    link = document.getElementById("webservices-link")
+    link.href = address;
+    link.innerHTML = address;
+}
 
 function setState(pState) {
     state = pState;
@@ -44,6 +53,7 @@ function setState(pState) {
 
 function prepareCreateLocation() {
     setState("create");
+    return false;
 }
 
 function cancelUpdate() {

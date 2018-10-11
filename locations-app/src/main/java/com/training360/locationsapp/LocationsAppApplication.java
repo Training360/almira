@@ -26,7 +26,7 @@ public class LocationsAppApplication
     @Bean
     public Endpoint endpoint(LocationsEndpoint locationsEndpoint) {
         EndpointImpl endpoint = new EndpointImpl(bus, locationsEndpoint);
-        endpoint.publish("/Hello");
+        endpoint.publish("/locations");
         return endpoint;
     }
 }
