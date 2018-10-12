@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOAP webszolgáltatások</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/soap.js"></script>
+    <script type="text/javascript" src="js/vkbeautify.js"></script>
+</head>
+<body>
+
+<main class="container" role="main">
+
+<h1>SOAP webszolgáltatások</h1>
+
+    <p>Webszolgáltatások: <a href="" class="text-light bg-dark" id="webservices-link"></a></p>
+
+<h2>SOAP kérés</h2>
+
+<pre lang="xml" >
+    <code class="xml" id="soap-request-code">
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;
+        xmlns:tri=&quot;http://triangle.api.epbva.training360/&quot;&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;tri:classifyTriangle&gt;
+         &lt;triangle&gt;
+            &lt;a&gt;10&lt;/a&gt;
+            &lt;b&gt;10&lt;/b&gt;
+            &lt;c&gt;10&lt;/c&gt;
+         &lt;/triangle&gt;
+      &lt;/tri:classifyTriangle&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+    </code>
+</pre>
+
+    <button type="submit" class="btn btn-primary" id="send-button">Elküld</button>
+
+    <h2>SOAP válasz</h2>
+
+<pre lang="xml"><code class="xml" id="soap-response-code"></code>
+</pre>
+
+</main>
+
+</body>
+</html>

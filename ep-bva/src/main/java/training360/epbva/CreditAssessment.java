@@ -5,16 +5,17 @@ import java.util.List;
 
 public class CreditAssessment {
 
-    public void validateNumber(String value, String name, int min, int max, List<String> errors) {
-        int i = 0;
+    public void isNumber(String value, String name, List<String> errors) {
         try {
-            i = Integer.parseInt(value);
+            Integer.parseInt(value);
         }
         catch (NumberFormatException ne) {
             errors.add(String.format("A %s nem szám!", name));
             return;
         }
-        i = round(i);
+    }
+
+    private void isValid(int i, String name, int min, int max, List<String> errors) {
         if (i < min) {
             errors.add(String.format("A %s minimális értéke %d!", name, min));
         }
@@ -23,16 +24,14 @@ public class CreditAssessment {
         }
     }
 
-    public List<String> validate(String mortgage, String valueOfTheProperty) {
-        List<String> errors = new ArrayList<>();
-        validateNumber(mortgage, "jelzáloghitel összege", 50_000, 10_000_000, errors);
-        validateNumber(valueOfTheProperty, "ingatlan értéke", 250_000, 50_000_000, errors);
-        return errors;
+    public void validate(int mortgage, int valueOfTheProperty, List<String> errors) {
+        isValid(mortgage, "jelzáloghitel összege", 50_000, 10_000_000, errors);
+        isValid(valueOfTheProperty, "ingatlan értéke", 250_000, 50_000_000, errors);
     }
 
-    public WorkflowType calculateWorkflowType(String mortgageParam, String valueOfThePropertyParam) {
-        int mortgage = round(Integer.parseInt(mortgageParam));
-        int valueOfTheProperty = round(Integer.parseInt(valueOfThePropertyParam));
+    public WorkflowType calculateWorkflowType(int mortgageParam, int valueOfThePropertyParam) {
+        int mortgage = round(mortgageParam);
+        int valueOfTheProperty = round(valueOfThePropertyParam);
         return (mortgage >= 5_000_000 || valueOfTheProperty >= 10_000_000 ? WorkflowType.SENIOR : WorkflowType.NORMAL);
     }
 

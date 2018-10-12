@@ -10,7 +10,7 @@ public class TriangleDecision {
             Integer.parseInt(edge);
         }
         catch (NumberFormatException ne) {
-            errors.add(String.format("A %s nem szám!", name));
+            errors.add(String.format("A háromszög \"%s\" oldala nem szám!", name));
             return false;
         }
         return true;
@@ -18,11 +18,11 @@ public class TriangleDecision {
 
     private boolean validEdge(int edge, String name, List<String> errors) {
         if (edge < 1) {
-            errors.add(String.format("A %s kisebb, mint 1!", name));
+            errors.add(String.format("A háromszög \"%s\" oldala kisebb, mint 1!", name));
             return false;
         }
         else if (edge > 200) {
-            errors.add(String.format("A %s nagyobb, mint 200!", name));
+            errors.add(String.format("A háromszög \"%s\" oldala nagyobb, mint 200!", name));
             return false;
         }
         return true;
@@ -46,7 +46,7 @@ public class TriangleDecision {
         List<String> errors = new ArrayList<>();
         validEdge(a, "a", errors);
         validEdge(b, "b", errors);
-        validEdge(c, "b", errors);
+        validEdge(c, "c", errors);
         return errors;
     }
 

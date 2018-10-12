@@ -1,36 +1,31 @@
 package training360.epbva.api.triangle;
 
-import org.springframework.ws.server.endpoint.annotation.Endpoint;
-import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
-import org.springframework.ws.server.endpoint.annotation.RequestPayload;
-import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+import org.springframework.stereotype.Service;
 import training360.epbva.TriangleDecision;
 import training360.epbva.TriangleType;
 
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Endpoint
+@WebService
+@Service
 public class TriangleEndpoint {
 
-    private static final String NAMESPACE_URI = "http://training360.com/epbva/triangle";
-
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "triangleRequest")
-    @ResponsePayload
-    public TriangleResponse classifyTriangle(@RequestPayload TriangleRequest triangleRequest)
-        throws TriangleException {
+    @WebMethod
+    @WebResult(name = "triangleType")
+    public TriangleType classifyTriangle(@WebParam(name = "triangle") @XmlElement(required = true) Triangle triangle) {
         TriangleDecision triangleDecision = new TriangleDecision();
 
-        List<String> errors = triangleDecision.validate(triangleRequest.getA(), triangleRequest.getB(), triangleRequest.getC());
+        List<String> errors = triangleDecision.validate(triangle.getA(), triangle.getB(), triangle.getC());
         if (!errors.isEmpty()) {
-            TriangleFault triangleFault = new TriangleFault();
-            triangleFault.setMessages(errors);
-            throw new TriangleException(triangleFault);
+            throw new IllegalArgumentException(errors.get(0));
         }
 
-        TriangleType triangleType = triangleDecision.classify(triangleRequest.getA(), triangleRequest.getB(), triangleRequest.getC());
-        TriangleResponseType triangleResponseType = TriangleResponseType.valueOf(triangleType.name());
-        TriangleResponse response = new TriangleResponse();
-        response.setTriangleResponseType(triangleResponseType);
-        return response;
+        TriangleType triangleType = triangleDecision.classify(triangle.getA(), triangle.getB(), triangle.getC());
+        return triangleType;
     }
 }

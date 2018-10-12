@@ -1,9 +1,6 @@
 package training360.epbva.api.triangle;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(namespace = "http://training360.com/epbva/triangle")
-public class TriangleRequest {
+public class Triangle {
 
     private int a;
 
