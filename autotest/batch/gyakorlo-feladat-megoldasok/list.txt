@@ -1,0 +1,21 @@
+ Volume in drive C is SYSTEM
+ Volume Serial Number is 6001-636E
+
+ Directory of C:\Users\Training\Desktop\bat_gyak
+
+2018. 10. 13.  14:13    <DIR>          .
+2018. 10. 13.  14:13    <DIR>          ..
+2018. 10. 13.  12:32                36 a.txt
+2018. 10. 13.  14:02                18 b.txt
+2018. 10. 13.  14:13                 0 list.txt
+2018. 10. 13.  12:31               128 new1.bat
+2018. 10. 13.  13:08                95 new10.bat
+2018. 10. 13.  13:25                50 new11.bat
+2018. 10. 13.  13:36                71 new12.bat
+2018. 10. 13.  14:00                75 new13.bat
+2018. 10. 13.  12:33                39 new2.bat
+2018. 10. 13.  12:58                72 new5.bat
+2018. 10. 13.  14:06               125 new6.bat
+2018. 10. 13.  14:13                26 new7.bat
+              12 File(s)            735 bytes
+               2 Dir(s)  411 755 712 512 bytes free

@@ -1,0 +1,4 @@
+@echo off
+set ELSO_GYUMOLCS=alma
+set MASODIK_GYUMOLCS=korte
+echo %ELSO_GYUMOLCS% %MASODIK_GYUMOLCS%
