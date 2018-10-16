@@ -2,7 +2,7 @@ var defaultSize = 10;
 var state = "default";
 
 window.onload = function() {
-    fillTable();
+    downloadLocations();
     var locationForm = document.getElementById("location-form");
     locationForm.onsubmit = createLocation;
 
@@ -10,9 +10,9 @@ window.onload = function() {
     updateLocationForm.onsubmit = updateLocation;
 
     var prevLink = document.getElementById("prev-link");
-    prevLink.onclick = fillTableAt;
+    prevLink.onclick = doPaging;
     var nextLink = document.getElementById("next-link");
-    nextLink.onclick = fillTableAt;
+    nextLink.onclick = doPaging;
 
     document.getElementById("update-cancel-button").onclick = cancelUpdate;
 
@@ -65,70 +65,64 @@ function cancelCreate() {
     document.getElementById("create-location-link").removeAttribute("hidden");
 }
 
-function fillTableAt() {
+function doPaging() {
     link = this.getAttribute("href");
-    fillTable(getParameterByName("start", link), getParameterByName("size", link))
+    downloadLocations(getParameterByName("start", link), getParameterByName("size", link))
     return false;
 }
 
-
-
-function fillTable(start = 0, size) {
+function downloadLocations(start = 0, size) {
     if (!size) {
         size = defaultSize;
     }
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'api/locations?start=' + start + "&size=" + size);
-    xhr.onreadystatechange = function () {
-      var DONE = 4;
-      var OK = 200;
-      if (xhr.readyState === DONE) {
-        if (xhr.status === OK) {
-          var response = JSON.parse(xhr.responseText);
-          initPagination(response.start, response.count);
-          var locations = response.locations;
-          var locationsTable = document.getElementById("locations-table");
-          locationsTable.innerHTML = "";
-          for (var i = 0; i < locations.length; i++) {
-            var tr = document.createElement("tr");
-            tr["raw-data"] = locations[i];
+    let url = 'api/locations?start=' + start + "&size=" + size;
 
-            var idTd = document.createElement("td");
-            idTd.innerHTML = locations[i].id;
-            tr.appendChild(idTd);
+    fetch(url)
+        .then(function(response) {
+            return response.json();
+            })
+        .then(function(jsonData) {
+            initPagination(jsonData.start, jsonData.count);
+            fillTable(jsonData.locations);
+        });
+}
 
-            var nameTd = document.createElement("td");
-            nameTd.innerHTML = locations[i].name;
-            tr.appendChild(nameTd);
+function fillTable(locations) {
+  var locationsTable = document.getElementById("locations-table");
+  locationsTable.innerHTML = "";
+  for (var i = 0; i < locations.length; i++) {
+    var tr = document.createElement("tr");
+    tr["raw-data"] = locations[i];
 
-            var coordsTd = document.createElement("td");
-            coordsTd.innerHTML = locations[i].lat + ", " + locations[i].lon;
-            tr.appendChild(coordsTd);
+    var idTd = document.createElement("td");
+    idTd.innerHTML = locations[i].id;
+    tr.appendChild(idTd);
 
-            var buttonsTd = document.createElement("td");
-            var editButton = document.createElement("button");
-            editButton.setAttribute("class", "btn btn-link");
-            editButton.innerHTML= "Edit";
-            editButton.onclick = prepareForUpdateLocation;
-            buttonsTd.appendChild(editButton);
+    var nameTd = document.createElement("td");
+    nameTd.innerHTML = locations[i].name;
+    tr.appendChild(nameTd);
 
-            var deleteButton = document.createElement("button");
-            deleteButton.setAttribute("class", "btn btn-danger");
-            deleteButton.innerHTML= "Delete";
-            deleteButton.onclick = deleteLocation;
-            buttonsTd.appendChild(deleteButton);
+    var coordsTd = document.createElement("td");
+    coordsTd.innerHTML = locations[i].lat + ", " + locations[i].lon;
+    tr.appendChild(coordsTd);
 
-            tr.appendChild(buttonsTd);
+    var buttonsTd = document.createElement("td");
+    var editButton = document.createElement("button");
+    editButton.setAttribute("class", "btn btn-link");
+    editButton.innerHTML= "Edit";
+    editButton.onclick = prepareForUpdateLocation;
+    buttonsTd.appendChild(editButton);
 
-            locationsTable.appendChild(tr);
-          }
-        } else {
-          console.log('Error: ' + xhr.status);
-        }
-      }
-    };
-    xhr.send(null);
+    var deleteButton = document.createElement("button");
+    deleteButton.setAttribute("class", "btn btn-danger");
+    deleteButton.innerHTML= "Delete";
+    deleteButton.onclick = deleteLocation;
+    buttonsTd.appendChild(deleteButton);
 
+    tr.appendChild(buttonsTd);
+
+    locationsTable.appendChild(tr);
+  }
 }
 
 function initPagination(start, count) {
@@ -162,36 +156,42 @@ function createLocation() {
     var name = document.getElementById("location-name").value;
     var coords = document.getElementById("location-coords").value;
 
-    var req = {"name": name, "coords": coords};
+    var request = {"name": name, "coords": coords};
 
-    var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'api/locations');
-        xhr.setRequestHeader("Content-type", "application/json");
-        xhr.onreadystatechange = function () {
-          var DONE = 4;
-          var OK = 200;
-          if (xhr.readyState === DONE) {
-            if (xhr.status === OK) {
-                console.log("Successfull post");
-                document.getElementById("location-name").value = "";
-                document.getElementById("location-coords").value = "";
-                fillTable();
-                setState("default");
-                document.getElementById("message-div").innerHTML = "Location has created";
-                document.getElementById("message-div").setAttribute("class", "alert alert-success");
-            } else if (xhr.status == 400){
-                var response = JSON.parse(xhr.responseText);
-                document.getElementById("message-div").innerHTML = response.message;
-                document.getElementById("message-div").setAttribute("class", "alert alert-danger");
 
-            } else {
-              console.log('Error: ' + xhr.responseText);
-            }
-          }
-        };
-        xhr.send(JSON.stringify(req));
-        return false;
+    fetch("api/locations", {
+        method: "POST",
+        body: JSON.stringify(request),
+        headers: {
+            "Content-type": "application/json"
+        }
+    })
+    .then(function(response) {
+        return response.json().then(function(jsonData) {
+            return {status: response.status, body: jsonData}
+        });
+    })
+    .then(function(jsonData) {
+        if (jsonData.status == 200) {
+           successCreate();
+        }
+        else {
+            document.getElementById("message-div").innerHTML = jsonData.body.message;
+            document.getElementById("message-div").setAttribute("class", "alert alert-danger");
+        }
+    });
 
+    return false;
+}
+
+function successCreate() {
+    console.log("Successfull post");
+    document.getElementById("location-name").value = "";
+    document.getElementById("location-coords").value = "";
+    downloadLocations();
+    setState("default");
+    document.getElementById("message-div").innerHTML = "Location has created";
+    document.getElementById("message-div").setAttribute("class", "alert alert-success");
 }
 
 function deleteLocation() {
@@ -200,25 +200,22 @@ function deleteLocation() {
         return;
     }
     var location = this.parentElement.parentElement["raw-data"];
-    var xhr = new XMLHttpRequest();
-        xhr.open('DELETE', 'api/locations/' + location.id);
-        xhr.onreadystatechange = function () {
-          var DONE = 4;
-          var OK = 200;
-          if (xhr.readyState === DONE) {
-            if (xhr.status === OK) {
-                console.log("Successfull delete");
-                fillTable();
-                document.getElementById("message-div").innerHTML = "Location has deleted";
-                document.getElementById("message-div").setAttribute("class", "alert alert-success");
-            } else {
-              console.log('Error: ' + xhr.responseText);
-            }
-          }
-        };
-        xhr.send();
-        return false;
+    var url = 'api/locations/' + location.id;
 
+    fetch(url, {
+            method: "DELETE"
+        })
+        .then(function(response) {
+            successDelete();
+        })
+        return false;
+}
+
+function successDelete() {
+    console.log("Successfull delete");
+    downloadLocations();
+    document.getElementById("message-div").innerHTML = "Location has deleted";
+    document.getElementById("message-div").setAttribute("class", "alert alert-success");
 }
 
 function updateLocation() {
@@ -226,36 +223,45 @@ function updateLocation() {
     var name = document.getElementById("update-location-name").value;
     var coords = document.getElementById("update-location-coords").value;
 
-    var req = {"name": name, "coords": coords};
+    var request = {"name": name, "coords": coords};
 
-    var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'api/locations/' + id);
-        xhr.setRequestHeader("Content-type", "application/json");
-        xhr.onreadystatechange = function () {
-          var DONE = 4;
-          var OK = 200;
-          if (xhr.readyState === DONE) {
-            if (xhr.status === OK) {
-                console.log("Successfull post");
-                document.getElementById("update-location-id").value = "";
-                document.getElementById("update-location-name").value = "";
-                document.getElementById("update-location-coords").value = "";
-                var start = document.getElementById("start-span").innerHTML;
-                fillTable(start);
-                setState("default");
-                document.getElementById("message-div").innerHTML = "Location has modified";
-                document.getElementById("message-div").setAttribute("class", "alert alert-success");
-            } else if (xhr.status == 400){
-                var response = JSON.parse(xhr.responseText);
-                document.getElementById("message-div").innerHTML = response.message;
-                document.getElementById("message-div").setAttribute("class", "alert alert-danger");
-            } else {
-                console.log('Error: ' + xhr.responseText);
-            }
-          }
-        };
-        xhr.send(JSON.stringify(req));
-        return false;
+    var url = 'api/locations/' + id;
+
+    fetch(url, {
+        method: "POST",
+        body: JSON.stringify(request),
+        headers: {
+            "Content-type": "application/json"
+        }
+    })
+    .then(function(response) {
+        return response.json().then(function(jsonData) {
+            return {status: response.status, body: jsonData}
+        });
+    })
+    .then(function(jsonData) {
+        if (jsonData.status == 200) {
+           successUpdate();
+        }
+        else {
+            document.getElementById("message-div").innerHTML = jsonData.body.message;
+            document.getElementById("message-div").setAttribute("class", "alert alert-danger");
+        }
+    });
+
+    return false;
+}
+
+function successUpdate() {
+    console.log("Successfull update");
+    document.getElementById("update-location-id").value = "";
+    document.getElementById("update-location-name").value = "";
+    document.getElementById("update-location-coords").value = "";
+    var start = document.getElementById("start-span").innerHTML;
+    downloadLocations(start);
+    setState("default");
+    document.getElementById("message-div").innerHTML = "Location has modified";
+    document.getElementById("message-div").setAttribute("class", "alert alert-success");
 }
 
 function getParameterByName(name, url) {
