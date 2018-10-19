@@ -7991,16 +7991,16 @@ D. Integrating functions during the development of a new system.
 
 Q. 893: Which of the following statements are TRUE?
 
-A. Regression testing and acceptance testing are the same.
-B. Regression tests show if all defects have been resolved.
-C. Regression tests are typically well-suited for test automation.
-D. Regression tests are performed to find out if code changes have introduced or uncovered defects.
+I. Regression testing and acceptance testing are the same.
+II. Regression tests show if all defects have been resolved.
+III. Regression tests are typically well-suited for test automation.
+IV. Regression tests are performed to find out if code changes have introduced or uncovered defects.
 
 
-A. A, C and D are true; B is false.
-B. A, C are true; B and D are false.
-C. C and D are true; A and B are false.
-D. B true; A, C and D are false.
+A. I, III and IV are true; II is false.
+B. I, III are true; II and IV are false.
+C. III and IV are true; I and II are false.
+D. II true; I, III and IV are false.
 
 Q. 894: Which of the following comparisons of component testing and system testing are TRUE?
 
