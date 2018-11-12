@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equivalencia partíció és határérték elemzés</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/triangle.js"></script>
+</head>
+<body>
+<main class="container" role="main">
+    <h1>Training360 Tesztakadémia - Equivalencia partíció és határérték elemzés</h1>
+    <h2>Háromszög</h2>
+    <p>Adott egy program, ami három egész számot vár bemenetként (a, b, c) egy felületen keresztül, amelyen 3 mező található adatbevitel céljából. Ezek lesznek a háromszög oldalai. Mindhárom oldal hossza 1 és 200 közé eshet, tehát 1 ≤ a ≤ 200, 1 ≤ b ≤ 200, 1 ≤ b ≤ 200.
+
+        A program kimenete a háromszög típusa: szabályos, egyenlőszárú, vagy általános háromszög. Természetesen előfordulhat, hogy a megadott számokból nem képezhető háromszög, ekkor a program a „Nem háromszög” válasszal tér vissza.
+    </p>
+    <div id="triangle-message-div"></div>
+    <form id="triangle-form" class="form">
+        <div class="form-group">
+            <label for="a-input">a</label>
+            <input id="a-input"/>
+        </div>
+        <div class="form-group">
+            <label for="b-input">b</label>
+            <input id="b-input"/>
+        </div>
+        <div class="form-group">
+            <label for="c-input">c</label>
+            <input id="c-input"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Vizsgálat</button>
+    </form>
+</main>
+</body>
+</html>

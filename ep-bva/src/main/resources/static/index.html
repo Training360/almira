@@ -10,62 +10,14 @@
 </head>
 <body>
 <main class="container" role="main">
+
     <h1>Training360 Tesztakadémia - Equivalencia partíció és határérték elemzés</h1>
-    <h2>Háromszög</h2>
-    <p>Adott egy program, ami három egész számot vár bemenetként (a, b, c) egy felületen keresztül, amelyen 3 mező található adatbevitel céljából. Ezek lesznek a háromszög oldalai. Mindhárom oldal hossza 1 és 200 közé eshet, tehát 1 ≤ a ≤ 200, 1 ≤ b ≤ 200, 1 ≤ b ≤ 200.
 
-        A program kimenete a háromszög típusa: szabályos, egyenlőszárú, vagy általános háromszög. Természetesen előfordulhat, hogy a megadott számokból nem képezhető háromszög, ekkor a program a „Nem háromszög” válasszal tér vissza.
-    </p>
-    <div id="triangle-message-div"></div>
-    <form id="triangle-form" class="form">
-        <div class="form-group">
-            <label for="a-input">a</label>
-            <input id="a-input"/>
-        </div>
-        <div class="form-group">
-            <label for="b-input">b</label>
-            <input id="b-input"/>
-        </div>
-        <div class="form-group">
-            <label for="c-input">c</label>
-            <input id="c-input"/>
-        </div>
-        <button type="submit" class="btn btn-primary">Vizsgálat</button>
-    </form>
+    <p>Válassz funkciót!</p>
 
-    <h2>Hitelbírálat</h2>
-    <p>
-        Adott az alábbi adatbekérő felület egy banki hiteligénylést rögzítő alkalmazás részeként, melyen két információt adhat meg a felhasználó:</p>
-<ul>
-    <li>jelzáloghitel összege</li>
-    <li>ingatlan értéke</li>
-</ul>
-    <p>Mindkét mező esetén a rendszer egész Ft összeget fogad el, és kerekíti a legközelebbi 1000-es értékre. Emellett az alábbi szabályok érvényesek:</p>
-<ul>
-    <li>A jelzáloghitel minimális összege 50 000 Ft</li>
-    <li>A jelzáloghitel maximális összege 10 000 000 Ft</li>
-    <li>Az ingatlan értéke minimum 250 000 Ft</li>
-    <li>Az ingatlan értéke maximum 50 000 000 Ft</li>
-</ul>
+    <a href="triangle.html" class="btn btn-primary">Háromszög</a>
+    <a href="credit.html" class="btn btn-primary">Hitelbírálat</a>
 
-        <p>Amennyiben a felületen megfelelő adatok kerültek rögzítésre, úgy az ügyintéző lépteti a folyamatot a következő lépésbe. Szükséges szenior üzletkötő bevonása a folyamatban, ha a jelzáloghitel összege legalább 5 000 000 Ft vagy az ingatlan értéke legalább 10 000 000 Ft.
-        Ha valamelyik mező értéke érvénytelen, hibaüzenetet jelez a felület.
-    </p>
-
-    <div id="credit-assessment-message-div"></div>
-    <form id="credit-assessment-form" class="form">
-        <div class="form-group">
-            <label for="mortgage-input">Jelzáloghitel</label>
-            <input id="mortgage-input"/>
-        </div>
-        <div class="form-group">
-            <label for="value-of-the-property-input">Ingatlan értéke</label>
-            <input id="value-of-the-property-input"/>
-        </div>
-        <button type="submit" class="btn btn-primary">Vizsgálat</button>
-    </form>
-
-    <h2></h2>
 </main>
 </body>
 </html>
