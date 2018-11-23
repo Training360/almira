@@ -21,7 +21,7 @@ public class TriangleDecision {
             errors.add(String.format("A háromszög \"%s\" oldala kisebb, mint 1!", name));
             return false;
         }
-        else if (edge > 200) {
+        else if (edge >= 200) {
             errors.add(String.format("A háromszög \"%s\" oldala nagyobb, mint 200!", name));
             return false;
         }
@@ -62,7 +62,7 @@ public class TriangleDecision {
     public TriangleType classify(int a, int b, int c) {
         if (a <= 0 || b <= 0 || c <= 0) return TriangleType.INVALID;
         if (a == b && b == c) return TriangleType.EQUILATERAL;
-        if (a >= b+c || c >= b+a || b >= a+c) return TriangleType.INVALID;
+        if (a > b+c || c > b+a || b > a+c) return TriangleType.INVALID;
         if (b==c || a==b || c==a) return TriangleType.ISOSCELES;
         return TriangleType.SCALENE;
     }
