@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-from testappwdtests.page import Page
+from page import Page
 
 driver = webdriver.Firefox(executable_path="C:/Java/geckodriver-v0.20.1-win64/geckodriver.exe")
 driver.get("http://tadev.training360.com/testapp-rest/")
