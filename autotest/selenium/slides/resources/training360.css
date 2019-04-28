@@ -14,7 +14,10 @@
   padding: 0.2em 1.7em 0.2em 1.7em;
 }
 
-.remark-slide-content.inverse {
+.remark-slide-content.inverse {  
+  background: #fff url(training360-logo.svg) no-repeat right top/contain;
+  background-position: right 50px top 100px; 
+  background-size: 220px; 
   background-color: #25292c;
   color: #ea5432;
   font-family: 'Calibri Light';
@@ -93,17 +96,23 @@
   display: none;
 }
 
-.training360-logo {
-  display: block;
-  text-align:right;
-  padding-bottom: 300px;
-}
-
-.training360-logo img {
-  width:220px;
-}
-
-
 /* .remark-slide-content li::before {
   content: "●";
 } */
+
+.column:first-of-type {
+    float:left
+}
+
+.column:last-of-type {
+    float:right
+}
+
+.split-50 .column:first-of-type {
+    width: 50%
+}
+
+.split-50 .column:last-of-type {
+    width: 50%
+}
+.
