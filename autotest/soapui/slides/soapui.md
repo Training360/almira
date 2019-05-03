@@ -10,19 +10,29 @@ class: inverse, center, middle
 * Különböző kiadások
     * Open Source
     * Professional (ReadyAPI csomag része)
-        * Követelmények kezelése
-        * Data Driven Testing
-            * Adatok beolvasása különböző forrásokból: Excel, XML, JDBC, CSV, stb.
-            * Kérések beolvasása fájlból
-            * Data Generator: adatgenerálás (pl. véletlenszám, script, stb.)
-            * Adatbázisba mentés
-        * Lefedettség WSDL alapján
-        * Test assertion
-        * Több környezet támogatása
-            * Service URL-ek, JDBC kapcsolatok, változók (properties)
-        * CI/CD integráció
-        * Reporting (különböző formátumokban)
-        * Support
+
+---
+
+## SoapUI Pro
+
+* Követelmények kezelése
+* Több környezet támogatása
+    * Service URL-ek, JDBC kapcsolatok, változók (properties)
+* Data Driven Testing (beolvasás és kiírás különböző formátumokban)
+* Lefedettség WSDL alapján
+* Test assertion támogatás (pl. XPath generálás)
+* CI/CD integráció
+* Reporting (különböző formátumokban)
+* Support
+
+---
+
+## Data Driven Testing
+
+* Adatok beolvasása különböző forrásokból: Excel, XML, JDBC, CSV, stb.
+* Kérések (XML) beolvasása fájlból
+* Data Generator: adatgenerálás (pl. véletlenszám, script, stb.)
+* Adatbázisba mentés
         
 ---
 
@@ -137,8 +147,4 @@ declare namespace l='http://training360.com/locations'
 
 * Parancssor
 * Groovy
-* Mocking
-* Performance
-* Data-Driven Testing
-* Test reporting
-* JDBC test step
+* Pro feature-ök
