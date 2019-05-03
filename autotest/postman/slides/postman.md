@@ -22,7 +22,7 @@ class: inverse, center, middle
 * Magas szintű csoportmunka (nem csak szoftver, hanem szolgáltatás)
 * Tervezés és mock (szimuláció)
 * Hibakeresés
-* Manuális és aautomatizált tesztelés 
+* Manuális és automatizált tesztelés 
 * Dokumentálás
 * Monitorozás
 
