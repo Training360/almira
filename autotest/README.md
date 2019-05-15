@@ -4,16 +4,18 @@
 
 A tanfolyam célja a tesztautomatizálás elméletének és gyakorlatának megismertetése.
 Alapvetően felhasználói felület és API tesztek kerülnek bemutatásra, de szó esik
-funkcionális, regressziós és terhelésesről is. A gyakorlatok során főleg
-webes (böngészős felülettel rendelkező) alkalmazások, valamint SOAP és REST webszolgáltatások
-kerülnek letesztelésre. A szükséges elméleti alapfogalmak is ismertetésre kerülnek.
+funkcionális, regressziós és terheléses tesztekről is. A gyakorlatok során elsősorban
+webes (böngészőből használható) alkalmazások, valamint SOAP és REST webszolgáltatások
+képzik a tesztelés tárgyát. A szükséges elméleti alapfogalmak is ismertetésre kerülnek.
 
-Felhasználó felület tesztelésére a Seleniumot (annak több komponensével, mint UI, WebDriver és Grid),
-SOAP webszolgáltatások tesztelésére SoapUI-t, REST webszolgáltatások tesztelésére Postmant mutatunk be.
+Felhasználó felület tesztelésére a Selenium (annak több komponensével, mint UI, WebDriver és Grid),
+SOAP webszolgáltatások tesztelésére a SoapUI, míg REST webszolgáltatások tesztelésére Postman
+tesztelő keretrendszerek kerülnek bemutatásra.
 
 ## Szükséges előképzettség
 
-Alapvető számítógép és szoftverhasználati ismeretek.
+Alapvető számítógép és szoftverhasználati ismeretek, valamint tesztelői vagy fejlesztői 
+alapismeretek szükségesek a tanfolyamon való részvételhez.
 
 Mivel a tananyagok egy
 része angol nyelvű, ezért alapfokú, dokumentumolvasás-szintű angol
@@ -23,11 +25,12 @@ slide-ok alapján.
 ## Tanfolyami tematika
 
 * Tesztelés típusai és csoportosítása.
+* Tesztautomatizálási alapelvek
 * Modern szoftverarchitektúrák alapfogalmai (webes alkalmazás, többrétegű alkalmazás, RIA, AJAX, stb.)
 * Felhasználói felület felépítése
 * Webes felhasználói felületek technológiái (URL, HTTP, HTML, CSS, JavaScript)
 * Selenium IDE automatizált tesztelésre
-    * Felhasználói felület felépítése, projekt és fájlkezelés
+    * Selenium IDE felépítése, projekt és fájlkezelés
     * Tesztesetek, teszt csomagok, teszt lépések
     * Parancsok
     * Lokátorok
@@ -35,16 +38,15 @@ slide-ok alapján.
     * Debuggolás
     * Változók használata
     * Control flow, vezérlési szerkezetek, elágazások és ciklusok
-    * Másik teszteset meghívása
+    * Tesztesetből másik teszteset meghívása
     * Parancssori futtatás
-    * Legjobb gyakorlatok
 * Selenium WebDriver
 * Selenium Grid
-* SOAP webszolgáltatások, SOAP boríték, WSDL
+* SOAP webszolgáltatások, SOAP envelope, WSDL
 * SoapUI használata
-    * Felhasználói felület felépítése, projekt és fájlkezelés
+    * SoapUI alkalmazás felépítése, projekt és fájlkezelés
     * Tesztesetek, teszt csomagok, teszt lépések
-    * Változók, properties
+    * Változók használata, properties
     * Property transfer
     * Adatbázis lekérdezések
     * Data driven testing
@@ -53,12 +55,13 @@ slide-ok alapján.
     * Terheléses tesztelés
 * REST webszolgáltatások (JSON)
 * Postman használata
-    * Felhasználói felület felépítése, Workspace és fájlkezelés
+    * Postman alkalmazás felépítése, Workspace és fájlkezelés
     * History, Collection
     * Collaboration
     * Dokumentáció generálása
     * Környezetek
     * Assert
     * Futtatás parancssorban
-    * Változók, scope
+    * Változók használata, scope
     * CSV állományok kezelése
+* Best practices
