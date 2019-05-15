@@ -143,8 +143,23 @@ declare namespace l='http://training360.com/locations'
 
 ---
 
-## TODO
+## Ismétlő kérdések
 
-* Parancssor
-* Groovy
-* Pro feature-ök
+* Mi a SoapUI elsődleges célja?
+* Mi a különbség a különböző kiadások között?
+* Milyen tesztelésre használható?
+* Hogyan épülnek fel a tesztesetek? Milyen teszt lépéseket ismersz?
+* Hogyan lehet assertet megfogalmazni?
+* Hogyan kell változót használni?
+* Hogyan kell adatbázisból olvasni?
+
+---
+
+## Ismétlő kérdések 2.
+
+* Hogyan lehet terheléses tesztelést futtatni?
+* Hogyan lehet egy szolgáltatást mockolni?
+* Hogyan lehet különböző környezeteket használni?
+* Mi az a Data Driven tesztelés?
+* Mi alapján lehet lefedettséget mérni?
+* Hogyan lehet jelentéseket generálni?

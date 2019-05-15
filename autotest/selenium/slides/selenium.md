@@ -248,9 +248,23 @@ class: inverse, center, middle
 * Körültekintően nevezzük el a teszteket
 * Selectornál támaszkodjunk az `id` értékekre, fejlesztők támogatása szükséges
   * `id` elnevezés legyen konzekvens (elnevezési konvenció)
-* DRY - don't repeat yourself
 * Idempotens és izolált
+* Tesztesetek legyenek egyszerűek
+* DRY - don't repeat yourself
 * Használjuk Continuous Integration rendszeren belül
+
+---
+
+## Idempotencia és izoláltság
+
+* Tesztesetek egymásra hatással vannak
+    * Állapot: pl. adatbázis
+* Ugyanazon tesztkörnyezeten több tesztelő vagy harness dolgozik
+* Megoldás:
+    * Teszteset "rendet tesz" maga előtt, un. set-up
+    * "Rendet tesz" maga után, un. tear down
+    * Test fixture
+        * Legszélsőségesebb megoldás: adatbázistörlés
 
 ---
 
@@ -412,3 +426,31 @@ assert "1b válasz" in secondAnswerLabel.text
 ---
 
 ## Adatvezérelt tesztelés
+
+---
+
+## Ismétlő kérdések
+
+* Milyen komponensekből áll a Selenium? Melyiknek mi a feladata?
+* Mi a Selenium fő célja?
+* Milyen területeken használható a Selenium?
+* Mire való a Selenium IDE?
+* Milyen szoftverként jelenik meg, hogy kell telepíteni?
+* Hogyan lehet a legegyszerűbben egy tesztet elkészíteni?
+* Milyen debugging lehetőségek vannak benne?
+* Milyen gyakori tesztlépések vannak?
+* Mi az a lokátor? Hogyan lehet megadni?
+
+---
+
+## Ismétlő kérdések 2.
+
+* Mik a teszteléssel kapcsolatos legjobb gyakorlatok?
+* Hogy lehet a kódismétlést minimalizálni?
+* Hogyan lehet változót deklarálni és használni?
+* Milyen vezérlési szerkezetek vannak?
+* Hogyan lehet parancssorban futtatni teszteseteket?
+* Mire való a WebDriver?
+* Milyen programozási nyelveket támogat?
+* Milyen lépéseket ismersz?
+* Milyen tervezési mintát ismersz?

@@ -146,7 +146,7 @@ class: inverse, center, middle
 
 ---
 
-## Postman account - gyakorlat
+## Postman account (gyakorlat)
 
 * Saját account készítése
 * Team workspace készítése
@@ -265,3 +265,28 @@ John
 Jane
 Jack
 ```
+
+---
+
+## Ismétlő kérdések
+
+* Mire való a Postman?
+* Milyen verziói vannak, milyen különbség van közöttük?
+* A szoftverfejlesztési életciklus mely lépéseit támogatja?
+* Hogyan kell egy kérést megfogalmazni?
+* Mibe lehet szervezni a kéréseket?
+* Hogyan épül fel a felhasználói felület?
+* Mi az a Workspace?
+* Milyen csoportmunka eszközöket ismersz?
+
+---
+
+## Ismétlő kérdések 2.
+
+* Hogyan lehet Postmannel dokumentálni az API-t?
+* Hogyan támogatja a Postman a környezeteket?
+* Hogyan írhatsz asserteket?
+* Hogyan hozhatsz létre több lépésből álló teszteseteket?
+* Hogyan lehet parancssorban futtatni a teszteseteket?
+* Hogyan lehet változót deklarálni és használni?
+* Hogyan lehet adatvezérelt tesztelést megvalósítani?
