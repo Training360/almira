@@ -36,10 +36,8 @@ Amennyiben nem az első oldal került megjelenítésre, a törlés után visszau
 Az alkalmazás futtatásához szükséges egy MariaDB a localhostra telepítve, `locations`
 sémával, és ugyanezzel a felhasználóval és jelszóval.
 
-Töltsd le a `locations-app.jar` állományt. Az alkalmazás 10-es Java-t követel meg.
-Telepítsd fel a 10-es Java-t.
-Letölthető a http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html címről,
-`jdk-10.0.2_windows-x64_bin.exe` néven.
+Töltsd le a `locations-app.jar` állományt. Az alkalmazás 12-es Java-t követel meg.
+Telepítsd fel a 12-es Java-t!
 Ekkor a `C:\Program Files (x86)\Java` könyvtárba kerül feltelepítésre.
 
 Az alkalmazás futtatása:
@@ -47,5 +45,7 @@ Az alkalmazás futtatása:
 ```
 java -jar locations-app.jar
 ```
+
+(Amennyiben a java nincs a PATH-ban, teljes elérési útvonalat kell megadni.)
 
 Az alkalmazás indítás után elérhető böngészőből a `http://localhost:8080` címen.

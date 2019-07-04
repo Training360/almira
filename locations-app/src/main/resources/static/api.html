@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Locations alkalmazás API</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container">
+<h1 id="rest-api-leírás">REST API leírás</h1>
+<h2 id="lekérdezés">Lekérdezés</h2>
+<p>A kedvenc helyek lekérdezhetők a <code>api/locations</code> végponton.</p>
+<h2 id="egy-kedvenc-hely-lekérése">Egy kedvenc hely lekérése</h2>
+<p>Lekérdezhető a <code>locations/{id}</code> végponton, ahol az <code>id</code> a kedvenc hely egyedi azonosítója.</p>
+<h2 id="kedvenc-hely-felvétele">Kedvenc hely felvétele</h2>
+<p>A <code>api/locations</code> végponton <code>POST</code> metódussal kell a következő JSON-t felküldeni:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="op">{</span><span class="st">&quot;name&quot;</span><span class="op">:</span><span class="st">&quot;Budapest&quot;</span><span class="op">,</span><span class="st">&quot;coords&quot;</span><span class="op">:</span><span class="st">&quot;47.4979,19.0402&quot;</span><span class="op">}</span></code></pre></div>
+<h2 id="kedvenc-hely-módosítása">Kedvenc hely módosítása</h2>
+<p>A <code>locations/{id}</code> végpontra kell a következő JSON-t küldeni:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="op">{</span><span class="st">&quot;name&quot;</span><span class="op">:</span><span class="st">&quot;Budapest&quot;</span><span class="op">,</span><span class="st">&quot;coords&quot;</span><span class="op">:</span><span class="st">&quot;47.4979,19.0402&quot;</span><span class="op">}</span></code></pre></div>
+<h2 id="kedvenc-hely-törlése">Kedvenc hely törlése</h2>
+<p>A <code>locations/{id}</code> végponton <code>DELETE</code> metódussal.</p>
+</div>
+</body>
+</html>
