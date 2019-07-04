@@ -230,7 +230,7 @@ class: inverse, center, middle
 
 ## XPath predicates 2.
 
-* `//input[@id"]` - van `id` attribútuma
+* `//input[@id]` - van `id` attribútuma
 * `//input[@id="name-input"]` - `id` attribútumának értéke `name-input`
 
 ---
