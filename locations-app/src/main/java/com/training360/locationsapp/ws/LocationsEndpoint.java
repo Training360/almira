@@ -13,8 +13,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-@WebService
+@WebService(targetNamespace = "http://locations.com/services/locations")
 @Service
 public class LocationsEndpoint {
 
@@ -27,8 +28,9 @@ public class LocationsEndpoint {
     @WebMethod
     @XmlElementWrapper(name = "locations")
     @WebResult(name = "location")
-    public List<Location> listLocations() {
-        return locationsService.listLocations();
+    public List<LocationDto> listLocations() {
+        return locationsService.listLocations().stream()
+                .map(LocationDto::new).collect(Collectors.toList());
     }
 
     @WebResult(name = "location")
