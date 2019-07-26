@@ -1,4 +1,4 @@
-package com.training360.locationsapp.entities;
+package locationsapp.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

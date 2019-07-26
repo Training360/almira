@@ -1,4 +1,4 @@
-package com.training360.locationsapp.controller;
+package locationsapp.controller;
 
 import java.util.List;
 

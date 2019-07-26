@@ -1,7 +1,7 @@
-package com.training360.locationsapp.repository;
+package locationsapp.repository;
 
-import com.training360.locationsapp.controller.ListLocationsResponse;
-import com.training360.locationsapp.entities.Location;
+import locationsapp.controller.ListLocationsResponse;
+import locationsapp.entities.Location;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;

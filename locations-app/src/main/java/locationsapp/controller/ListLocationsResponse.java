@@ -1,6 +1,6 @@
-package com.training360.locationsapp.controller;
+package locationsapp.controller;
 
-import com.training360.locationsapp.entities.Location;
+import locationsapp.entities.Location;
 
 import java.util.List;
 

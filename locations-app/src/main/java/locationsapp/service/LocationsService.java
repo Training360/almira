@@ -1,8 +1,8 @@
-package com.training360.locationsapp.service;
+package locationsapp.service;
 
-import com.training360.locationsapp.controller.ListLocationsResponse;
-import com.training360.locationsapp.entities.Location;
-import com.training360.locationsapp.repository.LocationsRepository;
+import locationsapp.controller.ListLocationsResponse;
+import locationsapp.entities.Location;
+import locationsapp.repository.LocationsRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

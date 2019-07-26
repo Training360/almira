@@ -1,4 +1,4 @@
-package com.training360.locationsapp.ws;
+package locationsapp.ws;
 
 import lombok.Data;
 

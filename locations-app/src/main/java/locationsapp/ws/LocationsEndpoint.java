@@ -1,8 +1,8 @@
-package com.training360.locationsapp.ws;
+package locationsapp.ws;
 
-import com.training360.locationsapp.controller.Validator;
-import com.training360.locationsapp.entities.Location;
-import com.training360.locationsapp.service.LocationsService;
+import locationsapp.controller.Validator;
+import locationsapp.entities.Location;
+import locationsapp.service.LocationsService;
 import org.springframework.stereotype.Service;
 
 import javax.jws.WebMethod;

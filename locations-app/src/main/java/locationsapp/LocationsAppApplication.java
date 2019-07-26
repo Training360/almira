@@ -1,6 +1,6 @@
-package com.training360.locationsapp;
+package locationsapp;
 
-import com.training360.locationsapp.ws.LocationsEndpoint;
+import locationsapp.ws.LocationsEndpoint;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
 import org.springframework.beans.factory.annotation.Autowired;

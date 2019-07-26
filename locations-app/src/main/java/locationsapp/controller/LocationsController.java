@@ -1,7 +1,7 @@
-package com.training360.locationsapp.controller;
+package locationsapp.controller;
 
-import com.training360.locationsapp.entities.Location;
-import com.training360.locationsapp.service.LocationsService;
+import locationsapp.entities.Location;
+import locationsapp.service.LocationsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
