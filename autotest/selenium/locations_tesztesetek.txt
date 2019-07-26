@@ -1,0 +1,73 @@
+1. Új kedvenc hely felvitele
+ funkcionális teszt
+ 1. főoldal megnyitása
+ 2. Create location link megnyomása
+ 3. Name helyére: Budapest
+ 4. Koordináták helyére: 1,1
+ 5. Create location gomb megnyomása
+ 6. ASSERT
+	első sorban: Budapest,
+		1,1
+	Location has created üzenet megelenik-e
+	Eltűnik a create location űrlap
+	
+2. Név üres hagyása
+    Táblázat üres marad
+	Name can not be empty! hibeüzenet
+	a create location űrlap nem tűnik el
+	mezőn vizuális feedback
+	
+3 - 10
+
+11. Kedvenc hely módosítása
+
+ 1. Létrehozunk egy kedvenc helyet `Budapest 1,1 koordinátákkal az 1. tesztesetnek megfelelően
+ 2. Edit linkre kattintunk
+	Assert beviteli mező ki van-e töltve Budapset értékkel
+ 3. Név átírása Bukarest
+ 4. Update location gomb
+ 5. ASSERT Név Bukarest 
+ 
+12. Koordinátákra is
+
+13. - 18.	Elbukó validációk tesztelése is
+	
+19. Kedvenc hely törlése
+	1. Létrehozunk...
+	2. Delete gombot nyomunk
+	3. OK kattintunk
+	4. ASSERT
+		Üres a táblázat
+		Locatsion has deleted felirat 
+	
+20. Kedvenc hely törlése Mégse gombra kattintással
+
+21. Create locationnél cancel
+	1. Assert
+		Üres táblázat
+		Eltűnik az űrlap
+		
+22. Editnél cancel
+
+23. Lapozás
+	1. Ciklusban létrehozunk 11 kedenc helyet,
+	nevek: BudapestX, ahol x szigoruan monoton novekvo egesz szam, 10-től indítva, koord: 1,1
+	2. Ráklikkelünk a nextre
+	3. ASSERT: A táblázat egy sort tartalmaz
+		Budapest11 lesz az elsp sor
+	
+24. Lapozás vissza
+	1, Felveszünk 11 kedvenc helyet
+	2. NExtre kattintunk
+	3. Prevre kattintunk 
+	4. assert: 10 elem
+		Budapest 1 lesz az els
+		Budapset 10 lesez az utolso
+		
+25. Lapozás közben új kedvec hely felvitele
+
+26. Lapozás közben törlés
+	
+	
+99. terheléses teszt - 300 db locationnel
+100. stresszteszt
