@@ -1,4 +1,6 @@
-# Tesztautomatizálás (3 nap)
+# ATM-TESZT1 - Tesztautomatizálás (3 nap)
+
+Felületi tesztelés Selenium, valamint API tesztelés SoapUI és Postman eszközökkel
 
 ## Tanfolyam célja
 
@@ -24,7 +26,7 @@ slide-ok alapján.
 
 ## Tanfolyami tematika
 
-* Tesztelés típusai és csoportosítása.
+* Tesztelés típusai és csoportosítása
 * Tesztautomatizálási alapelvek
 * Modern szoftverarchitektúrák alapfogalmai (webes alkalmazás, többrétegű alkalmazás, RIA, AJAX, stb.)
 * Felhasználói felület felépítése
