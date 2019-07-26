@@ -1,9 +1,13 @@
 package locationsapp.controller;
 
 import locationsapp.entities.Location;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.util.List;
 
+@Data
+@AllArgsConstructor
 public class ListLocationsResponse {
 
     private List<Location> locations;
@@ -12,33 +16,4 @@ public class ListLocationsResponse {
 
     private int count;
 
-    public ListLocationsResponse(List<Location> locations, int start, int count) {
-        this.locations = locations;
-        this.start = start;
-        this.count = count;
-    }
-
-    public List<Location> getLocations() {
-        return locations;
-    }
-
-    public void setLocations(List<Location> locations) {
-        this.locations = locations;
-    }
-
-    public int getStart() {
-        return start;
-    }
-
-    public void setStart(int start) {
-        this.start = start;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
 }

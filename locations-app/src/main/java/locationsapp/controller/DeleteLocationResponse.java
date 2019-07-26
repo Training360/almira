@@ -1,18 +1,10 @@
 package locationsapp.controller;
 
+import lombok.Data;
+
+@Data
 public class DeleteLocationResponse {
 
-    private boolean success;
+    private String status = "deleted";
 
-    public DeleteLocationResponse(boolean success) {
-        this.success = success;
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
 }

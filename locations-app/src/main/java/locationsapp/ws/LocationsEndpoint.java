@@ -57,7 +57,10 @@ public class LocationsEndpoint {
     @WebMethod
     @WebResult(name = "status")
     public String deleteLocation(@WebParam(name = "locationId") long id) {
-        locationsService.deleteLocation(id);
-        return "ok";
+        var count = locationsService.deleteLocation(id);
+        if (count == 0) {
+            throw new IllegalArgumentException("Unknown id: " + id);
+        }
+        return "deleted";
     }
 }

@@ -35,14 +35,25 @@ public class LocationsController {
     }
 
     @RequestMapping(value = "/api/locations/{id}", method = RequestMethod.GET)
-    public Location getLocationById(@PathVariable long id) {
-        return locationsService.getLocationById(id);
+    public ResponseEntity<Object> getLocationById(@PathVariable long id) {
+        var location = locationsService.getLocationById(id);
+        if (location.isEmpty()) {
+            return new ResponseEntity<>(new DataError("Not found"), HttpStatus.NOT_FOUND);
+        }
+        else {
+            return ResponseEntity.ok(location.get());
+        }
     }
 
     @RequestMapping(value = "/api/locations/{id}", method = RequestMethod.DELETE)
-    public DeleteLocationResponse deleteLocation(@PathVariable long id) {
+    public ResponseEntity<Object> deleteLocation(@PathVariable long id) {
         int i = locationsService.deleteLocation(id);
-        return new DeleteLocationResponse(i == 1);
+        if (i == 0) {
+            return new ResponseEntity<>(new DataError("Not found"), HttpStatus.NOT_FOUND);
+        }
+        else {
+            return ResponseEntity.ok(new DeleteLocationResponse());
+        }
     }
 
     private void checkValues(String name, String coords, List<String> errors) {

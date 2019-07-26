@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LocationsService {
@@ -36,8 +37,8 @@ public class LocationsService {
         return location;
     }
 
-    public Location getLocationById(long id) {
-        return locationsRepository.getLocationById(id);
+    public Optional<Location> getLocationById(long id) {
+        return locationsRepository.tryLocationById(id);
     }
 
     public Location updateLocation(long id, String name, double lat, double lon) {
