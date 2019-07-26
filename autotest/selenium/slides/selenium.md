@@ -270,7 +270,7 @@ class: inverse, center, middle
 
 ## Új komplex teszt (gyakorlat)
 
-* Egy tesztkitöltés rögzítése, valamint az eredmények megtekinítése
+* Egy tesztkitöltés rögzítése, valamint az eredmények megtekintése
 
 ---
 
