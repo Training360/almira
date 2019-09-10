@@ -40,8 +40,8 @@ public class LocationsEndpoint {
         if (!errors.isEmpty()) {
             throw new IllegalArgumentException(errors.get(0));
         }
-        return locationsService.createLocation(createLocationRequest.getName(), createLocationRequest.getLat(),
-                createLocationRequest.getLon());
+        // TODO
+        return null;
     }
 
     @WebResult(name = "location")
@@ -51,14 +51,15 @@ public class LocationsEndpoint {
         if (!errors.isEmpty()) {
             throw new IllegalArgumentException(errors.get(0));
         }
-        return locationsService.updateLocation(location.getId(), location.getName(), location.getLat(), location.getLon());
+        // TODO
+        return null;
     }
 
     @WebMethod
     @WebResult(name = "status")
     public String deleteLocation(@WebParam(name = "locationId") long id) {
-        var count = locationsService.deleteLocation(id);
-        if (count == 0) {
+        var location = locationsService.deleteLocation(id);
+        if (location.isEmpty()) {
             throw new IllegalArgumentException("Unknown id: " + id);
         }
         return "deleted";

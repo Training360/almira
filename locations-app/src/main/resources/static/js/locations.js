@@ -35,6 +35,8 @@ function setState(pState) {
     if (state == "default") {
         document.getElementById("location-name").value = "";
         document.getElementById("location-coords").value = "";
+        document.getElementById("location-interesting-at").value = "";
+        document.getElementById("location-tags").value = "";
         document.getElementById("create-location-link").removeAttribute("hidden");
         document.getElementById("location-form").setAttribute("hidden", "hidden");
         document.getElementById("update-location-form").setAttribute("hidden", "hidden");
@@ -67,28 +69,28 @@ function cancelCreate() {
 
 function doPaging() {
     link = this.getAttribute("href");
-    downloadLocations(getParameterByName("start", link), getParameterByName("size", link))
+    downloadLocations(getParameterByName("page", link), getParameterByName("size", link))
     return false;
 }
 
-function downloadLocations(start = 0, size) {
+function downloadLocations(page = 0, size) {
     if (!size) {
         size = defaultSize;
     }
-    let url = 'api/locations?start=' + start + "&size=" + size;
+    let url = 'api/locations?page=' + page + "&size=" + size;
 
     fetch(url)
         .then(function(response) {
             return response.json();
             })
         .then(function(jsonData) {
-            initPagination(jsonData.start, jsonData.count);
-            fillTable(jsonData.locations);
+            initPagination(jsonData.number, jsonData.totalElements);
+            fillTable(jsonData.content);
         });
 }
 
 function fillTable(locations) {
-  var locationsTable = document.getElementById("locations-table");
+  var locationsTable = document.getElementById("locations-table-tbody");
   locationsTable.innerHTML = "";
   for (var i = 0; i < locations.length; i++) {
     var tr = document.createElement("tr");
@@ -105,6 +107,16 @@ function fillTable(locations) {
     var coordsTd = document.createElement("td");
     coordsTd.innerHTML = locations[i].lat + ", " + locations[i].lon;
     tr.appendChild(coordsTd);
+
+    var interestingAtTd = document.createElement("td");
+    if (locations[i].interestingAt) {
+        interestingAtTd.innerHTML = locations[i].interestingAt;
+    }
+    tr.appendChild(interestingAtTd);
+
+    var tagsTd = document.createElement("td");
+    tagsTd.innerHTML = locations[i].tags;
+    tr.appendChild(tagsTd);
 
     var buttonsTd = document.createElement("td");
     var editButton = document.createElement("button");
@@ -125,18 +137,18 @@ function fillTable(locations) {
   }
 }
 
-function initPagination(start, count) {
-    if (start == 0) {
+function initPagination(page, totalElements) {
+    if (page == 0) {
         document.getElementById("prev-link").setAttribute("hidden", "hidden");
     }
     else {
         document.getElementById("prev-link").removeAttribute("hidden");
-        document.getElementById("prev-link").setAttribute("href", "?start=" + (start - defaultSize) + "&size=" + defaultSize)
+        document.getElementById("prev-link").setAttribute("href", "?page=" + (page - 1) + "&size=" + defaultSize)
     }
-    document.getElementById("start-span").innerHTML = start;
-    if (start + defaultSize < count) {
+    document.getElementById("page-span").innerHTML = page;
+    if (page + defaultSize < totalElements) {
             document.getElementById("next-link").removeAttribute("hidden");
-            document.getElementById("next-link").setAttribute("href", "?start=" + (start + defaultSize) + "&size=" + defaultSize)
+            document.getElementById("next-link").setAttribute("href", "?page=" + (page + 1) + "&size=" + defaultSize)
         }
         else {
             document.getElementById("next-link").setAttribute("hidden", "hidden");
@@ -150,13 +162,22 @@ function prepareForUpdateLocation() {
     document.getElementById("update-location-id").value = location.id;
     document.getElementById("update-location-name").value = location.name;
     document.getElementById("update-location-coords").value = location.lat + "," + location.lon;
+    if (location.interestingAt) {
+        document.getElementById("update-location-interesting-at").value = location.interestingAt;
+    }
+    else {
+        document.getElementById("update-location-interesting-at").value = "";
+    }
+    document.getElementById("update-location-tags").value = location.tags;
 }
 
 function createLocation() {
     var name = document.getElementById("location-name").value;
     var coords = document.getElementById("location-coords").value;
+    var interestingAt = document.getElementById("location-interesting-at").value;
+    var tags = document.getElementById("location-tags").value;
 
-    var request = {"name": name, "coords": coords};
+    var request = {"name": name, "coords": coords, "interestingAt": interestingAt, "tags": tags};
 
 
     fetch("api/locations", {
@@ -222,8 +243,10 @@ function updateLocation() {
     var id = document.getElementById("update-location-id").value;
     var name = document.getElementById("update-location-name").value;
     var coords = document.getElementById("update-location-coords").value;
+    var interestingAt = document.getElementById("update-location-interesting-at").value;
+    var tags = document.getElementById("update-location-tags").value;
 
-    var request = {"name": name, "coords": coords};
+    var request = {"name": name, "coords": coords, "interestingAt": interestingAt, "tags": tags};
 
     var url = 'api/locations/' + id;
 
@@ -257,8 +280,8 @@ function successUpdate() {
     document.getElementById("update-location-id").value = "";
     document.getElementById("update-location-name").value = "";
     document.getElementById("update-location-coords").value = "";
-    var start = document.getElementById("start-span").innerHTML;
-    downloadLocations(start);
+    var page = document.getElementById("page-span").innerHTML;
+    downloadLocations(page);
     setState("default");
     document.getElementById("message-div").innerHTML = "Location has modified";
     document.getElementById("message-div").setAttribute("class", "alert alert-success");

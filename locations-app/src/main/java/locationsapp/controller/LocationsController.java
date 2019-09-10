@@ -1,13 +1,21 @@
 package locationsapp.controller;
 
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import locationsapp.entities.Location;
 import locationsapp.service.LocationsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.*;
 
 @RestController
@@ -22,16 +30,8 @@ public class LocationsController {
     }
 
     @RequestMapping(value = "/api/locations", method = RequestMethod.GET)
-    public ListLocationsResponse listLocations(@RequestParam(required = false) Integer start,
-                                        @RequestParam(required = false) Integer size) {
-        if (start == null) {
-            start = 0;
-        }
-        if (size == null) {
-            size = 100_000;
-        }
-
-        return locationsService.listLocations(start, size);
+    public Page<Location> listLocations(@PageableDefault(sort = "name") Pageable pageable) {
+        return locationsService.listLocations(pageable);
     }
 
     @RequestMapping(value = "/api/locations/{id}", method = RequestMethod.GET)
@@ -47,12 +47,12 @@ public class LocationsController {
 
     @RequestMapping(value = "/api/locations/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> deleteLocation(@PathVariable long id) {
-        int i = locationsService.deleteLocation(id);
-        if (i == 0) {
+        var location = locationsService.deleteLocation(id);
+        if (location.isEmpty()) {
             return new ResponseEntity<>(new DataError("Not found"), HttpStatus.NOT_FOUND);
         }
         else {
-            return ResponseEntity.ok(new DeleteLocationResponse());
+            return ResponseEntity.ok(location.get());
         }
     }
 
@@ -81,11 +81,10 @@ public class LocationsController {
            return new ResponseEntity<>(new DataError(errors.get(0)), HttpStatus.BAD_REQUEST);
        }
 
-        Scanner scanner = new Scanner(req.getCoords()).useDelimiter(",")
-                .useLocale(Locale.UK);
-        double lat = scanner.nextDouble();
-        double lon = scanner.nextDouble();
-        Location location = locationsService.updateLocation(id, req.getName(), lat, lon);
+        var location = locationsService.updateLocation(id, req);
+       if (location.isEmpty()) {
+           return new ResponseEntity<>(new DataError("Not found"), HttpStatus.NOT_FOUND);
+       }
         return new ResponseEntity(location, HttpStatus.OK);
     }
 
@@ -97,11 +96,20 @@ public class LocationsController {
             return new ResponseEntity<>(new DataError(errors.get(0)), HttpStatus.BAD_REQUEST);
         }
 
-        Scanner scanner = new Scanner(req.getCoords()).useDelimiter(",")
-                .useLocale(Locale.UK);
-        double lat = scanner.nextDouble();
-        double lon = scanner.nextDouble();
-        Location location = locationsService.createLocation(req.getName(), lat, lon);
+        Location location = locationsService.createLocation(req);
         return new ResponseEntity(location, HttpStatus.OK);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<Object> handleException(HttpMessageNotReadableException ex) {
+        if (ex.getCause() instanceof InvalidFormatException) {
+            if (((InvalidFormatException) ex.getCause()).getPath().toString().contains("interestingAt")) {
+                return new ResponseEntity<>(new DataError("Invalid Interesting at format!"), HttpStatus.BAD_REQUEST);
+            } else {
+                return new ResponseEntity<>(new DataError(ex.getMessage()), HttpStatus.BAD_REQUEST);
+            }
+        } else {
+            return new ResponseEntity<>(new DataError(ex.getMessage()), HttpStatus.BAD_REQUEST);
+        }
     }
 }
