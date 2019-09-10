@@ -6,65 +6,29 @@ A kedvenc helyek lekérdezhetők a `api/locations` végponton. Két paraméter a
 A `page` az oldal (nullától számozva), a `size`, az oldal mérete, hogy mennyi találat legyen egy oldalon.
 Alapértelmezett paraméterezése: `/api/locations?page=0&size=10`.  
 
-A visszaadott eredmény:
+A visszaadott eredmény a következő JSON. Az eredmény utolsó részében a lapozással és rendezéssel kapcsolatos 
+információk szerepelnek.
+
 
 ```javascript
 {
     "content": [
         {
-            "id": 40,
+            "id": 1,
+            "name": "Budapest",
+            "lat": 47.497912,
+            "lon": 19.040235,
+            "interestingAt": "2019-01-01T05:00:00",
+            "tags": [
+                "capital",
+                "favourite"
+            ]
+        },
+        {
+            "id": 2,
             "name": "Debrecen",
             "lat": 47.5316049,
             "lon": 21.6273124,
-            "tags": []
-        },
-        {
-            "id": 33,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
-            "tags": []
-        },
-        {
-            "id": 18,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
-            "tags": []
-        },
-        {
-            "id": 43,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
-            "tags": []
-        },
-        {
-            "id": 28,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
-            "tags": []
-        },
-        {
-            "id": 53,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
-            "tags": []
-        },
-        {
-            "id": 13,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
-            "tags": []
-        },
-        {
-            "id": 38,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
             "tags": []
         },
         {
@@ -75,20 +39,27 @@ A visszaadott eredmény:
             "tags": []
         },
         {
-            "id": 23,
-            "name": "Győr",
-            "lat": 47.6874569,
-            "lon": 17.6503974,
+            "id": 3,
+            "name": "Miskolc",
+            "lat": 48.1034775,
+            "lon": 20.7784384,
+            "tags": []
+        },
+        {
+            "id": 4,
+            "name": "Veszprém",
+            "lat": 47.1028087,
+            "lon": 17.9093019,
             "tags": []
         }
     ],
-    "first": false,
-    "last": false,
-    "totalPages": 6,
-    "totalElements": 54,
-    "numberOfElements": 10,
+    "first": true,
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 5,
+    "numberOfElements": 5,
     "size": 10,
-    "number": 2,
+    "number": 0,
     "sort": [
         {
             "property": "name",
@@ -112,7 +83,12 @@ A visszaadott eredmény:
     "id": 1,
     "name": "Budapest",
     "lat": 47.497912,
-    "lon": 19.040235
+    "lon": 19.040235,
+    "interestingAt": "2019-01-01T05:00:00",
+    "tags": [
+        "capital",
+        "favourite"
+    ]
 }
 ```
 
@@ -128,20 +104,30 @@ tér vissza, és az eredmény:
 ## Kedvenc hely felvétele
 
 A `api/locations` végponton `POST` metódussal kell a következő
-JSON-t felküldeni:
+JSON-t felküldeni. Az `interestingAt` és a `tags` megadása opcionális.
 
 ```javascript
-{"name":"Budapest","coords":"47.497912,19.040235"}
+{
+    "name":"Budapest",
+    "coords":"47.497912,19.040235", 
+    "interestingAt": "2019-01-01T05:00:00", 
+    "tags": "capital,favourite"
+}
 ```
 
 A visszaadott eredmény:
 
 ```javascript
 {
-    "id": 1,
+    "id": 7,
     "name": "Budapest",
     "lat": 47.497912,
-    "lon": 19.040235
+    "lon": 19.040235,
+    "interestingAt": "2019-01-01T05:00:00",
+    "tags": [
+        "capital",
+        "favourite"
+    ]
 }
 ```
 
@@ -152,13 +138,19 @@ Ellenőrzések:
 * A koordináták nem megfelelő formátumban vannak megadva. `Invalid coordinates format!`
 * A szélességi fok értéke -90 és 90 között kell legyen. `Latitude must be between -90 and 90`
 * A hosszúsági fok értéke -180 és 180 között kell legyen. `Longitude must be between -180 and 180`
+* A dátum formátuma nem megfelelő. `Invalid Interesting at format!`
 
 ## Kedvenc hely módosítása
 
 A `locations/{id}` végpontra kell a következő JSON-t küldeni:
 
 ```javascript
-{"name":"Budapest","coords":"47.497912,19.040235"}
+{
+    "name":"Budapest",
+    "coords":"47.497912,19.040235", 
+    "interestingAt": "2019-01-01T05:00:00", 
+    "tags": "capital,favourite"
+}
 ```
 
 A visszaadott eredmény:
@@ -168,7 +160,12 @@ A visszaadott eredmény:
     "id": 1,
     "name": "Budapest",
     "lat": 47.497912,
-    "lon": 19.040235
+    "lon": 19.040235,
+    "interestingAt": "2019-01-01T05:00:00",
+    "tags": [
+        "capital",
+        "favourite"
+    ]
 }
 ```
 
@@ -180,5 +177,5 @@ funkciónál.
 
 A `locations/{id}` végponton `DELETE` metódussal.
 
-Amennyiben a megadott azonosítóval nincs kedvenc hely, `404` sátuszkóddal
+Amennyiben a megadott azonosítóval nincs kedvenc hely, `404` státuszkóddal
 tér vissza.

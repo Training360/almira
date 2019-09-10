@@ -8,10 +8,10 @@ public class Validator {
         if (name == null || name.trim().isEmpty()) {
             errors.add("Name can not be empty!");
         }if (lat < -90 || lat > 90) {
-            errors.add("Latitude must be between -90 and 90");
+            errors.add("Latitude must be between -90 and 90!");
         }
         if (lon < -180 || lat > 180) {
-            errors.add("Longitude must be between -180 and 180");
+            errors.add("Longitude must be between -180 and 180!");
         }
     }
 }

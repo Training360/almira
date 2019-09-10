@@ -52,7 +52,7 @@ public class LocationsService {
     }
 
     public Optional<Location> getLocationById(long id) {
-        return locationsRepository.findById(id);
+        return locationsRepository.findByIdWithTags(id);
     }
 
     @Transactional
