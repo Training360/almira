@@ -78,7 +78,7 @@ public class LocationsService {
     }
 
     public Optional<Location> deleteLocation(long id) {
-        var location = locationsRepository.findById(id);
+        var location = locationsRepository.findByIdWithTags(id);
         if (location.isEmpty()) {
             return Optional.empty();
         }
