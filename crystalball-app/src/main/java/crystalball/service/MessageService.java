@@ -1,15 +1,15 @@
 package crystalball.service;
 
 import crystalball.entities.Message;
-import crystalball.service.CreateMessageCommand;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -19,7 +19,17 @@ public class MessageService {
 
     private List<Message> messages = Collections.synchronizedList(new ArrayList<>());
 
-    public OperationResult saveMessage(CreateMessageCommand command) {
+    private MessageSource messageSource;
+
+    public MessageService(MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
+
+    public String generateToken() {
+        return UUID.randomUUID().toString();
+    }
+
+    public OperationResult<MessageDetailsDto> saveMessage(CreateMessageCommand command, String token) {
         log.debug("Create message: {}, {}", command.getContent(), command.getCreator());
         Message message = new Message();
         message.setId(UUID.randomUUID().toString());
@@ -27,8 +37,11 @@ public class MessageService {
         message.setCreatedAt(LocalDateTime.now());
         message.setOpenAt(command.getOpenAt());
         message.setCreator(command.getCreator());
+        message.setToken(token);
         messages.add(message);
-        return new OperationResult(OperationResult.Status.OK, "Message has created", toMessageDetailsDto(message));
+        return new OperationResult(OperationStatus.OK, messageSource.getMessage("message.created",
+                new Object[]{},
+                LocaleContextHolder.getLocale()), toMessageDetailsDto(message));
     }
 
     public List<MessageDto> listMessages() {
@@ -36,32 +49,55 @@ public class MessageService {
         return messages.stream().map(MessageService::toMessageDto).collect(Collectors.toList());
     }
 
-    public Optional<MessageDetailsDto> getMessageById(String id) {
+    public MessageDetailsDto getMessageById(String id) {
         log.debug("Get message by id: {}", id);
-        return messages.stream().filter(m -> m.getId().equals(id)).map(MessageService::toMessageDetailsDto).findFirst();
+        return messages.stream().filter(m -> m.getId().equals(id)).map(MessageService::toMessageDetailsDto).findFirst()
+                .orElseThrow(() -> new IllegalRequestException(OperationStatus.NOT_FOUND, messageSource.getMessage("message.not.found",
+                        new Object[]{},
+                        LocaleContextHolder.getLocale())));
     }
 
-    public OperationResult updateMessage(String id, UpdateMessageCommand command) {
+    public OperationResult updateMessage(String id, UpdateMessageCommand command, String token) {
         log.debug("Update message by id: {}, {}", id, command.getContent());
         var message = messages.stream().filter(m -> m.getId().equals(id)).findFirst();
         if (message.isEmpty()) {
-            return new OperationResult(OperationResult.Status.NOT_FOUND, "Message not found");
+            throw new IllegalRequestException(OperationStatus.NOT_FOUND, messageSource.getMessage("message.not.found",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()));
         }
         else {
+            checkToken(token, message.get());
             message.get().setContent(command.getContent());
-            return new OperationResult(OperationResult.Status.OK, "Message has updated", toMessageDetailsDto(message.get()));
+            return new OperationResult(OperationStatus.OK, messageSource.getMessage("message.updated",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()), toMessageDetailsDto(message.get()));
         }
     }
 
-    public OperationResult delete(String id) {
+    public OperationResult delete(String id, String token) {
         log.debug("Delete message by id: {}", id);
         var message = messages.stream().filter(m -> m.getId().equals(id)).findFirst();
+
+        checkToken(token, message.get());
+
         if (message.isEmpty()) {
-            return new OperationResult(OperationResult.Status.NOT_FOUND, "Message not found");
+            throw new IllegalRequestException(OperationStatus.NOT_FOUND, messageSource.getMessage("message.not.found",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()));
         }
         else {
             messages.remove(message.get());
-            return new OperationResult(OperationResult.Status.OK, "Message has deleted", toMessageDetailsDto(message.get()));
+            return new OperationResult(OperationStatus.OK, messageSource.getMessage("message.has.deleted",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()), toMessageDetailsDto(message.get()));
+        }
+    }
+
+    public void checkToken(String token, Message message) {
+        if (token == null || token.isBlank() || !token.equals(message.getToken())) {
+            throw new IllegalRequestException(OperationStatus.UNAUTHORIZED,  messageSource.getMessage("unauthorized",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()));
         }
     }
 

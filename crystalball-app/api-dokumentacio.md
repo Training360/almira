@@ -2,7 +2,7 @@
 
 ## Jóslat létrehozása
 
-A `/api/messages/` címre kell elküldeni `POST` metódussal a következő JSON dokumentumot:
+A `/api/messages` címre kell elküldeni `POST` metódussal a következő JSON dokumentumot:
 
 ```javascript
 {
@@ -14,7 +14,7 @@ A `/api/messages/` címre kell elküldeni `POST` metódussal a következő JSON 
 
 ## Jóslatok listázása
 
-A `/api/messages/` címen `GET` metódussal.
+A `/api/messages` címen `GET` metódussal.
 
 ## Jóslat lekérése
 

@@ -1,6 +1,8 @@
 package crystalball.controller;
 
 import crystalball.service.*;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -9,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/messages")
@@ -17,53 +19,62 @@ public class MessageController {
 
     private MessageService messageService;
 
-    public MessageController(MessageService messageService) {
+    private MessageSource messageSource;
+
+    public MessageController(MessageService messageService, MessageSource messageSource) {
         this.messageService = messageService;
+        this.messageSource = messageSource;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public ResponseEntity<Object> saveMessage(@Valid @RequestBody CreateMessageCommand command) {
-        var result =  messageService.saveMessage(command);
-        return new ResponseEntity(result, HttpStatus.OK);
+    @PostMapping
+    public ResponseEntity<OperationResult<MessageDetailsDto>> saveMessage(@Valid @RequestBody CreateMessageCommand command) {
+        var token = messageService.generateToken();
+        var result =  messageService.saveMessage(command, token);
+        return ResponseEntity
+                .ok()
+                .header("token", token)
+                .body(result);
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping
     public List<MessageDto> listMessages() {
         return messageService.listMessages();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Object> getMessageById(@PathVariable String id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<MessageDetailsDto> getMessageById(@PathVariable String id) {
         var message = messageService.getMessageById(id);
-        if (message.isEmpty()) {
-            return new ResponseEntity<>(new OperationResult(OperationResult.Status.NOT_FOUND, "Message not found"), HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(message.get(), HttpStatus.OK);
+        return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
-    public ResponseEntity<OperationResult> updateMessage(@PathVariable String id, @Valid @RequestBody UpdateMessageCommand command) {
-        var result = messageService.updateMessage(id, command);
+    @PostMapping("/{id}")
+    public ResponseEntity<OperationResult> updateMessage(@PathVariable String id, @Valid @RequestBody UpdateMessageCommand command, @RequestHeader Map<String, String> headers) {
+        String token = getToken(headers);
+        var result = messageService.updateMessage(id, command, token);
 
-        return new ResponseEntity(result, resolveStatus(result));
+        return ResponseEntity
+                .status(resolveStatus(result.getStatus()))
+                .body(result);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<OperationResult> delete(@PathVariable String id) {
-        var result = messageService.delete(id);
-        return new ResponseEntity(result, resolveStatus(result));
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<OperationResult> delete(@PathVariable String id, @RequestHeader Map<String, String> headers) {
+        String token = getToken(headers);
+        var result = messageService.delete(id, token);
+
+        return ResponseEntity
+                .status(resolveStatus(result.getStatus()))
+                .body(result);
     }
 
-    private HttpStatus resolveStatus(OperationResult result) {
-        if (result.getStatus() == OperationResult.Status.OK) {
-            return HttpStatus.OK;
+    public String getToken(Map<String, String> headers) {
+        String header = headers.get("authorization");
+        if (header == null || !header.startsWith("Bearer ")) {
+            throw new IllegalRequestException(OperationStatus.UNAUTHORIZED, messageSource.getMessage("illegal.bearer",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()));
         }
-        else if (result.getStatus() == OperationResult.Status.NOT_FOUND) {
-            return HttpStatus.NOT_FOUND;
-        }
-        else {
-            throw new IllegalArgumentException("Status not found " + result.getStatus());
-        }
+        return header.substring("Bearer ".length()).trim();
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -79,6 +90,38 @@ public class MessageController {
             message += ((FieldError)error).getField() + " - ";
         }
         message += error.getDefaultMessage();
-        return new OperationResult(OperationResult.Status.VALIDATION_FAILED, message);
+        return new OperationResult(OperationStatus.VALIDATION_FAILED, message);
+    }
+
+    @ExceptionHandler(IllegalRequestException.class)
+    public ResponseEntity<OperationResult> handleIllegalRequest(IllegalRequestException ex) {
+        ResponseEntity.BodyBuilder
+                response = ResponseEntity
+                .status(resolveStatus(ex.getOperationStatus()));
+
+        if (ex.getOperationStatus() == OperationStatus.VALIDATION_FAILED) {
+            response.header("WWW-Authenticate", "Bearer");
+        }
+
+        return response
+                .body(new OperationResult(ex.getOperationStatus(), ex.getMessage()));
+    }
+
+    private HttpStatus resolveStatus(OperationStatus status) {
+        if (status == OperationStatus.OK) {
+            return HttpStatus.OK;
+        }
+        else if (status == OperationStatus.NOT_FOUND) {
+            return HttpStatus.NOT_FOUND;
+        }
+        else if (status == OperationStatus.VALIDATION_FAILED) {
+            return HttpStatus.BAD_REQUEST;
+        }
+        else if (status == OperationStatus.UNAUTHORIZED) {
+            return HttpStatus.UNAUTHORIZED;
+        }
+        else {
+            throw new IllegalArgumentException("Status not found " + status);
+        }
     }
 }

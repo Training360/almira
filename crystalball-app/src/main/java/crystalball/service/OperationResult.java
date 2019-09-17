@@ -7,17 +7,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OperationResult {
+public class OperationResult<T> {
 
-    public enum Status {OK, NOT_FOUND, VALIDATION_FAILED};
-
-    private Status status;
+    private OperationStatus status;
 
     private String message;
 
-    private MessageDetailsDto messageDetailsDto;
+    private T entity;
 
-    public OperationResult(Status status, String message) {
+    public OperationResult(OperationStatus status, String message) {
         this.status = status;
         this.message = message;
     }
