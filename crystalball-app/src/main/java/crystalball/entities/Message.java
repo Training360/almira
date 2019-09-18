@@ -18,4 +18,6 @@ public class Message {
     private LocalDateTime createdAt;
 
     private LocalDateTime openAt;
+
+    private String filename;
 }

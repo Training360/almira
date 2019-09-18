@@ -2,16 +2,21 @@ package crystalball.controller;
 
 import crystalball.service.*;
 import org.springframework.context.MessageSource;
-import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/messages")
@@ -42,9 +47,19 @@ public class MessageController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<MessageDetailsDto> getMessageById(@PathVariable String id) {
-        var message = messageService.getMessageById(id);
+    public ResponseEntity<MessageDetailsDto> getMessageById(@PathVariable String id, @RequestHeader Map<String, String> headers) {
+        String token = getToken(headers);
+        var message = messageService.getMessageById(id, token, getTimeMachine(headers));
         return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    private Optional<LocalDateTime> getTimeMachine(Map<String, String> headers) {
+        String value = headers.get("time-machine");
+        if (value == null) {
+            return Optional.empty();
+        }
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+        return Optional.of(LocalDateTime.parse(value, formatter));
     }
 
     @PostMapping("/{id}")
@@ -67,12 +82,30 @@ public class MessageController {
                 .body(result);
     }
 
+
+    @PostMapping("/{id}/file")
+    public ResponseEntity<OperationResult> handleFileUpload(@PathVariable String id,
+                                                            @RequestParam("file") MultipartFile file,
+                                                            @RequestHeader Map<String, String> headers) {
+        String token = getToken(headers);
+        var result = messageService.uploadFile(id, file, token);
+        return ResponseEntity.ok().body(result);
+    }
+
+    @GetMapping("/{id}/file")
+    public ResponseEntity<Resource> handleFileDownload(@PathVariable String id) {
+        var result = messageService.getFile(id);
+        return ResponseEntity
+                .ok()
+                .header(HttpHeaders.CONTENT_TYPE, result.getContentType())
+                .header( HttpHeaders.CONTENT_DISPOSITION,
+                        "attachment; filename=\"" + result.getFilename() + "\"").body(result.getResource());
+    }
+
     public String getToken(Map<String, String> headers) {
         String header = headers.get("authorization");
         if (header == null || !header.startsWith("Bearer ")) {
-            throw new IllegalRequestException(OperationStatus.UNAUTHORIZED, messageSource.getMessage("illegal.bearer",
-                    new Object[]{},
-                    LocaleContextHolder.getLocale()));
+            return "";
         }
         return header.substring("Bearer ".length()).trim();
     }

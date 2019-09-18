@@ -2,10 +2,17 @@ package crystalball.service;
 
 import crystalball.entities.Message;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
@@ -20,6 +27,12 @@ public class MessageService {
     private List<Message> messages = Collections.synchronizedList(new ArrayList<>());
 
     private MessageSource messageSource;
+
+    @Value("${file.location}")
+    private Path dir;
+
+    @Value("${skip.authentication}")
+    private boolean skipAuthentication;
 
     public MessageService(MessageSource messageSource) {
         this.messageSource = messageSource;
@@ -46,12 +59,12 @@ public class MessageService {
 
     public List<MessageDto> listMessages() {
         log.debug("List messages");
-        return messages.stream().map(MessageService::toMessageDto).collect(Collectors.toList());
+        return messages.stream().map(this::toMessageDto).collect(Collectors.toList());
     }
 
-    public MessageDetailsDto getMessageById(String id) {
+    public MessageDetailsDto getMessageById(String id, String token, Optional<LocalDateTime> timeMachine) {
         log.debug("Get message by id: {}", id);
-        return messages.stream().filter(m -> m.getId().equals(id)).map(MessageService::toMessageDetailsDto).findFirst()
+        return messages.stream().filter(m -> m.getId().equals(id)).map(m -> toHashedMessageDetailsDto(m, token, timeMachine)).findFirst()
                 .orElseThrow(() -> new IllegalRequestException(OperationStatus.NOT_FOUND, messageSource.getMessage("message.not.found",
                         new Object[]{},
                         LocaleContextHolder.getLocale())));
@@ -93,20 +106,88 @@ public class MessageService {
         }
     }
 
+    public OperationResult uploadFile(String id, MultipartFile file, String token) {
+        var message = messages.stream().filter(m -> m.getId().equals(id)).findFirst()
+                .orElseThrow(() -> new IllegalRequestException(OperationStatus.NOT_FOUND, messageSource.getMessage("message.not.found",
+                        new Object[]{},
+                        LocaleContextHolder.getLocale())));
+        checkToken(token, message);
+        String filename = id + getExtension(file.getOriginalFilename());
+        try {
+            file.transferTo(dir.resolve(filename));
+            message.setFilename(filename);
+            return new OperationResult(OperationStatus.OK, messageSource.getMessage("file.has.uploaded",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()));
+        }
+        catch (IOException ioe) {
+            throw new IllegalArgumentException("Can not transfer file", ioe);
+        }
+    }
+
+    public FileResult getFile(String id) {
+        var message = messages.stream().filter(m -> m.getId().equals(id)).findFirst()
+                .orElseThrow(() -> new IllegalRequestException(OperationStatus.NOT_FOUND, messageSource.getMessage("message.not.found",
+                        new Object[]{},
+                        LocaleContextHolder.getLocale())));
+        String filename = message.getFilename();
+        if (filename == null) {
+            throw new IllegalRequestException(OperationStatus.NOT_FOUND,  messageSource.getMessage("message.not.found",
+                    new Object[]{},
+                    LocaleContextHolder.getLocale()));
+        }
+        Resource resource = new FileSystemResource(dir.resolve(filename));
+        var contentType = "";
+        try {
+            contentType = Files.probeContentType(dir.resolve(filename));
+        }
+        catch (IOException ioe) {
+            log.error("Cannot determine content type");
+        }
+        return new FileResult(filename, resource, contentType);
+    }
+
+    private String getExtension(String name) {
+        return name.substring(name.lastIndexOf("."));
+    }
+
+    private boolean isValidToken(String token, Message message) {
+        return token != null && !token.isBlank() && token.equals(message.getToken());
+    }
+
     public void checkToken(String token, Message message) {
-        if (token == null || token.isBlank() || !token.equals(message.getToken())) {
+        if (!skipAuthentication && !isValidToken(token, message)) {
             throw new IllegalRequestException(OperationStatus.UNAUTHORIZED,  messageSource.getMessage("unauthorized",
                     new Object[]{},
                     LocaleContextHolder.getLocale()));
         }
     }
 
-    public static MessageDto toMessageDto(Message message) {
+    public MessageDto toMessageDto(Message message) {
         MessageDto messageDto = new MessageDto();
         messageDto.setId(message.getId());
         messageDto.setCreatedAt(message.getCreatedAt());
         messageDto.setCreator(message.getCreator());
         return messageDto;
+    }
+
+    public MessageDetailsDto toHashedMessageDetailsDto(Message message, String token, Optional<LocalDateTime> timeMachine) {
+        var dto = toMessageDetailsDto(message);
+
+        LocalDateTime base = timeMachine.orElse(LocalDateTime.now());
+
+        // Van autentikáció és valid, vagy lejárt
+        if (!skipAuthentication && (!isValidToken(token, message)) &&
+                !message.getOpenAt().isBefore(base.plus(5, ChronoUnit.MINUTES))) {
+            dto.setContent(toMd5(message.getContent()));
+        }
+
+        // Nincs autentikáció
+        if (skipAuthentication && !message.getOpenAt().isBefore(base.plus(5, ChronoUnit.MINUTES))) {
+            dto.setContent(toMd5(message.getContent()));
+        }
+
+        return dto;
     }
 
     public static MessageDetailsDto toMessageDetailsDto(Message message) {
@@ -115,12 +196,8 @@ public class MessageService {
         messageDto.setCreatedAt(message.getCreatedAt());
         messageDto.setCreator(message.getCreator());
         messageDto.setOpenAt(message.getOpenAt());
-        if (message.getOpenAt().isBefore(LocalDateTime.now().plus(5, ChronoUnit.MINUTES))) {
-            messageDto.setContent(message.getContent());
-        }
-        else {
-            messageDto.setContent(toMd5(message.getContent()));
-        }
+        messageDto.setContent(message.getContent());
+        messageDto.setFilename(message.getFilename());
         return messageDto;
     }
 

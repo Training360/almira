@@ -16,4 +16,6 @@ public class MessageDetailsDto {
     private LocalDateTime createdAt;
 
     private LocalDateTime openAt;
+
+    private String filename;
 }
