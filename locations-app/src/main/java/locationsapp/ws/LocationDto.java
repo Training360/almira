@@ -5,15 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"id", "name", "lat", "lon"})
+@XmlType(propOrder = {"id", "name", "lat", "lon", "interestingAt", "tags"})
 public class LocationDto {
 
     @XmlAttribute
@@ -25,42 +23,10 @@ public class LocationDto {
 
     private double lon;
 
-    public LocationDto(Location location) {
-        this.id = location.getId();
-        this.name = location.getName();
-        this.lat = location.getLat();
-        this.lon = location.getLon();
-    }
+    @XmlElement(name = "interesting-at")
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
+    private LocalDateTime interestingAt;
 
-    public Long getId() {
-        return id;
-    }
+    private String tags;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getLat() {
-        return lat;
-    }
-
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public double getLon() {
-        return lon;
-    }
-
-    public void setLon(double lon) {
-        this.lon = lon;
-    }
 }

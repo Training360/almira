@@ -1,5 +1,6 @@
 package locationsapp.ws;
 
+import locationsapp.controller.CreateLocationCommand;
 import locationsapp.controller.Validator;
 import locationsapp.entities.Location;
 import locationsapp.service.LocationsService;
@@ -30,29 +31,65 @@ public class LocationsEndpoint {
     @WebResult(name = "location")
     public List<LocationDto> listLocations() {
         return locationsService.listLocations().stream()
-                .map(LocationDto::new).collect(Collectors.toList());
+                .map(this::toDto).collect(Collectors.toList());
     }
 
     @WebResult(name = "location")
-    public Location createLocation(@WebParam(name = "createLocationRequest") @XmlElement(required = true) CreateLocationRequest createLocationRequest) {
+    public LocationDto createLocation(@WebParam(name = "createLocationRequest") @XmlElement(required = true) CreateLocationRequest createLocationRequest) {
         List<String> errors = new ArrayList<>();
         new Validator().validate(createLocationRequest.getName(), createLocationRequest.getLat(), createLocationRequest.getLon(), errors);
         if (!errors.isEmpty()) {
             throw new IllegalArgumentException(errors.get(0));
         }
-        // TODO
-        return null;
+
+        var location = locationsService.createLocation(toCommand(createLocationRequest));
+        return toDto(location);
+    }
+
+    private CreateLocationCommand toCommand(CreateLocationRequest request) {
+        var command = new CreateLocationCommand();
+        command.setName(request.getName());
+        command.setCoords(request.getLat() + "," + request.getLon());
+        command.setInterestingAt(request.getInterestingAt());
+        command.setTags(request.getTags());
+        return command;
+    }
+
+    private CreateLocationCommand toCommand(UpdateLocationRequest request) {
+        var command = new CreateLocationCommand();
+        command.setName(request.getName());
+        command.setCoords(request.getLat() + "," + request.getLon());
+        command.setInterestingAt(request.getInterestingAt());
+        command.setTags(request.getTags());
+        return command;
+    }
+
+    private LocationDto toDto(Location location) {
+        var dto = new LocationDto();
+        dto.setId(location.getId());
+        dto.setName(location.getName());
+        dto.setLat(location.getLat());
+        dto.setLon(location.getLon());
+        dto.setInterestingAt(location.getInterestingAt());
+        if (!location.getTags().isEmpty()) {
+            dto.setTags(String.join(",", location.getTags()));
+        }
+        return dto;
     }
 
     @WebResult(name = "location")
-    public Location updateLocation(@WebParam(name = "updateLocationRequest") @XmlElement(required = true) UpdateLocationRequest location) {
+    public LocationDto updateLocation(@WebParam(name = "updateLocationRequest") @XmlElement(required = true) UpdateLocationRequest request) {
         List<String> errors = new ArrayList<>();
-        new Validator().validate(location.getName(), location.getLat(), location.getLon(), errors);
+        new Validator().validate(request.getName(), request.getLat(), request.getLon(), errors);
         if (!errors.isEmpty()) {
             throw new IllegalArgumentException(errors.get(0));
         }
-        // TODO
-        return null;
+
+        var location = locationsService.updateLocation(request.getId(), toCommand(request));
+        if (location.isEmpty()) {
+            throw new IllegalArgumentException("Unknown id: " + request.getId());
+        }
+        return toDto(location.get());
     }
 
     @WebMethod

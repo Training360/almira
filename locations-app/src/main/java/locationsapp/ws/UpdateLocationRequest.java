@@ -2,25 +2,31 @@ package locationsapp.ws;
 
 import lombok.Data;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDateTime;
 
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"id", "name", "lat", "lon"})
+@XmlType(propOrder = {"id", "name", "lat", "lon", "interestingAt", "tags"})
 public class UpdateLocationRequest {
 
+    @XmlAttribute
     private long id;
 
-    @XmlAttribute(required = true)
+    @XmlElement(required = true)
     private String name;
 
-    @XmlAttribute(required = true)
+    @XmlElement(required = true)
     private double lat;
 
-    @XmlAttribute(required = true)
+    @XmlElement(required = true)
     private double lon;
+
+    @XmlElement(name = "interesting-at")
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
+    private LocalDateTime interestingAt;
+
+    private String tags;
 
 }

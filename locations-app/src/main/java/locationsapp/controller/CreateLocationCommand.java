@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class CreateLocationRequest {
+public class CreateLocationCommand {
 
     private String name;
 

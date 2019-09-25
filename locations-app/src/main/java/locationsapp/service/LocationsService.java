@@ -1,13 +1,12 @@
 package locationsapp.service;
 
-import locationsapp.controller.CreateLocationRequest;
+import locationsapp.controller.CreateLocationCommand;
 import locationsapp.entities.Location;
 import locationsapp.repository.LocationsRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -30,11 +29,11 @@ public class LocationsService {
     }
 
     public List<Location> listLocations() {
-        return locationsRepository.findAll(Sort.by("name"));
+        return locationsRepository.findAllWithTags(Pageable.unpaged()).getContent();
     }
 
-    public Location createLocation(CreateLocationRequest req) {
-        Scanner scanner = new Scanner(req.getCoords()).useDelimiter(",")
+    public Location createLocation(CreateLocationCommand command) {
+        Scanner scanner = new Scanner(command.getCoords()).useDelimiter(",")
                 .useLocale(Locale.UK);
         double lat = scanner.nextDouble();
         double lon = scanner.nextDouble();
@@ -42,12 +41,12 @@ public class LocationsService {
         Location location = new Location();
         location.setLat(lat);
         location.setLon(lon);
-        location.setName(req.getName());
-        location.setInterestingAt(req.getInterestingAt());
-        location.setTags(parseTags(req.getTags()));
+        location.setName(command.getName());
+        location.setInterestingAt(command.getInterestingAt());
+        location.setTags(parseTags(command.getTags()));
 
         locationsRepository.save(location);
-        LOGGER.info(String.format("Location has created id: %s, name: %s", location.getId(), req.getName()));
+        LOGGER.info(String.format("Location has created id: %s, name: %s", location.getId(), command.getName()));
         return location;
     }
 
@@ -56,7 +55,7 @@ public class LocationsService {
     }
 
     @Transactional
-    public Optional<Location> updateLocation(long id, CreateLocationRequest req) {
+    public Optional<Location> updateLocation(long id, CreateLocationCommand req) {
         var maybeLocation = locationsRepository.findById(id);
         if (maybeLocation.isEmpty()) {
             return Optional.empty();

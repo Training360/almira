@@ -11,11 +11,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.Id;
 import java.util.*;
 
 @RestController
@@ -74,7 +71,7 @@ public class LocationsController {
     }
 
     @RequestMapping(value = "/api/locations/{id}", method = RequestMethod.POST)
-    public ResponseEntity<Object> updateLocation(@PathVariable long id, @RequestBody CreateLocationRequest req) {
+    public ResponseEntity<Object> updateLocation(@PathVariable long id, @RequestBody CreateLocationCommand req) {
         List<String> errors = new ArrayList<>();
         checkValues(req.getName(), req.getCoords(), errors);
        if (!errors.isEmpty()) {
@@ -89,7 +86,7 @@ public class LocationsController {
     }
 
     @RequestMapping(value = "/api/locations", method = RequestMethod.POST)
-    public ResponseEntity<Object> createLocation(@RequestBody CreateLocationRequest req) {
+    public ResponseEntity<Object> createLocation(@RequestBody CreateLocationCommand req) {
         List<String> errors = new ArrayList<>();
         checkValues(req.getName(), req.getCoords(), errors);
         if (!errors.isEmpty()) {
