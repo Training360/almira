@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -25,9 +26,13 @@ public class LocationsAppApplication implements WebMvcConfigurer
     @Autowired
     private Bus bus;
 
+    @Autowired
+    private Environment environment;
+
     @Bean
     public Endpoint endpoint(LocationsEndpoint locationsEndpoint) {
         EndpointImpl endpoint = new EndpointImpl(bus, locationsEndpoint);
+        endpoint.setPublishedEndpointUrl(environment.getProperty("publish.url.prefix") + "/services/locations");
         endpoint.publish("/locations");
         return endpoint;
     }
