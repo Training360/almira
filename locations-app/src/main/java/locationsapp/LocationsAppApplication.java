@@ -1,5 +1,7 @@
 package locationsapp;
 
+import locationsapp.ws.AuthEndpoint;
+import locationsapp.ws.FilesEndpoint;
 import locationsapp.ws.LocationsEndpoint;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
@@ -30,10 +32,26 @@ public class LocationsAppApplication implements WebMvcConfigurer
     private Environment environment;
 
     @Bean
-    public Endpoint endpoint(LocationsEndpoint locationsEndpoint) {
+    public Endpoint publishedLocationsEndpoint(LocationsEndpoint locationsEndpoint) {
         EndpointImpl endpoint = new EndpointImpl(bus, locationsEndpoint);
         endpoint.setPublishedEndpointUrl(environment.getProperty("publish.url.prefix") + "/services/locations");
         endpoint.publish("/locations");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint publishedFilesEndpoint(FilesEndpoint filesEndpoint) {
+        EndpointImpl endpoint = new EndpointImpl(bus, filesEndpoint);
+        endpoint.setPublishedEndpointUrl(environment.getProperty("publish.url.prefix") + "/services/files");
+        endpoint.publish("/files");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint publishedAuthEndpoint(AuthEndpoint authEndpoint) {
+        EndpointImpl endpoint = new EndpointImpl(bus, authEndpoint);
+        endpoint.setPublishedEndpointUrl(environment.getProperty("publish.url.prefix") + "/services/auth");
+        endpoint.publish("/auth");
         return endpoint;
     }
 
