@@ -189,7 +189,7 @@ class: inverse, center, middle
 
 * Selenium IDE: Select target in page, Find target in page
 * Egyszerre több locatort is megjegyez, amelyik sikerül
-
+    * Amennyiben további fejlesztés miatt az egyik locator nem ad eredményt, a másik még adhat
 ---
 
 ## CSS selector
