@@ -35,8 +35,10 @@ function initScreen() {
 }
 
 function updateWebservicesLink() {
-    let address = window.location + "/services";
-    link = document.getElementById("webservices-link")
+    let url = window.location.href;
+    let base = url.substring(0, url.lastIndexOf("/"));
+    let address = base + "/services";
+    let link = document.getElementById("webservices-link");
     link.href = address;
     link.innerHTML = address;
 }
