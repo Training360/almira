@@ -64,7 +64,7 @@ public class LocationsController {
             double lat = scanner.nextDouble();
             double lon = scanner.nextDouble();
 
-            new Validator().validate(name, lat, lon, errors);
+            new LocationValidator().validate(name, lat, lon, errors);
         } catch (Exception e) {
             errors.add("Invalid coordinates format!");
         }

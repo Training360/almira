@@ -2,7 +2,7 @@ package locationsapp.controller;
 
 import java.util.List;
 
-public class Validator {
+public class LocationValidator {
 
     public void validate(String name, double lat, double lon, List<String> errors) {
         if (name == null || name.trim().isEmpty()) {

@@ -1,7 +1,7 @@
 package locationsapp.ws;
 
 import locationsapp.controller.CreateLocationCommand;
-import locationsapp.controller.Validator;
+import locationsapp.controller.LocationValidator;
 import locationsapp.entities.Location;
 import locationsapp.service.LocationsService;
 import org.springframework.stereotype.Service;
@@ -37,7 +37,7 @@ public class LocationsEndpoint {
     @WebResult(name = "location")
     public LocationDto createLocation(@WebParam(name = "createLocationRequest") @XmlElement(required = true) CreateLocationRequest createLocationRequest) {
         List<String> errors = new ArrayList<>();
-        new Validator().validate(createLocationRequest.getName(), createLocationRequest.getLat(), createLocationRequest.getLon(), errors);
+        new LocationValidator().validate(createLocationRequest.getName(), createLocationRequest.getLat(), createLocationRequest.getLon(), errors);
         if (!errors.isEmpty()) {
             throw new IllegalArgumentException(errors.get(0));
         }
@@ -80,7 +80,7 @@ public class LocationsEndpoint {
     @WebResult(name = "location")
     public LocationDto updateLocation(@WebParam(name = "updateLocationRequest") @XmlElement(required = true) UpdateLocationRequest request) {
         List<String> errors = new ArrayList<>();
-        new Validator().validate(request.getName(), request.getLat(), request.getLon(), errors);
+        new LocationValidator().validate(request.getName(), request.getLat(), request.getLon(), errors);
         if (!errors.isEmpty()) {
             throw new IllegalArgumentException(errors.get(0));
         }
