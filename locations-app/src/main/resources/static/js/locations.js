@@ -84,7 +84,7 @@ function downloadLocations(page = 0, size) {
             return response.json();
             })
         .then(function(jsonData) {
-            initPagination(jsonData.number, jsonData.totalElements);
+            initPagination(jsonData.number, jsonData.totalPages);
             fillTable(jsonData.content);
         });
 }
@@ -137,8 +137,8 @@ function fillTable(locations) {
   }
 }
 
-function initPagination(page, totalElements) {
-    if (page == 0) {
+function initPagination(page, totalPages) {
+    if (page === 0) {
         document.getElementById("prev-link").setAttribute("hidden", "hidden");
     }
     else {
@@ -146,7 +146,7 @@ function initPagination(page, totalElements) {
         document.getElementById("prev-link").setAttribute("href", "?page=" + (page - 1) + "&size=" + defaultSize)
     }
     document.getElementById("page-span").innerHTML = page;
-    if (page + defaultSize < totalElements) {
+    if (page < totalPages - 1) {
             document.getElementById("next-link").removeAttribute("hidden");
             document.getElementById("next-link").setAttribute("href", "?page=" + (page + 1) + "&size=" + defaultSize)
         }
