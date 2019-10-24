@@ -185,12 +185,24 @@ function prepareForUpdateLocation() {
 }
 
 function createLocation() {
-    var name = document.getElementById("location-name").value;
-    var coords = document.getElementById("location-coords").value;
-    var interestingAt = document.getElementById("location-interesting-at").value;
-    var tags = document.getElementById("location-tags").value;
+    let delay = getParameterByName("delay");
 
-    var request = {"name": name, "coords": coords, "interestingAt": interestingAt, "tags": tags};
+    if (!delay) {
+        createLocationNow();
+    }
+    else {
+        setTimeout(createLocationNow, delay);
+    }
+    return false;
+}
+
+function createLocationNow() {
+    let name = document.getElementById("location-name").value;
+    let coords = document.getElementById("location-coords").value;
+    let interestingAt = document.getElementById("location-interesting-at").value;
+    let tags = document.getElementById("location-tags").value;
+
+    let request = {"name": name, "coords": coords, "interestingAt": interestingAt, "tags": tags};
 
 
     fetch("api/locations", {
@@ -200,22 +212,20 @@ function createLocation() {
             "Content-type": "application/json"
         }
     })
-    .then(function(response) {
-        return response.json().then(function(jsonData) {
-            return {status: response.status, body: jsonData}
+        .then(function(response) {
+            return response.json().then(function(jsonData) {
+                return {status: response.status, body: jsonData}
+            });
+        })
+        .then(function(jsonData) {
+            if (jsonData.status == 200) {
+                successCreate();
+            }
+            else {
+                document.getElementById("message-div").innerHTML = jsonData.body.message;
+                document.getElementById("message-div").setAttribute("class", "alert alert-danger");
+            }
         });
-    })
-    .then(function(jsonData) {
-        if (jsonData.status == 200) {
-           successCreate();
-        }
-        else {
-            document.getElementById("message-div").innerHTML = jsonData.body.message;
-            document.getElementById("message-div").setAttribute("class", "alert alert-danger");
-        }
-    });
-
-    return false;
 }
 
 function successCreate() {
