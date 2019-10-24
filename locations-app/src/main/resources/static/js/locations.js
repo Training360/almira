@@ -1,17 +1,16 @@
-var defaultSize = 10;
 var state = "default";
 
 window.onload = function() {
-    downloadLocations();
-    var locationForm = document.getElementById("location-form");
+    initScreen();
+    let locationForm = document.getElementById("location-form");
     locationForm.onsubmit = createLocation;
 
-    var updateLocationForm = document.getElementById("update-location-form");
+    let updateLocationForm = document.getElementById("update-location-form");
     updateLocationForm.onsubmit = updateLocation;
 
-    var prevLink = document.getElementById("prev-link");
+    let prevLink = document.getElementById("prev-link");
     prevLink.onclick = doPaging;
-    var nextLink = document.getElementById("next-link");
+    let nextLink = document.getElementById("next-link");
     nextLink.onclick = doPaging;
 
     document.getElementById("update-cancel-button").onclick = cancelUpdate;
@@ -22,6 +21,18 @@ window.onload = function() {
 
     updateWebservicesLink();
 };
+
+function initScreen() {
+    let page = getParameterByName("page");
+    if (page == null) {
+        page = 0;
+    }
+    let size = getParameterByName("size");
+    if (size == null) {
+        size = 10;
+    }
+    downloadLocations(page, size);
+}
 
 function updateWebservicesLink() {
     let address = window.location + "/services";
@@ -68,15 +79,15 @@ function cancelCreate() {
 }
 
 function doPaging() {
-    link = this.getAttribute("href");
-    downloadLocations(getParameterByName("page", link), getParameterByName("size", link))
+    let link = this.getAttribute("href");
+    let page = getParameterByName("page", link);
+    let size = getParameterByName("size", link);
+    downloadLocations(page, size);
+    window.history.pushState("Locations", "Locations (page " + page + ")", "?page=" + page + "&size=" + size);
     return false;
 }
 
-function downloadLocations(page = 0, size) {
-    if (!size) {
-        size = defaultSize;
-    }
+function downloadLocations(page, size) {
     let url = 'api/locations?page=' + page + "&size=" + size;
 
     fetch(url)
@@ -84,7 +95,7 @@ function downloadLocations(page = 0, size) {
             return response.json();
             })
         .then(function(jsonData) {
-            initPagination(jsonData.number, jsonData.totalPages);
+            initPagination(jsonData.number, jsonData.totalPages, size);
             fillTable(jsonData.content);
         });
 }
@@ -137,18 +148,18 @@ function fillTable(locations) {
   }
 }
 
-function initPagination(page, totalPages) {
+function initPagination(page, totalPages, size) {
     if (page === 0) {
         document.getElementById("prev-link").setAttribute("hidden", "hidden");
     }
     else {
         document.getElementById("prev-link").removeAttribute("hidden");
-        document.getElementById("prev-link").setAttribute("href", "?page=" + (page - 1) + "&size=" + defaultSize)
+        document.getElementById("prev-link").setAttribute("href", "?page=" + (page - 1) + "&size=" + size)
     }
     document.getElementById("page-span").innerHTML = page;
     if (page < totalPages - 1) {
             document.getElementById("next-link").removeAttribute("hidden");
-            document.getElementById("next-link").setAttribute("href", "?page=" + (page + 1) + "&size=" + defaultSize)
+            document.getElementById("next-link").setAttribute("href", "?page=" + (page + 1) + "&size=" + size)
         }
         else {
             document.getElementById("next-link").setAttribute("hidden", "hidden");
