@@ -10,14 +10,14 @@ funkcionális, regressziós és terheléses tesztekről is. A gyakorlatok során
 webes (böngészőből használható) alkalmazások, valamint SOAP és REST webszolgáltatások
 képzik a tesztelés tárgyát. A szükséges elméleti alapfogalmak is ismertetésre kerülnek.
 
-Felhasználó felület tesztelésére a Selenium (annak több komponensével, mint UI, WebDriver és Grid),
+Felhasználó felület tesztelésére a Selenium UI,
 SOAP webszolgáltatások tesztelésére a SoapUI, míg REST webszolgáltatások tesztelésére Postman
 tesztelő keretrendszerek kerülnek bemutatásra.
 
 ## Szükséges előképzettség
 
 Alapvető számítógép és szoftverhasználati ismeretek, valamint tesztelői vagy fejlesztői 
-alapismeretek szükségesek a tanfolyamon való részvételhez.
+alapismeretek szükségesek a tanfolyamon való részvételhez. Programozási előképzettség nem szükséges.
 
 Mivel a tananyagok egy
 része angol nyelvű, ezért alapfokú, dokumentumolvasás-szintű angol
@@ -36,14 +36,15 @@ slide-ok alapján.
     * Tesztesetek, teszt csomagok, teszt lépések
     * Parancsok
     * Lokátorok
-    * Assert lehetőségek
+    * Assert és verify lehetőségek
     * Debuggolás
     * Változók használata
     * Control flow, vezérlési szerkezetek, elágazások és ciklusok
     * Tesztesetből másik teszteset meghívása
     * Parancssori futtatás
-* Selenium WebDriver
-* Selenium Grid
+    * AJAX kezelése
+* Selenium WebDriver koncepcionális bemutatása, rövid demóval
+* Selenium Grid koncepcionális bemutatása, rövid demóval
 * SOAP webszolgáltatások, SOAP envelope, WSDL
 * SoapUI használata
     * SoapUI alkalmazás felépítése, projekt és fájlkezelés
@@ -51,7 +52,6 @@ slide-ok alapján.
     * Változók használata, properties
     * Property transfer
     * Adatbázis lekérdezések
-    * Data driven testing
     * Service mocking
     * Parancssori futtatás
     * Terheléses tesztelés
@@ -59,11 +59,11 @@ slide-ok alapján.
 * Postman használata
     * Postman alkalmazás felépítése, Workspace és fájlkezelés
     * History, Collection
-    * Collaboration
     * Dokumentáció generálása
     * Környezetek
     * Assert
-    * Futtatás parancssorban
     * Változók használata, scope
-    * CSV állományok kezelése
+    * Data driven testing, CSV állományok kezelése
+    * Futtatás parancssorban
+    * Collaboration lehetőségek áttekintése
 * Best practices
