@@ -35,6 +35,32 @@ class: inverse, center, middle
 
 ---
 
+## Selenium helye a tesztpiramisban
+
+* E2E tesztelés
+* GUI oldalról
+* E2E tesztelés erőforrásigényes teszt készítés és teszt futtatás szempontjából is
+    * Rendszer tesztelése a környezetével integrálva
+    * Környezet megfelelő állapotban van?
+    * Böngészők, virtuális ablakozó rendszer
+    * Lassú
+* Ne függj törékeny, gyakran változó dolgoktól, mint a GUI
+    * Fragile Test Problem - változik a GUI, változtatni kell a teszteseteket
+
+---
+
+## Selenium alkalmazási területei
+
+* Ha kevés teljes folyamaton átívelő, több lépésből álló E2E
+tesztem van, ami a core üzleti funkcionalitást teszteli (happy path), (sanity)
+* Megkérdőjelezhetőek a klasszikus alapelvek:
+    * Egy teszt egy dolgot tesztel, egy dologra ellenőrzök
+        * Több lépés esetén több ellenőrzés
+* Ha nem törik el: jön a pénz
+* Ha eltörik: nem jön a pénz
+
+---
+
 ## Eszközök
 
 * Selenium IDE: felvétel és visszajátszás grafikus felületen
@@ -79,9 +105,9 @@ class: inverse, center, middle
 
 ## Első teszt felvétele és visszajátszása (gyakorlat)
 
-* http://tadev.training360.com/testapp-web
-* Egy teszt végigvitele: `Answer questions`
-* Eredmény ellenőrzése: Jobb klikk/Selenium IDE/Assert text
+* http://host/locations/server
+* Új lokáció felvétele helyes adatokkal
+* Eredmény ellenőrzése: Jobb klikk/Selenium IDE/Assert text (`Location has saved.`)
 
 ---
 
@@ -133,9 +159,9 @@ class: inverse, center, middle
 
 ## Új teszt felvétele (gyakorlat)
 
-* New test (név: `List results`)
-* Record
-* Eredmény ellenőrzése: Jobb klikk/Selenium IDE/Assert text
+* http://host/locations/server
+* Új lokáció felvétele helytelen adatokkal
+* Eredmény ellenőrzése: Jobb klikk/Selenium IDE/Assert text (`Location has saved.`)
 
 ---
 
@@ -237,9 +263,16 @@ class: inverse, center, middle
 
 ## XPath ismeretlen csomópontok
 
-* `/html/body/*` - összes gyerek 
+* `/html/body/*` - összes gyerek
 * `//*` - összes elem
 * `//*[@id="name-input"]` - összes tag, megadott attribútummal
+
+---
+
+## Új assert (gyakorlat)
+
+* A táblázatban megjelenik-e <span style="color:white">xpath=//td[contains(text(), 'Győr')]</span>
+* A táblázatban ha megjelenik, a koordináta <span style="color:white">xpath=//tr[td[contains(text(), 'Győr')]]/td[2]</span>
 
 ---
 
@@ -266,11 +299,37 @@ class: inverse, center, middle
     * Test fixture
         * Legszélsőségesebb megoldás: adatbázistörlés
 
+
 ---
 
-## Új komplex teszt (gyakorlat)
+## Változók használata
 
-* Egy tesztkitöltés rögzítése, valamint az eredmények megtekintése
+* `store [érték] [változónév]`
+* `echo [érték]` parancs, változóra: `${változónév}`
+
+---
+
+## Változó újrafelhasználása (gyakorlat)
+
+* A név értéke legyen a `name` változóban
+
+---
+
+## JavaScript + változó (gyakorlat)
+
+* `execute script | return Date.now(); | now`
+* Névben legyen benne ez a generált szám
+
+```javascript
+confirm("Hello World!");console.log("Hello Console!");
+```
+
+---
+
+## XPath kifejezés értéke változóba (gyakorlat)
+
+* Id visszaolvasása
+* `store text` <span style="color:white">xpath=//tr[td[contains(text(), 'Győr')]]/td[1]</span>
 
 ---
 
@@ -283,41 +342,6 @@ class: inverse, center, middle
 ## DRY megszüntetése (gyakorlat)
 
 * `Answer questions` hívása `run` parancs segítségével
-
----
-
-## Változók használata
-
-* `store [érték] [változónév]` 
-* `echo [érték]` parancs, változóra: `${változónév}`
-
----
-
-## Változó újrafelhasználása (gyakorlat)
-
-* A név értéke legyen a `name` változóban
-
----
-
-## XPath kifejezés értéke változóba (gyakorlat)
-
-* A results oldalon a táblázat sorainak számát kell ellenőrizni
-
----
-
-## Saját alkalmazáspéldány elindítása (gyakorlat)
-
-* séma inicializálás
-
-```sql
-create schema if not exists testdb default character set utf8 collate utf8_hungarian_ci;
-
-create user 'testuser'@'localhost' identified by 'testpwd';
-grant all on *.* to 'testuser'@'localhost';
-```
-
-* testapp-web indítása (`java -jar testapp-web.jar`)
-* Base URL módosítása
 
 ---
 
