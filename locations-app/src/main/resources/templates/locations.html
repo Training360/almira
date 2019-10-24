@@ -14,6 +14,7 @@
 
     <table class="table table-hover">
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>Location</th>
             <th>Coordinates</th>
@@ -24,6 +25,7 @@
         <tbody>
         <th:block th:each="location : ${page.content}">
             <tr>
+                <td th:text="${location.id}"></td>
                 <td th:text="${location.name}"></td>
                 <td th:text="${location.lat + ',' + location.lon}"></td>
                 <td th:text="${location.interestingAt}"></td>
