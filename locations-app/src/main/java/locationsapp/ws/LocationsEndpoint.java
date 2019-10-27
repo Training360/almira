@@ -2,6 +2,7 @@ package locationsapp.ws;
 
 import locationsapp.controller.CreateLocationCommand;
 import locationsapp.controller.LocationValidator;
+import locationsapp.controller.UpdateLocationCommand;
 import locationsapp.entities.Location;
 import locationsapp.service.LocationsService;
 import org.springframework.stereotype.Service;
@@ -55,8 +56,9 @@ public class LocationsEndpoint {
         return command;
     }
 
-    private CreateLocationCommand toCommand(UpdateLocationRequest request) {
-        var command = new CreateLocationCommand();
+    private UpdateLocationCommand toCommand(UpdateLocationRequest request) {
+        var command = new UpdateLocationCommand();
+        command.setId(request.getId());
         command.setName(request.getName());
         command.setCoords(request.getLat() + "," + request.getLon());
         command.setInterestingAt(request.getInterestingAt());
@@ -85,7 +87,7 @@ public class LocationsEndpoint {
             throw new IllegalArgumentException(errors.get(0));
         }
 
-        var location = locationsService.updateLocation(request.getId(), toCommand(request));
+        var location = locationsService.updateLocation(toCommand(request));
         if (location.isEmpty()) {
             throw new IllegalArgumentException("Unknown id: " + request.getId());
         }

@@ -218,14 +218,21 @@ function createLocationNow() {
             });
         })
         .then(function(jsonData) {
-            if (jsonData.status == 200) {
+            if (jsonData.status === 200) {
                 successCreate();
             }
             else {
-                document.getElementById("message-div").innerHTML = jsonData.body.message;
+                document.getElementById("message-div").innerHTML = getErrorMessages(jsonData);
                 document.getElementById("message-div").setAttribute("class", "alert alert-danger");
             }
         });
+}
+
+function getErrorMessages(jsonData) {
+    let errorMessages = jsonData.body.errors;
+    let concatenated = "";
+    errorMessages.forEach(errorMessage => concatenated += errorMessage.defaultMessage + "; ");
+    return concatenated;
 }
 
 function successCreate() {
@@ -263,15 +270,15 @@ function successDelete() {
 }
 
 function updateLocation() {
-    var id = document.getElementById("update-location-id").value;
-    var name = document.getElementById("update-location-name").value;
-    var coords = document.getElementById("update-location-coords").value;
-    var interestingAt = document.getElementById("update-location-interesting-at").value;
-    var tags = document.getElementById("update-location-tags").value;
+    let id = document.getElementById("update-location-id").value;
+    let name = document.getElementById("update-location-name").value;
+    let coords = document.getElementById("update-location-coords").value;
+    let interestingAt = document.getElementById("update-location-interesting-at").value;
+    let tags = document.getElementById("update-location-tags").value;
 
-    var request = {"name": name, "coords": coords, "interestingAt": interestingAt, "tags": tags};
+    let request = {"name": name, "coords": coords, "interestingAt": interestingAt, "tags": tags};
 
-    var url = 'api/locations/' + id;
+    let url = 'api/locations/' + id;
 
     fetch(url, {
         method: "POST",
@@ -290,7 +297,7 @@ function updateLocation() {
            successUpdate();
         }
         else {
-            document.getElementById("message-div").innerHTML = jsonData.body.message;
+            document.getElementById("message-div").innerHTML = getErrorMessages(jsonData);
             document.getElementById("message-div").setAttribute("class", "alert alert-danger");
         }
     });

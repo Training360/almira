@@ -26,11 +26,6 @@ public class LocationsServerController {
         this.locationsService = locationsService;
     }
 
-    @InitBinder("createLocationCommand")
-    public void initBinder(WebDataBinder binder) {
-        binder.addValidators(new CreateLocationCommandValidator());
-    }
-
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ModelAndView listLocations() {
         return new ModelAndView("locations", "page", locationsService.listLocations(PageRequest.of(0, 20_000, Sort.by("name")))).addObject("createLocationCommand", new CreateLocationCommand());

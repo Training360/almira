@@ -6,7 +6,9 @@ import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @Data
-public class CreateLocationCommand {
+public class UpdateLocationCommand {
+
+    private long id;
 
     @NotBlank
     private String name;
@@ -17,5 +19,4 @@ public class CreateLocationCommand {
     private LocalDateTime interestingAt;
 
     private String tags;
-
 }

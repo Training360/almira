@@ -3,8 +3,6 @@ package locationsapp.controller;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import locationsapp.entities.Location;
 import locationsapp.service.LocationsService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -13,12 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import javax.validation.Valid;
 
 @RestController
 public class LocationsController {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(LocationsController.class);
 
     private LocationsService locationsService;
 
@@ -53,32 +49,11 @@ public class LocationsController {
         }
     }
 
-    private void checkValues(String name, String coords, List<String> errors) {
-        if (!coords.matches("^-?\\d*\\.?\\d*,-?\\d*\\.?\\d*$")) {
-            errors.add("Invalid coordinates format!");
-        }
-
-        try {
-            Scanner scanner = new Scanner(coords).useDelimiter(",")
-                    .useLocale(Locale.UK);
-            double lat = scanner.nextDouble();
-            double lon = scanner.nextDouble();
-
-            new LocationValidator().validate(name, lat, lon, errors);
-        } catch (Exception e) {
-            errors.add("Invalid coordinates format!");
-        }
-    }
-
     @RequestMapping(value = "/api/locations/{id}", method = RequestMethod.POST)
-    public ResponseEntity<Object> updateLocation(@PathVariable long id, @RequestBody CreateLocationCommand req) {
-        List<String> errors = new ArrayList<>();
-        checkValues(req.getName(), req.getCoords(), errors);
-       if (!errors.isEmpty()) {
-           return new ResponseEntity<>(new DataError(errors.get(0)), HttpStatus.BAD_REQUEST);
-       }
+    public ResponseEntity<Object> updateLocation(@PathVariable long id, @Valid @RequestBody UpdateLocationCommand req) {
+        req.setId(id);
 
-        var location = locationsService.updateLocation(id, req);
+        var location = locationsService.updateLocation(req);
        if (location.isEmpty()) {
            return new ResponseEntity<>(new DataError("Not found"), HttpStatus.NOT_FOUND);
        }
@@ -86,12 +61,7 @@ public class LocationsController {
     }
 
     @RequestMapping(value = "/api/locations", method = RequestMethod.POST)
-    public ResponseEntity<Object> createLocation(@RequestBody CreateLocationCommand req) {
-        List<String> errors = new ArrayList<>();
-        checkValues(req.getName(), req.getCoords(), errors);
-        if (!errors.isEmpty()) {
-            return new ResponseEntity<>(new DataError(errors.get(0)), HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Object> createLocation(@Valid @RequestBody CreateLocationCommand req) {
 
         Location location = locationsService.createLocation(req);
         return new ResponseEntity(location, HttpStatus.OK);

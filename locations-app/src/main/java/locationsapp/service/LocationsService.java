@@ -1,8 +1,10 @@
 package locationsapp.service;
 
 import locationsapp.controller.CreateLocationCommand;
+import locationsapp.controller.UpdateLocationCommand;
 import locationsapp.entities.Location;
 import locationsapp.repository.LocationsRepository;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -20,8 +22,11 @@ public class LocationsService {
 
     private LocationsRepository locationsRepository;
 
-    public LocationsService(LocationsRepository locationsRepository) {
+    private ModelMapper modelMapper;
+
+    public LocationsService(LocationsRepository locationsRepository, ModelMapper modelMapper) {
         this.locationsRepository = locationsRepository;
+        this.modelMapper = modelMapper;
     }
 
     public Page<Location> listLocations(Pageable pageable) {
@@ -55,24 +60,24 @@ public class LocationsService {
     }
 
     @Transactional
-    public Optional<Location> updateLocation(long id, CreateLocationCommand req) {
-        var maybeLocation = locationsRepository.findById(id);
+    public Optional<Location> updateLocation(UpdateLocationCommand command) {
+        var maybeLocation = locationsRepository.findById(command.getId());
         if (maybeLocation.isEmpty()) {
             return Optional.empty();
         }
         var location = maybeLocation.get();
-        Scanner scanner = new Scanner(req.getCoords()).useDelimiter(",")
+        Scanner scanner = new Scanner(command.getCoords()).useDelimiter(",")
                 .useLocale(Locale.UK);
         double lat = scanner.nextDouble();
         double lon = scanner.nextDouble();
 
-        location.setName(req.getName());
+        location.setName(command.getName());
         location.setLat(lat);
         location.setLon(lon);
-        location.setInterestingAt(req.getInterestingAt());
-        location.setTags(parseTags(req.getTags()));
+        location.setInterestingAt(command.getInterestingAt());
+        location.setTags(parseTags(command.getTags()));
 
-        LOGGER.info(String.format("Location has updated id: %s, name: %s", id, req.getName()));
+        LOGGER.info(String.format("Location has updated id: %s, name: %s", command.getId(), command.getName()));
         return Optional.of(location);
     }
 
