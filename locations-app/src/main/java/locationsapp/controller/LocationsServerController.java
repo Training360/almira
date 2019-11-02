@@ -40,7 +40,7 @@ public class LocationsServerController {
         }
 
         locationsService.createLocation(createLocationCommand);
-        redirectAttributes.addFlashAttribute("message", "Location has saved.");
+        redirectAttributes.addFlashAttribute("message", "Location has been saved.");
         return new ModelAndView("redirect:/server");
     }
 

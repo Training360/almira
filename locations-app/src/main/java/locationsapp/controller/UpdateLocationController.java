@@ -37,7 +37,7 @@ public class UpdateLocationController {
             return new ModelAndView("update-location");
         }
         locationsService.updateLocation(command);
-        redirectAttributes.addFlashAttribute("message", "Location has updated.");
+        redirectAttributes.addFlashAttribute("message", "Location has been updated.");
         return new ModelAndView("redirect:/server");
     }
 }

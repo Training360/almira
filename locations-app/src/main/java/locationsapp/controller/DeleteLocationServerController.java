@@ -20,7 +20,7 @@ public class DeleteLocationServerController {
     @PostMapping("/delete")
     public String delete(@ModelAttribute DeleteCommand command, RedirectAttributes redirectAttributes) {
         locationsService.deleteLocation(command.getId());
-        redirectAttributes.addFlashAttribute("message", "Location has deleted.");
+        redirectAttributes.addFlashAttribute("message", "Location has been deleted.");
         return "redirect:/server";
     }
 }
