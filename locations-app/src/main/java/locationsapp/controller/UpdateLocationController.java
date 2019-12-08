@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/server")
+@RequestMapping("/server/update")
 public class UpdateLocationController {
 
     private LocationsService locationsService;
@@ -23,7 +23,7 @@ public class UpdateLocationController {
         this.modelMapper = modelMapper;
     }
 
-    @GetMapping("/update")
+    @GetMapping
     public ModelAndView updateLocation(@RequestParam long id) {
         var command = modelMapper.map(
                 locationsService.getLocationById(id).orElseThrow(() -> new IllegalArgumentException("Invalid identifier: " + id)), UpdateLocationCommand.class);
@@ -31,13 +31,13 @@ public class UpdateLocationController {
                 .addObject("updateLocationCommand", command);
     }
 
-    @PostMapping("/update")
+    @PostMapping
     public ModelAndView updateLocationPost(@Valid UpdateLocationCommand command, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors()) {
             return new ModelAndView("update-location");
         }
         locationsService.updateLocation(command);
         redirectAttributes.addFlashAttribute("message", "Location has been updated.");
-        return new ModelAndView("redirect:/server");
+        return new ModelAndView("redirect:/server/details?id=" + command.getId());
     }
 }

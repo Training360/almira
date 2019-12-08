@@ -1,10 +1,11 @@
 package locationsapp.ws;
 
 import locationsapp.controller.CreateLocationCommand;
+import locationsapp.controller.LocationDto;
 import locationsapp.controller.LocationValidator;
 import locationsapp.controller.UpdateLocationCommand;
-import locationsapp.entities.Location;
 import locationsapp.service.LocationsService;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.jws.WebMethod;
@@ -23,20 +24,23 @@ public class LocationsEndpoint {
 
     private LocationsService locationsService;
 
-    public LocationsEndpoint(LocationsService locationsService) {
+    private ModelMapper modelMapper;
+
+    public LocationsEndpoint(LocationsService locationsService, ModelMapper modelMapper) {
         this.locationsService = locationsService;
+        this.modelMapper = modelMapper;
     }
 
     @WebMethod
     @XmlElementWrapper(name = "locations")
     @WebResult(name = "location")
-    public List<LocationDto> listLocations() {
+    public List<LocationEndpointDto> listLocations() {
         return locationsService.listLocations().stream()
                 .map(this::toDto).collect(Collectors.toList());
     }
 
     @WebResult(name = "location")
-    public LocationDto createLocation(@WebParam(name = "createLocationRequest") @XmlElement(required = true) CreateLocationRequest createLocationRequest) {
+    public LocationEndpointDto createLocation(@WebParam(name = "createLocationRequest") @XmlElement(required = true) CreateLocationRequest createLocationRequest) {
         List<String> errors = new ArrayList<>();
         new LocationValidator().validate(createLocationRequest.getName(), createLocationRequest.getLat(), createLocationRequest.getLon(), errors);
         if (!errors.isEmpty()) {
@@ -66,8 +70,8 @@ public class LocationsEndpoint {
         return command;
     }
 
-    private LocationDto toDto(Location location) {
-        var dto = new LocationDto();
+    private LocationEndpointDto toDto(LocationDto location) {
+        var dto = new LocationEndpointDto();
         dto.setId(location.getId());
         dto.setName(location.getName());
         dto.setLat(location.getLat());
@@ -80,7 +84,7 @@ public class LocationsEndpoint {
     }
 
     @WebResult(name = "location")
-    public LocationDto updateLocation(@WebParam(name = "updateLocationRequest") @XmlElement(required = true) UpdateLocationRequest request) {
+    public LocationEndpointDto updateLocation(@WebParam(name = "updateLocationRequest") @XmlElement(required = true) UpdateLocationRequest request) {
         List<String> errors = new ArrayList<>();
         new LocationValidator().validate(request.getName(), request.getLat(), request.getLon(), errors);
         if (!errors.isEmpty()) {
@@ -97,10 +101,11 @@ public class LocationsEndpoint {
     @WebMethod
     @WebResult(name = "status")
     public String deleteLocation(@WebParam(name = "locationId") long id) {
-        var location = locationsService.deleteLocation(id);
-        if (location.isEmpty()) {
+        var success = locationsService.deleteLocation(id);
+        if (success) {
+            return "deleted";
+        } else {
             throw new IllegalArgumentException("Unknown id: " + id);
         }
-        return "deleted";
     }
 }

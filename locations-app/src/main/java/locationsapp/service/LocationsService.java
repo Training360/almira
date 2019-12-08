@@ -1,6 +1,7 @@
 package locationsapp.service;
 
 import locationsapp.controller.CreateLocationCommand;
+import locationsapp.controller.LocationDto;
 import locationsapp.controller.UpdateLocationCommand;
 import locationsapp.entities.Location;
 import locationsapp.repository.LocationsRepository;
@@ -33,11 +34,14 @@ public class LocationsService {
         return locationsRepository.findAllWithTags(pageable);
     }
 
-    public List<Location> listLocations() {
-        return locationsRepository.findAllWithTags(Pageable.unpaged()).getContent();
+    public List<LocationDto> listLocations() {
+        return locationsRepository.findAllWithTags(Pageable.unpaged()).getContent()
+                .stream()
+                .map(l -> modelMapper.map(l, LocationDto.class))
+                .collect(Collectors.toList());
     }
 
-    public Location createLocation(CreateLocationCommand command) {
+    public LocationDto createLocation(CreateLocationCommand command) {
         Scanner scanner = new Scanner(command.getCoords()).useDelimiter(",")
                 .useLocale(Locale.UK);
         double lat = scanner.nextDouble();
@@ -52,15 +56,17 @@ public class LocationsService {
 
         locationsRepository.save(location);
         LOGGER.info(String.format("Location has created id: %s, name: %s", location.getId(), command.getName()));
-        return location;
+        return modelMapper.map(location, LocationDto.class);
     }
 
-    public Optional<Location> getLocationById(long id) {
-        return locationsRepository.findByIdWithTags(id);
+    public Optional<LocationDto> getLocationById(long id) {
+        return locationsRepository.findByIdWithTags(id)
+                .stream().map(l -> modelMapper.map(l, LocationDto.class))
+                .findFirst();
     }
 
     @Transactional
-    public Optional<Location> updateLocation(UpdateLocationCommand command) {
+    public Optional<LocationDto> updateLocation(UpdateLocationCommand command) {
         var maybeLocation = locationsRepository.findById(command.getId());
         if (maybeLocation.isEmpty()) {
             return Optional.empty();
@@ -78,19 +84,17 @@ public class LocationsService {
         location.setTags(parseTags(command.getTags()));
 
         LOGGER.info(String.format("Location has updated id: %s, name: %s", command.getId(), command.getName()));
-        return Optional.of(location);
+        return Optional.of(modelMapper.map(location, LocationDto.class));
     }
 
-    public Optional<Location> deleteLocation(long id) {
-        var location = locationsRepository.findByIdWithTags(id);
-        if (location.isEmpty()) {
-            return Optional.empty();
-        }
-        else {
+    public boolean deleteLocation(long id) {
+        var location = locationsRepository.findById(id);
+        if (location.isPresent()) {
             locationsRepository.delete(location.get());
             LOGGER.info(String.format("Location has deleted, id: %s", id));
-            return Optional.of(location.get());
+            return true;
         }
+        return false;
     }
 
     private List<String> parseTags(String tags) {

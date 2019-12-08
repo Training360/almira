@@ -1,6 +1,7 @@
 package locationsapp;
 
 import locationsapp.controller.CreateLocationCommand;
+import locationsapp.controller.LocationDto;
 import locationsapp.controller.UpdateLocationCommand;
 import locationsapp.entities.Location;
 import locationsapp.ws.AuthEndpoint;
@@ -44,10 +45,10 @@ public class LocationsAppApplication implements WebMvcConfigurer
     @Bean
     public ModelMapper modelMapper() {
         var modelMapper = new ModelMapper();
-        modelMapper.createTypeMap(Location.class, UpdateLocationCommand.class)
-                .setConverter(new Converter<Location, UpdateLocationCommand>() {
+        modelMapper.createTypeMap(LocationDto.class, UpdateLocationCommand.class)
+                .setConverter(new Converter<LocationDto, UpdateLocationCommand>() {
                     @Override
-                    public UpdateLocationCommand convert(MappingContext<Location, UpdateLocationCommand> context) {
+                    public UpdateLocationCommand convert(MappingContext<LocationDto, UpdateLocationCommand> context) {
                         var source = context.getSource();
                         var command = new UpdateLocationCommand();
                         command.setId(source.getId());

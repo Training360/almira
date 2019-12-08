@@ -4,14 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Locations</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    <script th:src="@{/js/locations-server.js}"></script>
 </head>
 <body>
 
 <div class="container">
 
-    <h1>Update location</h1>
-    <form th:action="@{/server/update}" th:object="${updateLocationCommand}" method="post">
-        <input type="hidden" name="id" th:value="${updateLocationCommand.id}">
+    <h1>Create location</h1>
+
+    <form th:action="@{/server/create}" th:object="${createLocationCommand}" method="post">
         <div class="form-group">
             <label for="nameInput">Name</label>
             <input type="text" th:field="*{name}" id="nameInput" class="form-control" th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"/>
@@ -30,9 +31,10 @@
                 Incorrect
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Update location</button>
-        <a th:href="@{/server/details(id=${updateLocationCommand.id})}">Cancel</a>
+        <button type="submit" class="btn btn-primary">Create location</button>
+        <a th:href="@{/server/}">Cancel</a>
     </form>
+
 </div>
 </body>
 </html>

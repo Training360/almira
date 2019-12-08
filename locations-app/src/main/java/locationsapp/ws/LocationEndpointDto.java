@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"id", "name", "lat", "lon", "interestingAt", "tags"})
-public class LocationDto {
+public class LocationEndpointDto {
 
     @XmlAttribute
     private Long id;

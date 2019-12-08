@@ -12,60 +12,29 @@
 
     <h1>Locations</h1>
 
+    <div class="alert alert-success" role="alert" th:if="${message}" th:text="${message}">Saved</div>
+
     <table class="table table-striped">
         <tr>
-            <th>Id</th>
             <th>Name</th>
             <th>Coordinates</th>
-            <th>Interesting at</th>
-            <th>Tags</th>
             <th></th>
         </tr>
 
         <tbody>
         <th:block th:each="location : ${page.content}">
             <tr>
-                <td th:text="${location.id}"></td>
                 <td th:text="${location.name}"></td>
                 <td th:text="${location.lat + ',' + location.lon}"></td>
-                <td th:text="${location.interestingAt}"></td>
-                <td th:text="${location.tags}"></td>
                 <td>
-                    <form th:action="@{/server/delete}" method="post">
-                        <input type="hidden" name="id" th:value="${location.id}" />
-                        <a th:href="@{/server/update(id=${location.id})}">Edit</a>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                        <a th:href="@{/server/details(id=${location.id})}">View</a>
                 </td>
             </tr>
         </th:block>
         </tbody>
     </table>
 
-    <div class="alert alert-success" role="alert" th:if="${message}" th:text="${message}">Saved</div>
-
-    <form th:action="@{/server}" th:object="${createLocationCommand}" method="post">
-        <div class="form-group">
-            <label for="nameInput">Name</label>
-            <input type="text" th:field="*{name}" id="nameInput" class="form-control" th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"/>
-            <div class="invalid-feedback"
-                  th:if="${#fields.hasErrors('name')}"
-                  th:errors="*{name}">
-                Incorrect
-        </div>
-        </div>
-        <div class="form-group">
-            <label for="coordsInput">Coordinates</label>
-            <input type="text" th:field="*{coords}" id="coordsInput" class="form-control" th:classappend="${#fields.hasErrors('coords')} ? 'is-invalid'"/>
-            <div class="invalid-feedback"
-                  th:if="${#fields.hasErrors('coords')}"
-                  th:errors="*{coords}">
-            Incorrect
-        </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Create location</button>
-    </form>
-
+    <a th:href="@{/server/create}">Create location</a>
 
 </div>
 
