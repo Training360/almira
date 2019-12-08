@@ -30,8 +30,8 @@ public class LocationsService {
         this.modelMapper = modelMapper;
     }
 
-    public Page<Location> listLocations(Pageable pageable) {
-        return locationsRepository.findAllWithTags(pageable);
+    public Page<LocationDto> listLocations(Pageable pageable) {
+        return locationsRepository.findAllWithTags(pageable).map(l -> modelMapper.map(l, LocationDto.class));
     }
 
     public List<LocationDto> listLocations() {

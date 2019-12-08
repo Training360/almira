@@ -23,7 +23,7 @@ public class LocationsRestController {
     }
 
     @RequestMapping(value = "/api/locations", method = RequestMethod.GET)
-    public Page<Location> listLocations(@PageableDefault(sort = "name") Pageable pageable) {
+    public Page<LocationDto> listLocations(@PageableDefault(sort = "name") Pageable pageable) {
         return locationsService.listLocations(pageable);
     }
 

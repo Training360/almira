@@ -14,8 +14,8 @@
 
     <form th:action="@{/server/create}" th:object="${createLocationCommand}" method="post">
         <div class="form-group">
-            <label for="nameInput">Name</label>
-            <input type="text" th:field="*{name}" id="nameInput" class="form-control" th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"/>
+            <label for="name-input">Name</label>
+            <input type="text" th:field="*{name}" id="name-input" class="form-control" th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"/>
             <div class="invalid-feedback"
                  th:if="${#fields.hasErrors('name')}"
                  th:errors="*{name}">
@@ -23,8 +23,8 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="coordsInput">Coordinates</label>
-            <input type="text" th:field="*{coords}" id="coordsInput" class="form-control" th:classappend="${#fields.hasErrors('coords')} ? 'is-invalid'"/>
+            <label for="coords-input">Coordinates</label>
+            <input type="text" th:field="*{coords}" id="coords-input" class="form-control" th:classappend="${#fields.hasErrors('coords')} ? 'is-invalid'"/>
             <div class="invalid-feedback"
                  th:if="${#fields.hasErrors('coords')}"
                  th:errors="*{coords}">

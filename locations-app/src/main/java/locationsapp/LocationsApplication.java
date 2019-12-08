@@ -1,9 +1,7 @@
 package locationsapp;
 
-import locationsapp.controller.CreateLocationCommand;
 import locationsapp.controller.LocationDto;
 import locationsapp.controller.UpdateLocationCommand;
-import locationsapp.entities.Location;
 import locationsapp.ws.AuthEndpoint;
 import locationsapp.ws.FilesEndpoint;
 import locationsapp.ws.LocationsEndpoint;
@@ -29,11 +27,11 @@ import java.util.Locale;
 
 @SpringBootApplication
 @Configuration
-public class LocationsAppApplication implements WebMvcConfigurer
+public class LocationsApplication implements WebMvcConfigurer
 {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LocationsAppApplication.class, args);
+		SpringApplication.run(LocationsApplication.class, args);
 	}
 
     @Autowired
@@ -53,7 +51,7 @@ public class LocationsAppApplication implements WebMvcConfigurer
                         var command = new UpdateLocationCommand();
                         command.setId(source.getId());
                         command.setName(source.getName());
-                        command.setCoords(source.getLat() + "," + source.getLon());
+                        command.setCoords(source.getLat() + ", " + source.getLon());
                         command.setInterestingAt(source.getInterestingAt());
                         command.setTags(source.getTags().toString());
                         return command;
